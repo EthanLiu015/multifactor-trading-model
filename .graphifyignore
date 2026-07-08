@@ -1,0 +1,7 @@
+# Docs need LLM semantic extraction (no API key configured yet).
+# Remove these lines once GEMINI_API_KEY / ANTHROPIC_API_KEY / etc is set,
+# then run `graphify update . --force` to add them to the graph.
+CLAUDE.md
+CLAUDE.md.pre-migration-*
+docs/guardrails/*.md
+README.md
