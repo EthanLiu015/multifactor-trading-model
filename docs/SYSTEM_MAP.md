@@ -94,23 +94,24 @@ Dataset `yfinance_daily` keyed by ticker; never merged with `crsp_daily` (securi
 
 | function | does |
 |---|---|
-| `YFinanceClient` | real adapter: chunked `yf.download` (auto_adjust=False: raw Close for dollar_volume, Adj Close for returns), `fast_info["shares"]` |
+| `YFinanceClient` | real adapter: chunked `yf.download` (auto_adjust=False: raw Close for dollar_volume, Adj Close for returns), `fast_info["shares"]`; paced (`pause_s` between chunks) + exponential backoff on Yahoo throttle (60s doubling, `max_retries`, then chunk skipped into fetch_failures) |
+| `_rate_limited_errors(errors)` | detects Yahoo throttle in `yfinance.shared._ERRORS` (batch download swallows YFRateLimitError instead of raising); delisted-ticker errors never match |
 | `YFinanceDailyLoader.load_year(year, tickers, knowledge_ts, chunk_size)` | chunked pull → transform → shared audit → append `part=year` / quarantine; failed chunks + missing tickers → `fetch_failures` (flagged, not fatal) |
 | `_transform(frames)` | wide→long stack; drops all-null grid artifacts (pre-IPO dates); `ret` = Adj Close pct_change per ticker (first bar/year null, counted); dollar_volume from raw close |
 | `load_shares_current(tickers, ts)` | one-row-per-ticker snapshot → own dataset `yfinance_shares_current`, effective_date = fetch date (current-only value; per-bar storage would embed look-ahead) |
 | `fetch_listed_tickers()` | NASDAQ Trader symbol files → filter test issues/ETFs/'$'-preferreds, map `.`→`-` (BRK.B→BRK-B) |
-| `main(argv)` | CLI: `python -m research.data.loaders.yfinance_daily --start 2011` (+`--shares` optional slow snapshot) — per-year reports, rows/s for METRICS.md |
+| `main(argv)` | CLI: `python -m research.data.loaders.yfinance_daily --start 2011` (+`--pause/--max-retries/--backoff` pacing, `--shares` optional slow snapshot) — per-year reports, rows/s for METRICS.md |
 
 ### Barrel files
 - `research/data/__init__.py` — exports `PITStore`
 - `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`, `YFinanceDailyLoader`, `AuditReport`, `audit_daily_bars`
 
-### tests/ — **20 passing**
+### tests/ — **24 passing**
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |
 | `test_crsp_loader.py` | happy path into store, re-run idempotency, dup quarantine, short-past-year audit fail, nulls/outliers flagged not dropped, schema verify (offline FakeConn) |
-| `test_yfinance_loader.py` | happy path (ret from Adj Close, dollar_volume from raw close), idempotency, grid-artifact drop vs partial-null keep, fetch failures flagged not fatal, failed chunk skipped, dup quarantine, short-past-year fail, shares snapshot, symbol-file parsing (offline FakeClient) |
+| `test_yfinance_loader.py` | happy path (ret from Adj Close, dollar_volume from raw close), idempotency, grid-artifact drop vs partial-null keep, fetch failures flagged not fatal, failed chunk skipped, dup quarantine, short-past-year fail, shares snapshot, symbol-file parsing (offline FakeClient); throttle detector + backoff schedule + give-up + legit-partial-no-retry (monkeypatched yf.download, fake sleep) |
 
 ### Config
 - `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5; pytest config

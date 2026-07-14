@@ -6,7 +6,9 @@ import pytest
 from research.data.loaders.yfinance_daily import (
     DATASET,
     SHARES_DATASET,
+    YFinanceClient,
     YFinanceDailyLoader,
+    _rate_limited_errors,
     fetch_listed_tickers,
 )
 from research.data.store import PITStore
@@ -182,3 +184,77 @@ def test_fetch_listed_tickers_filters_and_maps():
     got = fetch_listed_tickers(fetch_text=lambda url: next(texts))
     # test issues, ETFs, and '$' preferreds excluded; '.' -> '-' for yfinance
     assert got == ["AAPL", "BRK-B"]
+
+
+def test_rate_limited_errors_detector():
+    assert not _rate_limited_errors({})
+    assert _rate_limited_errors(
+        {"AAA": "YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')"}
+    )
+    # delisted-ticker errors are legitimate failures, never retried
+    assert not _rate_limited_errors(
+        {"GONE": "YFTzMissingError('$GONE: possibly delisted; no timezone found')"}
+    )
+
+
+def _patched_client(monkeypatch, download_results, errors_per_call):
+    """YFinanceClient with fake yf.download, shared._ERRORS, recorded sleeps."""
+    import yfinance
+    import yfinance.shared as shared
+
+    calls = {"n": 0}
+    sleeps = []
+
+    def fake_download(tickers, **kwargs):
+        i = calls["n"]
+        calls["n"] += 1
+        monkeypatch.setattr(shared, "_ERRORS", errors_per_call[i], raising=False)
+        return download_results[i]
+
+    monkeypatch.setattr(yfinance, "download", fake_download)
+    client = YFinanceClient(
+        pause_s=1.0, max_retries=2, backoff_base_s=60.0, sleep=sleeps.append
+    )
+    return client, sleeps
+
+
+THROTTLED = {"AAA": "YFRateLimitError('Too Many Requests. Rate limited.')"}
+
+
+def test_client_backoff_then_success(monkeypatch):
+    good = wide({"AAA": {D1: (10.0, 100.0, 1000.0)}})
+    client, sleeps = _patched_client(
+        monkeypatch,
+        download_results=[pd.DataFrame(), pd.DataFrame(), good],
+        errors_per_call=[THROTTLED, THROTTLED, {}],
+    )
+    out = client.download(["AAA"], f"{YEAR}-01-01", f"{YEAR + 1}-01-01")
+
+    assert out is good
+    # pause before each of 3 calls + exponential backoff after 2 throttles
+    assert sleeps == [1.0, 60.0, 1.0, 120.0, 1.0]
+
+
+def test_client_gives_up_after_max_retries(monkeypatch):
+    from yfinance.exceptions import YFRateLimitError
+
+    client, sleeps = _patched_client(
+        monkeypatch,
+        download_results=[pd.DataFrame()] * 3,
+        errors_per_call=[THROTTLED] * 3,
+    )
+    with pytest.raises(YFRateLimitError):
+        client.download(["AAA"], f"{YEAR}-01-01", f"{YEAR + 1}-01-01")
+    assert sleeps == [1.0, 60.0, 1.0, 120.0, 1.0]  # no sleep after final attempt
+
+
+def test_client_returns_legit_partial_without_retry(monkeypatch):
+    good = wide({"AAA": {D1: (10.0, 100.0, 1000.0)}})
+    delisted = {"GONE": "YFTzMissingError('possibly delisted')"}
+    client, sleeps = _patched_client(
+        monkeypatch, download_results=[good], errors_per_call=[delisted]
+    )
+    out = client.download(["AAA", "GONE"], f"{YEAR}-01-01", f"{YEAR + 1}-01-01")
+
+    assert out is good
+    assert sleeps == [1.0]  # single paced call, no backoff

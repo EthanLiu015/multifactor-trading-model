@@ -29,6 +29,7 @@ import argparse
 import datetime as dt
 import time
 import urllib.request
+from collections.abc import Callable
 
 import polars as pl
 
@@ -48,21 +49,70 @@ OTHER_LISTED_URL = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
 FIELDS = {"Close": "close", "Adj Close": "adj_close", "Volume": "volume"}
 
 
+def _rate_limited_errors(errors: dict) -> bool:
+    """True if a yfinance per-ticker error dict shows Yahoo throttling.
+
+    Batch ``yf.download`` swallows YFRateLimitError per ticker and records
+    it in ``yfinance.shared._ERRORS`` instead of raising; values look like
+    ``"YFRateLimitError('Too Many Requests. Rate limited. ...')"``.
+    Non-throttle errors (delisted: YFTzMissingError etc.) must NOT match —
+    they are legitimate fetch failures, not something a retry can fix.
+    """
+    return any(
+        "ratelimit" in str(v).replace(" ", "").lower() for v in errors.values()
+    )
+
+
 class YFinanceClient:
-    """Thin adapter over the yfinance package; tests inject a fake instead."""
+    """Thin adapter over the yfinance package; tests inject a fake instead.
+
+    Paces requests to survive Yahoo's rate limiter: ``pause_s`` between
+    chunk downloads keeps the steady-state request rate low; a throttled
+    chunk is retried with exponential backoff (``backoff_base_s`` doubling
+    per attempt: 60s, 120s, 240s, ...). ``sleep`` is injectable for tests.
+    """
+
+    def __init__(
+        self,
+        pause_s: float = 2.0,
+        max_retries: int = 5,
+        backoff_base_s: float = 60.0,
+        sleep: Callable[[float], None] = time.sleep,
+    ) -> None:
+        self.pause_s = pause_s
+        self.max_retries = max_retries
+        self.backoff_base_s = backoff_base_s
+        self._sleep = sleep
 
     def download(self, tickers: list[str], start: str, end: str):
         import yfinance as yf  # deferred: only live pulls need it
+        import yfinance.shared as shared
+        from yfinance.exceptions import YFRateLimitError
 
-        return yf.download(
-            tickers,
-            start=start,
-            end=end,
-            auto_adjust=False,  # keep raw Close alongside Adj Close
-            group_by="ticker",
-            threads=True,
-            progress=False,
-        )
+        delay = self.backoff_base_s
+        for attempt in range(self.max_retries + 1):
+            self._sleep(self.pause_s)
+            try:
+                pdf = yf.download(
+                    tickers,
+                    start=start,
+                    end=end,
+                    auto_adjust=False,  # keep raw Close alongside Adj Close
+                    group_by="ticker",
+                    threads=True,
+                    progress=False,
+                )
+            except YFRateLimitError:
+                pass  # single-ticker code paths raise instead of logging
+            else:
+                if not _rate_limited_errors(getattr(shared, "_ERRORS", {})):
+                    return pdf  # clean or legitimately-partial chunk
+            if attempt < self.max_retries:
+                self._sleep(delay)
+                delay *= 2
+        # Exhausted: load_year's per-chunk except skips this chunk and its
+        # tickers surface in fetch_failures.
+        raise YFRateLimitError()
 
     def shares_outstanding(self, ticker: str) -> float | None:
         import yfinance as yf
@@ -262,6 +312,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--lake", default="lake")
     parser.add_argument("--chunk-size", type=int, default=200)
     parser.add_argument(
+        "--pause", type=float, default=2.0, help="seconds between chunk downloads"
+    )
+    parser.add_argument(
+        "--max-retries", type=int, default=5, help="retries per throttled chunk"
+    )
+    parser.add_argument(
+        "--backoff",
+        type=float,
+        default=60.0,
+        help="base backoff seconds, doubles per retry (60, 120, 240, ...)",
+    )
+    parser.add_argument(
         "--shares",
         action="store_true",
         help="also snapshot current shares outstanding (slow: one call/ticker)",
@@ -272,7 +334,12 @@ def main(argv: list[str] | None = None) -> int:
     tickers = fetch_listed_tickers()
     print(f"{len(tickers)} tickers after test-issue/ETF filter")
 
-    loader = YFinanceDailyLoader(YFinanceClient(), PITStore(args.lake))
+    client = YFinanceClient(
+        pause_s=args.pause,
+        max_retries=args.max_retries,
+        backoff_base_s=args.backoff,
+    )
+    loader = YFinanceDailyLoader(client, PITStore(args.lake))
     # Naive UTC, matching the store's own load_ts convention.
     knowledge_ts = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
     t0 = time.perf_counter()
