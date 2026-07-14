@@ -19,10 +19,10 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import time
-from dataclasses import dataclass, field
 
 import polars as pl
 
+from research.data.loaders.audit import AuditReport, audit_daily_bars
 from research.data.store import PITStore
 
 DATASET = "crsp_daily"
@@ -49,25 +49,6 @@ COMMON_STOCK_WHERE = (
     " AND primaryexch IN ('N', 'A', 'Q') AND conditionaltype = 'RW'"
     " AND tradingstatusflg = 'A'"
 )
-
-MAX_ABS_RET = 2.0  # |ret| above this is counted as an outlier, never dropped
-FULL_YEAR_TRADING_DAYS = (240, 260)  # sanity bounds for a complete year
-
-
-@dataclass
-class AuditReport:
-    year: int
-    rows: int
-    trading_days: int
-    null_counts: dict[str, int]
-    ret_outliers: int
-    failures: list[str] = field(default_factory=list)
-    written_to: str | None = None
-
-    @property
-    def ok(self) -> bool:
-        return not self.failures
-
 
 class CRSPDailyLoader:
     """scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.
@@ -124,29 +105,9 @@ class CRSPDailyLoader:
         )
 
     def _audit(self, df: pl.DataFrame, year: int) -> AuditReport:
-        failures: list[str] = []
-        rows = df.shape[0]
-        if rows == 0:
-            return AuditReport(year, 0, 0, {}, 0, failures=["empty chunk"])
-
-        dups = rows - df.select(["security_id", "effective_date"]).unique().shape[0]
-        if dups > 0:
-            failures.append(f"{dups} duplicate (security_id, effective_date) rows")
-
-        trading_days = df["effective_date"].n_unique()
-        lo, hi = FULL_YEAR_TRADING_DAYS
-        if year < dt.date.today().year and not lo <= trading_days <= hi:
-            failures.append(
-                f"{trading_days} trading days for complete year, expected {lo}-{hi}"
-            )
-
-        null_counts = {
-            c: int(df[c].null_count()) for c in ("close", "ret", "volume", "shrout")
-        }
-        ret_outliers = int(
-            df.filter(pl.col("ret").abs() > MAX_ABS_RET).shape[0]
+        return audit_daily_bars(
+            df, year, null_cols=("close", "ret", "volume", "shrout")
         )
-        return AuditReport(year, rows, trading_days, null_counts, ret_outliers, failures)
 
     def _quarantine(self, df: pl.DataFrame, year: int, knowledge_ts: dt.datetime):
         qdir = self.store.root / "_quarantine"

@@ -6,6 +6,7 @@ requires-python = ">=3.10"
 dependencies = [
     "polars>=1.42",
     "wrds>=3.2",
+    "yfinance>=1.5",
 ]
 
 [project.optional-dependencies]

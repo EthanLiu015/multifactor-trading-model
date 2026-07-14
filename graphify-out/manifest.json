@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "pyproject.toml": {
-    "mtime": 1783968835.4899318,
-    "ast_hash": "e28e6a3347f6b1fa6fb6ffca607f8f91",
+    "mtime": 1783998472.060943,
+    "ast_hash": "cab986a1bc5b666ee03e0b8b3a54eb29",
     "semantic_hash": ""
   },
   "research/__init__.py": {
@@ -30,18 +30,63 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1783961683.2029328,
-    "ast_hash": "63e719ae77b8b3d975060b3bfcf6e45b",
+    "mtime": 1783998760.8233466,
+    "ast_hash": "ea699f4e03060c7686b54bb316a6d4f6",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
-    "mtime": 1783969019.3638957,
-    "ast_hash": "c4b312773a89c231ea29040769ab73aa",
+    "mtime": 1783998539.8658073,
+    "ast_hash": "1d9664445509c5608493c114422140b4",
     "semantic_hash": ""
   },
   "docs/METRICS.md": {
     "mtime": 1783625885.26368,
     "ast_hash": "e7719895542abf47ce8b546611dcaa25",
+    "semantic_hash": ""
+  },
+  "research/data/__init__.py": {
+    "mtime": 1783619476.3664737,
+    "ast_hash": "f46b9838490268fa2025b94884686c9e",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/__init__.py": {
+    "mtime": 1783998470.4952312,
+    "ast_hash": "ffea797c1a27ebfbf9b9744d2fe411a2",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/audit.py": {
+    "mtime": 1783998298.8731942,
+    "ast_hash": "86aae0d3cc41e6aad2600f671637f3f9",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/crsp_daily.py": {
+    "mtime": 1783998311.345045,
+    "ast_hash": "eb49763b723449047da8eee4e3654c95",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/yfinance_daily.py": {
+    "mtime": 1783998626.331336,
+    "ast_hash": "db5e4c32eeb2449af7a77d8ddc042a79",
+    "semantic_hash": ""
+  },
+  "research/data/store.py": {
+    "mtime": 1783968793.1645172,
+    "ast_hash": "0f56438e87bfdacf513978118fad50d2",
+    "semantic_hash": ""
+  },
+  "tests/test_yfinance_loader.py": {
+    "mtime": 1783998534.135889,
+    "ast_hash": "030f6d665ad7f41a5340efcb1c928575",
+    "semantic_hash": ""
+  },
+  "docs/SYSTEM_MAP.md": {
+    "mtime": 1783998600.8477798,
+    "ast_hash": "8614a7b586a48ece941feb447014b376",
+    "semantic_hash": ""
+  },
+  "handoff.md": {
+    "mtime": 1783998714.2844508,
+    "ast_hash": "4c3a4d82a67b3902ab105d15775fcb1e",
     "semantic_hash": ""
   }
 }

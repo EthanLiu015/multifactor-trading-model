@@ -70,14 +70,14 @@ Honest inventory. **Built** means tested code in the repo; nothing else is.
 |---|---|---|
 | PITStore (bitemporal parquet store) | **BUILT** | `research/data/store.py`, 5 tests |
 | CRSP daily-bars loader (WRDS, CIZ format) | **BUILT, live-pull blocked** | `research/data/loaders/crsp_daily.py`, 6 offline tests. Duke WRDS access is academic-year only — no live pull until ~late Aug 2026. CIZ column names are **UNVERIFIED** against the live table (`verify_schema()` gates every pull) |
-| yfinance interim loader + shared `audit.py` | **APPROVED SPEC, not built** | Spec in conversation + docs/SYSTEM_MAP.md. Backfill window decided: 2011→today, daily bars |
+| yfinance interim loader + shared `audit.py` | **BUILT** (2026-07-13 session 2) | `research/data/loaders/yfinance_daily.py`, `audit.py`; 9 offline tests; 1-year live smoke run passed. Full backfill 2011→today not yet run (Ethan's call) |
 | Universe builder (part 3) | designed only (DESIGN.md Block 1) | |
 | Security master + matching (part 4) | designed only | |
 | Signals/alpha/risk/optimizer/backtester | designed only (DESIGN.md Blocks 2–4 + Backtester) | |
 | C++ engine, ops layer, analytics suite | designed only (Blocks 5–6) | |
-| Test suite | **11 passing** — `.venv/bin/python -m pytest` | |
+| Test suite | **20 passing** — `.venv/bin/python -m pytest` | |
 
-Full test suite currently: `11 passed`. Baseline discipline: run it before and after every change set.
+Full test suite currently: `20 passed`. Baseline discipline: run it before and after every change set.
 
 ## 4. Repository layout
 
@@ -214,12 +214,12 @@ Design consequences: at this scale, brute force + pushdown wins; no premature in
 
 Ordered by severity. None are hidden in the code — all are stated here or in STATE.md.
 
-1. **`.gitignore` swallows all source code (CRITICAL).** Line 5 is `data/` (unanchored) — it matches `research/data/`, so `git check-ignore` confirms **every source file built so far is ignored**; `git add research/` would silently skip the core package. The repo's two commits predate the code. Fix: change `data/` to `/data/` (or `/lake/`, since the lake is the actual thing to ignore — note `lake/` isn't ignored at all today). One line; needs owner's go-ahead.
+1. **FIXED 2026-07-13 (commit a5aca9a)** — `.gitignore` unanchored `data/` had hidden `research/data/` from git; Ethan's commit 1ce8420 silently omitted store.py + crsp_daily.py. Now `/data/` + `/lake/` anchored, source tracked.
 2. **METRICS.md cites `bench_store.py` — the script is not in the repo.** Numbers are therefore not reproducible from the current tree. Recreate the benchmark script and commit it alongside the numbers.
 3. **CIZ column names unverified.** `SRC_COLUMNS` / `COMMON_STOCK_WHERE` in `crsp_daily.py` come from CRSP documentation, not a live connection (WRDS blocked until fall). `verify_schema()` gates every pull, so failure mode is loud, but expect possible renames on first real run.
-4. **Test time bomb**: `tests/test_crsp_loader.py` hardcodes `YEAR = 2026` to mean "current year" (audit's trading-day bounds skip the current year via `dt.date.today()`). In January 2027 these tests start failing — 2026 becomes a "complete past year" with 1 trading day. Fix when touched: `YEAR = dt.date.today().year`.
-5. **yfinance backfill (once built) is survivorship-biased** and has no delisting returns — documented interim state, replaced wholesale by CRSP in fall. Its `market_cap` would embed look-ahead (only current shares outstanding exist); spec stores `shares_outstanding_current` and defers mcap filtering to CRSP.
-6. **`AuditReport` not yet shared.** Lives in `crsp_daily.py`; part 2b's approved spec extracts it to `loaders/audit.py`. Until then, a second loader would duplicate it.
+4. **FIXED 2026-07-13** — loader-test year time bomb: both loader test files now use `YEAR = dt.date.today().year`.
+5. **yfinance backfill is survivorship-biased** and has no delisting returns — documented interim state, replaced wholesale by CRSP in fall. No `market_cap` column (would embed look-ahead); current shares outstanding live in separate dataset `yfinance_shares_current` (`--shares` flag), mcap filtering deferred to CRSP.
+6. **FIXED 2026-07-13** — `AuditReport` + `audit_daily_bars` extracted to `loaders/audit.py`, shared by both loaders.
 7. **No lockfile / no CI.** Deps are floor-pinned in pyproject only; suite runs locally only. Acceptable at this stage, worth adding before the codebase grows contributors.
 8. **Uncommitted work.** `docs/DESIGN.md`/`docs/STATE.md` carry uncommitted modifications; `research/`, `tests/`, `pyproject.toml`, docs are untracked (partly *because of* item 1). Commit discipline starts after the gitignore fix.
 9. **WRDS seasonal access** (Duke): academic year only. Discovered 2026-07-13. CRSP loader is code-complete and idles until ~late Aug 2026.
@@ -260,8 +260,8 @@ Build phasing (DESIGN.md, owner-approved order): data layer → 2–3 classic si
 
 Immediate queue, in order:
 
-1. **Fix `.gitignore` (§12.1) and make the first real commit of the source tree.** Highest value-to-effort ratio in the repo; everything else compounds on it.
-2. **Build part 2b** (yfinance loader + shared `audit.py`) — spec already approved, backfill 2011→today. Unblocks everything data-dependent for the summer. Record first real METRICS.md loader numbers.
+1. ~~Fix `.gitignore`~~ **DONE 2026-07-13** (commit a5aca9a).
+2. ~~Build part 2b~~ **DONE 2026-07-13** — remaining: Ethan runs full backfill `python -m research.data.loaders.yfinance_daily --start 2011` and records METRICS.md numbers.
 3. **Part 3: universe builder** — top ~1,000 by 60d median dollar volume, price > $5, monthly PIT snapshots stored as their own dataset (survivorship-safe membership). Needs part 2b's bars. Explain-first per protocol.
 4. **Part 4: security master skeleton** — permanent internal IDs, ticker↔permno validity ranges; prerequisite for CRSP/yfinance reconciliation.
 5. **Fall (WRDS returns)**: run `crsp_daily` live — `verify_schema()` first, full backfill, METRICS entry, then reconcile vs yfinance (DESIGN 1a cross-vendor checks).

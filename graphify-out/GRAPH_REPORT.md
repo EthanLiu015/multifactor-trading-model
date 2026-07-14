@@ -1,16 +1,16 @@
 # Graph Report - multifactor-trading-system  (2026-07-13)
 
 ## Corpus Check
-- 9 files · ~5,342 words
+- 18 files · ~13,091 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 60 nodes · 76 edges · 8 communities (6 shown, 2 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 169 nodes · 288 edges · 13 communities (12 shown, 1 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `21524802`
+- Built from commit: `a5aca9a7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,30 +22,44 @@
 - multifactor-trading-system
 - test_crsp_loader.py
 - METRICS
+- AuditReport
+- YFinanceDailyLoader
+- HANDOFF — Multifactor Equity Trading System
+- .load_year
+- Files & functions
 
 ## God Nodes (most connected - your core abstractions)
-1. `Multifactor Trading System — Design` - 18 edges
-2. `FakeConn` - 10 edges
-3. `STATE` - 10 edges
-4. `frame()` - 7 edges
-5. `bars()` - 7 edges
-6. `row()` - 6 edges
-7. `test_happy_path_lands_in_store()` - 4 edges
-8. `test_rerun_same_year_is_idempotent()` - 4 edges
-9. `test_duplicate_rows_quarantined_not_stored()` - 4 edges
-10. `test_short_past_year_fails_audit()` - 4 edges
+1. `PITStore` - 26 edges
+2. `YFinanceDailyLoader` - 22 edges
+3. `CRSPDailyLoader` - 20 edges
+4. `Multifactor Trading System — Design` - 18 edges
+5. `HANDOFF — Multifactor Equity Trading System` - 17 edges
+6. `AuditReport` - 13 edges
+7. `FakeClient` - 13 edges
+8. `FakeConn` - 12 edges
+9. `STATE` - 10 edges
+10. `audit_daily_bars()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- None detected - all connections are within the same source files.
+- `FakeConn` --uses--> `PITStore`  [INFERRED]
+  tests/test_crsp_loader.py → research/data/store.py
+- `store()` --calls--> `PITStore`  [EXTRACTED]
+  tests/test_store.py → research/data/store.py
+- `FakeClient` --uses--> `PITStore`  [INFERRED]
+  tests/test_yfinance_loader.py → research/data/store.py
+- `FakeConn` --uses--> `CRSPDailyLoader`  [INFERRED]
+  tests/test_crsp_loader.py → research/data/loaders/crsp_daily.py
+- `FakeClient` --uses--> `YFinanceDailyLoader`  [INFERRED]
+  tests/test_yfinance_loader.py → research/data/loaders/yfinance_daily.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (8 total, 2 thin omitted)
+## Communities (13 total, 1 thin omitted)
 
 ### Community 0 - "Multifactor Trading System — Design"
-Cohesion: 0.11
-Nodes (17): Analytics suite (per-factor scoreboard), Backtester (validates Blocks 1–4 before any live loop), Block 2: Alpha Forecast, Block 3: Risk Model (parallel to alpha), Block 4: Portfolio Construction (Optimizer), Block 5: Implementation + Trading System (C++ hot path), Block 6: Performance Analysis, Build phasing (each block detailed by Ethan before its implementation) (+9 more)
+Cohesion: 0.10
+Nodes (19): Analytics suite (per-factor scoreboard), Backtester (validates Blocks 1–4 before any live loop), Block 1: Data + Signals, Block 1 mini-systems (per-vendor pipeline; every data source, especially each alternative dataset, passes through all of these), Block 2: Alpha Forecast, Block 3: Risk Model (parallel to alpha), Block 4: Portfolio Construction (Optimizer), Block 5: Implementation + Trading System (C++ hot path) (+11 more)
 
 ### Community 1 - "STATE"
 Cohesion: 0.18
@@ -53,27 +67,59 @@ Nodes (10): Constraints, Decisions, Done, Facts, Failed attempts, Goal, Next, No
 
 ### Community 2 - "test_store.py"
 Cohesion: 0.39
-Nodes (7): DataFrame, bars(), test_append_idempotent(), test_append_parts_coexist_and_overwrite(), test_append_rejects_bad_schema(), test_asof_point_in_time(), test_round_trip()
+Nodes (8): bars(), DataFrame, store(), test_append_idempotent(), test_append_parts_coexist_and_overwrite(), test_append_rejects_bad_schema(), test_asof_point_in_time(), test_round_trip()
+
+### Community 3 - "Block 1: Data + Signals"
+Cohesion: 0.14
+Nodes (12): LazyFrame, Path, PITStore, DataFrame, datetime, Point-in-time (bitemporal) parquet store.  Every dataset in the lake carries two, A directory-per-dataset parquet lake with point-in-time reads., Write one load batch. Idempotent: same knowledge_ts overwrites.          The bat (+4 more)
 
 ### Community 6 - "test_crsp_loader.py"
-Cohesion: 0.33
-Nodes (9): FakeConn, frame(), row(), test_duplicate_rows_quarantined_not_stored(), test_happy_path_lands_in_store(), test_nulls_and_outliers_flagged_not_dropped(), test_rerun_same_year_is_idempotent(), test_short_past_year_fails_audit() (+1 more)
+Cohesion: 0.27
+Nodes (13): CRSPDailyLoader, main(), scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, Assert expected CIZ columns exist on the live table., FakeConn, frame(), row(), test_duplicate_rows_quarantined_not_stored() (+5 more)
 
 ### Community 7 - "METRICS"
 Cohesion: 0.50
 Nodes (3): Data layer — PITStore (point-in-time parquet store), METRICS, Pending sections (filled as systems are built)
 
+### Community 8 - "AuditReport"
+Cohesion: 0.18
+Nodes (10): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, DataFrame, datetime, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al (+2 more)
+
+### Community 9 - "YFinanceDailyLoader"
+Cohesion: 0.20
+Nodes (16): fetch_listed_tickers(), Listed US common-stock-ish tickers from the NASDAQ Trader symbol files.      Exc, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``client`` ex, YFinanceDailyLoader, FakeClient, {ticker: {date: (close, adj_close, volume)}} -> yfinance wide frame., test_duplicate_rows_quarantined_not_stored(), test_failed_chunk_skipped_others_land() (+8 more)
+
+### Community 10 - "HANDOFF — Multifactor Equity Trading System"
+Cohesion: 0.11
+Nodes (17): 10. Dependencies and rationale, 11. Performance model, 12. Known limitations, technical debt, inconsistencies, 13. Non-obvious implementation details & pitfalls, 14. Testing strategy, 15. How to add things, 16. Roadmap & recommended next tasks, 1. Project purpose (+9 more)
+
+### Community 11 - ".load_year"
+Cohesion: 0.21
+Nodes (8): main(), DataFrame, datetime, Wide yfinance frames -> long internal schema.          yfinance returns one colu, Snapshot current shares outstanding into its own dataset.          One row per t, Thin adapter over the yfinance package; tests inject a fake instead., Pull one calendar year for all tickers, audit, append or quarantine.          Do, YFinanceClient
+
+### Community 12 - "Files & functions"
+Cohesion: 0.17
+Nodes (11): Barrel files, Config, Data layer (Phase 1 — current), Files & functions, Not yet started (DESIGN.md blocks), research/data/loaders/audit.py — **built (part 2b, shared by all loaders)**, research/data/loaders/crsp_daily.py — **built** (6 tests; live pull blocked until fall), research/data/loaders/yfinance_daily.py — **built (part 2b; interim vendor while WRDS blocked)** (+3 more)
+
 ## Knowledge Gaps
-- **29 isolated node(s):** `multifactor-trading-system`, `Purpose`, `Locked decisions`, `System overview`, `Block 1 mini-systems (per-vendor pipeline; every data source, especially each alternative dataset, passes through all of these)` (+24 more)
+- **54 isolated node(s):** `multifactor-trading-system`, `Purpose`, `Locked decisions`, `System overview`, `Block 1 mini-systems (per-vendor pipeline; every data source, especially each alternative dataset, passes through all of these)` (+49 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Multifactor Trading System — Design` connect `Multifactor Trading System — Design` to `Block 1: Data + Signals`?**
-  _High betweenness centrality (0.099) - this node is a cross-community bridge._
-- **What connects `multifactor-trading-system`, `Purpose`, `Locked decisions` to the rest of the system?**
-  _29 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Multifactor Trading System — Design` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+- **Why does `PITStore` connect `Block 1: Data + Signals` to `test_store.py`, `test_crsp_loader.py`, `AuditReport`, `YFinanceDailyLoader`, `.load_year`?**
+  _High betweenness centrality (0.197) - this node is a cross-community bridge._
+- **Why does `YFinanceDailyLoader` connect `YFinanceDailyLoader` to `AuditReport`, `Block 1: Data + Signals`, `.load_year`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+- **Why does `CRSPDailyLoader` connect `test_crsp_loader.py` to `AuditReport`, `Block 1: Data + Signals`?**
+  _High betweenness centrality (0.059) - this node is a cross-community bridge._
+- **Are the 5 inferred relationships involving `PITStore` (e.g. with `CRSPDailyLoader` and `YFinanceClient`) actually correct?**
+  _`PITStore` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `YFinanceDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**
+  _`YFinanceDailyLoader` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `CRSPDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**
+  _`CRSPDailyLoader` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `multifactor-trading-system`, `Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa`, `Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H` to the rest of the system?**
+  _73 weakly-connected nodes found - possible documentation gaps or missing edges._

@@ -19,8 +19,8 @@ flowchart LR
 
     subgraph LOADERS["research/data/loaders/ — vendor adapters (scrub → audit → PIT append)"]
         CRSP["<b>crsp_daily.py</b><br/>CRSPDailyLoader"]
-        YFL["yfinance_daily.py<br/><i>specced (part 2b)</i>"]
-        AUD["audit.py<br/><i>specced: shared AuditReport</i>"]
+        YFL["<b>yfinance_daily.py</b><br/>YFinanceDailyLoader"]
+        AUD["<b>audit.py</b><br/>AuditReport + audit_daily_bars"]
     end
 
     subgraph STORE["research/data/"]
@@ -40,13 +40,14 @@ flowchart LR
     end
 
     WRDS -- "raw_sql (pandas)" --> CRSP
-    YF -. "bulk daily bars" .-> YFL
-    ND -. "listed-symbol filter" .-> YFL
+    YF -- "chunked yf.download" --> YFL
+    ND -- "fetch_listed_tickers()" --> YFL
     CRSP -- "audit pass:<br/>append(df, knowledge_ts, part)" --> PIT
-    YFL -. same contract .-> PIT
+    YFL -- same contract --> PIT
     CRSP -- "audit fail" --> QUAR
-    CRSP -.uses.-> AUD
-    YFL -.uses.-> AUD
+    YFL -- "audit fail" --> QUAR
+    CRSP -- uses --> AUD
+    YFL -- uses --> AUD
     PIT -- "write_parquet" --> LAKE
     LAKE -- "scan_parquet (lazy)" --> PIT
     PIT == "asof(dataset, T, keys)<br/>PIT panel, no look-ahead" ==> UNIV
@@ -78,29 +79,41 @@ CRSP daily bars via WRDS, CIZ format (`crsp.dsf_v2`). Delisting returns arrive i
 | `CRSPDailyLoader.verify_schema()` | asserts expected CIZ columns exist on live table before any pull (columns unverified until first real connection) |
 | `load_year(year, knowledge_ts)` | pull one calendar year (common-stock SQL filter) → transform → audit → append on pass / quarantine on fail |
 | `_transform(pdf)` | pandas→Polars, vendor→internal names (permno→security_id), derives `dollar_volume`, `market_cap` |
-| `_audit(df, year)` | dup (security_id, effective_date) = hard fail; trading-day bounds for past years; nulls + \|ret\|>200% counted, never dropped |
+| `_audit(df, year)` | thin wrapper over shared `audit_daily_bars` (null cols: close, ret, volume, shrout) |
 | `_quarantine(df, year, ts)` | failed batch → lake/_quarantine/, never enters PIT data |
 | `main(argv)` | CLI: `python -m research.data.loaders.crsp_daily --start 2011` — per-year reports, rows/s for METRICS.md |
-| `AuditReport` | per-chunk result: rows, days, null counts, outliers, failures, `ok` |
 
-### research/data/loaders/yfinance_daily.py — *approved spec, not built (part 2b)*
-Interim free vendor while WRDS is blocked; same contract, separate `yfinance_daily` dataset keyed by ticker. Planned: NASDAQ symbol-file universe fetch, chunked `yf.download`, fetch-failure audit, CLI. Backfill 2011→today, daily bars.
+### research/data/loaders/audit.py — **built (part 2b, shared by all loaders)**
+| symbol | does |
+|---|---|
+| `AuditReport` | per-chunk result: rows, days, null counts, outliers, fetch_failures, failures, `ok` |
+| `audit_daily_bars(df, year, null_cols, ...)` | hard-fail: empty chunk, dup (security_id, effective_date), bad trading-day count for past years; nulls + \|ret\|>200% + vendor fetch failures counted, never dropped |
 
-### research/data/loaders/audit.py — *approved spec, not built (part 2b)*
-`AuditReport` + generic checks extracted from crsp_daily.py, shared by all loaders.
+### research/data/loaders/yfinance_daily.py — **built (part 2b; interim vendor while WRDS blocked)**
+Dataset `yfinance_daily` keyed by ticker; never merged with `crsp_daily` (security master, part 4). Survivorship-biased, no delisting returns — replaced wholesale by CRSP in fall.
+
+| function | does |
+|---|---|
+| `YFinanceClient` | real adapter: chunked `yf.download` (auto_adjust=False: raw Close for dollar_volume, Adj Close for returns), `fast_info["shares"]` |
+| `YFinanceDailyLoader.load_year(year, tickers, knowledge_ts, chunk_size)` | chunked pull → transform → shared audit → append `part=year` / quarantine; failed chunks + missing tickers → `fetch_failures` (flagged, not fatal) |
+| `_transform(frames)` | wide→long stack; drops all-null grid artifacts (pre-IPO dates); `ret` = Adj Close pct_change per ticker (first bar/year null, counted); dollar_volume from raw close |
+| `load_shares_current(tickers, ts)` | one-row-per-ticker snapshot → own dataset `yfinance_shares_current`, effective_date = fetch date (current-only value; per-bar storage would embed look-ahead) |
+| `fetch_listed_tickers()` | NASDAQ Trader symbol files → filter test issues/ETFs/'$'-preferreds, map `.`→`-` (BRK.B→BRK-B) |
+| `main(argv)` | CLI: `python -m research.data.loaders.yfinance_daily --start 2011` (+`--shares` optional slow snapshot) — per-year reports, rows/s for METRICS.md |
 
 ### Barrel files
 - `research/data/__init__.py` — exports `PITStore`
-- `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`
+- `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`, `YFinanceDailyLoader`, `AuditReport`, `audit_daily_bars`
 
-### tests/ — **11 passing**
+### tests/ — **20 passing**
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |
 | `test_crsp_loader.py` | happy path into store, re-run idempotency, dup quarantine, short-past-year audit fail, nulls/outliers flagged not dropped, schema verify (offline FakeConn) |
+| `test_yfinance_loader.py` | happy path (ret from Adj Close, dollar_volume from raw close), idempotency, grid-artifact drop vs partial-null keep, fetch failures flagged not fatal, failed chunk skipped, dup quarantine, short-past-year fail, shares snapshot, symbol-file parsing (offline FakeClient) |
 
 ### Config
-- `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2 (yfinance pending part 2b); pytest config
+- `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5; pytest config
 
 ## Not yet started (DESIGN.md blocks)
 `research/signals/` · `research/alpha/` · `research/risk/` · `research/portfolio/` · `research/attribution/` · backtester · `engine/` (C++) · `common/` · `infra/`

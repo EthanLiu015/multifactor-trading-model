@@ -9,8 +9,8 @@ from research.data.store import PITStore
 K = dt.datetime(2026, 7, 13, 12, 0)
 
 # Audit's trading-day bounds only apply to complete (past) years, so happy-path
-# fixtures use the current year (2026) where a tiny frame is legal.
-YEAR = 2026
+# fixtures use the current year where a tiny frame is legal.
+YEAR = dt.date.today().year
 
 
 def row(permno=10001, date=f"{YEAR}-01-02", close=10.0, ret=0.01, vol=1000.0):
