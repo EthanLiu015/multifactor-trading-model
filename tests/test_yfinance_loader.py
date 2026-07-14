@@ -10,6 +10,8 @@ from research.data.loaders.yfinance_daily import (
     YFinanceDailyLoader,
     _rate_limited_errors,
     fetch_listed_tickers,
+    read_tickers_file,
+    select_liquid_tickers,
 )
 from research.data.store import PITStore
 
@@ -184,6 +186,43 @@ def test_fetch_listed_tickers_filters_and_maps():
     got = fetch_listed_tickers(fetch_text=lambda url: next(texts))
     # test issues, ETFs, and '$' preferreds excluded; '.' -> '-' for yfinance
     assert got == ["AAPL", "BRK-B"]
+
+
+def test_select_liquid_tickers_ranks_by_median_not_mean(store):
+    import polars as pl
+
+    def bars(ticker, dvs):
+        return pl.DataFrame(
+            {
+                "security_id": [ticker] * len(dvs),
+                "effective_date": pl.Series(
+                    [dt.date(YEAR, 1, d + 2) for d in range(len(dvs))],
+                    dtype=pl.Date,
+                ),
+                "dollar_volume": pl.Series(dvs, dtype=pl.Float64),
+            }
+        )
+
+    # STEADY: median 100. SPIKE: one 10_000 day but median 10. SMALL: median 5.
+    df = pl.concat(
+        [
+            bars("STEADY", [100.0, 100.0, 100.0]),
+            bars("SPIKE", [10.0, 10.0, 10_000.0]),
+            bars("SMALL", [5.0, 5.0, 5.0]),
+        ]
+    )
+    store.append(DATASET, df, knowledge_ts=K)
+
+    top2 = select_liquid_tickers(store, top_n=2, year=YEAR)
+    assert top2 == ["STEADY", "SPIKE"]
+    # off-year data must not count
+    assert select_liquid_tickers(store, top_n=3, year=YEAR - 1) == []
+
+
+def test_read_tickers_file(tmp_path):
+    p = tmp_path / "tickers.txt"
+    p.write_text("AAPL\n\n# comment\nBRK-B \n")
+    assert read_tickers_file(str(p)) == ["AAPL", "BRK-B"]
 
 
 def test_rate_limited_errors_detector():

@@ -4,7 +4,7 @@
 Build multifactor equity trading system (Grinold & Kahn framework) — learn quant-shop internals + resume piece. Currently design-capture phase.
 
 ## Now
-Phase 1, part 2b COMPLETE incl. rate-limit pacing (2026-07-14): shared loaders/audit.py + yfinance_daily.py with paced/backoff client; 24/24 tests pass. Full backfill ready to run overnight: `.venv/bin/python -m research.data.loaders.yfinance_daily --start 2011` (defaults: 2s pause, 5 retries, 60s doubling backoff; add `--shares` for slow shares snapshot).
+Two-phase backfill in progress (2026-07-14): loader gained --no-threads/--tickers-file/--select-top (26/26 tests). Phase 1 running overnight: `python -u -m research.data.loaders.yfinance_daily --start 2025 --end 2025 --no-threads --chunk-size 50` (all 7,093 tickers, 1 year, sequential drip). Then: `--select-top 1500 --select-year 2025 > tickers_top1500.txt`, wipe biased lake/yfinance_daily (needs approval), phase 2 `--start 2011 --no-threads --tickers-file tickers_top1500.txt`.
 
 ## Next
 1. Ethan runs full yfinance backfill 2011→today; record rows/s + lake size in docs/METRICS.md
@@ -37,6 +37,7 @@ Phase 1, part 2b COMPLETE incl. rate-limit pacing (2026-07-14): shared loaders/a
 - DECISION: yfinance = interim bars vendor (dataset `yfinance_daily`, keyed by ticker, backfill 2011→today) while WRDS season-blocked; replaced wholesale by CRSP in fall; never merged with crsp_daily before security master (approved spec 2026-07-13)
 - DECISION: shares outstanding stored as separate one-row-per-ticker dataset `yfinance_shares_current` (effective_date = fetch date), optional `--shares` CLI flag — embedding current snapshot in 15y of bars would forge history; mcap deferred to CRSP (CONFIRMED by Ethan 2026-07-13)
 - DECISION: yfinance backfill rate-limit strategy = paced run with retry/backoff in YFinanceClient (inter-chunk sleep + exponential backoff on YFRateLimitError; overnight single run) — chosen by Ethan 2026-07-13 over curated universe / top-ups / requests-cache
+- DECISION: after paced full run failed (Yahoo stealth-throttle: fast "Data doesn't exist" fails, not YFRateLimitError; threads=True bursts 200 req/chunk so chunk pacing useless) → two-phase need-driven backfill: (1) slow-drip 1 recent year, all tickers, threads=False; (2) rank by dollar volume, backfill 15y for top ~1,500 only — chosen by Ethan 2026-07-14
 - DECISION: Engine event-journaled from day one (crash recovery + trade blotter); broker simulator for deterministic engine tests; shadow deployment for new models; stress/crowding monitors; financing costs + live corporate-action handling added (2026-07-09)
 
 ## Facts
@@ -59,6 +60,8 @@ Phase 1, part 2b COMPLETE incl. rate-limit pacing (2026-07-14): shared loaders/a
 - Rate-limit pacing built (2026-07-14) — RESULT: YFinanceClient paced (pause_s per chunk) + exponential backoff (60s doubling, max_retries then chunk→fetch_failures); throttle detected via yfinance.shared._ERRORS (batch download swallows YFRateLimitError — discovered via probe, design adjusted from raise-based retry); CLI flags --pause/--max-retries/--backoff; `.venv/bin/python -m pytest` -> "24 passed"
 
 ## Open items
+- lake/yfinance_daily holds 14 year-files (k=2026-07-14T04-17-29, 2011–2024, 1.32M rows) from throttled run — ~5-10% ticker coverage, throttle-selected = unknown bias, UNUSABLE for research; wipe before phase-2 backfill (needs Ethan approval, files listed in session 2026-07-14)
+- Full backfill attempt 2026-07-14 killed at 00:47 mid-2025; stdout progress lines lost to block buffering — run future backfills with `python -u`
 - WRDS approved BUT Duke student access restricted to academic year — no access summer 2026; CRSP pulls resume fall semester (discovered 2026-07-13). CRSP stays the primary bars source; loader ready.
 - HTCondor role ambiguous: Ethan says "run KDB in parallel with HTCondor for live trading model"; HTCondor is batch/HPC scheduler — likely better fit for research grid (backtest sweeps). Confirm intent at block-5 deep dive.
 - Alt-data source selection deferred to alpha research phase

@@ -77,11 +77,16 @@ class YFinanceClient:
         pause_s: float = 2.0,
         max_retries: int = 5,
         backoff_base_s: float = 60.0,
+        threads: bool = True,
         sleep: Callable[[float], None] = time.sleep,
     ) -> None:
         self.pause_s = pause_s
         self.max_retries = max_retries
         self.backoff_base_s = backoff_base_s
+        # threads=False fetches tickers sequentially (~1-2 req/s) — the only
+        # rate Yahoo's per-request limiter tolerates for bulk pulls; True
+        # bursts a whole chunk in parallel and gets stealth-throttled.
+        self.threads = threads
         self._sleep = sleep
 
     def download(self, tickers: list[str], start: str, end: str):
@@ -99,7 +104,7 @@ class YFinanceClient:
                     end=end,
                     auto_adjust=False,  # keep raw Close alongside Adj Close
                     group_by="ticker",
-                    threads=True,
+                    threads=self.threads,
                     progress=False,
                 )
             except YFRateLimitError:
@@ -261,6 +266,37 @@ class YFinanceDailyLoader:
         return sum(1 for v in values if v is not None)
 
 
+def select_liquid_tickers(store: PITStore, top_n: int, year: int) -> list[str]:
+    """Top ``top_n`` tickers by median daily dollar volume in ``year``.
+
+    Fetch triage for the two-phase backfill (phase 1 pulls one recent year
+    for everything; phase 2 backfills history only for these) — NOT the
+    tradeable universe, which part 3 derives with PIT membership rules.
+    Median, not mean: one spike day should not buy a backfill slot.
+    """
+    now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+    ranked = (
+        store.asof(DATASET, now, keys=["security_id"])
+        .filter(pl.col("effective_date").dt.year() == year)
+        .group_by("security_id")
+        .agg(pl.col("dollar_volume").median().alias("median_dv"))
+        .sort("median_dv", descending=True, nulls_last=True)
+        .head(top_n)
+        .collect()
+    )
+    return ranked["security_id"].to_list()
+
+
+def read_tickers_file(path: str) -> list[str]:
+    """One ticker per line; blank lines and '#' comments skipped."""
+    with open(path, encoding="utf-8") as fh:
+        return [
+            ln.strip()
+            for ln in fh
+            if ln.strip() and not ln.strip().startswith("#")
+        ]
+
+
 def fetch_listed_tickers(fetch_text=None) -> list[str]:
     """Listed US common-stock-ish tickers from the NASDAQ Trader symbol files.
 
@@ -328,16 +364,52 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="also snapshot current shares outstanding (slow: one call/ticker)",
     )
+    parser.add_argument(
+        "--no-threads",
+        action="store_true",
+        help="sequential per-ticker fetch (~1-2 req/s) — survives Yahoo throttle",
+    )
+    parser.add_argument(
+        "--tickers-file",
+        default=None,
+        help="one ticker per line; skips the NASDAQ Trader universe fetch",
+    )
+    parser.add_argument(
+        "--select-top",
+        type=int,
+        default=None,
+        metavar="N",
+        help="no download: print top-N tickers by median dollar volume and exit",
+    )
+    parser.add_argument(
+        "--select-year",
+        type=int,
+        default=dt.date.today().year - 1,
+        help="ranking year for --select-top (default: last complete year)",
+    )
     args = parser.parse_args(argv)
 
-    print("fetching listed-ticker universe from NASDAQ Trader...")
-    tickers = fetch_listed_tickers()
-    print(f"{len(tickers)} tickers after test-issue/ETF filter")
+    if args.select_top is not None:
+        # Redirect-friendly: tickers only, one per line, nothing else on stdout.
+        for t in select_liquid_tickers(
+            PITStore(args.lake), args.select_top, args.select_year
+        ):
+            print(t)
+        return 0
+
+    if args.tickers_file is not None:
+        tickers = read_tickers_file(args.tickers_file)
+        print(f"{len(tickers)} tickers from {args.tickers_file}")
+    else:
+        print("fetching listed-ticker universe from NASDAQ Trader...")
+        tickers = fetch_listed_tickers()
+        print(f"{len(tickers)} tickers after test-issue/ETF filter")
 
     client = YFinanceClient(
         pause_s=args.pause,
         max_retries=args.max_retries,
         backoff_base_s=args.backoff,
+        threads=not args.no_threads,
     )
     loader = YFinanceDailyLoader(client, PITStore(args.lake))
     # Naive UTC, matching the store's own load_ts convention.

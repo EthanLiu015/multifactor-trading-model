@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1783998760.8233466,
-    "ast_hash": "ea699f4e03060c7686b54bb316a6d4f6",
+    "mtime": 1784001995.1495657,
+    "ast_hash": "7fd132af59f7aca13cb6d0d64bdf3d21",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "research/data/loaders/yfinance_daily.py": {
-    "mtime": 1783998626.331336,
-    "ast_hash": "db5e4c32eeb2449af7a77d8ddc042a79",
+    "mtime": 1784001936.7564912,
+    "ast_hash": "51d56ff977c3ecdeba98981e47dff9b4",
     "semantic_hash": ""
   },
   "research/data/store.py": {
@@ -75,13 +75,13 @@
     "semantic_hash": ""
   },
   "tests/test_yfinance_loader.py": {
-    "mtime": 1783998534.135889,
-    "ast_hash": "030f6d665ad7f41a5340efcb1c928575",
+    "mtime": 1784001956.1603656,
+    "ast_hash": "b8291bd75613f3bb88873e3095031f73",
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1783998600.8477798,
-    "ast_hash": "8614a7b586a48ece941feb447014b376",
+    "mtime": 1784001980.4134533,
+    "ast_hash": "3762b30ad23d13143a859362a6951b4a",
     "semantic_hash": ""
   },
   "handoff.md": {

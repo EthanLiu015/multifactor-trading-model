@@ -100,13 +100,15 @@ Dataset `yfinance_daily` keyed by ticker; never merged with `crsp_daily` (securi
 | `_transform(frames)` | wide→long stack; drops all-null grid artifacts (pre-IPO dates); `ret` = Adj Close pct_change per ticker (first bar/year null, counted); dollar_volume from raw close |
 | `load_shares_current(tickers, ts)` | one-row-per-ticker snapshot → own dataset `yfinance_shares_current`, effective_date = fetch date (current-only value; per-bar storage would embed look-ahead) |
 | `fetch_listed_tickers()` | NASDAQ Trader symbol files → filter test issues/ETFs/'$'-preferreds, map `.`→`-` (BRK.B→BRK-B) |
-| `main(argv)` | CLI: `python -m research.data.loaders.yfinance_daily --start 2011` (+`--pause/--max-retries/--backoff` pacing, `--shares` optional slow snapshot) — per-year reports, rows/s for METRICS.md |
+| `select_liquid_tickers(store, top_n, year)` | fetch triage for two-phase backfill: top-N by median daily dollar volume in one year (median: spike days don't buy slots). NOT the part-3 universe |
+| `read_tickers_file(path)` | one ticker/line, blanks + # comments skipped (feeds `--tickers-file`) |
+| `main(argv)` | CLI: `python -m research.data.loaders.yfinance_daily --start 2011` (+`--pause/--max-retries/--backoff` pacing, `--no-threads` sequential drip, `--tickers-file`, `--select-top N --select-year Y` ranking mode, `--shares`) — per-year reports, rows/s for METRICS.md |
 
 ### Barrel files
 - `research/data/__init__.py` — exports `PITStore`
 - `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`, `YFinanceDailyLoader`, `AuditReport`, `audit_daily_bars`
 
-### tests/ — **24 passing**
+### tests/ — **26 passing**
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |

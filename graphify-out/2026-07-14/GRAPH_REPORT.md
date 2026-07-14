@@ -1,16 +1,16 @@
-# Graph Report - multifactor-trading-system  (2026-07-13)
+# Graph Report - multifactor-trading-system  (2026-07-14)
 
 ## Corpus Check
-- 18 files · ~13,091 words
+- 18 files · ~13,649 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 169 nodes · 288 edges · 13 communities (12 shown, 1 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.5)
+- 178 nodes · 311 edges · 13 communities (12 shown, 1 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a5aca9a7`
+- Built from commit: `984221e9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,11 +34,11 @@
 3. `CRSPDailyLoader` - 20 edges
 4. `Multifactor Trading System — Design` - 18 edges
 5. `HANDOFF — Multifactor Equity Trading System` - 17 edges
-6. `AuditReport` - 13 edges
-7. `FakeClient` - 13 edges
+6. `FakeClient` - 14 edges
+7. `AuditReport` - 13 edges
 8. `FakeConn` - 12 edges
-9. `STATE` - 10 edges
-10. `audit_daily_bars()` - 9 edges
+9. `YFinanceClient` - 11 edges
+10. `STATE` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `FakeConn` --uses--> `PITStore`  [INFERRED]
@@ -49,7 +49,7 @@
   tests/test_yfinance_loader.py → research/data/store.py
 - `FakeConn` --uses--> `CRSPDailyLoader`  [INFERRED]
   tests/test_crsp_loader.py → research/data/loaders/crsp_daily.py
-- `FakeClient` --uses--> `YFinanceDailyLoader`  [INFERRED]
+- `test_rate_limited_errors_detector()` --calls--> `_rate_limited_errors()`  [EXTRACTED]
   tests/test_yfinance_loader.py → research/data/loaders/yfinance_daily.py
 
 ## Import Cycles
@@ -82,20 +82,20 @@ Cohesion: 0.50
 Nodes (3): Data layer — PITStore (point-in-time parquet store), METRICS, Pending sections (filled as systems are built)
 
 ### Community 8 - "AuditReport"
-Cohesion: 0.18
+Cohesion: 0.19
 Nodes (10): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, DataFrame, datetime, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al (+2 more)
 
 ### Community 9 - "YFinanceDailyLoader"
-Cohesion: 0.20
-Nodes (16): fetch_listed_tickers(), Listed US common-stock-ish tickers from the NASDAQ Trader symbol files.      Exc, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``client`` ex, YFinanceDailyLoader, FakeClient, {ticker: {date: (close, adj_close, volume)}} -> yfinance wide frame., test_duplicate_rows_quarantined_not_stored(), test_failed_chunk_skipped_others_land() (+8 more)
+Cohesion: 0.14
+Nodes (23): _rate_limited_errors(), scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``client`` ex, True if a yfinance per-ticker error dict shows Yahoo throttling.      Batch ``yf, Thin adapter over the yfinance package; tests inject a fake instead.      Paces, YFinanceClient, YFinanceDailyLoader, FakeClient, _patched_client() (+15 more)
 
 ### Community 10 - "HANDOFF — Multifactor Equity Trading System"
 Cohesion: 0.11
 Nodes (17): 10. Dependencies and rationale, 11. Performance model, 12. Known limitations, technical debt, inconsistencies, 13. Non-obvious implementation details & pitfalls, 14. Testing strategy, 15. How to add things, 16. Roadmap & recommended next tasks, 1. Project purpose (+9 more)
 
 ### Community 11 - ".load_year"
-Cohesion: 0.21
-Nodes (8): main(), DataFrame, datetime, Wide yfinance frames -> long internal schema.          yfinance returns one colu, Snapshot current shares outstanding into its own dataset.          One row per t, Thin adapter over the yfinance package; tests inject a fake instead., Pull one calendar year for all tickers, audit, append or quarantine.          Do, YFinanceClient
+Cohesion: 0.18
+Nodes (9): fetch_listed_tickers(), main(), DataFrame, datetime, Pull one calendar year for all tickers, audit, append or quarantine.          Do, Wide yfinance frames -> long internal schema.          yfinance returns one colu, Snapshot current shares outstanding into its own dataset.          One row per t, Listed US common-stock-ish tickers from the NASDAQ Trader symbol files.      Exc (+1 more)
 
 ### Community 12 - "Files & functions"
 Cohesion: 0.17
@@ -110,11 +110,11 @@ Nodes (11): Barrel files, Config, Data layer (Phase 1 — current), Files & func
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `PITStore` connect `Block 1: Data + Signals` to `test_store.py`, `test_crsp_loader.py`, `AuditReport`, `YFinanceDailyLoader`, `.load_year`?**
-  _High betweenness centrality (0.197) - this node is a cross-community bridge._
+  _High betweenness centrality (0.200) - this node is a cross-community bridge._
 - **Why does `YFinanceDailyLoader` connect `YFinanceDailyLoader` to `AuditReport`, `Block 1: Data + Signals`, `.load_year`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **Why does `CRSPDailyLoader` connect `test_crsp_loader.py` to `AuditReport`, `Block 1: Data + Signals`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
+  _High betweenness centrality (0.057) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `PITStore` (e.g. with `CRSPDailyLoader` and `YFinanceClient`) actually correct?**
   _`PITStore` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `YFinanceDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**
@@ -122,4 +122,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 3 inferred relationships involving `CRSPDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**
   _`CRSPDailyLoader` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `multifactor-trading-system`, `Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa`, `Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H` to the rest of the system?**
-  _73 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _75 weakly-connected nodes found - possible documentation gaps or missing edges._
