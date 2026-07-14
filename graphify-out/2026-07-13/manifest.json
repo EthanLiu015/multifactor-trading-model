@@ -1,0 +1,37 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1783544495.5676847,
+    "ast_hash": "9933ec369b31313cb957557914cffae3",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1783544467.8149555,
+    "ast_hash": "c6ffecd10feb894fe61b682ac0a17fe9",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1783619459.029561,
+    "ast_hash": "ceefe5fa92b4dc70fd4c7215f3503556",
+    "semantic_hash": ""
+  },
+  "research/__init__.py": {
+    "mtime": 1783619475.5014172,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/test_store.py": {
+    "mtime": 1783619498.811644,
+    "ast_hash": "5ea89a55a82b731e3b473ab037416a0a",
+    "semantic_hash": ""
+  },
+  "docs/DESIGN.md": {
+    "mtime": 1783611941.8584113,
+    "ast_hash": "719f755d205ddd004b1030437830b4f2",
+    "semantic_hash": ""
+  },
+  "docs/STATE.md": {
+    "mtime": 1783619457.1478984,
+    "ast_hash": "b3038078e56482c92b01092c611ed308",
+    "semantic_hash": ""
+  }
+}

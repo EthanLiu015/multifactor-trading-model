@@ -1,0 +1,47 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1783544495.5676847,
+    "ast_hash": "9933ec369b31313cb957557914cffae3",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1783544467.8149555,
+    "ast_hash": "c6ffecd10feb894fe61b682ac0a17fe9",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1783968835.4899318,
+    "ast_hash": "e28e6a3347f6b1fa6fb6ffca607f8f91",
+    "semantic_hash": ""
+  },
+  "research/__init__.py": {
+    "mtime": 1783619475.5014172,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/test_store.py": {
+    "mtime": 1783968803.785581,
+    "ast_hash": "25b619481284f752d4c3877fdb163695",
+    "semantic_hash": ""
+  },
+  "docs/DESIGN.md": {
+    "mtime": 1783611941.8584113,
+    "ast_hash": "719f755d205ddd004b1030437830b4f2",
+    "semantic_hash": ""
+  },
+  "docs/STATE.md": {
+    "mtime": 1783961683.2029328,
+    "ast_hash": "63e719ae77b8b3d975060b3bfcf6e45b",
+    "semantic_hash": ""
+  },
+  "tests/test_crsp_loader.py": {
+    "mtime": 1783969019.3638957,
+    "ast_hash": "c4b312773a89c231ea29040769ab73aa",
+    "semantic_hash": ""
+  },
+  "docs/METRICS.md": {
+    "mtime": 1783625885.26368,
+    "ast_hash": "e7719895542abf47ce8b546611dcaa25",
+    "semantic_hash": ""
+  }
+}

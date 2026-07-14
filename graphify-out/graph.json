@@ -1,0 +1,1398 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "multifactor-trading-system",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "0.1.0",
+      "_origin": "ast",
+      "id": "pkg_multifactor_trading_system",
+      "community": 4,
+      "norm_label": "multifactor-trading-system"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "research/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_init",
+      "community": 5,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "test_crsp_loader.py",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader",
+      "community": 6,
+      "norm_label": "test_crsp_loader.py"
+    },
+    {
+      "label": "row()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_row",
+      "community": 6,
+      "norm_label": "row()"
+    },
+    {
+      "label": "frame()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_frame",
+      "community": 6,
+      "norm_label": "frame()"
+    },
+    {
+      "label": "FakeConn",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_fakeconn",
+      "community": 6,
+      "norm_label": "fakeconn"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_fakeconn_init",
+      "community": 6,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".raw_sql()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_fakeconn_raw_sql",
+      "community": 6,
+      "norm_label": ".raw_sql()"
+    },
+    {
+      "label": ".describe_table()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_fakeconn_describe_table",
+      "community": 6,
+      "norm_label": ".describe_table()"
+    },
+    {
+      "label": "store()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_store",
+      "community": 6,
+      "norm_label": "store()"
+    },
+    {
+      "label": "test_happy_path_lands_in_store()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_happy_path_lands_in_store",
+      "community": 6,
+      "norm_label": "test_happy_path_lands_in_store()"
+    },
+    {
+      "label": "test_rerun_same_year_is_idempotent()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
+      "community": 6,
+      "norm_label": "test_rerun_same_year_is_idempotent()"
+    },
+    {
+      "label": "test_duplicate_rows_quarantined_not_stored()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
+      "community": 6,
+      "norm_label": "test_duplicate_rows_quarantined_not_stored()"
+    },
+    {
+      "label": "test_short_past_year_fails_audit()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_short_past_year_fails_audit",
+      "community": 6,
+      "norm_label": "test_short_past_year_fails_audit()"
+    },
+    {
+      "label": "test_nulls_and_outliers_flagged_not_dropped()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
+      "community": 6,
+      "norm_label": "test_nulls_and_outliers_flagged_not_dropped()"
+    },
+    {
+      "label": "test_verify_schema()",
+      "file_type": "code",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "tests_test_crsp_loader_test_verify_schema",
+      "community": 6,
+      "norm_label": "test_verify_schema()"
+    },
+    {
+      "label": "test_store.py",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_store",
+      "community": 2,
+      "norm_label": "test_store.py"
+    },
+    {
+      "label": "store()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "tests_test_store_store",
+      "community": 2,
+      "norm_label": "store()"
+    },
+    {
+      "label": "bars()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "tests_test_store_bars",
+      "community": 2,
+      "norm_label": "bars()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "dataframe",
+      "community": 2,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "test_round_trip()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "tests_test_store_test_round_trip",
+      "community": 2,
+      "norm_label": "test_round_trip()"
+    },
+    {
+      "label": "test_asof_point_in_time()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "tests_test_store_test_asof_point_in_time",
+      "community": 2,
+      "norm_label": "test_asof_point_in_time()"
+    },
+    {
+      "label": "test_append_idempotent()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "tests_test_store_test_append_idempotent",
+      "community": 2,
+      "norm_label": "test_append_idempotent()"
+    },
+    {
+      "label": "test_append_parts_coexist_and_overwrite()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "tests_test_store_test_append_parts_coexist_and_overwrite",
+      "community": 2,
+      "norm_label": "test_append_parts_coexist_and_overwrite()"
+    },
+    {
+      "label": "test_append_rejects_bad_schema()",
+      "file_type": "code",
+      "source_file": "tests/test_store.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "tests_test_store_test_append_rejects_bad_schema",
+      "community": 2,
+      "norm_label": "test_append_rejects_bad_schema()"
+    },
+    {
+      "label": "DESIGN.md",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_design",
+      "community": 0,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Multifactor Trading System \u2014 Design",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_design_multifactor_trading_system_design",
+      "community": 0,
+      "norm_label": "multifactor trading system \u2014 design"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_design_purpose",
+      "community": 0,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Locked decisions",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_design_locked_decisions",
+      "community": 0,
+      "norm_label": "locked decisions"
+    },
+    {
+      "label": "System overview",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_design_system_overview",
+      "community": 0,
+      "norm_label": "system overview"
+    },
+    {
+      "label": "Block 1: Data + Signals",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "docs_design_block_1_data_signals",
+      "community": 3,
+      "norm_label": "block 1: data + signals"
+    },
+    {
+      "label": "Block 1 mini-systems (per-vendor pipeline; every data source, especially each alternative dataset, passes through all of these)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "docs_design_block_1_mini_systems_per_vendor_pipeline_every_data_source_especially_each_alternative_dataset_passes_through_all_of_these",
+      "community": 3,
+      "norm_label": "block 1 mini-systems (per-vendor pipeline; every data source, especially each alternative dataset, passes through all of these)"
+    },
+    {
+      "label": "Block 2: Alpha Forecast",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "docs_design_block_2_alpha_forecast",
+      "community": 0,
+      "norm_label": "block 2: alpha forecast"
+    },
+    {
+      "label": "Infrastructure layer (serves Data+Signals, Alpha Forecast, and historical forecast runs)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "docs_design_infrastructure_layer_serves_data_signals_alpha_forecast_and_historical_forecast_runs",
+      "community": 0,
+      "norm_label": "infrastructure layer (serves data+signals, alpha forecast, and historical forecast runs)"
+    },
+    {
+      "label": "Block 3: Risk Model (parallel to alpha)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "docs_design_block_3_risk_model_parallel_to_alpha",
+      "community": 0,
+      "norm_label": "block 3: risk model (parallel to alpha)"
+    },
+    {
+      "label": "Block 4: Portfolio Construction (Optimizer)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "docs_design_block_4_portfolio_construction_optimizer",
+      "community": 0,
+      "norm_label": "block 4: portfolio construction (optimizer)"
+    },
+    {
+      "label": "Backtester (validates Blocks 1\u20134 before any live loop)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "docs_design_backtester_validates_blocks_1_4_before_any_live_loop",
+      "community": 0,
+      "norm_label": "backtester (validates blocks 1\u20134 before any live loop)"
+    },
+    {
+      "label": "Block 5: Implementation + Trading System (C++ hot path)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "docs_design_block_5_implementation_trading_system_c_hot_path",
+      "community": 0,
+      "norm_label": "block 5: implementation + trading system (c++ hot path)"
+    },
+    {
+      "label": "Block 6: Performance Analysis",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "docs_design_block_6_performance_analysis",
+      "community": 0,
+      "norm_label": "block 6: performance analysis"
+    },
+    {
+      "label": "Analytics suite (per-factor scoreboard)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "docs_design_analytics_suite_per_factor_scoreboard",
+      "community": 0,
+      "norm_label": "analytics suite (per-factor scoreboard)"
+    },
+    {
+      "label": "Ops layer (cross-cutting, live system)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L182",
+      "_origin": "ast",
+      "id": "docs_design_ops_layer_cross_cutting_live_system",
+      "community": 0,
+      "norm_label": "ops layer (cross-cutting, live system)"
+    },
+    {
+      "label": "Cross-cutting: Fundamental Law of Active Management",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L195",
+      "_origin": "ast",
+      "id": "docs_design_cross_cutting_fundamental_law_of_active_management",
+      "community": 0,
+      "norm_label": "cross-cutting: fundamental law of active management"
+    },
+    {
+      "label": "Repo layout (when coding starts)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "docs_design_repo_layout_when_coding_starts",
+      "community": 0,
+      "norm_label": "repo layout (when coding starts)"
+    },
+    {
+      "label": "Build phasing (each block detailed by Ethan before its implementation)",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L217",
+      "_origin": "ast",
+      "id": "docs_design_build_phasing_each_block_detailed_by_ethan_before_its_implementation",
+      "community": 0,
+      "norm_label": "build phasing (each block detailed by ethan before its implementation)"
+    },
+    {
+      "label": "Open items",
+      "file_type": "document",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "docs_design_open_items",
+      "community": 0,
+      "norm_label": "open items"
+    },
+    {
+      "label": "METRICS.md",
+      "file_type": "document",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_metrics",
+      "community": 7,
+      "norm_label": "metrics.md"
+    },
+    {
+      "label": "METRICS",
+      "file_type": "document",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_metrics_metrics",
+      "community": 7,
+      "norm_label": "metrics"
+    },
+    {
+      "label": "Data layer \u2014 PITStore (point-in-time parquet store)",
+      "file_type": "document",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_metrics_data_layer_pitstore_point_in_time_parquet_store",
+      "community": 7,
+      "norm_label": "data layer \u2014 pitstore (point-in-time parquet store)"
+    },
+    {
+      "label": "Pending sections (filled as systems are built)",
+      "file_type": "document",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_metrics_pending_sections_filled_as_systems_are_built",
+      "community": 7,
+      "norm_label": "pending sections (filled as systems are built)"
+    },
+    {
+      "label": "STATE.md",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_state",
+      "community": 1,
+      "norm_label": "state.md"
+    },
+    {
+      "label": "STATE",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_state_state",
+      "community": 1,
+      "norm_label": "state"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_state_goal",
+      "community": 1,
+      "norm_label": "goal"
+    },
+    {
+      "label": "Now",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_state_now",
+      "community": 1,
+      "norm_label": "now"
+    },
+    {
+      "label": "Next",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_state_next",
+      "community": 1,
+      "norm_label": "next"
+    },
+    {
+      "label": "Constraints",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_state_constraints",
+      "community": 1,
+      "norm_label": "constraints"
+    },
+    {
+      "label": "Decisions",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_state_decisions",
+      "community": 1,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "Facts",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_state_facts",
+      "community": 1,
+      "norm_label": "facts"
+    },
+    {
+      "label": "Done",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_state_done",
+      "community": 1,
+      "norm_label": "done"
+    },
+    {
+      "label": "Open items",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_state_open_items",
+      "community": 1,
+      "norm_label": "open items"
+    },
+    {
+      "label": "Failed attempts",
+      "file_type": "document",
+      "source_file": "docs/STATE.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_state_failed_attempts",
+      "community": 1,
+      "norm_label": "failed attempts"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_happy_path_lands_in_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_short_past_year_fails_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader",
+      "target": "tests_test_crsp_loader_test_verify_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_happy_path_lands_in_store",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_short_past_year_fails_audit",
+      "target": "tests_test_crsp_loader_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_happy_path_lands_in_store",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_short_past_year_fails_audit",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_verify_schema",
+      "target": "tests_test_crsp_loader_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_fakeconn",
+      "target": "tests_test_crsp_loader_fakeconn_describe_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_fakeconn",
+      "target": "tests_test_crsp_loader_fakeconn_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_fakeconn",
+      "target": "tests_test_crsp_loader_fakeconn_raw_sql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_happy_path_lands_in_store",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_short_past_year_fails_audit",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_crsp_loader.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "tests_test_crsp_loader_test_verify_schema",
+      "target": "tests_test_crsp_loader_fakeconn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_test_append_idempotent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_test_append_parts_coexist_and_overwrite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_test_append_rejects_bad_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_test_asof_point_in_time",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "tests_test_store",
+      "target": "tests_test_store_test_round_trip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tests_test_store_bars",
+      "target": "dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "tests_test_store_test_append_idempotent",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "tests_test_store_test_append_parts_coexist_and_overwrite",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_test_store_test_append_rejects_bad_schema",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "tests_test_store_test_asof_point_in_time",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "tests_test_store_test_round_trip",
+      "target": "tests_test_store_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_store.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "tests_test_store_test_append_rejects_bad_schema",
+      "target": "dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_design",
+      "target": "docs_design_multifactor_trading_system_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_analytics_suite_per_factor_scoreboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_backtester_validates_blocks_1_4_before_any_live_loop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_1_data_signals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_2_alpha_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_3_risk_model_parallel_to_alpha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_4_portfolio_construction_optimizer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_5_implementation_trading_system_c_hot_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_block_6_performance_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_build_phasing_each_block_detailed_by_ethan_before_its_implementation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_cross_cutting_fundamental_law_of_active_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_infrastructure_layer_serves_data_signals_alpha_forecast_and_historical_forecast_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_locked_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_open_items",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L182",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_ops_layer_cross_cutting_live_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_repo_layout_when_coding_starts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_design_multifactor_trading_system_design",
+      "target": "docs_design_system_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DESIGN.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "docs_design_block_1_data_signals",
+      "target": "docs_design_block_1_mini_systems_per_vendor_pipeline_every_data_source_especially_each_alternative_dataset_passes_through_all_of_these",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_metrics",
+      "target": "docs_metrics_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_metrics_metrics",
+      "target": "docs_metrics_data_layer_pitstore_point_in_time_parquet_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/METRICS.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "docs_metrics_metrics",
+      "target": "docs_metrics_pending_sections_filled_as_systems_are_built",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_state",
+      "target": "docs_state_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_done",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_facts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_failed_attempts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_goal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/STATE.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_state_state",
+      "target": "docs_state_open_items",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "21524802a9fd8dedb17c47cd39070c1b48840f6e"
+}
