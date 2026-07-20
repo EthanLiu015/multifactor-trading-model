@@ -1,10 +1,12 @@
 import datetime as dt
 
 import pandas as pd
+import polars as pl
 import pytest
 
 from research.data.loaders.yfinance_daily import (
     DATASET,
+    SECTOR_DATASET,
     SHARES_DATASET,
     YFinanceClient,
     YFinanceDailyLoader,
@@ -36,9 +38,10 @@ def wide(data):
 
 
 class FakeClient:
-    def __init__(self, data, shares=None, boom=()):
+    def __init__(self, data, shares=None, sectors=None, boom=()):
         self.data = data  # full universe; download slices by request
         self.shares = shares or {}
+        self.sectors = sectors or {}
         self.boom = set(boom)  # tickers whose chunk raises
 
     def download(self, tickers, start, end):
@@ -49,6 +52,9 @@ class FakeClient:
 
     def shares_outstanding(self, ticker):
         return self.shares.get(ticker)
+
+    def sector_info(self, ticker):
+        return self.sectors.get(ticker, (None, None))
 
 
 @pytest.fixture()
@@ -106,6 +112,21 @@ def test_grid_artifacts_dropped_partial_nulls_kept(store):
     assert report.ok
     assert report.rows == 5  # 2 AAA + 1 BBB (D1 artifact dropped) + 2 CCC
     assert report.null_counts["close"] == 1  # CCC's halted day survives
+
+
+def test_transform_pins_volume_dtype_regardless_of_source(store):
+    # yfinance's Volume column is int64 when a chunk has no null rows, but
+    # upcasts to float64 the moment any ticker in the same request has a
+    # grid-artifact null (e.g. a later IPO). Two batches loaded on different
+    # days can therefore disagree on dtype unless _transform pins one down —
+    # this is the bug behind lake/yfinance_daily's real SchemaError.
+    frame = wide({"AAA": {D1: (10.0, 100.0, 1000.0), D2: (10.1, 101.0, 1100.0)}})
+    frame[("AAA", "Volume")] = frame[("AAA", "Volume")].astype("int64")
+
+    loader = YFinanceDailyLoader(FakeClient({}), store)
+    df = loader._transform([frame])
+
+    assert df.schema["volume"] == pl.Float64
 
 
 def test_fetch_failures_counted_not_fatal(store):
@@ -166,6 +187,24 @@ def test_load_shares_current(store):
     aaa = out.filter(out["security_id"] == "AAA")
     assert aaa["shares_outstanding_current"][0] == 5_000_000.0
     assert aaa["effective_date"][0] == K.date()
+
+
+def test_load_sector_current(store):
+    client = FakeClient(
+        {},
+        sectors={"AAA": ("Technology", "Consumer Electronics"), "BBB": (None, None)},
+    )
+    got = YFinanceDailyLoader(client, store).load_sector_current(["AAA", "BBB"], K)
+
+    assert got == 1
+    out = store.asof(SECTOR_DATASET, K, keys=["security_id"]).collect()
+    assert out.shape[0] == 2
+    aaa = out.filter(out["security_id"] == "AAA")
+    assert aaa["sector"][0] == "Technology"
+    assert aaa["industry"][0] == "Consumer Electronics"
+    assert aaa["effective_date"][0] == K.date()
+    bbb = out.filter(out["security_id"] == "BBB")
+    assert bbb["sector"][0] is None
 
 
 NASDAQ_TXT = """Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares

@@ -1,0 +1,117 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1783544495.5676847,
+    "ast_hash": "9933ec369b31313cb957557914cffae3",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1783544467.8149555,
+    "ast_hash": "c6ffecd10feb894fe61b682ac0a17fe9",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1783998472.060943,
+    "ast_hash": "cab986a1bc5b666ee03e0b8b3a54eb29",
+    "semantic_hash": ""
+  },
+  "research/__init__.py": {
+    "mtime": 1783619475.5014172,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/test_store.py": {
+    "mtime": 1783968803.785581,
+    "ast_hash": "25b619481284f752d4c3877fdb163695",
+    "semantic_hash": ""
+  },
+  "docs/DESIGN.md": {
+    "mtime": 1783611941.8584113,
+    "ast_hash": "719f755d205ddd004b1030437830b4f2",
+    "semantic_hash": ""
+  },
+  "docs/STATE.md": {
+    "mtime": 1784084345.833143,
+    "ast_hash": "a6de96dbedfd0ba0deeb304ffdb1974c",
+    "semantic_hash": ""
+  },
+  "tests/test_crsp_loader.py": {
+    "mtime": 1783998539.8658073,
+    "ast_hash": "1d9664445509c5608493c114422140b4",
+    "semantic_hash": ""
+  },
+  "docs/METRICS.md": {
+    "mtime": 1784079514.189556,
+    "ast_hash": "c3cb55db7601095a91a841e938c5c170",
+    "semantic_hash": ""
+  },
+  "research/data/__init__.py": {
+    "mtime": 1783619476.3664737,
+    "ast_hash": "f46b9838490268fa2025b94884686c9e",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/__init__.py": {
+    "mtime": 1783998470.4952312,
+    "ast_hash": "ffea797c1a27ebfbf9b9744d2fe411a2",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/audit.py": {
+    "mtime": 1783998298.8731942,
+    "ast_hash": "86aae0d3cc41e6aad2600f671637f3f9",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/crsp_daily.py": {
+    "mtime": 1783998311.345045,
+    "ast_hash": "eb49763b723449047da8eee4e3654c95",
+    "semantic_hash": ""
+  },
+  "research/data/loaders/yfinance_daily.py": {
+    "mtime": 1784004789.2427225,
+    "ast_hash": "1e4ce6036ed893425ce9e1bdf44e4ef9",
+    "semantic_hash": ""
+  },
+  "research/data/store.py": {
+    "mtime": 1783968793.1645172,
+    "ast_hash": "0f56438e87bfdacf513978118fad50d2",
+    "semantic_hash": ""
+  },
+  "tests/test_yfinance_loader.py": {
+    "mtime": 1784004802.9409103,
+    "ast_hash": "79deca66b59a12c93e3ba72eb6dd3000",
+    "semantic_hash": ""
+  },
+  "docs/SYSTEM_MAP.md": {
+    "mtime": 1784084336.0709248,
+    "ast_hash": "93d15b17d129c547d7a07b9ddc7b1cfa",
+    "semantic_hash": ""
+  },
+  "handoff.md": {
+    "mtime": 1784084358.4736416,
+    "ast_hash": "bd6b2bbe581c893abf1275c74eb4d739",
+    "semantic_hash": ""
+  },
+  "research/universe.py": {
+    "mtime": 1784074600.6593592,
+    "ast_hash": "23c58c2655a893f180088018ace78f01",
+    "semantic_hash": ""
+  },
+  "tests/test_universe.py": {
+    "mtime": 1784074682.916761,
+    "ast_hash": "8e6b732ca7fa581d93b882249cb455e5",
+    "semantic_hash": ""
+  },
+  "tickers_top1500.txt": {
+    "mtime": 1784044747.9061184,
+    "ast_hash": "6979c2ac665d472c344f369214b2c16c",
+    "semantic_hash": ""
+  },
+  "research/security_master.py": {
+    "mtime": 1784084306.0650709,
+    "ast_hash": "f61f0d7744fee2d49c00c520b09e6869",
+    "semantic_hash": ""
+  },
+  "tests/test_security_master.py": {
+    "mtime": 1784084290.0030704,
+    "ast_hash": "d96ebd18ad3a544697ce8f6af737dde0",
+    "semantic_hash": ""
+  }
+}

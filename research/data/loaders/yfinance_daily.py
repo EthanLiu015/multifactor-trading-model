@@ -38,6 +38,7 @@ from research.data.store import PITStore
 
 DATASET = "yfinance_daily"
 SHARES_DATASET = "yfinance_shares_current"
+SECTOR_DATASET = "yfinance_sector_current"
 
 # NASDAQ Trader symbol directories: every listed US security, pipe-delimited,
 # one header row, footer line starting "File Creation Time".
@@ -127,12 +128,28 @@ class YFinanceClient:
         except Exception:
             return None  # missing/errored symbol: recorded as null, never fatal
 
+    def sector_info(self, ticker: str) -> tuple[str | None, str | None]:
+        """(sector, industry) — Yahoo's own taxonomy, not literal GICS codes.
+
+        Unlike ``fast_info`` (no sector field at all), this needs the full
+        ``.info`` property, yfinance's slowest/most rate-limited per-ticker
+        call — paced by ``pause_s`` same as chunked bar downloads.
+        """
+        import yfinance as yf
+
+        self._sleep(self.pause_s)
+        try:
+            info = yf.Ticker(ticker).info
+            return info.get("sector"), info.get("industry")
+        except Exception:
+            return None, None  # missing/errored symbol: recorded as null, never fatal
+
 
 class YFinanceDailyLoader:
     """scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.
 
-    ``client`` exposes ``download`` and ``shares_outstanding`` (see
-    :class:`YFinanceClient`); tests pass an offline fake.
+    ``client`` exposes ``download``, ``shares_outstanding``, and
+    ``sector_info`` (see :class:`YFinanceClient`); tests pass an offline fake.
     """
 
     def __init__(self, client, store: PITStore) -> None:
@@ -214,6 +231,10 @@ class YFinanceDailyLoader:
             .with_columns(
                 pl.col("security_id").cast(pl.String),
                 pl.col("effective_date").cast(pl.Date),
+                # yfinance returns volume as int when a chunk has no NaNs,
+                # float when it does (NaN forces float upcast in pandas) —
+                # pin one dtype so batches never collide in a full-column asof().
+                pl.col("volume").cast(pl.Float64),
             )
             .sort(["security_id", "effective_date"])
             .with_columns(
@@ -264,6 +285,32 @@ class YFinanceDailyLoader:
         )
         self.store.append(SHARES_DATASET, df, knowledge_ts=knowledge_ts)
         return sum(1 for v in values if v is not None)
+
+    def load_sector_current(
+        self, tickers: list[str], knowledge_ts: dt.datetime
+    ) -> int:
+        """Snapshot current sector/industry into its own dataset.
+
+        One row per ticker, effective_date = snapshot date — no free
+        source of historical sector reassignment exists, same caveat as
+        ``load_shares_current``. Returns the count of tickers that
+        resolved to a sector.
+        """
+        pairs = [self.client.sector_info(t) for t in tickers]
+        sectors = [s for s, _ in pairs]
+        industries = [i for _, i in pairs]
+        df = pl.DataFrame(
+            {
+                "security_id": pl.Series(tickers, dtype=pl.String),
+                "effective_date": pl.Series(
+                    [knowledge_ts.date()] * len(tickers), dtype=pl.Date
+                ),
+                "sector": pl.Series(sectors, dtype=pl.String),
+                "industry": pl.Series(industries, dtype=pl.String),
+            }
+        )
+        self.store.append(SECTOR_DATASET, df, knowledge_ts=knowledge_ts)
+        return sum(1 for s in sectors if s is not None)
 
 
 def select_liquid_tickers(store: PITStore, top_n: int, year: int) -> list[str]:
@@ -365,6 +412,11 @@ def main(argv: list[str] | None = None) -> int:
         help="also snapshot current shares outstanding (slow: one call/ticker)",
     )
     parser.add_argument(
+        "--sector",
+        action="store_true",
+        help="also snapshot current sector/industry (slower: one .info call/ticker)",
+    )
+    parser.add_argument(
         "--no-threads",
         action="store_true",
         help="sequential per-ticker fetch (~1-2 req/s) — survives Yahoo throttle",
@@ -447,6 +499,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.shares:
         got = loader.load_shares_current(tickers, knowledge_ts)
         print(f"shares snapshot: {got}/{len(tickers)} tickers resolved")
+
+    if args.sector:
+        got = loader.load_sector_current(tickers, knowledge_ts)
+        print(f"sector snapshot: {got}/{len(tickers)} tickers resolved")
 
     return 1 if quarantined else 0
 

@@ -1,0 +1,18 @@
+{
+  "0": "Multifactor Trading System — Design",
+  "1": "STATE",
+  "2": "test_store.py",
+  "4": "multifactor-trading-system",
+  "5": "__init__.py",
+  "6": "test_crsp_loader.py",
+  "7": "METRICS",
+  "8": "AuditReport",
+  "9": "YFinanceDailyLoader",
+  "10": "HANDOFF — Multifactor Equity Trading System",
+  "11": ".load_year",
+  "12": "Files & functions",
+  "13": "test_security_master.py",
+  "14": "test_broker_simulator.cpp",
+  "15": "test_signals.py",
+  "16": "test_ic.py"
+}

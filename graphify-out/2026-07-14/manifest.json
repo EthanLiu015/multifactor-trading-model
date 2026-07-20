@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1784001995.1495657,
-    "ast_hash": "7fd132af59f7aca13cb6d0d64bdf3d21",
+    "mtime": 1784079540.397127,
+    "ast_hash": "9c8f0ec04558e2f45c620e1ff054990e",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "docs/METRICS.md": {
-    "mtime": 1783625885.26368,
-    "ast_hash": "e7719895542abf47ce8b546611dcaa25",
+    "mtime": 1784079514.189556,
+    "ast_hash": "c3cb55db7601095a91a841e938c5c170",
     "semantic_hash": ""
   },
   "research/data/__init__.py": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "research/data/loaders/yfinance_daily.py": {
-    "mtime": 1784001936.7564912,
-    "ast_hash": "51d56ff977c3ecdeba98981e47dff9b4",
+    "mtime": 1784004789.2427225,
+    "ast_hash": "1e4ce6036ed893425ce9e1bdf44e4ef9",
     "semantic_hash": ""
   },
   "research/data/store.py": {
@@ -75,18 +75,43 @@
     "semantic_hash": ""
   },
   "tests/test_yfinance_loader.py": {
-    "mtime": 1784001956.1603656,
-    "ast_hash": "b8291bd75613f3bb88873e3095031f73",
+    "mtime": 1784004802.9409103,
+    "ast_hash": "79deca66b59a12c93e3ba72eb6dd3000",
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1784001980.4134533,
-    "ast_hash": "3762b30ad23d13143a859362a6951b4a",
+    "mtime": 1784079532.2191765,
+    "ast_hash": "dc4f047c6978c6c8584a0d88ecde8d9d",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1783998714.2844508,
-    "ast_hash": "4c3a4d82a67b3902ab105d15775fcb1e",
+    "mtime": 1784079566.1395051,
+    "ast_hash": "d058755ad274cdb89daba924fc4dccde",
+    "semantic_hash": ""
+  },
+  "research/universe.py": {
+    "mtime": 1784074600.6593592,
+    "ast_hash": "23c58c2655a893f180088018ace78f01",
+    "semantic_hash": ""
+  },
+  "tests/test_universe.py": {
+    "mtime": 1784074682.916761,
+    "ast_hash": "8e6b732ca7fa581d93b882249cb455e5",
+    "semantic_hash": ""
+  },
+  "tickers_top1500.txt": {
+    "mtime": 1784044747.9061184,
+    "ast_hash": "6979c2ac665d472c344f369214b2c16c",
+    "semantic_hash": ""
+  },
+  "research/security_master.py": {
+    "mtime": 1784079420.8523762,
+    "ast_hash": "3208da1953b1785a56e855fb80ce1898",
+    "semantic_hash": ""
+  },
+  "tests/test_security_master.py": {
+    "mtime": 1784079462.418922,
+    "ast_hash": "e7ba0e796778770ccb315a7243183bfc",
     "semantic_hash": ""
   }
 }

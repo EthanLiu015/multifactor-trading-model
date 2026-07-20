@@ -7,6 +7,8 @@ dependencies = [
     "polars>=1.42",
     "wrds>=3.2",
     "yfinance>=1.5",
+    "numpy>=2.0",
+    "scikit-learn>=1.5",
 ]
 
 [project.optional-dependencies]
