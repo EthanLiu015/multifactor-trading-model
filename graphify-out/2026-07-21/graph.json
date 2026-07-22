@@ -873,7 +873,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_init",
-      "community": 6,
+      "community": 9,
       "norm_label": "__init__.py"
     },
     {
@@ -883,7 +883,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit",
-      "community": 6,
+      "community": 9,
       "norm_label": "audit.py"
     },
     {
@@ -893,7 +893,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport",
-      "community": 6,
+      "community": 9,
       "norm_label": "auditreport"
     },
     {
@@ -903,7 +903,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport_ok",
-      "community": 6,
+      "community": 9,
       "norm_label": ".ok()"
     },
     {
@@ -913,7 +913,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_loaders_audit_audit_daily_bars",
-      "community": 6,
+      "community": 9,
       "norm_label": "audit_daily_bars()"
     },
     {
@@ -923,7 +923,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_audit_py_dataframe",
-      "community": 6,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -933,7 +933,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_1",
-      "community": 6,
+      "community": 9,
       "norm_label": "shared audit for daily-bars loaders (design.md block 1d).  every vendor chunk pa"
     },
     {
@@ -943,7 +943,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_52",
-      "community": 6,
+      "community": 9,
       "norm_label": "audit one yearly chunk of daily bars keyed (security_id, effective_date).      h"
     },
     {
@@ -953,7 +953,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily",
-      "community": 6,
+      "community": 9,
       "norm_label": "crsp_daily.py"
     },
     {
@@ -1033,7 +1033,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_audit",
-      "community": 6,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -1063,7 +1063,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_1",
-      "community": 6,
+      "community": 9,
       "norm_label": "crsp daily-bars loader (wrds, crsp 2.0 / \"ciz\" format).  pulls daily bars for al"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_audit",
-      "community": 6,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -1677,66 +1677,6 @@
       "norm_label": "trailing single-factor beta per security, as of ``rebuild_date``.      ``securit"
     },
     {
-      "label": "constraints.py",
-      "file_type": "code",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints",
-      "community": 18,
-      "norm_label": "constraints.py"
-    },
-    {
-      "label": "build_constraints()",
-      "file_type": "code",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints_build_constraints",
-      "community": 18,
-      "norm_label": "build_constraints()"
-    },
-    {
-      "label": "Variable",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints_py_variable",
-      "community": 18,
-      "norm_label": "variable"
-    },
-    {
-      "label": "Constraint",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints_py_constraint",
-      "community": 18,
-      "norm_label": "constraint"
-    },
-    {
-      "label": "Block 4b: optimizer constraints (DESIGN.md Block 4).  Builds the cvxpy constrain",
-      "file_type": "rationale",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints_rationale_1",
-      "community": 18,
-      "norm_label": "block 4b: optimizer constraints (design.md block 4).  builds the cvxpy constrain"
-    },
-    {
-      "label": "Constraint list for ``w`` (shape ``(N,)``, aligned to ``inputs.security_ids``).",
-      "file_type": "rationale",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L63",
-      "_origin": "ast",
-      "id": "research_portfolio_constraints_rationale_63",
-      "community": 18,
-      "norm_label": "constraint list for ``w`` (shape ``(n,)``, aligned to ``inputs.security_ids``)."
-    },
-    {
       "label": "inputs.py",
       "file_type": "code",
       "source_file": "research/portfolio/inputs.py",
@@ -1843,7 +1783,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures",
-      "community": 15,
+      "community": 17,
       "norm_label": "exposures.py"
     },
     {
@@ -1903,7 +1843,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_1",
-      "community": 15,
+      "community": 17,
       "norm_label": "factor exposure matrix b (block 3 risk model).  per rebalance date: one row per"
     },
     {
@@ -2897,86 +2837,6 @@
       "norm_label": "a security outside `security_ids` neither gets a beta nor pollutes the market pr"
     },
     {
-      "label": "test_constraints.py",
-      "file_type": "code",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tests_test_constraints",
-      "community": 18,
-      "norm_label": "test_constraints.py"
-    },
-    {
-      "label": "synthetic_inputs()",
-      "file_type": "code",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "tests_test_constraints_synthetic_inputs",
-      "community": 18,
-      "norm_label": "synthetic_inputs()"
-    },
-    {
-      "label": "_solve()",
-      "file_type": "code",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "tests_test_constraints_solve",
-      "community": 18,
-      "norm_label": "_solve()"
-    },
-    {
-      "label": "Variable",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "tests_test_constraints_py_variable",
-      "community": 18,
-      "norm_label": "variable"
-    },
-    {
-      "label": "Constraint",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "tests_test_constraints_py_constraint",
-      "community": 18,
-      "norm_label": "constraint"
-    },
-    {
-      "label": "test_constraints_are_dcp_and_solution_respects_every_bound()",
-      "file_type": "code",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "tests_test_constraints_test_constraints_are_dcp_and_solution_respects_every_bound",
-      "community": 18,
-      "norm_label": "test_constraints_are_dcp_and_solution_respects_every_bound()"
-    },
-    {
-      "label": "test_constraints_bind_when_alpha_pushes_against_them()",
-      "file_type": "code",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "tests_test_constraints_test_constraints_bind_when_alpha_pushes_against_them",
-      "community": 18,
-      "norm_label": "test_constraints_bind_when_alpha_pushes_against_them()"
-    },
-    {
-      "label": "A tight ADV cap forces the ADV constraint to actually bind, not just hold slack.",
-      "file_type": "rationale",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "tests_test_constraints_rationale_90",
-      "community": 18,
-      "norm_label": "a tight adv cap forces the adv constraint to actually bind, not just hold slack."
-    },
-    {
       "label": "test_crsp_loader.py",
       "file_type": "code",
       "source_file": "tests/test_crsp_loader.py",
@@ -3173,7 +3033,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 2,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -3863,7 +3723,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 2,
+      "community": 15,
       "norm_label": "store()"
     },
     {
@@ -4133,7 +3993,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_universe_store",
-      "community": 11,
+      "community": 2,
       "norm_label": "store()"
     },
     {
@@ -4930,7 +4790,7 @@
       "label": "Done",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L85",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "docs_state_done",
       "community": 1,
@@ -4940,9 +4800,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L90",
+      "source_location": "L89",
       "_origin": "ast",
-      "id": "docs_state_open_items_90",
+      "id": "docs_state_open_items_89",
       "community": 1,
       "norm_label": "open items"
     },
@@ -4950,7 +4810,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L110",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -5117,20 +4977,20 @@
       "norm_label": "research/risk/ \u2014 **built (block 3, full barra-style scope, 17 tests)**"
     },
     {
-      "label": "research/portfolio/ \u2014 **blocks 4a+4b built (Block 4 Optimizer, kicked off 2026-07-20, 8 tests)**",
+      "label": "research/portfolio/ \u2014 **block 4a built (Block 4 Optimizer, kicked off 2026-07-20, 3 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L319",
       "_origin": "ast",
-      "id": "docs_system_map_research_portfolio_blocks_4a_4b_built_block_4_optimizer_kicked_off_2026_07_20_8_tests",
+      "id": "docs_system_map_research_portfolio_block_4a_built_block_4_optimizer_kicked_off_2026_07_20_3_tests",
       "community": 12,
-      "norm_label": "research/portfolio/ \u2014 **blocks 4a+4b built (block 4 optimizer, kicked off 2026-07-20, 8 tests)**"
+      "norm_label": "research/portfolio/ \u2014 **block 4a built (block 4 optimizer, kicked off 2026-07-20, 3 tests)**"
     },
     {
       "label": "engine/ \u2014 **built (broker simulator skeleton, 6 Catch2 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L329",
+      "source_location": "L328",
       "_origin": "ast",
       "id": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
       "community": 12,
@@ -5140,27 +5000,27 @@
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L341",
+      "source_location": "L340",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **87 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **85 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L345",
+      "source_location": "L344",
       "_origin": "ast",
-      "id": "docs_system_map_tests_87_passing_python_6_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_85_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **87 passing (python)** + **6 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **85 passing (python)** + **6 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L365",
+      "source_location": "L363",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -5170,7 +5030,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L368",
+      "source_location": "L366",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -9388,7 +9248,7 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "research_portfolio_init",
-      "target": "research_portfolio_constraints",
+      "target": "research_portfolio_inputs",
       "confidence_score": 1.0
     },
     {
@@ -9399,28 +9259,6 @@
       "source_location": "L2",
       "weight": 1.0,
       "source": "research_portfolio_init",
-      "target": "research_portfolio_constraints_build_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/__init__.py",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "research_portfolio_init",
-      "target": "research_portfolio_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/__init__.py",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "research_portfolio_init",
       "target": "research_portfolio_inputs_build_optimizer_inputs",
       "confidence_score": 1.0
     },
@@ -9429,7 +9267,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/__init__.py",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "research_portfolio_init",
       "target": "research_portfolio_inputs_optimizerinputs",
@@ -9621,124 +9459,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints",
-      "target": "research_portfolio_constraints_build_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints",
-      "target": "research_portfolio_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints_rationale_1",
-      "target": "research_portfolio_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "research_portfolio_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints_build_constraints",
-      "target": "research_portfolio_constraints_py_constraint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints_build_constraints",
-      "target": "research_portfolio_constraints_py_variable",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints_build_constraints",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "research/portfolio/constraints.py",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "research_portfolio_constraints_rationale_63",
-      "target": "research_portfolio_constraints_build_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "research_portfolio_constraints_build_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "tests_test_constraints_solve",
-      "target": "research_portfolio_constraints_build_constraints",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "research/portfolio/inputs.py",
       "source_location": "L72",
       "weight": 1.0,
@@ -9813,17 +9533,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "research_portfolio_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "tests/test_portfolio_inputs.py",
       "source_location": "L8",
       "weight": 1.0,
@@ -9872,50 +9581,6 @@
       "source_location": "L72",
       "weight": 1.0,
       "source": "research_portfolio_inputs_build_optimizer_inputs",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "tests_test_constraints_solve",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "return_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "tests_test_constraints_synthetic_inputs",
-      "target": "research_portfolio_inputs_optimizerinputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L92",
-      "weight": 1.0,
-      "source": "tests_test_constraints_test_constraints_bind_when_alpha_pushes_against_them",
       "target": "research_portfolio_inputs_optimizerinputs",
       "confidence_score": 1.0
     },
@@ -12590,100 +12255,6 @@
       "weight": 1.0,
       "source": "tests_test_beta_rationale_92",
       "target": "tests_test_beta_test_beta_only_computed_over_named_securities",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "tests_test_constraints_solve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "tests_test_constraints_synthetic_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "tests_test_constraints_test_constraints_are_dcp_and_solution_respects_every_bound",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "tests_test_constraints",
-      "target": "tests_test_constraints_test_constraints_bind_when_alpha_pushes_against_them",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "tests_test_constraints_solve",
-      "target": "tests_test_constraints_py_constraint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "tests_test_constraints_solve",
-      "target": "tests_test_constraints_py_variable",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "tests_test_constraints_test_constraints_are_dcp_and_solution_respects_every_bound",
-      "target": "tests_test_constraints_solve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L93",
-      "weight": 1.0,
-      "source": "tests_test_constraints_test_constraints_bind_when_alpha_pushes_against_them",
-      "target": "tests_test_constraints_solve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_constraints.py",
-      "source_location": "L90",
-      "weight": 1.0,
-      "source": "tests_test_constraints_rationale_90",
-      "target": "tests_test_constraints_test_constraints_bind_when_alpha_pushes_against_them",
       "confidence_score": 1.0
     },
     {
@@ -15918,7 +15489,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L85",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_done",
@@ -15938,7 +15509,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L110",
+      "source_location": "L108",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -15988,10 +15559,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L90",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_90",
+      "target": "docs_state_open_items_89",
       "confidence_score": 1.0
     },
     {
@@ -16038,7 +15609,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L368",
+      "source_location": "L366",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -16068,7 +15639,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L341",
+      "source_location": "L340",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -16078,7 +15649,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L365",
+      "source_location": "L363",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -16088,7 +15659,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L329",
+      "source_location": "L328",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
@@ -16151,7 +15722,7 @@
       "source_location": "L319",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_research_portfolio_blocks_4a_4b_built_block_4_optimizer_kicked_off_2026_07_20_8_tests",
+      "target": "docs_system_map_research_portfolio_block_4a_built_block_4_optimizer_kicked_off_2026_07_20_3_tests",
       "confidence_score": 1.0
     },
     {
@@ -16198,10 +15769,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L345",
+      "source_location": "L344",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_87_passing_python_6_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_85_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {

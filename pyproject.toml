@@ -9,6 +9,7 @@ dependencies = [
     "yfinance>=1.5",
     "numpy>=2.0",
     "scikit-learn>=1.5",
+    "cvxpy>=1.5",
 ]
 
 [project.optional-dependencies]
