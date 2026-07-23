@@ -316,8 +316,8 @@ First numpy-matrix module in the repo (everything before this is Polars-only). R
 | `specific_variance.py` — `build_specific_variance(specific_return_history, halflife_days=63)` | Polars native `ewm_var(half_life=...)` per security → D |
 | `model.py` — `RiskModel` (dataclass, `.sigma()`), `build_factor_return_history`, `build_risk_model` | orchestrates all of the above into Σ = B·F·Bᵀ + diag(D) for one date, using trailing history for F/D. `RiskModel.sigma()`'s docstring documents the benign Apple Accelerate BLAS warning quirk found here |
 
-### research/portfolio/ — **blocks 4a+4b built (Block 4 Optimizer, kicked off 2026-07-20, 8 tests)**
-Path corrected to match DESIGN.md's locked repo-layout (`portfolio/`, not `optimizer/` — real-world data ground truth caught mid-build, see docs/STATE.md). Block 4c (QP solve) + 4d (model/CLI) not yet built.
+### research/portfolio/ — **blocks 4a+4b+4c built (Block 4 Optimizer, kicked off 2026-07-20, 11 tests)**
+Path corrected to match DESIGN.md's locked repo-layout (`portfolio/`, not `optimizer/` — real-world data ground truth caught mid-build, see docs/STATE.md). Block 4d (end-to-end orchestrator + CLI) not yet built.
 
 | file / symbol | does |
 |---|---|
@@ -325,6 +325,7 @@ Path corrected to match DESIGN.md's locked repo-layout (`portfolio/`, not `optim
 | `OptimizerInputs` (dataclass) | `rebuild_date`, `security_ids`, `factor_names`, `B` (N×K), `F` (K×K), `D` (N), `alpha` (N), `beta` (N), `adv` (N, $ median daily dollar volume from `universe_monthly`), `w_prev` (N) — all N-length arrays row-aligned to `security_ids` |
 | `beta.py` — `compute_market_beta(bars, rebuild_date, security_ids, window_days=252, min_obs=None)` | per-stock rolling beta = cov(stock ret, mkt ret)/var(mkt ret); market proxy = equal-weighted mean return across the SAME `security_ids` passed in (no mcap data yet). Fills a real gap: the risk model's own `"market"` exposure (risk/exposures.py) is a constant `1.0` for every stock, not a per-stock CAPM beta — β·w=0 against it would just collapse to dollar-neutral. Needed for the optimizer's real beta-neutral constraint (block 4b) |
 | `constraints.py` — `build_constraints(inputs, w, gross_cap=2.0, turnover_cap=0.5, factor_exposure_cap=0.5, adv_days=5.0, book_notional=10_000_000.0)` → `list[cp.Constraint]` | dollar-neutral (`sum(w)==0`), beta-neutral (`beta @ w==0`, real per-stock beta), sector-neutral (each `sector_*` column dotted with `w`==0), ADV-relative position caps (`\|w_i\| <= adv_days*adv_i/book_notional`, `book_notional` a placeholder QP-scaling constant — no real capital figure exists in this project), turnover cap + gross leverage cap (L1 norms), style-factor exposure bounds (momentum/low_vol, `±factor_exposure_cap`). Net-leverage limit and the constant `"market"` column deliberately left unconstrained — both already collapse into dollar-neutral. Borrow-availability filter deliberately NOT built — no free borrow data exists in the lake |
+| `solve.py` — `solve_qp(inputs, risk_aversion=5.0, cost_penalty=10.0, **constraint_kwargs)` → `(w, problem)` | builds `max αᵀw − λ·wᵀΣw − κ·‖w−w_prev‖²` s.t. `build_constraints(...)`, solves via cvxpy. Risk term kept in factor form (`quad_form(Bᵀw, F, assume_PSD=True) + Σ(D_i·w_i²)`) — never materializes the full N×N Σ. `assume_PSD=True`: F (Ledoit-Wolf shrunk) is theoretically PSD, skips a spurious DCP failure from float-rounding. The κ soft-turnover term is layered ON TOP of 4b's hard `turnover_cap`, not a replacement |
 
 ### engine/ — **built (broker simulator skeleton, 6 Catch2 tests)**
 First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on this dev machine (`-DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++`) — system AppleClang/CommandLineTools libc++ headers are broken.
@@ -342,7 +343,7 @@ First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on t
 - `research/data/__init__.py` — exports `PITStore`
 - `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`, `YFinanceDailyLoader`, `AuditReport`, `audit_daily_bars`
 
-### tests/ — **87 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**
+### tests/ — **90 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |
@@ -360,10 +361,11 @@ First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on t
 | `test_portfolio_inputs.py` | end-to-end shape/alignment (B/D/alpha/beta/w_prev all N-length), None on insufficient risk-model history, w_prev supplied vs. flat-start default |
 | `test_beta.py` | closed-form match against independent numpy cov/var recomputation, short-history empty guard, outsider security (not in `security_ids`) excluded from both output and the market proxy |
 | `test_constraints.py` | real cvxpy Problem (alpha-driven, ridge-regularized objective so the solver actually explores constraint boundaries, not just w=0), asserts every constraint holds on the solved `w`; separate test with an artificially tight ADV cap confirming it actually binds |
+| `test_solve.py` | full constraint-satisfaction check on a real `solve_qp` run, zero-alpha-flat-start returns exactly w=0 (deterministic), higher λ provably shrinks gross exposure (monotonicity) |
 | `engine/tests/test_broker_simulator.cpp` | ack, out-of-order fill-before-ack, partial-then-full fill, reject-with-reason, poll drains the queue, cancel-on-unknown-id throws |
 
 ### Config
 - `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5, numpy ≥2.0, scikit-learn ≥1.5, cvxpy ≥1.5; pytest config
 
 ## Not yet started (DESIGN.md blocks)
-security master block 4 (CRSP permno/CUSIP hookup) · `research/portfolio/` blocks 4c-4d (QP solve, model/CLI — 4a inputs + 4b constraints done) · `research/attribution/` · backtester · `engine/` remaining Block 5 pieces (order gateway state machine, position keeper, pre-trade risk checks, market data handler, live `AlpacaGateway`) · `common/` · `infra/`
+security master block 4 (CRSP permno/CUSIP hookup) · `research/portfolio/` block 4d (end-to-end orchestrator + CLI — 4a inputs, 4b constraints, 4c solve all done) · `research/attribution/` · backtester · `engine/` remaining Block 5 pieces (order gateway state machine, position keeper, pre-trade risk checks, market data handler, live `AlpacaGateway`) · `common/` · `infra/`

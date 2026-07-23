@@ -1,7 +1,7 @@
 # HANDOFF — Multifactor Equity Trading System
 
 > Primary-context document for any agent or developer continuing this project.
-> Written 2026-07-13, last updated 2026-07-19. Ground truth hierarchy when documents disagree:
+> Written 2026-07-13, last updated 2026-07-22. Ground truth hierarchy when documents disagree:
 > **code + tests > docs/STATE.md > docs/DESIGN.md > this file > everything else.**
 > Read docs/STATE.md first in every new session — it is the live state ledger.
 
@@ -62,7 +62,7 @@ Locked decisions (do not relitigate; full table in DESIGN.md):
 
 **Phasing rule — local-first, distribute second**: ~1,000 names × 15y daily ≈ a few GB; fits in Polars on a laptop (measured: 13 MB parquet). The distributed stack is a learning/resume showcase, ported *after* the vertical slice works locally. Never let infra gate alpha work.
 
-## 3. Current implementation status (2026-07-14)
+## 3. Current implementation status (2026-07-22)
 
 Honest inventory. **Built** means tested code in the repo; nothing else is.
 
@@ -75,13 +75,13 @@ Honest inventory. **Built** means tested code in the repo; nothing else is.
 | Security master (part 4) | **blocks 1-3 of 4 BUILT** | `research/security_master.py`, 14 tests. Block 1: schema + PITStore fit. Block 2: `build_ticker_segments` extracts identity segments from the real lake via a trading-gap heuristic; real run found 2 gap tickers (MKC, QLYS), both confirmed **vendor data gaps, not real reuse** (§12 item 11). Block 3: `resolve_securities` (vectorized panel lookup, house no-loop rule) + `resolve_security` (scalar wrapper); real-lake probe confirms MKC resolves to the correct internal_id on each side of its gap and `None` inside it. Block 4 (CRSP permno/CUSIP hookup) blocked on WRDS |
 | Phase 2: signals + IC measurement | **BUILT** | `research/signals/{momentum,reversal,low_vol}.py` + registry (`__init__.py`'s `SIGNAL_REGISTRY`), `research/alpha/ic.py` (`compute_forward_returns`, `compute_ic`, `build_ic_series`, `ic_summary`). 15 tests. Real run over the full 2011–2026 lake: momentum n=169 mean_ic=0.019 t=1.45, reversal n=180 mean_ic=0.0007 t=0.07, low_vol n=174 mean_ic=-0.0017 t=-0.10 (824.2s) — see docs/METRICS.md. Scope is momentum/reversal/low-vol only — value/quality/size need fundamentals not yet ingested (data-availability fact, not a preference). Registry pattern exists specifically so future (non-raw/simple) signals are one file + one line, not a rewrite |
 | Risk model (Block 3) | **BUILT, real-lake verified** | `research/risk/` (exposures.py, regression.py, factor_covariance.py, specific_variance.py, model.py) — full Barra-style scope (market + 10 sector dummies + momentum + low-vol = 13 factors, not a sectors-skipped minimal version). Cross-sectional OLS regression per date (`numpy.linalg.lstsq`) → factor + specific returns; EWMA (63-day half-life) + scikit-learn `LedoitWolf` shrinkage + Newey-West → factor covariance F; EWMA specific variance D; `RiskModel.sigma()` assembles Σ = B·F·Bᵀ + D. 17 tests. Real run: 985 securities, 179.5s, shrinkage=0.302, Σ symmetric + explicitly confirmed finite — see docs/METRICS.md. Two real bugs found+fixed against the real lake (null sector crash, null-ret NaN corruption) plus one red herring ruled out (benign Apple Accelerate BLAS warnings, documented in `RiskModel.sigma()`'s docstring) — full chain in docs/METRICS.md and docs/STATE.md Failed attempts |
-| Optimizer / backtester | designed only (DESIGN.md Block 4 + Backtester) | |
+| Optimizer (Block 4) | **blocks 4a-4c of 4d BUILT** | `research/portfolio/` (beta.py, inputs.py, constraints.py, solve.py). Block 4a: `build_optimizer_inputs`/`OptimizerInputs` — aligns alpha (placeholder equal-weight blend of the 3 signals, shrink 0.5x/cap ±3), per-stock beta, ADV, w_prev against the risk model's B/F/D in factor form. Block 4b: `build_constraints` — dollar/beta/sector-neutral, ADV-relative caps, turnover cap, gross cap, style-factor bounds (borrow-availability filter deferred — no free data source exists). Block 4c: `solve_qp` — cvxpy QP, `max αᵀw − λ·wᵀΣw − κ‖w−w_prev‖²`, risk term kept in factor form (never materializes N×N Σ). 8 new tests across 4 files. Real numeric checks, not just shape checks: constraint-boundary tests, zero-alpha exact-zero solve, λ-monotonicity. **Next**: block 4d — `research/portfolio/model.py`, chain store→inputs→solve into one call + CLI, mirrors `research/risk/model.py`'s `build_risk_model` role. Backtester (DESIGN.md, after Block 4) not yet scoped |
 | C++ engine — broker simulator skeleton | **BUILT** | `engine/` (CMake + Catch2 v3.9.1, C++20): `IBrokerGateway`/`Order`/`OrderEvent` interface, `BrokerSimulator` (submit/cancel/poll_events + inject_ack/inject_fill/inject_reject/inject_cancel_ack test-scripting API), `EventJournal` CSV append-log stub; 6 Catch2 tests. Order gateway, position keeper, risk checks, market data handler, live AlpacaGateway are separate, unscoped. Requires Homebrew LLVM (`-DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++`) — system AppleClang/CommandLineTools libc++ headers are broken on the dev machine. **Known gap**: `inject_fill` does not validate the fill price against the order's `limit_price` — a test can force-fill at any price regardless of the limit; add a check before testing limit-order-specific behavior |
 | Ops layer, analytics suite | designed only (Block 6 + Ops layer) | |
-| Python test suite | **79 passing** — `.venv/bin/python -m pytest` | |
+| Python test suite | **90 passing** — `.venv/bin/python -m pytest` | |
 | C++ test suite | **6 passing** — `ctest --test-dir engine/build --output-on-failure` | |
 
-Full Python test suite currently: `79 passed`. Baseline discipline: run it before and after every change set.
+Full Python test suite currently: `90 passed`. Baseline discipline: run it before and after every change set.
 
 ## 4. Repository layout
 
@@ -100,6 +100,8 @@ research/               Python research stack (only package with code so far)
   signals/              Phase 2: momentum.py/reversal.py/low_vol.py + SIGNAL_REGISTRY (__init__.py)
   alpha/                Phase 2: ic.py — forward returns, IC (Spearman), IC time series + summary
   risk/                 Block 3: exposures/regression/factor_covariance/specific_variance/model.py
+  portfolio/             Block 4 (Optimizer): beta.py/inputs.py/constraints.py/solve.py (4a-4c
+                        done); model.py (4d, orchestrator + CLI) not yet built
 tests/                  pytest; offline-only (fake vendor connections) except
                         universe.py/security_master.py/signals+ic tests, which use real tmp_path stores
 docs/
@@ -118,14 +120,14 @@ engine/                 C++ (CMake + Catch2 v3.9.1, C++20) — Block 5 hot path,
   CMakeLists.txt        root build file; build/ is gitignored
 common/ infra/          NOT YET CREATED — reserved by DESIGN.md repo-layout section
 pyproject.toml          deps: polars>=1.42, wrds>=3.2, yfinance>=1.5, numpy>=2.0,
-                        scikit-learn>=1.5; pytest config
+                        scikit-learn>=1.5, cvxpy>=1.5; pytest config
 graphify-out/           generated code knowledge graph (query with `graphify query "..."`)
 lake/                   default PITStore root. Datasets: yfinance_daily (4.82M rows,
                         2011–2026 YTD × top-1500), universe_monthly (185 snapshots),
                         security_master (6,141 ticker-identity segments, block 2 output)
 ```
 
-Planned-but-absent directories (`research/portfolio/`, `research/attribution/`, `common/`, `infra/`, …) are named in DESIGN.md's repo-layout section; do not create them before their block's build phase.
+Planned-but-absent directories (`research/attribution/`, `common/`, `infra/`, …) are named in DESIGN.md's repo-layout section; do not create them before their block's build phase.
 
 ## 5. The core abstraction — bitemporal PIT store
 
@@ -219,8 +221,9 @@ The owner runs a strict protocol — violating it damages trust regardless of co
 | yfinance | ≥1.5 (1.5.1 installed) | Interim free bars vendor while WRDS is season-blocked |
 | numpy | ≥2.0 (2.2.6 installed) | Block 3's matrix algebra (DESIGN 1c: "Polars for tables, NumPy for matrices") — was already present transitively via polars/pandas, now declared directly for its first direct use |
 | scikit-learn | ≥1.5 (1.7.2 installed) | `LedoitWolf` shrinkage for the factor covariance matrix — correctness risk of hand-rolling the 2004 paper's optimal-shrinkage formula judged higher than the cost of one standard dependency (2026-07-17 decision) |
+| cvxpy | ≥1.5 (1.7.5 installed) | Block 4's QP modeling layer (bundles OSQP/Clarabel/SCS solvers) — chosen over hand-built OSQP matrices for constraint-iteration ergonomics; solve is once-daily so latency is non-critical (2026-07-20 decision) |
 
-Python 3.10 venv at `.venv/`; test command `.venv/bin/python -m pytest`. No uv, no lockfile (known gap, §12). Future (designed, not installed): cvxpy/OSQP (Block 4), Spark/Databricks/Delta (infra phase), kdb+ (live ticks).
+Python 3.10 venv at `.venv/`; test command `.venv/bin/python -m pytest`. No uv, no lockfile (known gap, §12). Future (designed, not installed): Spark/Databricks/Delta (infra phase), kdb+ (live ticks).
 
 ## 11. Performance model
 
@@ -267,7 +270,7 @@ Ordered by severity. None are hidden in the code — all are stated here or in S
 - **PIT correctness is tested as behavior**, not implementation: `test_asof_point_in_time` writes a value + a revision under different knowledge_ts and asserts three vintages (before/mid/after). Any store refactor must keep that test green untouched.
 - Idempotency, schema rejection, quarantine-not-store, flag-don't-drop each have a dedicated test.
 - Fresh `tmp_path` store per test — no shared state.
-- Run: `.venv/bin/python -m pytest` (79 passing). Narrow first during debugging (`pytest tests/test_x.py::test_y -x`), full suite as the gate. `test_universe.py`/`test_security_master.py` don't fake a vendor (nothing to fake) but still use a fresh `tmp_path` `PITStore` — no network either way.
+- Run: `.venv/bin/python -m pytest` (90 passing). Narrow first during debugging (`pytest tests/test_x.py::test_y -x`), full suite as the gate. `test_universe.py`/`test_security_master.py` don't fake a vendor (nothing to fake) but still use a fresh `tmp_path` `PITStore` — no network either way.
 - Gap: no property-based tests, no benchmarks in CI; live-pull integration is manual by design (credentials).
 
 ## 15. How to add things
@@ -294,8 +297,9 @@ Immediate queue, in order:
 5. ~~Fix the `volume` dtype bug~~ **DONE 2026-07-15** — real cause was the single 2026 gap-fill parquet part (`k=2026-07-14T19-06-00..._part=2026.parquet`) written as Int64; loader's `_transform` now casts volume to Float64, the one bad file was cast in place, regression test added. `.venv/bin/python -m pytest -q` -> 46 passed.
 6. ~~Broker simulator skeleton (C++ engine, out-of-phasing-order design/scope pass)~~ **DONE 2026-07-16** — `engine/` built and tested (see status table above). This jumped ahead of DESIGN.md's build-phasing order (C++ engine is step 7, after signals/risk/optimizer/backtester) as an explicit design/scope exercise, not a phasing change — remaining Block 5 pieces still wait their turn.
 7. ~~Phase 2: signals + IC measurement~~ **DONE 2026-07-16/17** — `research/signals/` (momentum/reversal/low_vol + registry) + `research/alpha/ic.py`, real run over the full lake recorded in docs/METRICS.md (§ Signal/alpha pipeline).
-8. ~~Block 3: Risk Model~~ **DONE 2026-07-19** — sector/industry loader (2026-07-17) + `research/risk/` (exposures, cross-sectional regression, EWMA+Ledoit-Wolf+Newey-West factor covariance, specific variance, Σ assembly). Real run: 985 securities, 13 factors, 179.5s (docs/METRICS.md). Two real bugs found+fixed against the real lake, one red herring (benign Apple Accelerate BLAS warnings) ruled out — full chain in docs/METRICS.md. **Next in DESIGN.md's phasing order**: Block 4 (Optimizer), not yet scoped.
-9. **Fall (WRDS returns)**: run `crsp_daily` live — `verify_schema()` first, full backfill, METRICS entry, then reconcile vs yfinance (DESIGN 1a cross-vendor checks) via security master block 4.
+8. ~~Block 3: Risk Model~~ **DONE 2026-07-19** — sector/industry loader (2026-07-17) + `research/risk/` (exposures, cross-sectional regression, EWMA+Ledoit-Wolf+Newey-West factor covariance, specific variance, Σ assembly). Real run: 985 securities, 13 factors, 179.5s (docs/METRICS.md). Two real bugs found+fixed against the real lake, one red herring (benign Apple Accelerate BLAS warnings) ruled out — full chain in docs/METRICS.md.
+9. **Block 4: Optimizer, blocks 4a-4c DONE 2026-07-20/21/22** — `research/portfolio/` (beta.py, inputs.py, constraints.py, solve.py); real numeric tests (constraint-boundary, zero-alpha exact solve, λ-monotonicity), `.venv/bin/python -m pytest -q` -> "90 passed". **Next**: block 4d — `research/portfolio/model.py` orchestrator (store→inputs→solve chained, mirrors `research/risk/model.py`'s `build_risk_model`) + CLI.
+10. **Fall (WRDS returns)**: run `crsp_daily` live — `verify_schema()` first, full backfill, METRICS entry, then reconcile vs yfinance (DESIGN 1a cross-vendor checks) via security master block 4.
 
 Item 4 in §12 (test year bomb) — **FIXED**, see status table above; both loader test files use `dt.date.today().year`.
 
