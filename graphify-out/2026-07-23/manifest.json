@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1784735375.6320362,
-    "ast_hash": "948de8bd0b77253f4d30422b5569eb0f",
+    "mtime": 1784841104.0071104,
+    "ast_hash": "c5154818d06d684fa4bb2057a15906cb",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1784735407.8313758,
-    "ast_hash": "cd9531160a1a79c841b45b028e2fd293",
+    "mtime": 1784841082.5677848,
+    "ast_hash": "89319741ddab974efc8055d7b712a049",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1784490402.6946893,
-    "ast_hash": "d5fa79f10f4e373ab299e94b55972cc3",
+    "mtime": 1784830639.3833542,
+    "ast_hash": "6d181b717de48a6c0208333cb4e9d9cb",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "research/portfolio/__init__.py": {
-    "mtime": 1784735344.4205806,
-    "ast_hash": "63288da54d4020dd96e80e48a0c41c35",
+    "mtime": 1784830503.7952323,
+    "ast_hash": "3316081e263092541cf19615d46f8d4a",
     "semantic_hash": ""
   },
   "research/portfolio/inputs.py": {
@@ -297,6 +297,31 @@
   "tests/test_solve.py": {
     "mtime": 1784735323.6566677,
     "ast_hash": "94e78f1c1120a1b32ffc9f656d50db4d",
+    "semantic_hash": ""
+  },
+  "research/portfolio/model.py": {
+    "mtime": 1784830498.9443955,
+    "ast_hash": "243675900ea84d7ad3cfee81e9b6c5f7",
+    "semantic_hash": ""
+  },
+  "tests/test_model.py": {
+    "mtime": 1784830520.3267226,
+    "ast_hash": "80876401ca616bc5804af85436cecb0e",
+    "semantic_hash": ""
+  },
+  "research/backtest/__init__.py": {
+    "mtime": 1784840985.1103163,
+    "ast_hash": "7ac62a26aa3d53c7a1f96a55ba18b84d",
+    "semantic_hash": ""
+  },
+  "research/backtest/costs.py": {
+    "mtime": 1784840980.496369,
+    "ast_hash": "d4be94f27849c821c12e8670af48393e",
+    "semantic_hash": ""
+  },
+  "tests/test_costs.py": {
+    "mtime": 1784841045.4062269,
+    "ast_hash": "4416ddc93fc85f4b1790df7919ad2d2d",
     "semantic_hash": ""
   }
 }

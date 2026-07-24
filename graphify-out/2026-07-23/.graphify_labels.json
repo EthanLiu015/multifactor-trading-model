@@ -17,5 +17,7 @@
   "15": "test_signals.py",
   "16": "test_ic.py",
   "17": "build_exposure_matrix",
-  "18": "build_optimizer_inputs"
+  "18": "build_optimizer_inputs",
+  "19": "build_exposure_matrix",
+  "20": "trade_cost"
 }

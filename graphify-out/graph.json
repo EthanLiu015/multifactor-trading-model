@@ -859,11 +859,191 @@
     {
       "label": "__init__.py",
       "file_type": "code",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_backtest_init",
+      "community": 20,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "costs.py",
+      "file_type": "code",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_backtest_costs",
+      "community": 20,
+      "norm_label": "costs.py"
+    },
+    {
+      "label": "trade_cost()",
+      "file_type": "code",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "research_backtest_costs_trade_cost",
+      "community": 20,
+      "norm_label": "trade_cost()"
+    },
+    {
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_backtest_costs_py_ndarray",
+      "community": 20,
+      "norm_label": "ndarray"
+    },
+    {
+      "label": "Block 5a: research-side trading cost model (DESIGN.md Block 5's cost components,",
+      "file_type": "rationale",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_backtest_costs_rationale_1",
+      "community": 20,
+      "norm_label": "block 5a: research-side trading cost model (design.md block 5's cost components,"
+    },
+    {
+      "label": "Per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `",
+      "file_type": "rationale",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "research_backtest_costs_rationale_25",
+      "community": 20,
+      "norm_label": "per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `"
+    },
+    {
+      "label": "simulate.py",
+      "file_type": "code",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_backtest_simulate",
+      "community": 20,
+      "norm_label": "simulate.py"
+    },
+    {
+      "label": "_empty_holding_returns()",
+      "file_type": "code",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_empty_holding_returns",
+      "community": 20,
+      "norm_label": "_empty_holding_returns()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_py_dataframe",
+      "community": 20,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "_holding_period_return()",
+      "file_type": "code",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_holding_period_return",
+      "community": 20,
+      "norm_label": "_holding_period_return()"
+    },
+    {
+      "label": "LazyFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_py_lazyframe",
+      "community": 20,
+      "norm_label": "lazyframe"
+    },
+    {
+      "label": "date",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_py_date",
+      "community": 20,
+      "norm_label": "date"
+    },
+    {
+      "label": "BacktestStep",
+      "file_type": "code",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_backteststep",
+      "community": 20,
+      "norm_label": "backteststep"
+    },
+    {
+      "label": "run_backtest()",
+      "file_type": "code",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_run_backtest",
+      "community": 20,
+      "norm_label": "run_backtest()"
+    },
+    {
+      "label": "datetime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_py_datetime",
+      "community": 20,
+      "norm_label": "datetime"
+    },
+    {
+      "label": "Block 5b: walk-forward day-loop orchestrator (DESIGN.md's Backtester).  The sole",
+      "file_type": "rationale",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_rationale_1",
+      "community": 20,
+      "norm_label": "block 5b: walk-forward day-loop orchestrator (design.md's backtester).  the sole"
+    },
+    {
+      "label": "Cumulative return per security over ``(start_date, end_date]``.      Excludes ``",
+      "file_type": "rationale",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_rationale_48",
+      "community": 20,
+      "norm_label": "cumulative return per security over ``(start_date, end_date]``.      excludes ``"
+    },
+    {
+      "label": "Walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw",
+      "file_type": "rationale",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "research_backtest_simulate_rationale_94",
+      "community": 20,
+      "norm_label": "walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
       "source_file": "research/data/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_init",
-      "community": 2,
+      "community": 6,
       "norm_label": "__init__.py"
     },
     {
@@ -973,7 +1153,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_init",
-      "community": 2,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1183,7 +1363,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 2,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1433,7 +1613,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store",
-      "community": 9,
+      "community": 6,
       "norm_label": "store.py"
     },
     {
@@ -1443,7 +1623,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "research_data_store_pitstore",
-      "community": 2,
+      "community": 6,
       "norm_label": "pitstore"
     },
     {
@@ -1453,7 +1633,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_data_store_pitstore_init",
-      "community": 2,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1463,7 +1643,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 2,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -1473,7 +1653,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "research_data_store_pitstore_dataset_dir",
-      "community": 2,
+      "community": 6,
       "norm_label": "._dataset_dir()"
     },
     {
@@ -1483,7 +1663,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "research_data_store_pitstore_append",
-      "community": 2,
+      "community": 6,
       "norm_label": ".append()"
     },
     {
@@ -1493,7 +1673,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_dataframe",
-      "community": 2,
+      "community": 6,
       "norm_label": "dataframe"
     },
     {
@@ -1503,7 +1683,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_datetime",
-      "community": 2,
+      "community": 6,
       "norm_label": "datetime"
     },
     {
@@ -1513,7 +1693,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "research_data_store_pitstore_scan",
-      "community": 2,
+      "community": 6,
       "norm_label": ".scan()"
     },
     {
@@ -1523,7 +1703,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_lazyframe",
-      "community": 2,
+      "community": 6,
       "norm_label": "lazyframe"
     },
     {
@@ -1533,7 +1713,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "research_data_store_pitstore_asof",
-      "community": 2,
+      "community": 6,
       "norm_label": ".asof()"
     },
     {
@@ -1543,7 +1723,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store_rationale_1",
-      "community": 9,
+      "community": 6,
       "norm_label": "point-in-time (bitemporal) parquet store.  every dataset in the lake carries two"
     },
     {
@@ -1553,7 +1733,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_data_store_rationale_28",
-      "community": 2,
+      "community": 6,
       "norm_label": "a directory-per-dataset parquet lake with point-in-time reads."
     },
     {
@@ -1563,7 +1743,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_store_rationale_43",
-      "community": 2,
+      "community": 6,
       "norm_label": "write one load batch. idempotent: same knowledge_ts overwrites.          the bat"
     },
     {
@@ -1573,7 +1753,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "research_data_store_rationale_81",
-      "community": 2,
+      "community": 6,
       "norm_label": "lazy scan of every batch in a dataset (no pit filtering)."
     },
     {
@@ -1583,7 +1763,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "research_data_store_rationale_91",
-      "community": 2,
+      "community": 6,
       "norm_label": "the world as we knew it at ``knowledge_ts``.          drops rows learned after t"
     },
     {
@@ -1850,7 +2030,7 @@
       "label": "build_target_portfolio()",
       "file_type": "code",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "research_portfolio_model_build_target_portfolio",
       "community": 18,
@@ -1900,9 +2080,9 @@
       "label": "Target weights for one rebalance date, or ``None`` if inputs can't be built.",
       "file_type": "rationale",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L56",
+      "source_location": "L58",
       "_origin": "ast",
-      "id": "research_portfolio_model_rationale_56",
+      "id": "research_portfolio_model_rationale_58",
       "community": 18,
       "norm_label": "target weights for one rebalance date, or ``none`` if inputs can't be built."
     },
@@ -1983,7 +2163,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures",
-      "community": 15,
+      "community": 3,
       "norm_label": "exposures.py"
     },
     {
@@ -1993,7 +2173,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_risk_exposures_zscore",
-      "community": 19,
+      "community": 3,
       "norm_label": "_zscore()"
     },
     {
@@ -2003,7 +2183,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_dataframe",
-      "community": 19,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -2013,7 +2193,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "research_risk_exposures_build_exposure_matrix",
-      "community": 19,
+      "community": 3,
       "norm_label": "build_exposure_matrix()"
     },
     {
@@ -2023,7 +2203,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_lazyframe",
-      "community": 19,
+      "community": 3,
       "norm_label": "lazyframe"
     },
     {
@@ -2033,7 +2213,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_date",
-      "community": 19,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -2043,7 +2223,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_1",
-      "community": 15,
+      "community": 3,
       "norm_label": "factor exposure matrix b (block 3 risk model).  per rebalance date: one row per"
     },
     {
@@ -2053,7 +2233,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_52",
-      "community": 19,
+      "community": 3,
       "norm_label": "exposure matrix b for one rebalance date.      ``sectors`` is the already-asof'd"
     },
     {
@@ -3117,6 +3297,56 @@
       "norm_label": "a tight adv cap forces the adv constraint to actually bind, not just hold slack."
     },
     {
+      "label": "test_costs.py",
+      "file_type": "code",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_costs",
+      "community": 20,
+      "norm_label": "test_costs.py"
+    },
+    {
+      "label": "test_zero_trade_gives_zero_cost()",
+      "file_type": "code",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "tests_test_costs_test_zero_trade_gives_zero_cost",
+      "community": 20,
+      "norm_label": "test_zero_trade_gives_zero_cost()"
+    },
+    {
+      "label": "test_impact_rate_scales_sublinearly_with_trade_size()",
+      "file_type": "code",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "tests_test_costs_test_impact_rate_scales_sublinearly_with_trade_size",
+      "community": 20,
+      "norm_label": "test_impact_rate_scales_sublinearly_with_trade_size()"
+    },
+    {
+      "label": "test_lower_adv_gives_higher_cost_for_same_trade()",
+      "file_type": "code",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "tests_test_costs_test_lower_adv_gives_higher_cost_for_same_trade",
+      "community": 20,
+      "norm_label": "test_lower_adv_gives_higher_cost_for_same_trade()"
+    },
+    {
+      "label": "Square-root impact: the cost RATE (bps) grows as sqrt(size), not the     total $",
+      "file_type": "rationale",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tests_test_costs_rationale_16",
+      "community": 20,
+      "norm_label": "square-root impact: the cost rate (bps) grows as sqrt(size), not the     total $"
+    },
+    {
       "label": "test_crsp_loader.py",
       "file_type": "code",
       "source_file": "tests/test_crsp_loader.py",
@@ -3193,7 +3423,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_store",
-      "community": 2,
+      "community": 6,
       "norm_label": "store()"
     },
     {
@@ -3263,7 +3493,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_exposures",
-      "community": 19,
+      "community": 3,
       "norm_label": "test_exposures.py"
     },
     {
@@ -3273,7 +3503,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_exposures_trading_days",
-      "community": 19,
+      "community": 3,
       "norm_label": "trading_days()"
     },
     {
@@ -3283,7 +3513,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_date",
-      "community": 19,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -3293,7 +3523,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_exposures_ret_bars",
-      "community": 19,
+      "community": 3,
       "norm_label": "ret_bars()"
     },
     {
@@ -3303,7 +3533,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_dataframe",
-      "community": 19,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -3313,7 +3543,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 19,
+      "community": 3,
       "norm_label": "store()"
     },
     {
@@ -3323,7 +3553,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_exposures_test_build_exposure_matrix_shape_and_sector_dummies",
-      "community": 19,
+      "community": 3,
       "norm_label": "test_build_exposure_matrix_shape_and_sector_dummies()"
     },
     {
@@ -3333,7 +3563,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_test_exposures_test_security_missing_sector_is_excluded",
-      "community": 19,
+      "community": 3,
       "norm_label": "test_security_missing_sector_is_excluded()"
     },
     {
@@ -3343,7 +3573,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_exposures_test_null_sector_value_excluded_not_crashed",
-      "community": 19,
+      "community": 3,
       "norm_label": "test_null_sector_value_excluded_not_crashed()"
     },
     {
@@ -3353,7 +3583,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_test_exposures_test_empty_when_no_members_have_enough_history",
-      "community": 19,
+      "community": 3,
       "norm_label": "test_empty_when_no_members_have_enough_history()"
     },
     {
@@ -3453,7 +3683,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_ic_store",
-      "community": 16,
+      "community": 6,
       "norm_label": "store()"
     },
     {
@@ -3893,7 +4123,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_security_master_store",
-      "community": 2,
+      "community": 13,
       "norm_label": "store()"
     },
     {
@@ -4103,7 +4333,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 2,
+      "community": 6,
       "norm_label": "store()"
     },
     {
@@ -4185,6 +4415,116 @@
       "id": "tests_test_signals_rationale_17",
       "community": 15,
       "norm_label": "n consecutive weekdays starting at (or after) start."
+    },
+    {
+      "label": "test_simulate.py",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_simulate",
+      "community": 20,
+      "norm_label": "test_simulate.py"
+    },
+    {
+      "label": "trading_days()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tests_test_simulate_trading_days",
+      "community": 20,
+      "norm_label": "trading_days()"
+    },
+    {
+      "label": "date",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "tests_test_simulate_py_date",
+      "community": 20,
+      "norm_label": "date"
+    },
+    {
+      "label": "ret_bars()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "tests_test_simulate_ret_bars",
+      "community": 20,
+      "norm_label": "ret_bars()"
+    },
+    {
+      "label": "DataFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "tests_test_simulate_py_dataframe",
+      "community": 20,
+      "norm_label": "dataframe"
+    },
+    {
+      "label": "store()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "tests_test_simulate_store",
+      "community": 20,
+      "norm_label": "store()"
+    },
+    {
+      "label": "populated_store()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "tests_test_simulate_populated_store",
+      "community": 20,
+      "norm_label": "populated_store()"
+    },
+    {
+      "label": "test_run_backtest_produces_a_step_per_rebalance_date()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
+      "community": 20,
+      "norm_label": "test_run_backtest_produces_a_step_per_rebalance_date()"
+    },
+    {
+      "label": "test_run_backtest_threads_w_prev_across_dates()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
+      "community": 20,
+      "norm_label": "test_run_backtest_threads_w_prev_across_dates()"
+    },
+    {
+      "label": "test_run_backtest_skips_dates_with_insufficient_history()",
+      "file_type": "code",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "community": 20,
+      "norm_label": "test_run_backtest_skips_dates_with_insufficient_history()"
+    },
+    {
+      "label": "First rebalance starts flat (full cost); later ones trade only the delta.",
+      "file_type": "rationale",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "tests_test_simulate_rationale_124",
+      "community": 20,
+      "norm_label": "first rebalance starts flat (full cost); later ones trade only the delta."
     },
     {
       "label": "test_solve.py",
@@ -4613,7 +4953,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 2,
+      "community": 6,
       "norm_label": "store()"
     },
     {
@@ -5190,7 +5530,7 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "docs_state_open_items",
       "community": 1,
@@ -5200,7 +5540,7 @@
       "label": "Constraints",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "docs_state_constraints",
       "community": 1,
@@ -5210,7 +5550,7 @@
       "label": "Decisions",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "docs_state_decisions",
       "community": 1,
@@ -5220,7 +5560,7 @@
       "label": "Facts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L75",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "docs_state_facts",
       "community": 1,
@@ -5230,7 +5570,7 @@
       "label": "Done",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L89",
+      "source_location": "L94",
       "_origin": "ast",
       "id": "docs_state_done",
       "community": 1,
@@ -5240,9 +5580,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L94",
+      "source_location": "L99",
       "_origin": "ast",
-      "id": "docs_state_open_items_94",
+      "id": "docs_state_open_items_99",
       "community": 1,
       "norm_label": "open items"
     },
@@ -5250,7 +5590,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L116",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -5427,10 +5767,20 @@
       "norm_label": "research/portfolio/ \u2014 **block 4 optimizer built (kicked off 2026-07-20, 14 tests)**"
     },
     {
-      "label": "engine/ \u2014 **built (broker simulator skeleton, 6 Catch2 tests)**",
+      "label": "research/backtest/ \u2014 **blocks 5a+5b built (Block 5 Backtester, kicked off 2026-07-23, 6 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L331",
+      "_origin": "ast",
+      "id": "docs_system_map_research_backtest_blocks_5a_5b_built_block_5_backtester_kicked_off_2026_07_23_6_tests",
+      "community": 12,
+      "norm_label": "research/backtest/ \u2014 **blocks 5a+5b built (block 5 backtester, kicked off 2026-07-23, 6 tests)**"
+    },
+    {
+      "label": "engine/ \u2014 **built (broker simulator skeleton, 6 Catch2 tests)**",
+      "file_type": "document",
+      "source_file": "docs/SYSTEM_MAP.md",
+      "source_location": "L339",
       "_origin": "ast",
       "id": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
       "community": 12,
@@ -5440,27 +5790,27 @@
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L343",
+      "source_location": "L351",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **93 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **99 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L347",
+      "source_location": "L355",
       "_origin": "ast",
-      "id": "docs_system_map_tests_93_passing_python_6_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_99_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **93 passing (python)** + **6 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **99 passing (python)** + **6 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L369",
+      "source_location": "L379",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -5470,7 +5820,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L372",
+      "source_location": "L382",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -5530,7 +5880,7 @@
       "label": "4. Repository layout",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "handoff_4_repository_layout",
       "community": 10,
@@ -5540,7 +5890,7 @@
       "label": "5. The core abstraction \u2014 bitemporal PIT store",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L132",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "handoff_5_the_core_abstraction_bitemporal_pit_store",
       "community": 10,
@@ -5550,7 +5900,7 @@
       "label": "6. The loader contract (DESIGN.md Block 1d)",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L154",
+      "source_location": "L155",
       "_origin": "ast",
       "id": "handoff_6_the_loader_contract_design_md_block_1d",
       "community": 10,
@@ -5560,7 +5910,7 @@
       "label": "7. Data flow end-to-end (current + near-term)",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L174",
+      "source_location": "L175",
       "_origin": "ast",
       "id": "handoff_7_data_flow_end_to_end_current_near_term",
       "community": 10,
@@ -5570,7 +5920,7 @@
       "label": "8. Coding conventions",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L188",
+      "source_location": "L189",
       "_origin": "ast",
       "id": "handoff_8_coding_conventions",
       "community": 10,
@@ -5580,7 +5930,7 @@
       "label": "9. Development process (as important as the code)",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L202",
+      "source_location": "L203",
       "_origin": "ast",
       "id": "handoff_9_development_process_as_important_as_the_code",
       "community": 10,
@@ -5590,7 +5940,7 @@
       "label": "10. Dependencies and rationale",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L214",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "handoff_10_dependencies_and_rationale",
       "community": 10,
@@ -5600,7 +5950,7 @@
       "label": "11. Performance model",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L228",
+      "source_location": "L229",
       "_origin": "ast",
       "id": "handoff_11_performance_model",
       "community": 10,
@@ -5610,7 +5960,7 @@
       "label": "12. Known limitations, technical debt, inconsistencies",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L241",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "handoff_12_known_limitations_technical_debt_inconsistencies",
       "community": 10,
@@ -5620,7 +5970,7 @@
       "label": "13. Non-obvious implementation details & pitfalls",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L257",
+      "source_location": "L258",
       "_origin": "ast",
       "id": "handoff_13_non_obvious_implementation_details_pitfalls",
       "community": 10,
@@ -5630,7 +5980,7 @@
       "label": "14. Testing strategy",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L267",
+      "source_location": "L268",
       "_origin": "ast",
       "id": "handoff_14_testing_strategy",
       "community": 10,
@@ -5640,7 +5990,7 @@
       "label": "15. How to add things",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L276",
+      "source_location": "L277",
       "_origin": "ast",
       "id": "handoff_15_how_to_add_things",
       "community": 10,
@@ -5650,7 +6000,7 @@
       "label": "16. Roadmap & recommended next tasks",
       "file_type": "document",
       "source_file": "handoff.md",
-      "source_location": "L287",
+      "source_location": "L288",
       "_origin": "ast",
       "id": "handoff_16_roadmap_recommended_next_tasks",
       "community": 10,
@@ -7338,6 +7688,502 @@
       "weight": 1.0,
       "source": "research_alpha_ic_main",
       "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "research_backtest_init",
+      "target": "research_backtest_costs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "research_backtest_init",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "research_backtest_init",
+      "target": "research_backtest_simulate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "research_backtest_init",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/__init__.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "research_backtest_init",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "research_backtest_costs",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "research_backtest_costs_rationale_1",
+      "target": "research_backtest_costs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_costs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_test_costs",
+      "target": "research_backtest_costs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "research_backtest_costs_rationale_25",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/costs.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "research_backtest_costs_trade_cost",
+      "target": "research_backtest_costs_py_ndarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_test_costs",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_costs_test_impact_rate_scales_sublinearly_with_trade_size",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "tests_test_costs_test_lower_adv_gives_higher_cost_for_same_trade",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tests_test_costs_test_zero_trade_gives_zero_cost",
+      "target": "research_backtest_costs_trade_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_simulate_empty_holding_returns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_simulate_holding_period_return",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_simulate_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_portfolio_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_portfolio_model_build_target_portfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "research_backtest_simulate",
+      "target": "research_risk_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_rationale_1",
+      "target": "research_backtest_simulate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "research_backtest_simulate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_empty_holding_returns",
+      "target": "research_backtest_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_holding_period_return",
+      "target": "research_backtest_simulate_empty_holding_returns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_holding_period_return",
+      "target": "research_backtest_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_holding_period_return",
+      "target": "research_backtest_simulate_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_holding_period_return",
+      "target": "research_backtest_simulate_py_lazyframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_rationale_48",
+      "target": "research_backtest_simulate_holding_period_return",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_simulate_holding_period_return",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_simulate_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_rationale_94",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_backtest_simulate_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/backtest/simulate.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "research_backtest_simulate_run_backtest",
+      "target": "research_portfolio_model_build_target_portfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "target": "research_backtest_simulate_run_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
+      "target": "research_backtest_simulate_run_backtest",
       "confidence_score": 1.0
     },
     {
@@ -9140,7 +9986,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_data_store_pitstore",
@@ -9473,6 +10319,28 @@
       "source_location": "L39",
       "weight": 1.0,
       "source": "tests_test_signals_store",
+      "target": "research_data_store_pitstore"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "tests_test_simulate_store",
       "target": "research_data_store_pitstore"
     },
     {
@@ -10487,7 +11355,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L63",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_inputs_build_optimizer_inputs",
@@ -10541,7 +11409,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model",
       "target": "research_portfolio_model_build_target_portfolio",
@@ -10616,7 +11484,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_model_targetportfolio",
@@ -10627,7 +11495,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_model_py_dataframe",
@@ -10638,7 +11506,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_model_py_date",
@@ -10649,7 +11517,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_model_py_datetime",
@@ -10660,7 +11528,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L75",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "research_portfolio_model_build_target_portfolio",
       "target": "research_portfolio_solve_solve_qp",
@@ -10670,9 +11538,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "research/portfolio/model.py",
-      "source_location": "L56",
+      "source_location": "L58",
       "weight": 1.0,
-      "source": "research_portfolio_model_rationale_56",
+      "source": "research_portfolio_model_rationale_58",
       "target": "research_portfolio_model_build_target_portfolio",
       "confidence_score": 1.0
     },
@@ -13510,6 +14378,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_test_costs",
+      "target": "tests_test_costs_test_impact_rate_scales_sublinearly_with_trade_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "tests_test_costs",
+      "target": "tests_test_costs_test_lower_adv_gives_higher_cost_for_same_trade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tests_test_costs",
+      "target": "tests_test_costs_test_zero_trade_gives_zero_cost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_costs.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tests_test_costs_rationale_16",
+      "target": "tests_test_costs_test_impact_rate_scales_sublinearly_with_trade_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_crsp_loader.py",
       "source_location": "L32",
       "weight": 1.0,
@@ -15627,6 +16535,185 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_populated_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_ret_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tests_test_simulate",
+      "target": "tests_test_simulate_trading_days",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "tests_test_simulate_populated_store",
+      "target": "tests_test_simulate_trading_days",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "target": "tests_test_simulate_trading_days",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tests_test_simulate_trading_days",
+      "target": "tests_test_simulate_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tests_test_simulate_ret_bars",
+      "target": "tests_test_simulate_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "tests_test_simulate_populated_store",
+      "target": "tests_test_simulate_ret_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tests_test_simulate_ret_bars",
+      "target": "tests_test_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "target": "tests_test_simulate_ret_bars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "tests_test_simulate_populated_store",
+      "target": "tests_test_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
+      "target": "tests_test_simulate_py_dataframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_simulate.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "tests_test_simulate_rationale_124",
+      "target": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_solve.py",
       "source_location": "L10",
       "weight": 1.0,
@@ -16971,7 +18058,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_constraints",
@@ -16981,7 +18068,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_decisions",
@@ -16991,7 +18078,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L89",
+      "source_location": "L94",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_done",
@@ -17001,7 +18088,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L75",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_facts",
@@ -17011,7 +18098,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L116",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -17051,7 +18138,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_open_items",
@@ -17061,10 +18148,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L94",
+      "source_location": "L99",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_94",
+      "target": "docs_state_open_items_99",
       "confidence_score": 1.0
     },
     {
@@ -17111,7 +18198,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L372",
+      "source_location": "L382",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -17141,7 +18228,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L343",
+      "source_location": "L351",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -17151,7 +18238,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L369",
+      "source_location": "L379",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -17161,7 +18248,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L331",
+      "source_location": "L339",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
@@ -17175,6 +18262,16 @@
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_research_alpha_ic_py_built_phase_2_8_tests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SYSTEM_MAP.md",
+      "source_location": "L331",
+      "weight": 1.0,
+      "source": "docs_system_map_files_functions",
+      "target": "docs_system_map_research_backtest_blocks_5a_5b_built_block_5_backtester_kicked_off_2026_07_23_6_tests",
       "confidence_score": 1.0
     },
     {
@@ -17271,10 +18368,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L347",
+      "source_location": "L355",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_93_passing_python_6_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_99_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -17291,7 +18388,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L214",
+      "source_location": "L215",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_10_dependencies_and_rationale",
@@ -17301,7 +18398,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L228",
+      "source_location": "L229",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_11_performance_model",
@@ -17311,7 +18408,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L241",
+      "source_location": "L242",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_12_known_limitations_technical_debt_inconsistencies",
@@ -17321,7 +18418,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L257",
+      "source_location": "L258",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_13_non_obvious_implementation_details_pitfalls",
@@ -17331,7 +18428,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L267",
+      "source_location": "L268",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_14_testing_strategy",
@@ -17341,7 +18438,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L276",
+      "source_location": "L277",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_15_how_to_add_things",
@@ -17351,7 +18448,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L287",
+      "source_location": "L288",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_16_roadmap_recommended_next_tasks",
@@ -17391,7 +18488,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_4_repository_layout",
@@ -17401,7 +18498,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L132",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_5_the_core_abstraction_bitemporal_pit_store",
@@ -17411,7 +18508,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L154",
+      "source_location": "L155",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_6_the_loader_contract_design_md_block_1d",
@@ -17421,7 +18518,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_7_data_flow_end_to_end_current_near_term",
@@ -17431,7 +18528,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L188",
+      "source_location": "L189",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_8_coding_conventions",
@@ -17441,7 +18538,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "handoff.md",
-      "source_location": "L202",
+      "source_location": "L203",
       "weight": 1.0,
       "source": "handoff_handoff_multifactor_equity_trading_system",
       "target": "handoff_9_development_process_as_important_as_the_code",
@@ -17449,5 +18546,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "74b208af42eda0c5f4c26c430cc760ff2ba36730"
+  "built_at_commit": "fc05ed302f6d1734fc907eaadad5698774bd9ec4"
 }

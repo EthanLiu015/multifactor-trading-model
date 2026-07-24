@@ -36,6 +36,8 @@ class TargetPortfolio:
     rebuild_date: dt.date
     security_ids: list[str]
     weights: np.ndarray  # N, row-aligned to security_ids; only trust if status is optimal*
+    w_prev: np.ndarray  # N, the aligned previous weights the solve used (block 5's cost calc needs this)
+    adv: np.ndarray  # N, $ median daily dollar volume, same alignment (block 5's cost calc needs this)
     objective_value: float
     status: str  # cvxpy problem.status, e.g. "optimal", "infeasible"
 
@@ -83,6 +85,8 @@ def build_target_portfolio(
         rebuild_date=rebuild_date,
         security_ids=inputs.security_ids,
         weights=w.value,
+        w_prev=inputs.w_prev,
+        adv=inputs.adv,
         objective_value=problem.value,
         status=problem.status,
     )

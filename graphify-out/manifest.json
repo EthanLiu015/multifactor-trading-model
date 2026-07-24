@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1784830597.8038697,
-    "ast_hash": "884e508ba05098b6efbdd7301941a6d7",
+    "mtime": 1784845459.861358,
+    "ast_hash": "ef9fd86149172c2229ebccb6721ea3bc",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1784830572.4164255,
-    "ast_hash": "d9f73d2948edc28f395383213813bc86",
+    "mtime": 1784845494.0292811,
+    "ast_hash": "7f8153c56a612ba593ca74ae53452fce",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1784825937.3435364,
-    "ast_hash": "c0edae9460955f62be3b6caa49708bd2",
+    "mtime": 1784841133.3079193,
+    "ast_hash": "87a7a65cbee5a87d93ae0075ff3da04c",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -255,7 +255,7 @@
     "semantic_hash": ""
   },
   "research/portfolio/__init__.py": {
-    "mtime": 1784830503.7952323,
+    "mtime": 1784845366.2331913,
     "ast_hash": "3316081e263092541cf19615d46f8d4a",
     "semantic_hash": ""
   },
@@ -300,13 +300,38 @@
     "semantic_hash": ""
   },
   "research/portfolio/model.py": {
-    "mtime": 1784830498.9443955,
-    "ast_hash": "243675900ea84d7ad3cfee81e9b6c5f7",
+    "mtime": 1784845323.899247,
+    "ast_hash": "0595c0ce7486144b341e8ff5a772004a",
     "semantic_hash": ""
   },
   "tests/test_model.py": {
     "mtime": 1784830520.3267226,
     "ast_hash": "80876401ca616bc5804af85436cecb0e",
+    "semantic_hash": ""
+  },
+  "research/backtest/__init__.py": {
+    "mtime": 1784845357.592957,
+    "ast_hash": "c836965f2153dcdbf01c0c1d9423ea27",
+    "semantic_hash": ""
+  },
+  "research/backtest/costs.py": {
+    "mtime": 1784840980.496369,
+    "ast_hash": "d4be94f27849c821c12e8670af48393e",
+    "semantic_hash": ""
+  },
+  "tests/test_costs.py": {
+    "mtime": 1784841045.4062269,
+    "ast_hash": "4416ddc93fc85f4b1790df7919ad2d2d",
+    "semantic_hash": ""
+  },
+  "research/backtest/simulate.py": {
+    "mtime": 1784845354.5107045,
+    "ast_hash": "87e37a00a8b81e2740b22af1213b496c",
+    "semantic_hash": ""
+  },
+  "tests/test_simulate.py": {
+    "mtime": 1784845416.491111,
+    "ast_hash": "bd5edc801f9006515e609be5fe04e14c",
     "semantic_hash": ""
   }
 }
