@@ -4,7 +4,7 @@ import numpy as np
 import polars as pl
 import pytest
 
-from research.backtest.simulate import run_backtest
+from research.backtest.simulate import HELD_OUT_START, run_backtest
 from research.data import PITStore
 
 BARS_DATASET = "yfinance_daily"
@@ -112,6 +112,7 @@ def test_run_backtest_produces_a_step_per_rebalance_date(populated_store):
         assert step.weights.shape == (n,)
         assert step.trade_cost.shape == (n,)
         assert np.all(step.trade_cost >= 0.0)
+        assert step.turnover >= 0.0
 
     # last step has no next date to hold until
     assert steps[-1].period_return is None
@@ -152,3 +153,25 @@ def test_run_backtest_skips_dates_with_insufficient_history(store):
 
     steps = run_backtest(store, dates[0], dates[-1], lookback_years=10, knowledge_ts=K1)
     assert steps == []
+
+
+def test_run_backtest_blocks_held_out_period_by_default(populated_store):
+    store, rebuild_dates, tickers = populated_store
+
+    with pytest.raises(ValueError, match="held-out"):
+        run_backtest(store, rebuild_dates[0], HELD_OUT_START, lookback_years=10, knowledge_ts=K1)
+
+
+def test_run_backtest_allows_held_out_period_with_explicit_flag(populated_store):
+    store, rebuild_dates, tickers = populated_store
+
+    # doesn't raise; held-out gate is the only thing under test here, not
+    # whether this particular (out-of-fixture-range) date produces steps
+    run_backtest(
+        store,
+        rebuild_dates[0],
+        HELD_OUT_START,
+        lookback_years=10,
+        knowledge_ts=K1,
+        allow_held_out=True,
+    )

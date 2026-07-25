@@ -18,6 +18,5 @@
   "16": "test_ic.py",
   "17": "build_exposure_matrix",
   "18": "build_optimizer_inputs",
-  "19": "build_target_portfolio",
   "20": "trade_cost"
 }

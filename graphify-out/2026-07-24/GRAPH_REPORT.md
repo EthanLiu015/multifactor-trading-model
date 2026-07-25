@@ -1,11 +1,11 @@
 # Graph Report - multifactor-trading-system  (2026-07-24)
 
 ## Corpus Check
-- 66 files · ~43,266 words
+- 66 files · ~42,787 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 613 nodes · 1212 edges · 21 communities (20 shown, 1 thin omitted)
+- 611 nodes · 1208 edges · 20 communities (19 shown, 1 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.59)
 - Token cost: 0 input · 0 output
 
@@ -32,7 +32,6 @@
 - test_ic.py
 - build_exposure_matrix
 - build_optimizer_inputs
-- build_target_portfolio
 - trade_cost
 
 ## God Nodes (most connected - your core abstractions)
@@ -42,27 +41,27 @@
 4. `CRSPDailyLoader` - 20 edges
 5. `OrderEvent` - 18 edges
 6. `Multifactor Trading System — Design` - 18 edges
-7. `run_backtest()` - 17 edges
-8. `build_optimizer_inputs()` - 17 edges
-9. `build_exposure_matrix()` - 17 edges
-10. `FakeClient` - 17 edges
+7. `build_optimizer_inputs()` - 17 edges
+8. `build_exposure_matrix()` - 17 edges
+9. `FakeClient` - 17 edges
+10. `HANDOFF — Multifactor Equity Trading System` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_beta.py → research/data/store.py
+- `FakeConn` --uses--> `PITStore`  [INFERRED]
+  tests/test_crsp_loader.py → research/data/store.py
+- `store()` --calls--> `PITStore`  [EXTRACTED]
+  tests/test_crsp_loader.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_exposures.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_model.py → research/data/store.py
-- `store()` --calls--> `PITStore`  [EXTRACTED]
-  tests/test_portfolio_inputs.py → research/data/store.py
-- `store()` --calls--> `PITStore`  [EXTRACTED]
-  tests/test_risk_model.py → research/data/store.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (21 total, 1 thin omitted)
+## Communities (20 total, 1 thin omitted)
 
 ### Community 0 - "Multifactor Trading System — Design"
 Cohesion: 0.10
@@ -73,16 +72,16 @@ Cohesion: 0.17
 Nodes (11): Constraints, Decisions, Done, Facts, Failed attempts, Goal, Next, Now (+3 more)
 
 ### Community 2 - "test_store.py"
-Cohesion: 0.33
-Nodes (9): bars(), DataFrame, store(), test_append_idempotent(), test_append_parts_coexist_and_overwrite(), test_append_rejects_bad_schema(), test_asof_point_in_time(), test_round_trip() (+1 more)
+Cohesion: 0.39
+Nodes (8): bars(), DataFrame, store(), test_append_idempotent(), test_append_parts_coexist_and_overwrite(), test_append_rejects_bad_schema(), test_asof_point_in_time(), test_round_trip()
 
 ### Community 3 - "model.py"
 Cohesion: 0.07
 Nodes (46): build_factor_covariance(), _ewma_scaled_centered(), _ewma_weights(), ndarray, Factor covariance matrix F (Block 3 risk model).  DESIGN.md: "Factor covariance, n weights, oldest first, most recent = 1.0; normalized so mean = 1., EWMA + Ledoit-Wolf shrunk + Newey-West adjusted factor covariance.      ``factor, build_factor_return_history() (+38 more)
 
 ### Community 6 - "test_crsp_loader.py"
-Cohesion: 0.07
-Nodes (38): Path, audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, CRSPDailyLoader, main() (+30 more)
+Cohesion: 0.17
+Nodes (17): CRSPDailyLoader, main(), DataFrame, datetime, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, Assert expected CIZ columns exist on the live table., Pull one calendar year, audit it, append or quarantine it., FakeConn (+9 more)
 
 ### Community 7 - "METRICS"
 Cohesion: 0.17
@@ -93,16 +92,16 @@ Cohesion: 0.05
 Nodes (57): deque, string, IBrokerGateway, cancel_order, poll_events, submit_order, Order, is_buy (+49 more)
 
 ### Community 9 - "YFinanceDailyLoader"
-Cohesion: 0.07
-Nodes (42): fetch_listed_tickers(), main(), DataFrame, datetime, _rate_limited_errors(), yfinance daily-bars loader (interim free vendor, part 2b).  Fills the lake while, (sector, industry) — Yahoo's own taxonomy, not literal GICS codes.          Unli, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``client`` ex (+34 more)
+Cohesion: 0.06
+Nodes (49): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al, fetch_listed_tickers(), main() (+41 more)
 
 ### Community 10 - "HANDOFF — Multifactor Equity Trading System"
 Cohesion: 0.11
 Nodes (17): 10. Dependencies and rationale, 11. Performance model, 12. Known limitations, technical debt, inconsistencies, 13. Non-obvious implementation details & pitfalls, 14. Testing strategy, 15. How to add things, 16. Roadmap & recommended next tasks, 1. Project purpose (+9 more)
 
 ### Community 11 - ".load_year"
-Cohesion: 0.17
-Nodes (25): build_snapshot(), build_universe(), _empty_snapshot(), main(), month_end_trading_days(), DataFrame, date, datetime (+17 more)
+Cohesion: 0.08
+Nodes (40): Path, PITStore, DataFrame, datetime, LazyFrame, Point-in-time (bitemporal) parquet store.  Every dataset in the lake carries two, A directory-per-dataset parquet lake with point-in-time reads., Write one load batch. Idempotent: same knowledge_ts overwrites.          The bat (+32 more)
 
 ### Community 12 - "Files & functions"
 Cohesion: 0.09
@@ -125,16 +124,12 @@ Cohesion: 0.28
 Nodes (15): build_exposure_matrix(), DataFrame, date, LazyFrame, Exposure matrix B for one rebalance date.      ``sectors`` is the already-asof'd, _zscore(), DataFrame, date (+7 more)
 
 ### Community 18 - "build_optimizer_inputs"
-Cohesion: 0.06
-Nodes (58): Problem, compute_market_beta(), _empty_beta(), DataFrame, date, LazyFrame, Per-stock market beta (Block 4b input): rolling single-factor beta.  Needed for, Trailing single-factor beta per security, as of ``rebuild_date``.      ``securit (+50 more)
-
-### Community 19 - "build_target_portfolio"
-Cohesion: 0.25
-Nodes (13): build_target_portfolio(), DataFrame, date, Target weights for one rebalance date, or ``None`` if inputs can't be built., populated_store(), DataFrame, date, ret_bars() (+5 more)
+Cohesion: 0.05
+Nodes (71): Problem, compute_market_beta(), _empty_beta(), DataFrame, date, LazyFrame, Per-stock market beta (Block 4b input): rolling single-factor beta.  Needed for, Trailing single-factor beta per security, as of ``rebuild_date``.      ``securit (+63 more)
 
 ### Community 20 - "trade_cost"
 Cohesion: 0.09
-Nodes (40): ndarray, Block 5a: research-side trading cost model (DESIGN.md Block 5's cost components,, Per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `, trade_cost(), BacktestResult, Block 5c: backtest result/equity-curve summary.  Pure aggregation over BacktestS, Equity curve + cost/turnover series over ``steps``.      Only steps with a ``per, summarize_backtest() (+32 more)
+Nodes (38): ndarray, Block 5a: research-side trading cost model (DESIGN.md Block 5's cost components,, Per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `, trade_cost(), BacktestResult, Block 5c: backtest result/equity-curve summary.  Pure aggregation over BacktestS, Equity curve + cost/turnover series over ``steps``.      Only steps with a ``per, summarize_backtest() (+30 more)
 
 ## Knowledge Gaps
 - **95 isolated node(s):** `symbol`, `qty`, `limit_price`, `is_buy`, `submit_order` (+90 more)
@@ -144,12 +139,12 @@ Nodes (40): ndarray, Block 5a: research-side trading cost model (DESIGN.md Block
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PITStore` connect `test_crsp_loader.py` to `test_store.py`, `model.py`, `YFinanceDailyLoader`, `.load_year`, `test_security_master.py`, `test_signals.py`, `test_ic.py`, `build_exposure_matrix`, `build_optimizer_inputs`, `build_target_portfolio`, `trade_cost`?**
-  _High betweenness centrality (0.445) - this node is a cross-community bridge._
-- **Why does `build_risk_model()` connect `model.py` to `build_exposure_matrix`, `build_optimizer_inputs`, `test_crsp_loader.py`?**
+- **Why does `PITStore` connect `.load_year` to `test_store.py`, `model.py`, `test_crsp_loader.py`, `YFinanceDailyLoader`, `test_security_master.py`, `test_signals.py`, `test_ic.py`, `build_exposure_matrix`, `build_optimizer_inputs`, `trade_cost`?**
+  _High betweenness centrality (0.444) - this node is a cross-community bridge._
+- **Why does `build_risk_model()` connect `model.py` to `build_exposure_matrix`, `build_optimizer_inputs`, `.load_year`?**
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
-- **Why does `run_backtest()` connect `trade_cost` to `build_target_portfolio`, `test_crsp_loader.py`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `YFinanceDailyLoader` connect `YFinanceDailyLoader` to `.load_year`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `PITStore` (e.g. with `CRSPDailyLoader` and `YFinanceClient`) actually correct?**
   _`PITStore` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `YFinanceDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**

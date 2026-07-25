@@ -20,6 +20,13 @@ research/risk/model.py's reference-sector gap). Names missing data
 mid-period (delisted, no bars) are dropped from the weighted sum --
 consistent with the yfinance backfill's already-documented
 survivorship-bias gap (handoff.md limitation 5), not a new one.
+
+Block 5d: ``HELD_OUT_START`` enforces DESIGN.md's backtest-overfitting
+defense (hold out the final 2-3 years until design is frozen). Fixed
+now at 3 years before 2026-07-24, deliberately never recomputed from
+"today" -- a dynamic boundary would silently creep forward as real time
+passes, letting previously-held-out data quietly become touchable
+without anyone deciding that.
 """
 
 from __future__ import annotations
@@ -36,6 +43,7 @@ from research.portfolio.model import build_target_portfolio
 from research.risk.model import BARS_DATASET, UNIVERSE_DATASET
 
 HOLDING_RETURN_SCHEMA = {"security_id": pl.String, "period_return": pl.Float64}
+HELD_OUT_START = dt.date(2023, 7, 24)  # DESIGN.md's overfitting defense: final 3y held out
 
 
 def _empty_holding_returns() -> pl.DataFrame:
@@ -73,6 +81,7 @@ class BacktestStep:
     weights: np.ndarray
     status: str
     trade_cost: np.ndarray  # $ per security, this rebalance's trade
+    turnover: float  # L1 sum(|weights - w_prev|), this rebalance's trade
     period_return: float | None  # portfolio return over (this date, next date]; None on the final step
 
 
@@ -89,6 +98,7 @@ def run_backtest(
     book_notional: float = 10_000_000.0,
     knowledge_ts: dt.datetime | None = None,
     cost_kwargs: dict | None = None,
+    allow_held_out: bool = False,
     **constraint_kwargs,
 ) -> list[BacktestStep]:
     """Walk-forward backtest over ``[start_date, end_date]``.
@@ -96,7 +106,18 @@ def run_backtest(
     ``cost_kwargs`` forwarded to :func:`research.backtest.costs.trade_cost`;
     ``constraint_kwargs`` forwarded through :func:`build_target_portfolio`
     to :func:`research.portfolio.constraints.build_constraints`.
+
+    Raises ``ValueError`` if ``end_date`` enters the held-out period
+    (``>= HELD_OUT_START``) unless ``allow_held_out=True`` -- DESIGN.md's
+    backtest-overfitting defense: the final years are touched once, when
+    the design is frozen, not during iteration.
     """
+    if end_date >= HELD_OUT_START and not allow_held_out:
+        raise ValueError(
+            f"end_date {end_date} enters the held-out period (>= {HELD_OUT_START}, "
+            "DESIGN.md's overfitting defense) -- pass allow_held_out=True only "
+            "when design is frozen"
+        )
     if knowledge_ts is None:
         knowledge_ts = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
     cost_kwargs = cost_kwargs or {}
@@ -128,7 +149,9 @@ def run_backtest(
         if target is None:
             continue
 
-        cost = trade_cost(target.weights - target.w_prev, target.adv, book_notional, **cost_kwargs)
+        delta_w = target.weights - target.w_prev
+        cost = trade_cost(delta_w, target.adv, book_notional, **cost_kwargs)
+        turnover = float(np.abs(delta_w).sum())
 
         period_return = None
         next_date = rebuild_dates[i + 1] if i + 1 < len(rebuild_dates) else None
@@ -149,6 +172,7 @@ def run_backtest(
                 weights=target.weights,
                 status=target.status,
                 trade_cost=cost,
+                turnover=turnover,
                 period_return=period_return,
             )
         )
