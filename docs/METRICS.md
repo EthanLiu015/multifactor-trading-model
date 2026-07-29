@@ -197,8 +197,34 @@ Resume phrasing:
 
 ---
 
+## Infra — Block 6c: local lake -> Delta/Databricks port
+
+**Measured 2026-07-26** — `DATABRICKS_HOST=... DATABRICKS_TOKEN=... PYTHONPATH=. .venv-delta/bin/python -m research.data.port_to_delta --dataset yfinance_daily`, run from Ethan's Mac (driver-side: Polars scan + Polars->pandas conversion), executing against a Databricks Free Edition serverless cluster (executor-side: the actual Delta MERGE/write) — not a single-machine number like every other entry in this file, noted since the "Hardware" line above doesn't apply as-is.
+
+| Metric | `yfinance_daily` | `universe_monthly` |
+|---|---|---|
+| Batches (distinct knowledge_ts) | 3 (not just the current asof view) | 1 |
+| Rows ported | 6,282,939 (1,459,612 + 4,625,327 + 198,000 — bigger than the "4.82M" figure quoted elsewhere in these docs, which is the *asof* view; raw batch history includes phase 1's superseded full-universe layer too) | 183,464 |
+| Wall time | 103.3 s | 19.2 s |
+| **Throughput** | **60,847 rows/s** | **9,554 rows/s** |
+| Target | `mfts.research.yfinance_daily` | `mfts.research.universe_monthly` |
+
+Both backed by S3 external location `s3://mfts-datalake-2026`.
+
+Notes:
+- One MERGE per distinct `knowledge_ts` batch, not one bulk write — preserves full bitemporal history through the copy, per `DeltaPITStore`'s docstring.
+- `universe_monthly`'s much lower rows/s than `yfinance_daily` despite far fewer rows is consistent with per-append overhead (session/MERGE setup cost) dominating at this row count, not a throughput regression — only 1 batch here vs. `yfinance_daily`'s 3, so there's less work to amortize a mostly-fixed cost over. Not investigated further; too small a sample (2 datasets) to draw a real scaling curve from.
+- Real bugs found+fixed getting `yfinance_daily` ported (see docs/STATE.md Failed attempts, block 6c): a scoped-vs-legacy Databricks PAT format mismatch (auth), a `TYPE_CHECKING`-only import that broke at runtime, and a Polars `pl.Date` -> pandas `datetime64` -> Spark `TimestampType` type-fidelity loss that needed an explicit cast back to `DateType`.
+- One more bug found porting `universe_monthly` (block 6d-i): its `rank`/`days_traded` columns are Polars `UInt32` (yfinance_daily has no unsigned columns, so this didn't surface earlier) — `.to_pandas()` preserves them as pandas `uint32`, which Spark Connect's Arrow bridge rejects (`[UNSUPPORTED_ARROWTYPE] Int(32, false)`, signed-only). Fixed generically in `port_dataset`: any `UInt8/16/32/64` column is cast to `Int64` before the pandas handoff.
+
+Resume phrasing:
+- "Ported a 6.3M-row bitemporal point-in-time dataset from a local Polars/parquet lake into Databricks Unity Catalog (Delta Lake on S3) via Databricks Connect, preserving full historical batch lineage (not just current state) through a MERGE-based idempotency scheme, at ~61K rows/s."
+
+---
+
 ## Pending sections (filled as systems are built)
 - **Backtester**: simulated days/s, full 15y walk-forward wall time.
 - **Optimizer**: solve time per rebalance (1,000-name QP with all constraints).
 - **C++ engine**: tick-to-order latency histogram (p50/p99/p99.9 ns), queue hop latency, orders/s throughput, journal write latency, recovery-replay time.
 - **Data loaders**: rows/day ingested, audit-check overhead.
+- **Block 6d**: Spark/Databricks vs. local-Polars historical-alpha-run benchmark (baseline: 824.2s, signal/alpha pipeline section above).

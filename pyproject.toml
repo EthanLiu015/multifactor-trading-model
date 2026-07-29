@@ -10,11 +10,19 @@ dependencies = [
     "numpy>=2.0",
     "scikit-learn>=1.5",
     "cvxpy>=1.5",
+    "pyarrow>=19",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=9",
+]
+# Install into a SEPARATE venv (.venv-delta/), never the main .venv: pulls
+# in numpy<2.0 (violates the numpy>=2.0 floor above) and is mutually
+# exclusive with a bare pyspark install in the same env (Databricks' own
+# docs: installing both breaks Spark-session init).
+delta = [
+    "databricks-connect==16.1.*",
 ]
 
 [tool.pytest.ini_options]

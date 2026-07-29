@@ -131,6 +131,30 @@ def compute_ic(signal_df: pl.DataFrame, forward_returns_df: pl.DataFrame) -> flo
     return value
 
 
+def _ic_for_date(
+    bars: pl.LazyFrame,
+    members: list[str],
+    d: dt.date,
+    signal_fns: dict[str, Callable[..., pl.DataFrame]],
+    horizon_days: int,
+) -> dict[str, float | None]:
+    """One IC value per signal, for a single rebalance date.
+
+    Extracted from build_ic_series's loop body (Block 6d, 2026-07-27) so the
+    same per-date unit of work can be distributed across Spark executors
+    (research/alpha/spark_ic.py) without duplicating this logic — the local
+    loop and the Spark path both call this one function.
+    """
+    forward = compute_forward_returns(bars, d, horizon_days=horizon_days).filter(
+        pl.col("security_id").is_in(members)
+    )
+    result: dict[str, float | None] = {}
+    for name, fn in signal_fns.items():
+        signal = fn(bars, d).filter(pl.col("security_id").is_in(members))
+        result[name] = compute_ic(signal, forward)
+    return result
+
+
 def build_ic_series(
     store: PITStore,
     signal_fns: dict[str, Callable[..., pl.DataFrame]],
@@ -171,12 +195,9 @@ def build_ic_series(
             .collect()["security_id"]
             .to_list()
         )
-        forward = compute_forward_returns(bars, d, horizon_days=horizon_days).filter(
-            pl.col("security_id").is_in(members)
-        )
-        for name, fn in signal_fns.items():
-            signal = fn(bars, d).filter(pl.col("security_id").is_in(members))
-            rows[name].append({"effective_date": d, "ic": compute_ic(signal, forward)})
+        ic_by_signal = _ic_for_date(bars, members, d, signal_fns, horizon_days)
+        for name, ic in ic_by_signal.items():
+            rows[name].append({"effective_date": d, "ic": ic})
 
     return {
         name: pl.DataFrame(r, schema=IC_SCHEMA) if r else pl.DataFrame(schema=IC_SCHEMA)

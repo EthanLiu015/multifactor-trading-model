@@ -1,7 +1,7 @@
 # HANDOFF — Multifactor Equity Trading System
 
 > Primary-context document for any agent or developer continuing this project.
-> Written 2026-07-13, last updated 2026-07-22. Ground truth hierarchy when documents disagree:
+> Written 2026-07-13, last updated 2026-07-28. Ground truth hierarchy when documents disagree:
 > **code + tests > docs/STATE.md > docs/DESIGN.md > this file > everything else.**
 > Read docs/STATE.md first in every new session — it is the live state ledger.
 
@@ -62,7 +62,7 @@ Locked decisions (do not relitigate; full table in DESIGN.md):
 
 **Phasing rule — local-first, distribute second**: ~1,000 names × 15y daily ≈ a few GB; fits in Polars on a laptop (measured: 13 MB parquet). The distributed stack is a learning/resume showcase, ported *after* the vertical slice works locally. Never let infra gate alpha work.
 
-## 3. Current implementation status (2026-07-22)
+## 3. Current implementation status (2026-07-28)
 
 Honest inventory. **Built** means tested code in the repo; nothing else is.
 
@@ -78,11 +78,12 @@ Honest inventory. **Built** means tested code in the repo; nothing else is.
 | Optimizer (Block 4) | **BUILT** | `research/portfolio/` (beta.py, inputs.py, constraints.py, solve.py, model.py). Block 4a: `build_optimizer_inputs`/`OptimizerInputs` — aligns alpha (placeholder equal-weight blend of the 3 signals, shrink 0.5x/cap ±3), per-stock beta, ADV, w_prev against the risk model's B/F/D in factor form. Block 4b: `build_constraints` — dollar/beta/sector-neutral, ADV-relative caps, turnover cap, gross cap, style-factor bounds (borrow-availability filter deferred — no free data source exists). Block 4c: `solve_qp` — cvxpy QP, `max αᵀw − λ·wᵀΣw − κ‖w−w_prev‖²`, risk term kept in factor form (never materializes N×N Σ). Block 4d: `build_target_portfolio`/`TargetPortfolio` — chains inputs→solve into one call, mirroring `research/risk/model.py`'s `build_risk_model` role exactly (incl. no CLI — that mirrored module has none either); non-optimal solve `status` (e.g. infeasible) surfaced on the result, not raised. 11 new tests across 5 files. Real numeric checks, not just shape checks: constraint-boundary tests, zero-alpha exact-zero solve, λ-monotonicity, end-to-end dollar-neutral check. **Block 4 fully built.** |
 | Backtester (Block 5) | **BUILT** | `research/backtest/` (new dir, sibling to signals/alpha/risk/portfolio/attribution). Block 5a: `trade_cost` — research-side cost model (spread + square-root impact + fees; borrow/financing deferred, same free-data gap as block 4b) since Block 5/C++ hasn't built its own cost model yet. Block 5b: `run_backtest`/`BacktestStep` — the walk-forward day-loop (the sole sanctioned Python loop-over-dates in this codebase), chains `build_target_portfolio` across `universe_monthly` rebalance dates threading `w_prev` forward, applies 5a's cost model, computes each step's holding-period return (`Σ w_i × period_return_i`, a documented buy-and-hold-between-rebalances approximation). Widened `TargetPortfolio` (block 4d) with `w_prev`/`adv` fields to avoid re-deriving already-aligned data. Block 5c: `summarize_backtest`/`BacktestResult` — pure aggregation into an equity curve (`cumprod(1+net_returns)`), cost, and turnover series; empty input gives an empty result (not `None` — mirrors `research/alpha/ic.py`'s `IcSummary` precedent). Widened `BacktestStep` with a `turnover` field. Block 5d: `HELD_OUT_START = dt.date(2023, 7, 24)` (fixed, DESIGN.md's overfitting defense — final 3y held out until design freeze) + `run_backtest`'s `allow_held_out=False` kwarg, hard `ValueError` block by default. 12 tests across the three files. **Block 5 fully built.** Next in DESIGN.md's build-phasing order: item 6, Spark/Databricks/Delta-on-S3 port (infra showcase layer) — not yet scoped |
 | C++ engine — broker simulator skeleton | **BUILT** | `engine/` (CMake + Catch2 v3.9.1, C++20): `IBrokerGateway`/`Order`/`OrderEvent` interface, `BrokerSimulator` (submit/cancel/poll_events + inject_ack/inject_fill/inject_reject/inject_cancel_ack test-scripting API), `EventJournal` CSV append-log stub; 6 Catch2 tests. Order gateway, position keeper, risk checks, market data handler, live AlpacaGateway are separate, unscoped. Requires Homebrew LLVM (`-DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++`) — system AppleClang/CommandLineTools libc++ headers are broken on the dev machine. **Known gap**: `inject_fill` does not validate the fill price against the order's `limit_price` — a test can force-fill at any price regardless of the limit; add a check before testing limit-order-specific behavior |
-| Ops layer, analytics suite | designed only (Block 6 + Ops layer) | |
-| Python test suite | **104 passing** — `.venv/bin/python -m pytest` | |
+| Spark/Databricks/Delta port (build-phasing item 6, infra showcase) | **6a-6d-iii BUILT, 6d-iv PAUSED (external)** | AWS S3 bucket `mfts-datalake-2026` + IAM role + Unity Catalog external location/catalog/schema (`mfts.research`) provisioned on Databricks Free Edition (6a). `research/data/delta_store.py`'s `DeltaPITStore` — Delta/Unity-Catalog mirror of PITStore, MERGE-based idempotency (no per-file trick, no `part`), live-verified (6b). `research/data/port_to_delta.py` — one-time copy of local lake datasets into Delta preserving full bitemporal batch history; both `yfinance_daily` (6,282,939 rows, 103.3s) and `universe_monthly` (183,464 rows, 19.2s) live-ported (6c, 6d-i) — see docs/METRICS.md. `research/alpha/ic.py`'s `_ic_for_date` extracted from `build_ic_series`'s loop (6d-ii, zero behavior change) so the same per-date unit powers both the local loop and `research/alpha/spark_ic.py`'s Spark version (6d-iii) — a `groupBy(rebalance_date).applyInPandas(...)` job using a real Spark-side broadcast range-join (not a closure — that hit a 128MB gRPC message cap on first attempt, see §12). **6d-iv (the actual benchmark run) is paused**: live execution fails reproducibly (twice, identically) with Databricks' own `ISOLATION_STARTUP_FAILURE.SANDBOX_STARTUP` (`exec format error` inside their managed UDF sandbox container) — a documented platform-side error class, no workaround found, genuinely external to this repo's code (error text says "contact Databricks support"). Separate `.venv-delta/` venv required throughout (`databricks-connect` force-downgrades numpy below this project's `>=2.0` floor and is mutually exclusive with bare `pyspark` in one env) — never installed into the main `.venv`. |
+| Ops layer, analytics suite | designed only (DESIGN.md architecture Block 6 — Performance Analysis/attribution, NOT the same "6" as the build-phasing item above; see DESIGN.md's own two numbering systems) | |
+| Python test suite | **106 passing, 1 skipped** — `.venv/bin/python -m pytest` (the 1 skip is `test_delta_store.py`, collection-skipped outside `.venv-delta/`) | |
 | C++ test suite | **6 passing** — `ctest --test-dir engine/build --output-on-failure` | |
 
-Full Python test suite currently: `104 passed`. Baseline discipline: run it before and after every change set.
+Full Python test suite currently: `106 passed, 1 skipped`. Baseline discipline: run it before and after every change set.
 
 ## 4. Repository layout
 
@@ -90,21 +91,31 @@ Full Python test suite currently: `104 passed`. Baseline discipline: run it befo
 research/               Python research stack (only package with code so far)
   data/
     store.py            PITStore — the bitemporal core. Everything depends on it.
+    delta_store.py       DeltaPITStore — Delta/Unity-Catalog mirror of PITStore (block 6b);
+                        MERGE-based idempotency, no `part` concept. Requires .venv-delta/, see below
+    port_to_delta.py     one-time local-lake -> Delta copy (block 6c), reused for both
+                        yfinance_daily and universe_monthly; also requires .venv-delta/
     loaders/
       crsp_daily.py     CRSP/WRDS vendor adapter (scrub → audit → PIT append)
       yfinance_daily.py yfinance vendor adapter (interim while WRDS blocked)
       audit.py          shared AuditReport / audit_daily_bars (both loaders)
       __init__.py       exports CRSPDailyLoader, YFinanceDailyLoader, AuditReport
-    __init__.py         exports PITStore
+    __init__.py         exports PITStore only — delta_store.py/port_to_delta.py deliberately
+                        NOT exported here, keeps this package importable without databricks-connect
   universe.py           monthly PIT universe snapshots (part 3)
   security_master.py    internal_id ↔ external identifier + PIT resolve (part 4, blocks 1-3)
   signals/              Phase 2: momentum.py/reversal.py/low_vol.py + SIGNAL_REGISTRY (__init__.py)
   alpha/                Phase 2: ic.py — forward returns, IC (Spearman), IC time series + summary
+                        (`_ic_for_date` extracted block 6d-ii, shared by the local loop + Spark)
+                        spark_ic.py — Spark version of build_ic_series (block 6d-iii), also
+                        requires .venv-delta/, also not exported from alpha/__init__.py
   risk/                 Block 3: exposures/regression/factor_covariance/specific_variance/model.py
   portfolio/             Block 4 (Optimizer, DONE): beta.py/inputs.py/constraints.py/solve.py/
                         model.py (no CLI — mirrors research/risk/model.py exactly)
 tests/                  pytest; offline-only (fake vendor connections) except
-                        universe.py/security_master.py/signals+ic tests, which use real tmp_path stores
+                        universe.py/security_master.py/signals+ic tests, which use real tmp_path stores.
+                        test_delta_store.py/test_port_to_delta.py: gated on DATABRICKS_TOKEN
+                        (or import-skipped entirely outside .venv-delta/, see below)
 docs/
   DESIGN.md             CANONICAL architecture. Block-by-block, decisions locked by owner.
   STATE.md              Live session ledger: Now/Next/Constraints/Decisions/Done/Open items.
@@ -121,11 +132,16 @@ engine/                 C++ (CMake + Catch2 v3.9.1, C++20) — Block 5 hot path,
   CMakeLists.txt        root build file; build/ is gitignored
 common/ infra/          NOT YET CREATED — reserved by DESIGN.md repo-layout section
 pyproject.toml          deps: polars>=1.42, wrds>=3.2, yfinance>=1.5, numpy>=2.0,
-                        scikit-learn>=1.5, cvxpy>=1.5; pytest config
+                        scikit-learn>=1.5, cvxpy>=1.5, pyarrow>=19 (block 6c, Polars->pandas
+                        bridge); pytest config. `delta` extra: databricks-connect==16.1.*
+                        (install into .venv-delta/ ONLY — see §10)
 graphify-out/           generated code knowledge graph (query with `graphify query "..."`)
-lake/                   default PITStore root. Datasets: yfinance_daily (4.82M rows,
-                        2011–2026 YTD × top-1500), universe_monthly (185 snapshots),
-                        security_master (6,141 ticker-identity segments, block 2 output)
+lake/                   default PITStore root. Datasets: yfinance_daily (4.82M rows asof-view,
+                        6.28M raw batch history, 2011–2026 YTD × top-1500), universe_monthly
+                        (185 snapshots), security_master (6,141 ticker-identity segments,
+                        block 2 output). Mirrored (yfinance_daily + universe_monthly only) into
+                        Delta at mfts.research.* on Databricks (block 6c/6d-i), backed by S3
+                        bucket mfts-datalake-2026 (block 6a) — see status table above
 ```
 
 Planned-but-absent directories (`research/attribution/`, `common/`, `infra/`, …) are named in DESIGN.md's repo-layout section; do not create them before their block's build phase.
@@ -223,8 +239,10 @@ The owner runs a strict protocol — violating it damages trust regardless of co
 | numpy | ≥2.0 (2.2.6 installed) | Block 3's matrix algebra (DESIGN 1c: "Polars for tables, NumPy for matrices") — was already present transitively via polars/pandas, now declared directly for its first direct use |
 | scikit-learn | ≥1.5 (1.7.2 installed) | `LedoitWolf` shrinkage for the factor covariance matrix — correctness risk of hand-rolling the 2004 paper's optimal-shrinkage formula judged higher than the cost of one standard dependency (2026-07-17 decision) |
 | cvxpy | ≥1.5 (1.7.5 installed) | Block 4's QP modeling layer (bundles OSQP/Clarabel/SCS solvers) — chosen over hand-built OSQP matrices for constraint-iteration ergonomics; solve is once-daily so latency is non-critical (2026-07-20 decision) |
+| pyarrow | ≥19 (25.0.0 installed) | Block 6c: Polars' own parquet I/O is native Rust and doesn't need it, but `.to_pandas()` (the bridge from a local Polars frame to a Spark DataFrame) does. Confirmed no numpy/pandas conflict before installing (2026-07-25 decision) |
+| databricks-connect | ==16.1.* (16.1.7 installed) | Block 6b: Spark Connect client for Databricks Free Edition serverless. **Installed into a SEPARATE `.venv-delta/`, never the main `.venv`** — force-downgrades numpy to <2.0 (violates this project's own `numpy>=2.0` floor) and is mutually exclusive with a bare `pyspark` install in the same environment (Databricks' own docs: installing both breaks Spark-session init). Same split-toolchain pattern as the C++/Homebrew-LLVM requirement below (2026-07-25 decision) |
 
-Python 3.10 venv at `.venv/`; test command `.venv/bin/python -m pytest`. No uv, no lockfile (known gap, §12). Future (designed, not installed): Spark/Databricks/Delta (infra phase), kdb+ (live ticks).
+Python 3.10 venv at `.venv/`; test command `.venv/bin/python -m pytest`. No uv, no lockfile (known gap, §12). Separate `.venv-delta/` (Python 3.10, `databricks-connect` + `polars`) for all block 6 Databricks/Delta/Spark work — see above. kdb+ (live ticks) still designed, not installed.
 
 ## 11. Performance model
 
@@ -254,6 +272,9 @@ Ordered by severity. None are hidden in the code — all are stated here or in S
 9. **WRDS seasonal access** (Duke): academic year only. Discovered 2026-07-13. CRSP loader is code-complete and idles until ~late Aug 2026.
 10. **FIXED 2026-07-15** — `yfinance_daily` volume dtype mismatch (found 2026-07-14). Real cause was narrower than first suspected: only the 2026 gap-fill part (`k=2026-07-14T19-06-00..._part=2026.parquet`) had `volume` as `Int64`; all other on-disk parts were already `Float64`. Loader's `_transform` now casts volume to `Float64` (`research/data/loaders/yfinance_daily.py`); the one bad file was cast in place (lossless, no re-fetch). Regression test `test_transform_pins_volume_dtype_regardless_of_source` added. Full-column `store.asof("yfinance_daily", ...).collect()` now works.
 11. **Security master block 2's gap heuristic has no ground truth (expected, documented).** Real run found 2 tickers (MKC, QLYS) with a >90-day trading gap; both are confirmed **vendor fetch failures** (grep of the phase 2 backfill log shows `"possibly delisted; no price data found"` for exactly those ticker/year pairs), not genuine ticker reassignment — same company both sides of the gap. The heuristic can't tell the difference from trading data alone; real disambiguation needs CUSIP from CRSP (block 4). Not a bug — the module docstring states this limitation up front.
+12. **Spark Connect has no `sparkContext`/RDD-broadcast API at all** (confirmed 2026-07-27 by inspecting `pyspark.sql.connect.session.SparkSession` directly, not assumed) — architectural, not a missing permission: Spark Connect is a thin client-server protocol with no driver-JVM co-location. `research/alpha/spark_ic.py`'s first design (closing an `applyInPandas` function over the full driver-collected bars/universe frames) hit a **128MB gRPC message-size cap** as a direct consequence — the cloudpickled closure came out to 462MB, since `applyInPandas` ships its function as one unchunked blob (unlike `spark.createDataFrame`, which streams/batches large local data fine — proven at 6.28M rows in block 6c). Fixed with a real Spark-side `F.broadcast` range-join instead (see docs/STATE.md block 6d-iii). Anyone porting more research code to Spark should assume the same ceiling applies to any UDF closure, not just this one.
+13. **Databricks Free Edition serverless hits `ISOLATION_STARTUP_FAILURE.SANDBOX_STARTUP` on every `applyInPandas` attempt so far** (`exec format error` inside Databricks' own managed UDF-isolation container) — reproduced identically twice (2026-07-28, hours apart, different container IDs each time). Community reports describe this error class as generally intermittent, but no documented workaround was found, and it's a container-*startup* failure (fails before any of our code or data runs), so a smaller-scale attempt wouldn't route around it either. Genuinely external — the error text itself says "Please contact Databricks support." **Block 6d-iv PAUSED** as of 2026-07-28; 6c's live-verified data port (6.28M + 183K rows) stands as the block's resume story regardless of whether this ever resolves.
+14. **`pyproject.toml` has no `[tool.setuptools.packages.find]` config.** A fresh `pip install -e .` in a new environment now fails with a flat-layout multi-package discovery error (`lake/`, `engine/`, `research/` all found as top-level packages) — surfaced 2026-07-25 when a `setuptools` upgrade (58.1.0→83.0.0, pulled in transiently while installing `databricks-connect`, since reverted in the main `.venv`) enforced a newer discovery guard the original install predates. The existing `.venv`'s editable install still works; only a fresh one elsewhere would hit this. Not fixed — low priority until the project needs CI or a second contributor (see item 7).
 
 ## 13. Non-obvious implementation details & pitfalls
 
@@ -300,8 +321,9 @@ Immediate queue, in order:
 7. ~~Phase 2: signals + IC measurement~~ **DONE 2026-07-16/17** — `research/signals/` (momentum/reversal/low_vol + registry) + `research/alpha/ic.py`, real run over the full lake recorded in docs/METRICS.md (§ Signal/alpha pipeline).
 8. ~~Block 3: Risk Model~~ **DONE 2026-07-19** — sector/industry loader (2026-07-17) + `research/risk/` (exposures, cross-sectional regression, EWMA+Ledoit-Wolf+Newey-West factor covariance, specific variance, Σ assembly). Real run: 985 securities, 13 factors, 179.5s (docs/METRICS.md). Two real bugs found+fixed against the real lake, one red herring (benign Apple Accelerate BLAS warnings) ruled out — full chain in docs/METRICS.md.
 9. ~~Block 4: Optimizer~~ **DONE 2026-07-20/21/22/23** — `research/portfolio/` (beta.py, inputs.py, constraints.py, solve.py, model.py); real numeric tests (constraint-boundary, zero-alpha exact solve, λ-monotonicity, end-to-end dollar-neutral check). Block 4d (`build_target_portfolio`) chains inputs→solve, mirrors `research/risk/model.py`'s `build_risk_model` exactly, no CLI.
-10. ~~Block 5: Backtester~~ **DONE 2026-07-23/24** — `research/backtest/costs.py` (`trade_cost`: spread + sqrt impact + fees, borrow deferred), `research/backtest/simulate.py` (`run_backtest`/`BacktestStep`: walk-forward day-loop, `TargetPortfolio` widened with `w_prev`/`adv`, `HELD_OUT_START` guard), `research/backtest/result.py` (`summarize_backtest`/`BacktestResult`: equity curve/cost/turnover series). `.venv/bin/python -m pytest -q` -> "104 passed". **Next in DESIGN.md's build-phasing order**: item 6, Spark/Databricks/Delta-on-S3 port (infra showcase layer), not yet scoped.
-11. **Fall (WRDS returns)**: run `crsp_daily` live — `verify_schema()` first, full backfill, METRICS entry, then reconcile vs yfinance (DESIGN 1a cross-vendor checks) via security master block 4.
+10. ~~Block 5: Backtester~~ **DONE 2026-07-23/24** — `research/backtest/costs.py` (`trade_cost`: spread + sqrt impact + fees, borrow deferred), `research/backtest/simulate.py` (`run_backtest`/`BacktestStep`: walk-forward day-loop, `TargetPortfolio` widened with `w_prev`/`adv`, `HELD_OUT_START` guard), `research/backtest/result.py` (`summarize_backtest`/`BacktestResult`: equity curve/cost/turnover series). `.venv/bin/python -m pytest -q` -> "104 passed".
+11. **Build-phasing item 6: Spark/Databricks/Delta-on-S3 port** — scoped 2026-07-24/25 into 6a-6e (see docs/STATE.md for full detail). ~~6a: AWS + Databricks provisioning~~ **DONE 2026-07-25** — S3 bucket, IAM role, Unity Catalog external location/catalog/schema (`mfts.research`). ~~6b: Delta-backed store~~ **DONE 2026-07-25**, live-verified — `research/data/delta_store.py`. ~~6c: local lake -> Delta port~~ **DONE 2026-07-26** — `research/data/port_to_delta.py`, `yfinance_daily` ported (6,282,939 rows, 103.3s). ~~6d-i: universe_monthly port~~ **DONE 2026-07-27** (183,464 rows, 19.2s). ~~6d-ii: `_ic_for_date` extraction~~ **DONE 2026-07-27**, zero behavior change. ~~6d-iii: Spark IC benchmark harness~~ **DONE 2026-07-27** — `research/alpha/spark_ic.py`, redesigned mid-build from a closure to a Spark-side broadcast range-join after hitting a real 128MB gRPC message-size cap (§12 item 12). **6d-iv (the actual benchmark run) PAUSED 2026-07-28** — Databricks-side `ISOLATION_STARTUP_FAILURE.SANDBOX_STARTUP`, reproduced identically twice, no workaround found, genuinely external to this repo (§12 item 13). **6e (benchmark comparison vs. 824.2s local baseline) waits on 6d-iv** — may never resolve if this is a persistent Free Edition limitation; 6c's live data port already stands as Block 6's resume story independent of this.
+12. **Fall (WRDS returns)**: run `crsp_daily` live — `verify_schema()` first, full backfill, METRICS entry, then reconcile vs yfinance (DESIGN 1a cross-vendor checks) via security master block 4.
 
 Item 4 in §12 (test year bomb) — **FIXED**, see status table above; both loader test files use `dt.date.today().year`.
 

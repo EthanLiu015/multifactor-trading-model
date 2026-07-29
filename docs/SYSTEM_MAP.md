@@ -224,6 +224,24 @@ Bitemporal (point-in-time) parquet store. Two time axes: `effective_date` (when 
 | `scan(dataset)` | lazy scan of all batches, **no** PIT filter — debug/inspection only |
 | `asof(dataset, knowledge_ts, keys)` | the world as known at T: drop rows learned after T, keep latest known revision per (keys, effective_date). The only research read path |
 
+### research/data/delta_store.py — **built** (4 tests, live-verified against `mfts.research` 2026-07-25)
+Delta/Unity Catalog mirror of PITStore (Block 6b, infra showcase). Same bitemporal invariant, different mechanism: idempotency is a MERGE on `keys+effective_date+knowledge_ts` (Delta has no per-batch file to overwrite the way PITStore's `k=<ts>.parquet` naming does), and there is no `part` concept (no per-file storage unit to split). Targets `mfts.research.<dataset>` (Unity Catalog schema bound to the `mfts-datalake-2026` S3 external location via its managed location, block 6a). Requires the `delta` extra (`databricks-connect`) in a **separate** venv (`.venv-delta/`) — never the main `.venv`, which the dependency would silently downgrade below `numpy>=2.0`.
+
+| function | does |
+|---|---|
+| `DeltaPITStore.__init__(spark, catalog, schema)` | binds store to a Unity Catalog schema |
+| `append(dataset, df, knowledge_ts, keys)` | validates schema (same rules as PITStore.append), stamps `knowledge_ts`+`load_ts`, MERGEs into the table (insert on no match, overwrite on match) — first call for a dataset does a plain `saveAsTable` |
+| `scan(dataset)` | all rows in a dataset, no PIT filter — debug/inspection only |
+| `asof(dataset, knowledge_ts, keys)` | same semantics as PITStore.asof, via a `row_number()` window over `(keys, effective_date)` ordered by `knowledge_ts desc` instead of Polars' `group_by().last()` |
+
+### research/data/port_to_delta.py — **built** (2 tests, live-verified 2026-07-26: 6,282,939 rows ported in 103.3s; local-lake copy only, loaders untouched)
+Block 6c: one-time copy of a local PITStore dataset's full batch history into Delta — not a re-run of the vendor loaders (that larger scope was explicitly deferred, see docs/STATE.md). Preserves every `knowledge_ts` batch (not just the current asof view): each batch is stripped of its local stamp columns and re-appended through `DeltaPITStore.append` under its ORIGINAL `knowledge_ts`, so bitemporal history survives the copy exactly. `part=`-split batches under the same `knowledge_ts` (PITStore's per-file storage detail, no PIT meaning) collapse into one Delta append, matching `DeltaPITStore`'s lack of a `part` concept.
+
+| function | does |
+|---|---|
+| `port_dataset(local_store, delta_store, dataset, keys)` | groups the local dataset's rows by `knowledge_ts`, converts each group to a Spark DataFrame (via pandas — new `pyarrow` dependency, needed only for this Polars→pandas bridge), appends via `delta_store.append` |
+| `main(argv)` | CLI: `python -m research.data.port_to_delta --dataset yfinance_daily` — must run under `.venv-delta/` (needs `databricks.connect`), prints rows/s for METRICS.md |
+
 ### research/data/loaders/crsp_daily.py — **built** (6 tests; live pull blocked until fall)
 CRSP daily bars via WRDS, CIZ format (`crsp.dsf_v2`). Delisting returns arrive inside `dlyret` — no separate merge.
 
@@ -301,9 +319,18 @@ IC = rank correlation of a signal vs. the forward return it's trying to predict 
 |---|---|
 | `compute_forward_returns(bars, rebuild_date, horizon_days=21)` | forward 21-trading-day return per security, from `rebuild_date`. Deliberately reads AHEAD in time — never call from signal/decision code. Bounded to a forward date-window (same technique as `low_vol`) — computing over full history measured at 3.3s/call vs 1.2s bounded (docs/METRICS.md) |
 | `compute_ic(signal_df, forward_returns_df)` | Spearman rank correlation between joined signal value and forward return; `None` (not 0) if fewer than 2 securities have both |
-| `build_ic_series(store, signal_fns, start_year, end_year, horizon_days=21)` | one IC value per rebalance date, per signal in `signal_fns` (typically the whole `SIGNAL_REGISTRY`) — forward returns computed ONCE per date and shared across every signal, not recomputed per signal (fixed a 3x redundant-computation bug same session) |
+| `_ic_for_date(bars, members, d, signal_fns, horizon_days)` | one IC value per signal, for a single rebalance date — extracted from `build_ic_series`'s loop body (block 6d, 2026-07-27) so the same per-date unit is callable both from the local loop and from a Spark `applyInPandas` group (`research/alpha/spark_ic.py`), without duplicating the logic |
+| `build_ic_series(store, signal_fns, start_year, end_year, horizon_days=21)` | one IC value per rebalance date, per signal in `signal_fns` (typically the whole `SIGNAL_REGISTRY`) — forward returns computed ONCE per date and shared across every signal via `_ic_for_date`, not recomputed per signal (fixed a 3x redundant-computation bug same session) |
 | `ic_summary(ic_series)` → `IcSummary` | mean IC, IC std, IC t-stat — is the edge statistically real or noise |
 | `main(argv)` | CLI: `python -m research.alpha.ic --start 2011 --end 2026` — per-signal IC summary + total wall time, for METRICS.md |
+
+### research/alpha/spark_ic.py — **built** (block 6d, not exported from `research/alpha/__init__.py` — same precedent as `delta_store.py`/`port_to_delta.py`)
+Spark version of `build_ic_series` (block 6d benchmark, compares against the 824.2s local baseline). Reads both Delta tables via `DeltaPITStore.asof`, distributes the per-date computation across executors via `groupBy(rebalance_date).applyInPandas(...)`, each task calling the SAME `_ic_for_date` (research/alpha/ic.py) that the local loop uses — no duplicated math. No `sc.broadcast()`: Spark Connect (`DatabricksSession`) has no `sparkContext`/RDD-broadcast API at all (confirmed by inspecting the Connect session class directly). A first version instead closed the per-date function over the full driver-collected Polars frames — hit a real 128MB gRPC message-size cap (the pickled closure came out to 462MB; `applyInPandas` ships its function as one unchunked blob, unlike `spark.createDataFrame`). Fixed with a real Spark-side `F.broadcast` RANGE-JOIN: a tiny 185-row `dates_sdf` (rebalance_date + a 430-day-back/35-day-forward window, sized off momentum's real 273-trading-day need) joined against `bars_sdf` on `effective_date BETWEEN window_start AND window_end`, so each group already carries its own bars window server-side. Universe membership stays a small closure dict (a few MB, nowhere near the cap).
+
+| function | does |
+|---|---|
+| `build_ic_series_spark(delta_store, signal_fns, start_year, end_year, horizon_days=21)` | same long-format result (rebalance_date/signal/ic rows) as `build_ic_series`, computed via Spark instead of a local loop |
+| `main(argv)` | CLI: `python -m research.alpha.spark_ic --start 2011 --end 2026` — must run under `.venv-delta/`, prints per-signal summary + wall time for METRICS.md |
 
 ### research/risk/ — **built (Block 3, full Barra-style scope, 17 tests)**
 First numpy-matrix module in the repo (everything before this is Polars-only). Real-lake verified: 985 securities, 13 factors, 179.5s — see docs/METRICS.md for the 2-bug-plus-1-red-herring debugging chain that got it there.
@@ -357,6 +384,8 @@ First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on t
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |
+| `test_delta_store.py` | same 4 behaviors as test_store.py (round trip, asof windows, idempotent append via MERGE, schema rejection), against a real Unity Catalog table — skipped without `DATABRICKS_TOKEN`, skipped at collection entirely outside `.venv-delta` |
+| `test_port_to_delta.py` | one append call per distinct knowledge_ts (not one blob), stamp columns stripped before handoff, same-knowledge_ts parts collapse into one call — against a `FakeDeltaStore` double, runs in the main venv (no live connection needed) |
 | `test_crsp_loader.py` | happy path into store, re-run idempotency, dup quarantine, short-past-year audit fail, nulls/outliers flagged not dropped, schema verify (offline FakeConn) |
 | `test_universe.py` | month-end date derivation, median-not-mean ranking + top-N cut + rank column, $5 filter on raw close, coverage filter (sparse ticker out), short-history empty guard, knowledge-cutoff hides later loads, one snapshot per month, CLI writes dataset, empty-lake exit 1 |
 | `test_security_master.py` | empty-frame schema match, round trip through store, store's own effective_date validation still applies, reused-ticker date-ranged resolution (two internal_ids, one id_value, disjoint valid ranges, correct one picked per as-of date incl. the unassigned gap), gap-based segment splitting, no-gap stays one segment, internal_id ordered by valid_from, CLI writes dataset + reports reuse count, panel resolution incl. gap/unresolvable/current cases, scalar wrapper matches panel |
@@ -379,7 +408,7 @@ First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on t
 | `engine/tests/test_broker_simulator.cpp` | ack, out-of-order fill-before-ack, partial-then-full fill, reject-with-reason, poll drains the queue, cancel-on-unknown-id throws |
 
 ### Config
-- `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5, numpy ≥2.0, scikit-learn ≥1.5, cvxpy ≥1.5; pytest config
+- `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5, numpy ≥2.0, scikit-learn ≥1.5, cvxpy ≥1.5, pyarrow ≥19 (Polars→pandas bridge, block 6c); pytest config. `delta` extra: databricks-connect ==16.1.* (install into `.venv-delta/` only, per module docstring)
 
 ## Not yet started (DESIGN.md blocks)
 security master block 4 (CRSP permno/CUSIP hookup) · `research/attribution/` · `engine/` remaining Block 5 (C++) pieces (order gateway state machine, position keeper, pre-trade risk checks, market data handler, live `AlpacaGateway` — separate from the now-complete research/backtest/) · `common/` · `infra/`
