@@ -5,13 +5,13 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1785268375.0326514,
-    "ast_hash": "fac0602638d5715f6e6dbec55a9abb6c",
+    "mtime": 1783544467.8149555,
+    "ast_hash": "c6ffecd10feb894fe61b682ac0a17fe9",
     "semantic_hash": ""
   },
   "pyproject.toml": {
-    "mtime": 1785028294.5420065,
-    "ast_hash": "44d041cf8336bf11885600591aaef2a7",
+    "mtime": 1784690972.4085906,
+    "ast_hash": "52a40210c980c25650275fe5396e7653",
     "semantic_hash": ""
   },
   "research/__init__.py": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785288903.521082,
-    "ast_hash": "1c3cd72b37335b56b4e351707bbf1bc8",
+    "mtime": 1784950592.0902214,
+    "ast_hash": "a8b8bbc1e37a885bd8fe4184870682c3",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "docs/METRICS.md": {
-    "mtime": 1785170642.8597457,
-    "ast_hash": "851761ad4d3fe9a10be2e6a08c0a1038",
+    "mtime": 1784490247.81428,
+    "ast_hash": "2a19e0b3d09e41a4ea1703264e1840fa",
     "semantic_hash": ""
   },
   "research/data/__init__.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785180588.3747687,
-    "ast_hash": "022eea269ebb0d9120e8e37c97e202cf",
+    "mtime": 1784950577.0033011,
+    "ast_hash": "cf2aa81ae192499876c5e630a843bb60",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785288913.6412714,
-    "ast_hash": "58c013775e139ce0d637aa1306eb8fe7",
+    "mtime": 1784949631.5328133,
+    "ast_hash": "aaabfc2d78e8cbdf98454c5ee735f7f8",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "engine/src/broker/BrokerSimulator.cpp": {
-    "mtime": 1785288867.5423765,
-    "ast_hash": "47fa93a4af1f00ba45baf02719b8a36f",
+    "mtime": 1784219763.3650396,
+    "ast_hash": "7476e9d89a3749a2226ed3920d696a20",
     "semantic_hash": ""
   },
   "engine/src/broker/BrokerSimulator.hpp": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "engine/tests/test_broker_simulator.cpp": {
-    "mtime": 1785288880.1195793,
-    "ast_hash": "59d38b3ba166ba514b0a47624c26c10d",
+    "mtime": 1784215886.2968783,
+    "ast_hash": "4e96b4a4b5e0e692469a79b82ca558e6",
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "research/alpha/ic.py": {
-    "mtime": 1785170871.1706862,
-    "ast_hash": "19871ee6347cba7cb8a67bb3daf82a0f",
+    "mtime": 1784260294.4967716,
+    "ast_hash": "5e679f53d0bb2db7c3ceef274f2a81e0",
     "semantic_hash": ""
   },
   "research/signals/__init__.py": {
@@ -342,31 +342,6 @@
   "tests/test_result.py": {
     "mtime": 1784949537.1001415,
     "ast_hash": "63f4a3460a3beb2351fc13fdddd1a055",
-    "semantic_hash": ""
-  },
-  "research/alpha/spark_ic.py": {
-    "mtime": 1785180523.5247686,
-    "ast_hash": "75e0a77081bca22128f2ff72a3eaffc1",
-    "semantic_hash": ""
-  },
-  "research/data/delta_store.py": {
-    "mtime": 1784960983.8767955,
-    "ast_hash": "161c184f402e0520f66cc00dd7af0516",
-    "semantic_hash": ""
-  },
-  "research/data/port_to_delta.py": {
-    "mtime": 1785169817.6010232,
-    "ast_hash": "e862503176332f5d42a9c03cf3bc180a",
-    "semantic_hash": ""
-  },
-  "tests/test_delta_store.py": {
-    "mtime": 1785021301.263945,
-    "ast_hash": "954cb01f55514ec3d32ed572256f2162",
-    "semantic_hash": ""
-  },
-  "tests/test_port_to_delta.py": {
-    "mtime": 1785119724.5824242,
-    "ast_hash": "ea8e625f808bec2a86aafc261ceae784",
     "semantic_hash": ""
   }
 }

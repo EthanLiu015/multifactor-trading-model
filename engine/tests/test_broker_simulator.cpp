@@ -74,3 +74,31 @@ TEST_CASE("cancel_order on an unknown id throws", "[broker_simulator]") {
     BrokerSimulator sim;
     REQUIRE_THROWS_AS(sim.cancel_order(999), std::out_of_range);
 }
+
+TEST_CASE("inject_fill above a buy limit throws", "[broker_simulator]") {
+    BrokerSimulator sim;
+    Order order{"AAPL", 100, 150.0, true};
+    OrderId id = sim.submit_order(order);
+
+    REQUIRE_THROWS_AS(sim.inject_fill(id, 100, 150.01), std::invalid_argument);
+}
+
+TEST_CASE("inject_fill below a sell limit throws", "[broker_simulator]") {
+    BrokerSimulator sim;
+    Order order{"AAPL", 100, 150.0, false};
+    OrderId id = sim.submit_order(order);
+
+    REQUIRE_THROWS_AS(sim.inject_fill(id, 100, 149.99), std::invalid_argument);
+}
+
+TEST_CASE("inject_fill exactly at the limit price is legal", "[broker_simulator]") {
+    BrokerSimulator sim;
+    Order order{"AAPL", 100, 150.0, true};
+    OrderId id = sim.submit_order(order);
+
+    sim.inject_fill(id, 100, 150.0);
+    auto events = sim.poll_events();
+
+    REQUIRE(events.size() == 1);
+    REQUIRE(events[0].type == EventType::Fill);
+}

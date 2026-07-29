@@ -1,5 +1,6 @@
 #include "broker/BrokerSimulator.hpp"
 
+#include <stdexcept>
 #include <utility>
 
 #include "journal/EventJournal.hpp"
@@ -44,6 +45,15 @@ void BrokerSimulator::inject_ack(OrderId id) {
 
 void BrokerSimulator::inject_fill(OrderId id, double qty, double price) {
     auto& state = orders_.at(id);
+    const double limit = state.order.limit_price;
+    if (limit != 0.0) {  // 0 = market order, no price constraint
+        const bool violates_limit =
+            state.order.is_buy ? (price > limit) : (price < limit);
+        if (violates_limit) {
+            throw std::invalid_argument(
+                "inject_fill: price violates order limit_price");
+        }
+    }
     if (qty >= state.qty_remaining) {
         state.qty_remaining = 0.0;
         state.status = OrderStatus::Filled;
