@@ -9,6 +9,7 @@ add_library(broker_sim
     src/journal/EventJournal.cpp
     src/order/OrderGateway.cpp
     src/position/PositionKeeper.cpp
+    src/risk/RiskChecker.cpp
 )
 target_include_directories(broker_sim PUBLIC include src)
 

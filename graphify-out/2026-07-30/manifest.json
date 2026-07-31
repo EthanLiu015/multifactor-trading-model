@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785460402.562261,
-    "ast_hash": "b6534fce6b2aee65067456fd219039ef",
+    "mtime": 1785466402.4690247,
+    "ast_hash": "59e3b47c7c3414274d970c43e38340d2",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785460387.632535,
-    "ast_hash": "cb7597611a02b7c0cfacc27711bc7b7d",
+    "mtime": 1785466387.7789338,
+    "ast_hash": "581683a5e1e5d11ee8d0f4845d126b0e",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785460414.5300765,
-    "ast_hash": "226ca7a390053230ffeed43f10e22ba1",
+    "mtime": 1785466416.7885947,
+    "ast_hash": "b21b59fd6737b6126c39cb2b7a353b07",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
-    "mtime": 1785460313.4527926,
-    "ast_hash": "bae21e10b71fbd4f855ab67f5f8d5b82",
+    "mtime": 1785466321.5167415,
+    "ast_hash": "a09d3c5178b1ff75311e4566a8c8b8ab",
     "semantic_hash": ""
   },
   "engine/tests/CMakeLists.txt": {
-    "mtime": 1785460339.4231064,
-    "ast_hash": "5825a15869b70fe8682d1390817cfca8",
+    "mtime": 1785466351.4117336,
+    "ast_hash": "f0be51214819158fe3e5a054b8a02931",
     "semantic_hash": ""
   },
   "research/alpha/__init__.py": {
@@ -382,6 +382,21 @@
   "engine/tests/test_order_gateway.cpp": {
     "mtime": 1785460335.2543561,
     "ast_hash": "a51bc99a059b5836306b433330f70136",
+    "semantic_hash": ""
+  },
+  "engine/include/position/PositionKeeper.hpp": {
+    "mtime": 1785466286.728219,
+    "ast_hash": "effce15f5cdf2e3be90d03cc16b01bce",
+    "semantic_hash": ""
+  },
+  "engine/src/position/PositionKeeper.cpp": {
+    "mtime": 1785466318.2348394,
+    "ast_hash": "b8e6b47f43ff53ce27933ad672d143ad",
+    "semantic_hash": ""
+  },
+  "engine/tests/test_position_keeper.cpp": {
+    "mtime": 1785466342.292628,
+    "ast_hash": "592adbefd4332ac4fd7925e78b3a1ce7",
     "semantic_hash": ""
   }
 }
