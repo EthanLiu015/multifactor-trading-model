@@ -27,5 +27,6 @@
   "25": "OrderGateway.cpp",
   "26": "EventJournal",
   "27": "Order",
-  "28": "test_order_gateway.cpp"
+  "28": "test_order_gateway.cpp",
+  "29": "test_position_keeper.cpp"
 }

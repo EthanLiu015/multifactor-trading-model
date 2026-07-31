@@ -354,6 +354,116 @@
       "norm_label": "states_"
     },
     {
+      "label": "PositionKeeper.hpp",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper",
+      "community": 23,
+      "norm_label": "positionkeeper.hpp"
+    },
+    {
+      "label": "Position",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_position",
+      "community": 25,
+      "norm_label": "position"
+    },
+    {
+      "label": "qty",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_position_qty",
+      "community": 25,
+      "norm_label": "qty"
+    },
+    {
+      "label": "avg_price",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_position_avg_price",
+      "community": 25,
+      "norm_label": "avg_price"
+    },
+    {
+      "label": "realized_pnl",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_position_realized_pnl",
+      "community": 25,
+      "norm_label": "realized_pnl"
+    },
+    {
+      "label": "PositionKeeper",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_positionkeeper",
+      "community": 25,
+      "norm_label": "positionkeeper"
+    },
+    {
+      "label": "on_fill",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_positionkeeper_on_fill",
+      "community": 25,
+      "norm_label": "on_fill"
+    },
+    {
+      "label": "position",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_positionkeeper_position",
+      "community": 25,
+      "norm_label": "position"
+    },
+    {
+      "label": "unordered_map",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_hpp_unordered_map",
+      "community": 25,
+      "norm_label": "unordered_map"
+    },
+    {
+      "label": "string",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_hpp_string",
+      "community": 25,
+      "norm_label": "string"
+    },
+    {
+      "label": "positions_",
+      "file_type": "code",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "engine_include_position_positionkeeper_positionkeeper_positions",
+      "community": 25,
+      "norm_label": "positions_"
+    },
+    {
       "label": "BrokerSimulator.cpp",
       "file_type": "code",
       "source_file": "engine/src/broker/BrokerSimulator.cpp",
@@ -400,7 +510,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_brokersimulator",
-      "community": 24,
+      "community": 26,
       "norm_label": "brokersimulator::brokersimulator()"
     },
     {
@@ -410,7 +520,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "eventjournal",
-      "community": 24,
+      "community": 26,
       "norm_label": "eventjournal"
     },
     {
@@ -460,7 +570,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate",
-      "community": 22,
+      "community": 27,
       "norm_label": "simorderstate"
     },
     {
@@ -470,7 +580,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_order",
-      "community": 22,
+      "community": 27,
       "norm_label": "order"
     },
     {
@@ -480,7 +590,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "orderstatus",
-      "community": 22,
+      "community": 27,
       "norm_label": "orderstatus"
     },
     {
@@ -490,7 +600,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_status",
-      "community": 22,
+      "community": 27,
       "norm_label": "status"
     },
     {
@@ -500,7 +610,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_qty_remaining",
-      "community": 22,
+      "community": 27,
       "norm_label": "qty_remaining"
     },
     {
@@ -520,7 +630,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_submit_order",
-      "community": 27,
+      "community": 24,
       "norm_label": "submit_order"
     },
     {
@@ -700,7 +810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_hpp_engine_src_journal_eventjournal",
-      "community": 26,
+      "community": 8,
       "norm_label": "eventjournal.hpp"
     },
     {
@@ -834,6 +944,46 @@
       "norm_label": "ordergateway::state()"
     },
     {
+      "label": "PositionKeeper.cpp",
+      "file_type": "code",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "engine_src_position_positionkeeper",
+      "community": 25,
+      "norm_label": "positionkeeper.cpp"
+    },
+    {
+      "label": "PositionKeeper::on_fill()",
+      "file_type": "code",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "engine_src_position_positionkeeper_positionkeeper_on_fill",
+      "community": 25,
+      "norm_label": "positionkeeper::on_fill()"
+    },
+    {
+      "label": "string",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_src_position_positionkeeper_cpp_string",
+      "community": 25,
+      "norm_label": "string"
+    },
+    {
+      "label": "PositionKeeper::position()",
+      "file_type": "code",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "engine_src_position_positionkeeper_positionkeeper_position",
+      "community": 25,
+      "norm_label": "positionkeeper::position()"
+    },
+    {
       "label": "test_broker_simulator.cpp",
       "file_type": "code",
       "source_file": "engine/tests/test_broker_simulator.cpp",
@@ -852,6 +1002,16 @@
       "id": "engine_tests_test_order_gateway",
       "community": 28,
       "norm_label": "test_order_gateway.cpp"
+    },
+    {
+      "label": "test_position_keeper.cpp",
+      "file_type": "code",
+      "source_file": "engine/tests/test_position_keeper.cpp",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "engine_tests_test_position_keeper",
+      "community": 29,
+      "norm_label": "test_position_keeper.cpp"
     },
     {
       "label": "multifactor-trading-system",
@@ -1383,7 +1543,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_init",
-      "community": 6,
+      "community": 19,
       "norm_label": "__init__.py"
     },
     {
@@ -1543,7 +1703,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_init",
-      "community": 9,
+      "community": 19,
       "norm_label": "__init__.py"
     },
     {
@@ -1553,7 +1713,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit",
-      "community": 9,
+      "community": 19,
       "norm_label": "audit.py"
     },
     {
@@ -1563,7 +1723,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport",
-      "community": 9,
+      "community": 19,
       "norm_label": "auditreport"
     },
     {
@@ -1573,7 +1733,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport_ok",
-      "community": 9,
+      "community": 19,
       "norm_label": ".ok()"
     },
     {
@@ -1583,7 +1743,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_loaders_audit_audit_daily_bars",
-      "community": 9,
+      "community": 19,
       "norm_label": "audit_daily_bars()"
     },
     {
@@ -1593,7 +1753,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_audit_py_dataframe",
-      "community": 9,
+      "community": 19,
       "norm_label": "dataframe"
     },
     {
@@ -1603,7 +1763,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_1",
-      "community": 9,
+      "community": 19,
       "norm_label": "shared audit for daily-bars loaders (design.md block 1d).  every vendor chunk pa"
     },
     {
@@ -1613,7 +1773,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_52",
-      "community": 9,
+      "community": 19,
       "norm_label": "audit one yearly chunk of daily bars keyed (security_id, effective_date).      h"
     },
     {
@@ -1623,7 +1783,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily",
-      "community": 9,
+      "community": 19,
       "norm_label": "crsp_daily.py"
     },
     {
@@ -1703,7 +1863,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_audit",
-      "community": 9,
+      "community": 19,
       "norm_label": "._audit()"
     },
     {
@@ -1733,7 +1893,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_1",
-      "community": 9,
+      "community": 19,
       "norm_label": "crsp daily-bars loader (wrds, crsp 2.0 / \"ciz\" format).  pulls daily bars for al"
     },
     {
@@ -1773,7 +1933,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily",
-      "community": 9,
+      "community": 19,
       "norm_label": "yfinance_daily.py"
     },
     {
@@ -1853,7 +2013,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 6,
+      "community": 9,
       "norm_label": ".__init__()"
     },
     {
@@ -1983,7 +2143,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_1",
-      "community": 9,
+      "community": 19,
       "norm_label": "yfinance daily-bars loader (interim free vendor, part 2b).  fills the lake while"
     },
     {
@@ -2153,7 +2313,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store",
-      "community": 6,
+      "community": 19,
       "norm_label": "store.py"
     },
     {
@@ -2163,7 +2323,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "research_data_store_pitstore",
-      "community": 6,
+      "community": 19,
       "norm_label": "pitstore"
     },
     {
@@ -2173,7 +2333,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_data_store_pitstore_init",
-      "community": 6,
+      "community": 19,
       "norm_label": ".__init__()"
     },
     {
@@ -2183,7 +2343,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 6,
+      "community": 19,
       "norm_label": "path"
     },
     {
@@ -2193,7 +2353,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "research_data_store_pitstore_dataset_dir",
-      "community": 6,
+      "community": 19,
       "norm_label": "._dataset_dir()"
     },
     {
@@ -2203,7 +2363,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "research_data_store_pitstore_append",
-      "community": 6,
+      "community": 19,
       "norm_label": ".append()"
     },
     {
@@ -2213,7 +2373,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_dataframe",
-      "community": 6,
+      "community": 19,
       "norm_label": "dataframe"
     },
     {
@@ -2223,7 +2383,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_datetime",
-      "community": 6,
+      "community": 19,
       "norm_label": "datetime"
     },
     {
@@ -2233,7 +2393,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "research_data_store_pitstore_scan",
-      "community": 6,
+      "community": 19,
       "norm_label": ".scan()"
     },
     {
@@ -2243,7 +2403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_lazyframe",
-      "community": 6,
+      "community": 19,
       "norm_label": "lazyframe"
     },
     {
@@ -2253,7 +2413,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "research_data_store_pitstore_asof",
-      "community": 6,
+      "community": 19,
       "norm_label": ".asof()"
     },
     {
@@ -2263,7 +2423,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store_rationale_1",
-      "community": 6,
+      "community": 19,
       "norm_label": "point-in-time (bitemporal) parquet store.  every dataset in the lake carries two"
     },
     {
@@ -2273,7 +2433,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_data_store_rationale_28",
-      "community": 6,
+      "community": 19,
       "norm_label": "a directory-per-dataset parquet lake with point-in-time reads."
     },
     {
@@ -2283,7 +2443,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_store_rationale_43",
-      "community": 6,
+      "community": 19,
       "norm_label": "write one load batch. idempotent: same knowledge_ts overwrites.          the bat"
     },
     {
@@ -2293,7 +2453,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "research_data_store_rationale_81",
-      "community": 6,
+      "community": 19,
       "norm_label": "lazy scan of every batch in a dataset (no pit filtering)."
     },
     {
@@ -2303,7 +2463,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "research_data_store_rationale_91",
-      "community": 6,
+      "community": 19,
       "norm_label": "the world as we knew it at ``knowledge_ts``.          drops rows learned after t"
     },
     {
@@ -2323,7 +2483,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_portfolio_beta",
-      "community": 18,
+      "community": 21,
       "norm_label": "beta.py"
     },
     {
@@ -2383,7 +2543,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_portfolio_beta_rationale_1",
-      "community": 18,
+      "community": 21,
       "norm_label": "per-stock market beta (block 4b input): rolling single-factor beta.  needed for"
     },
     {
@@ -2713,7 +2873,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_risk_exposures_zscore",
-      "community": 15,
+      "community": 3,
       "norm_label": "_zscore()"
     },
     {
@@ -2723,7 +2883,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_dataframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -2733,7 +2893,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "research_risk_exposures_build_exposure_matrix",
-      "community": 15,
+      "community": 3,
       "norm_label": "build_exposure_matrix()"
     },
     {
@@ -2743,7 +2903,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_lazyframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "lazyframe"
     },
     {
@@ -2753,7 +2913,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_date",
-      "community": 15,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -2773,7 +2933,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_52",
-      "community": 15,
+      "community": 3,
       "norm_label": "exposure matrix b for one rebalance date.      ``sectors`` is the already-asof'd"
     },
     {
@@ -4123,7 +4283,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_exposures",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_exposures.py"
     },
     {
@@ -4133,7 +4293,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_exposures_trading_days",
-      "community": 15,
+      "community": 3,
       "norm_label": "trading_days()"
     },
     {
@@ -4143,7 +4303,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_date",
-      "community": 15,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -4153,7 +4313,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_exposures_ret_bars",
-      "community": 15,
+      "community": 3,
       "norm_label": "ret_bars()"
     },
     {
@@ -4163,7 +4323,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_dataframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -4173,7 +4333,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 15,
+      "community": 3,
       "norm_label": "store()"
     },
     {
@@ -4183,7 +4343,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_exposures_test_build_exposure_matrix_shape_and_sector_dummies",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_build_exposure_matrix_shape_and_sector_dummies()"
     },
     {
@@ -4193,7 +4353,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_test_exposures_test_security_missing_sector_is_excluded",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_security_missing_sector_is_excluded()"
     },
     {
@@ -4203,7 +4363,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_exposures_test_null_sector_value_excluded_not_crashed",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_null_sector_value_excluded_not_crashed()"
     },
     {
@@ -4213,7 +4373,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_test_exposures_test_empty_when_no_members_have_enough_history",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_empty_when_no_members_have_enough_history()"
     },
     {
@@ -5223,7 +5383,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 6,
+      "community": 15,
       "norm_label": "store()"
     },
     {
@@ -5683,7 +5843,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_universe_store",
-      "community": 6,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -5863,7 +6023,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 6,
+      "community": 9,
       "norm_label": "store()"
     },
     {
@@ -6510,7 +6670,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L140",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -6727,40 +6887,40 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "engine/ \u2014 **built (broker simulator + order gateway, 18 Catch2 tests)**",
+      "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper, 25 Catch2 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L367",
       "_origin": "ast",
-      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_18_catch2_tests",
+      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_25_catch2_tests",
       "community": 12,
-      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway, 18 catch2 tests)**"
+      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper, 25 catch2 tests)**"
     },
     {
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L381",
+      "source_location": "L383",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **18 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **25 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L385",
+      "source_location": "L387",
       "_origin": "ast",
-      "id": "docs_system_map_tests_106_passing_1_skipped_python_18_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_106_passing_1_skipped_python_25_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **18 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **25 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L412",
+      "source_location": "L414",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -6770,7 +6930,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L415",
+      "source_location": "L417",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -7107,6 +7267,17 @@
       "source_location": "L5",
       "weight": 1.0,
       "source": "engine_include_broker_orderevent",
+      "target": "engine_include_broker_ibrokergateway_hpp_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "engine_include_position_positionkeeper",
       "target": "engine_include_broker_ibrokergateway_hpp_string",
       "confidence_score": 1.0
     },
@@ -7560,11 +7731,152 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "engine_include_position_positionkeeper",
+      "target": "engine_include_order_ordergateway_hpp_unordered_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/BrokerSimulator.hpp",
       "source_location": "L5",
       "weight": 1.0,
       "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
       "target": "engine_include_order_ordergateway_hpp_unordered_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "engine_include_position_positionkeeper",
+      "target": "engine_include_position_positionkeeper_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "engine_include_position_positionkeeper",
+      "target": "engine_include_position_positionkeeper_positionkeeper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_position",
+      "target": "engine_include_position_positionkeeper_position_avg_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_position",
+      "target": "engine_include_position_positionkeeper_position_qty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_position",
+      "target": "engine_include_position_positionkeeper_position_realized_pnl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "engine_src_position_positionkeeper_positionkeeper_position",
+      "target": "engine_include_position_positionkeeper_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_hpp_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_hpp_unordered_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_positionkeeper_on_fill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_positionkeeper_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_include_position_positionkeeper_positionkeeper",
+      "target": "engine_include_position_positionkeeper_positionkeeper_positions",
       "confidence_score": 1.0
     },
     {
@@ -8368,6 +8680,48 @@
       "context": "parameter_type",
       "source": "engine_src_order_ordergateway_ordergateway_state",
       "target": "engine_src_order_ordergateway_cpp_orderid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "engine_src_position_positionkeeper",
+      "target": "engine_src_position_positionkeeper_positionkeeper_on_fill",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "engine_src_position_positionkeeper",
+      "target": "engine_src_position_positionkeeper_positionkeeper_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_src_position_positionkeeper_positionkeeper_on_fill",
+      "target": "engine_src_position_positionkeeper_cpp_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/position/PositionKeeper.cpp",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_src_position_positionkeeper_positionkeeper_position",
+      "target": "engine_src_position_positionkeeper_cpp_string",
       "confidence_score": 1.0
     },
     {
@@ -20804,7 +21158,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L140",
+      "source_location": "L141",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -20904,7 +21258,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L415",
+      "source_location": "L417",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -20934,7 +21288,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L381",
+      "source_location": "L383",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -20944,7 +21298,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L412",
+      "source_location": "L414",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -20957,7 +21311,7 @@
       "source_location": "L367",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_18_catch2_tests",
+      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_25_catch2_tests",
       "confidence_score": 1.0
     },
     {
@@ -21104,10 +21458,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L385",
+      "source_location": "L387",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_106_passing_1_skipped_python_18_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_106_passing_1_skipped_python_25_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -21282,5 +21636,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "04702cbbd6324c3b95888d709107bff11057b219"
+  "built_at_commit": "fa53baaac85e1ec5d68b29cf3dd9c88c77afd794"
 }

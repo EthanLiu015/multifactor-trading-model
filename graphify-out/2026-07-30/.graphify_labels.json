@@ -18,5 +18,14 @@
   "16": "test_ic.py",
   "17": "build_exposure_matrix",
   "18": "build_optimizer_inputs",
-  "20": "trade_cost"
+  "19": "CRSPDailyLoader",
+  "20": "trade_cost",
+  "21": "compute_market_beta",
+  "22": "BrokerSimulator",
+  "23": "IBrokerGateway",
+  "24": "BrokerSimulator.cpp",
+  "25": "OrderGateway.cpp",
+  "26": "EventJournal",
+  "27": "Order",
+  "28": "test_order_gateway.cpp"
 }

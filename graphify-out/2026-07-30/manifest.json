@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1785268375.0326514,
-    "ast_hash": "fac0602638d5715f6e6dbec55a9abb6c",
+    "mtime": 1785459911.7680037,
+    "ast_hash": "1260d9fe8413bdd4a77291b2c710ae10",
     "semantic_hash": ""
   },
   "pyproject.toml": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785288903.521082,
-    "ast_hash": "1c3cd72b37335b56b4e351707bbf1bc8",
+    "mtime": 1785460402.562261,
+    "ast_hash": "b6534fce6b2aee65067456fd219039ef",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785180588.3747687,
-    "ast_hash": "022eea269ebb0d9120e8e37c97e202cf",
+    "mtime": 1785460387.632535,
+    "ast_hash": "cb7597611a02b7c0cfacc27711bc7b7d",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785288913.6412714,
-    "ast_hash": "58c013775e139ce0d637aa1306eb8fe7",
+    "mtime": 1785460414.5300765,
+    "ast_hash": "226ca7a390053230ffeed43f10e22ba1",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
-    "mtime": 1784215896.5831242,
-    "ast_hash": "a17cee341653977c2aa147d3560fdd8a",
+    "mtime": 1785460313.4527926,
+    "ast_hash": "bae21e10b71fbd4f855ab67f5f8d5b82",
     "semantic_hash": ""
   },
   "engine/tests/CMakeLists.txt": {
-    "mtime": 1784215891.0541291,
-    "ast_hash": "55b031faf1ce14aa62861c499b1196b7",
+    "mtime": 1785460339.4231064,
+    "ast_hash": "5825a15869b70fe8682d1390817cfca8",
     "semantic_hash": ""
   },
   "research/alpha/__init__.py": {
@@ -367,6 +367,21 @@
   "tests/test_port_to_delta.py": {
     "mtime": 1785119724.5824242,
     "ast_hash": "ea8e625f808bec2a86aafc261ceae784",
+    "semantic_hash": ""
+  },
+  "engine/include/order/OrderGateway.hpp": {
+    "mtime": 1785460300.3887517,
+    "ast_hash": "20a6c5ae3de16a0885ba83c2fe54f249",
+    "semantic_hash": ""
+  },
+  "engine/src/order/OrderGateway.cpp": {
+    "mtime": 1785460306.2582135,
+    "ast_hash": "2e2c9aa34450591f2e63a60faf1e89e6",
+    "semantic_hash": ""
+  },
+  "engine/tests/test_order_gateway.cpp": {
+    "mtime": 1785460335.2543561,
+    "ast_hash": "a51bc99a059b5836306b433330f70136",
     "semantic_hash": ""
   }
 }
