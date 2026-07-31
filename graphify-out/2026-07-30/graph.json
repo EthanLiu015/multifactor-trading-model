@@ -20,7 +20,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order",
-      "community": 27,
+      "community": 8,
       "norm_label": "order"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_symbol",
-      "community": 27,
+      "community": 8,
       "norm_label": "symbol"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_qty",
-      "community": 27,
+      "community": 8,
       "norm_label": "qty"
     },
     {
@@ -60,7 +60,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_limit_price",
-      "community": 27,
+      "community": 8,
       "norm_label": "limit_price"
     },
     {
@@ -70,7 +70,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_is_buy",
-      "community": 27,
+      "community": 8,
       "norm_label": "is_buy"
     },
     {
@@ -80,7 +80,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "community": 23,
+      "community": 8,
       "norm_label": "ibrokergateway"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_ibrokergateway",
-      "community": 23,
+      "community": 8,
       "norm_label": ".~ibrokergateway()"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_submit_order",
-      "community": 23,
+      "community": 8,
       "norm_label": "submit_order"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_cancel_order",
-      "community": 23,
+      "community": 8,
       "norm_label": "cancel_order"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_poll_events",
-      "community": 23,
+      "community": 8,
       "norm_label": "poll_events"
     },
     {
@@ -254,113 +254,13 @@
       "norm_label": "reason"
     },
     {
-      "label": "OrderGateway.hpp",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway",
-      "community": 23,
-      "norm_label": "ordergateway.hpp"
-    },
-    {
-      "label": "OrderGateway",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway",
-      "community": 23,
-      "norm_label": "ordergateway"
-    },
-    {
-      "label": "submit_order",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway_submit_order",
-      "community": 23,
-      "norm_label": "submit_order"
-    },
-    {
-      "label": "cancel_order",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway_cancel_order",
-      "community": 23,
-      "norm_label": "cancel_order"
-    },
-    {
-      "label": "pump",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway_pump",
-      "community": 23,
-      "norm_label": "pump"
-    },
-    {
-      "label": "state",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway_state",
-      "community": 23,
-      "norm_label": "state"
-    },
-    {
-      "label": "unordered_map",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_hpp_unordered_map",
-      "community": 23,
-      "norm_label": "unordered_map"
-    },
-    {
-      "label": "OrderId",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_hpp_orderid",
-      "community": 23,
-      "norm_label": "orderid"
-    },
-    {
-      "label": "OrderState",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_hpp_orderstate",
-      "community": 23,
-      "norm_label": "orderstate"
-    },
-    {
-      "label": "states_",
-      "file_type": "code",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "engine_include_order_ordergateway_ordergateway_states",
-      "community": 23,
-      "norm_label": "states_"
-    },
-    {
       "label": "BrokerSimulator.cpp",
       "file_type": "code",
       "source_file": "engine/src/broker/BrokerSimulator.cpp",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_engine_src_broker_brokersimulator",
-      "community": 24,
+      "community": 8,
       "norm_label": "brokersimulator.cpp"
     },
     {
@@ -370,7 +270,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_make_event",
-      "community": 24,
+      "community": 8,
       "norm_label": "make_event()"
     },
     {
@@ -380,7 +280,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_orderid",
-      "community": 24,
+      "community": 8,
       "norm_label": "orderid"
     },
     {
@@ -390,7 +290,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_eventtype",
-      "community": 24,
+      "community": 8,
       "norm_label": "eventtype"
     },
     {
@@ -400,7 +300,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_brokersimulator",
-      "community": 24,
+      "community": 8,
       "norm_label": "brokersimulator::brokersimulator()"
     },
     {
@@ -410,7 +310,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "eventjournal",
-      "community": 24,
+      "community": 8,
       "norm_label": "eventjournal"
     },
     {
@@ -430,7 +330,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_string",
-      "community": 24,
+      "community": 8,
       "norm_label": "string"
     },
     {
@@ -440,7 +340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
-      "community": 22,
+      "community": 8,
       "norm_label": "brokersimulator.hpp"
     },
     {
@@ -450,7 +350,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_eventjournal",
-      "community": 22,
+      "community": 8,
       "norm_label": "eventjournal"
     },
     {
@@ -460,7 +360,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate",
-      "community": 22,
+      "community": 8,
       "norm_label": "simorderstate"
     },
     {
@@ -470,7 +370,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_order",
-      "community": 22,
+      "community": 8,
       "norm_label": "order"
     },
     {
@@ -480,7 +380,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "orderstatus",
-      "community": 22,
+      "community": 8,
       "norm_label": "orderstatus"
     },
     {
@@ -490,7 +390,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_status",
-      "community": 22,
+      "community": 8,
       "norm_label": "status"
     },
     {
@@ -500,7 +400,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_simorderstate_qty_remaining",
-      "community": 22,
+      "community": 8,
       "norm_label": "qty_remaining"
     },
     {
@@ -510,7 +410,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator",
-      "community": 22,
+      "community": 8,
       "norm_label": "brokersimulator"
     },
     {
@@ -520,7 +420,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_submit_order",
-      "community": 27,
+      "community": 8,
       "norm_label": "submit_order"
     },
     {
@@ -530,7 +430,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_cancel_order",
-      "community": 24,
+      "community": 8,
       "norm_label": "cancel_order"
     },
     {
@@ -550,7 +450,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_ack",
-      "community": 24,
+      "community": 8,
       "norm_label": "inject_ack"
     },
     {
@@ -560,7 +460,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_fill",
-      "community": 24,
+      "community": 8,
       "norm_label": "inject_fill"
     },
     {
@@ -570,7 +470,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_reject",
-      "community": 24,
+      "community": 8,
       "norm_label": "inject_reject"
     },
     {
@@ -580,7 +480,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_cancel_ack",
-      "community": 24,
+      "community": 8,
       "norm_label": "inject_cancel_ack"
     },
     {
@@ -590,7 +490,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_enqueue",
-      "community": 24,
+      "community": 8,
       "norm_label": "enqueue"
     },
     {
@@ -600,7 +500,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_journal",
-      "community": 22,
+      "community": 8,
       "norm_label": "journal_"
     },
     {
@@ -609,8 +509,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "engine_src_broker_brokersimulator_hpp_unordered_map",
-      "community": 22,
+      "id": "unordered_map",
+      "community": 8,
       "norm_label": "unordered_map"
     },
     {
@@ -620,7 +520,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_hpp_orderid",
-      "community": 22,
+      "community": 8,
       "norm_label": "orderid"
     },
     {
@@ -630,7 +530,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_orders",
-      "community": 22,
+      "community": 8,
       "norm_label": "orders_"
     },
     {
@@ -640,7 +540,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "deque",
-      "community": 22,
+      "community": 8,
       "norm_label": "deque"
     },
     {
@@ -650,7 +550,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_pending_events",
-      "community": 22,
+      "community": 8,
       "norm_label": "pending_events_"
     },
     {
@@ -660,7 +560,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_next_id",
-      "community": 22,
+      "community": 8,
       "norm_label": "next_id_"
     },
     {
@@ -670,7 +570,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_cpp_engine_src_journal_eventjournal",
-      "community": 26,
+      "community": 8,
       "norm_label": "eventjournal.cpp"
     },
     {
@@ -680,7 +580,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_eventjournal",
-      "community": 26,
+      "community": 8,
       "norm_label": "eventjournal::eventjournal()"
     },
     {
@@ -690,7 +590,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_cpp_string",
-      "community": 26,
+      "community": 8,
       "norm_label": "string"
     },
     {
@@ -700,7 +600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_hpp_engine_src_journal_eventjournal",
-      "community": 26,
+      "community": 8,
       "norm_label": "eventjournal.hpp"
     },
     {
@@ -710,7 +610,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal",
-      "community": 26,
+      "community": 8,
       "norm_label": "eventjournal"
     },
     {
@@ -720,7 +620,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_append",
-      "community": 26,
+      "community": 8,
       "norm_label": "append"
     },
     {
@@ -730,7 +630,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ofstream",
-      "community": 26,
+      "community": 8,
       "norm_label": "ofstream"
     },
     {
@@ -740,98 +640,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_out",
-      "community": 26,
+      "community": 8,
       "norm_label": "out_"
-    },
-    {
-      "label": "OrderGateway.cpp",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway",
-      "community": 25,
-      "norm_label": "ordergateway.cpp"
-    },
-    {
-      "label": "is_terminal()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_is_terminal",
-      "community": 25,
-      "norm_label": "is_terminal()"
-    },
-    {
-      "label": "OrderState",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_cpp_orderstate",
-      "community": 25,
-      "norm_label": "orderstate"
-    },
-    {
-      "label": "OrderGateway::OrderGateway()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_ordergateway_ordergateway",
-      "community": 25,
-      "norm_label": "ordergateway::ordergateway()"
-    },
-    {
-      "label": "OrderGateway::submit_order()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_ordergateway_submit_order",
-      "community": 25,
-      "norm_label": "ordergateway::submit_order()"
-    },
-    {
-      "label": "OrderId",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_cpp_orderid",
-      "community": 25,
-      "norm_label": "orderid"
-    },
-    {
-      "label": "OrderGateway::cancel_order()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_ordergateway_cancel_order",
-      "community": 25,
-      "norm_label": "ordergateway::cancel_order()"
-    },
-    {
-      "label": "OrderGateway::pump()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_ordergateway_pump",
-      "community": 25,
-      "norm_label": "ordergateway::pump()"
-    },
-    {
-      "label": "OrderGateway::state()",
-      "file_type": "code",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "engine_src_order_ordergateway_ordergateway_state",
-      "community": 25,
-      "norm_label": "ordergateway::state()"
     },
     {
       "label": "test_broker_simulator.cpp",
@@ -842,16 +652,6 @@
       "id": "engine_tests_test_broker_simulator",
       "community": 14,
       "norm_label": "test_broker_simulator.cpp"
-    },
-    {
-      "label": "test_order_gateway.cpp",
-      "file_type": "code",
-      "source_file": "engine/tests/test_order_gateway.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_tests_test_order_gateway",
-      "community": 28,
-      "norm_label": "test_order_gateway.cpp"
     },
     {
       "label": "multifactor-trading-system",
@@ -1633,7 +1433,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader",
-      "community": 19,
+      "community": 6,
       "norm_label": "crspdailyloader"
     },
     {
@@ -1643,7 +1443,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_init",
-      "community": 19,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1653,7 +1453,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_verify_schema",
-      "community": 19,
+      "community": 6,
       "norm_label": ".verify_schema()"
     },
     {
@@ -1663,7 +1463,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_load_year",
-      "community": 19,
+      "community": 6,
       "norm_label": ".load_year()"
     },
     {
@@ -1673,7 +1473,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_datetime",
-      "community": 19,
+      "community": 6,
       "norm_label": "datetime"
     },
     {
@@ -1683,7 +1483,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_transform",
-      "community": 19,
+      "community": 6,
       "norm_label": "._transform()"
     },
     {
@@ -1693,7 +1493,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_dataframe",
-      "community": 19,
+      "community": 6,
       "norm_label": "dataframe"
     },
     {
@@ -1713,7 +1513,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_quarantine",
-      "community": 19,
+      "community": 6,
       "norm_label": "._quarantine()"
     },
     {
@@ -1723,7 +1523,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_main",
-      "community": 19,
+      "community": 6,
       "norm_label": "main()"
     },
     {
@@ -1743,7 +1543,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_54",
-      "community": 19,
+      "community": 6,
       "norm_label": "scrub -> audit -> pit store, per design.md block 1d contract.      ``conn`` is a"
     },
     {
@@ -1753,7 +1553,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_65",
-      "community": 19,
+      "community": 6,
       "norm_label": "assert expected ciz columns exist on the live table."
     },
     {
@@ -1763,7 +1563,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_76",
-      "community": 19,
+      "community": 6,
       "norm_label": "pull one calendar year, audit it, append or quarantine it."
     },
     {
@@ -1853,7 +1653,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 6,
+      "community": 9,
       "norm_label": ".__init__()"
     },
     {
@@ -2103,7 +1903,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta",
-      "community": 6,
+      "community": 17,
       "norm_label": "port_to_delta.py"
     },
     {
@@ -2123,7 +1923,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "research_data_port_to_delta_main",
-      "community": 6,
+      "community": 17,
       "norm_label": "main()"
     },
     {
@@ -2133,7 +1933,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta_rationale_1",
-      "community": 6,
+      "community": 17,
       "norm_label": "one-time port of a local pitstore dataset into delta (block 6c).  copies every `"
     },
     {
@@ -2333,7 +2133,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_portfolio_beta_empty_beta",
-      "community": 21,
+      "community": 18,
       "norm_label": "_empty_beta()"
     },
     {
@@ -2343,7 +2143,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_portfolio_beta_py_dataframe",
-      "community": 21,
+      "community": 18,
       "norm_label": "dataframe"
     },
     {
@@ -2353,7 +2153,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_portfolio_beta_compute_market_beta",
-      "community": 21,
+      "community": 18,
       "norm_label": "compute_market_beta()"
     },
     {
@@ -2363,7 +2163,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_portfolio_beta_py_lazyframe",
-      "community": 21,
+      "community": 18,
       "norm_label": "lazyframe"
     },
     {
@@ -2373,7 +2173,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_portfolio_beta_py_date",
-      "community": 21,
+      "community": 18,
       "norm_label": "date"
     },
     {
@@ -2393,7 +2193,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "research_portfolio_beta_rationale_38",
-      "community": 21,
+      "community": 18,
       "norm_label": "trailing single-factor beta per security, as of ``rebuild_date``.      ``securit"
     },
     {
@@ -2703,7 +2503,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures",
-      "community": 15,
+      "community": 3,
       "norm_label": "exposures.py"
     },
     {
@@ -2713,7 +2513,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_risk_exposures_zscore",
-      "community": 15,
+      "community": 3,
       "norm_label": "_zscore()"
     },
     {
@@ -2723,7 +2523,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_dataframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -2733,7 +2533,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "research_risk_exposures_build_exposure_matrix",
-      "community": 15,
+      "community": 3,
       "norm_label": "build_exposure_matrix()"
     },
     {
@@ -2743,7 +2543,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_lazyframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "lazyframe"
     },
     {
@@ -2753,7 +2553,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_date",
-      "community": 15,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -2763,7 +2563,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_1",
-      "community": 15,
+      "community": 3,
       "norm_label": "factor exposure matrix b (block 3 risk model).  per rebalance date: one row per"
     },
     {
@@ -2773,7 +2573,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_52",
-      "community": 15,
+      "community": 3,
       "norm_label": "exposure matrix b for one rebalance date.      ``sectors`` is the already-asof'd"
     },
     {
@@ -3663,7 +3463,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_beta",
-      "community": 21,
+      "community": 18,
       "norm_label": "test_beta.py"
     },
     {
@@ -3673,7 +3473,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "tests_test_beta_trading_days",
-      "community": 21,
+      "community": 18,
       "norm_label": "trading_days()"
     },
     {
@@ -3683,7 +3483,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_beta_py_date",
-      "community": 21,
+      "community": 18,
       "norm_label": "date"
     },
     {
@@ -3693,7 +3493,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_beta_ret_bars",
-      "community": 21,
+      "community": 18,
       "norm_label": "ret_bars()"
     },
     {
@@ -3703,7 +3503,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_beta_py_dataframe",
-      "community": 21,
+      "community": 18,
       "norm_label": "dataframe"
     },
     {
@@ -3713,7 +3513,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "tests_test_beta_store",
-      "community": 21,
+      "community": 18,
       "norm_label": "store()"
     },
     {
@@ -3723,7 +3523,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_beta_test_beta_matches_numpy_recomputation",
-      "community": 21,
+      "community": 18,
       "norm_label": "test_beta_matches_numpy_recomputation()"
     },
     {
@@ -3733,7 +3533,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_beta_test_beta_short_history_returns_empty",
-      "community": 21,
+      "community": 18,
       "norm_label": "test_beta_short_history_returns_empty()"
     },
     {
@@ -3743,7 +3543,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "tests_test_beta_test_beta_only_computed_over_named_securities",
-      "community": 21,
+      "community": 18,
       "norm_label": "test_beta_only_computed_over_named_securities()"
     },
     {
@@ -3753,7 +3553,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_beta_rationale_92",
-      "community": 21,
+      "community": 18,
       "norm_label": "a security outside `security_ids` neither gets a beta nor pollutes the market pr"
     },
     {
@@ -3893,7 +3693,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_crsp_loader",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_crsp_loader.py"
     },
     {
@@ -3903,7 +3703,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_row",
-      "community": 19,
+      "community": 6,
       "norm_label": "row()"
     },
     {
@@ -3913,7 +3713,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_frame",
-      "community": 19,
+      "community": 6,
       "norm_label": "frame()"
     },
     {
@@ -3923,7 +3723,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn",
-      "community": 19,
+      "community": 6,
       "norm_label": "fakeconn"
     },
     {
@@ -3933,7 +3733,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_init",
-      "community": 19,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -3943,7 +3743,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_raw_sql",
-      "community": 19,
+      "community": 6,
       "norm_label": ".raw_sql()"
     },
     {
@@ -3953,7 +3753,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_describe_table",
-      "community": 19,
+      "community": 6,
       "norm_label": ".describe_table()"
     },
     {
@@ -3963,7 +3763,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_store",
-      "community": 19,
+      "community": 6,
       "norm_label": "store()"
     },
     {
@@ -3973,7 +3773,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_happy_path_lands_in_store",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_happy_path_lands_in_store()"
     },
     {
@@ -3983,7 +3783,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_rerun_same_year_is_idempotent()"
     },
     {
@@ -3993,7 +3793,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_duplicate_rows_quarantined_not_stored()"
     },
     {
@@ -4003,7 +3803,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_short_past_year_fails_audit",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_short_past_year_fails_audit()"
     },
     {
@@ -4013,7 +3813,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_nulls_and_outliers_flagged_not_dropped()"
     },
     {
@@ -4023,7 +3823,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_verify_schema",
-      "community": 19,
+      "community": 6,
       "norm_label": "test_verify_schema()"
     },
     {
@@ -4123,7 +3923,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_exposures",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_exposures.py"
     },
     {
@@ -4133,7 +3933,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_exposures_trading_days",
-      "community": 15,
+      "community": 3,
       "norm_label": "trading_days()"
     },
     {
@@ -4143,7 +3943,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_date",
-      "community": 15,
+      "community": 3,
       "norm_label": "date"
     },
     {
@@ -4153,7 +3953,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_exposures_ret_bars",
-      "community": 15,
+      "community": 3,
       "norm_label": "ret_bars()"
     },
     {
@@ -4163,7 +3963,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_dataframe",
-      "community": 15,
+      "community": 3,
       "norm_label": "dataframe"
     },
     {
@@ -4173,7 +3973,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 15,
+      "community": 3,
       "norm_label": "store()"
     },
     {
@@ -4183,7 +3983,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_exposures_test_build_exposure_matrix_shape_and_sector_dummies",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_build_exposure_matrix_shape_and_sector_dummies()"
     },
     {
@@ -4193,7 +3993,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_test_exposures_test_security_missing_sector_is_excluded",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_security_missing_sector_is_excluded()"
     },
     {
@@ -4203,7 +4003,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_exposures_test_null_sector_value_excluded_not_crashed",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_null_sector_value_excluded_not_crashed()"
     },
     {
@@ -4213,7 +4013,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_test_exposures_test_empty_when_no_members_have_enough_history",
-      "community": 15,
+      "community": 3,
       "norm_label": "test_empty_when_no_members_have_enough_history()"
     },
     {
@@ -5223,7 +5023,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 6,
+      "community": 15,
       "norm_label": "store()"
     },
     {
@@ -5683,7 +5483,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_universe_store",
-      "community": 6,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -5863,7 +5663,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 6,
+      "community": 9,
       "norm_label": "store()"
     },
     {
@@ -6460,7 +6260,7 @@
       "label": "Constraints",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L29",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "docs_state_constraints",
       "community": 1,
@@ -6470,7 +6270,7 @@
       "label": "Decisions",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L38",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "docs_state_decisions",
       "community": 1,
@@ -6480,7 +6280,7 @@
       "label": "Facts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L86",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "docs_state_facts",
       "community": 1,
@@ -6490,7 +6290,7 @@
       "label": "Done",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L100",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "docs_state_done",
       "community": 1,
@@ -6500,9 +6300,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L105",
+      "source_location": "L104",
       "_origin": "ast",
-      "id": "docs_state_open_items_105",
+      "id": "docs_state_open_items_104",
       "community": 1,
       "norm_label": "open items"
     },
@@ -6510,7 +6310,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L140",
+      "source_location": "L138",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -6727,40 +6527,40 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "engine/ \u2014 **built (broker simulator + order gateway, 18 Catch2 tests)**",
+      "label": "engine/ \u2014 **built (broker simulator skeleton, 6 Catch2 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L367",
       "_origin": "ast",
-      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_18_catch2_tests",
+      "id": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
       "community": 12,
-      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway, 18 catch2 tests)**"
+      "norm_label": "engine/ \u2014 **built (broker simulator skeleton, 6 catch2 tests)**"
     },
     {
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L381",
+      "source_location": "L379",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **18 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **104 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L385",
+      "source_location": "L383",
       "_origin": "ast",
-      "id": "docs_system_map_tests_106_passing_1_skipped_python_18_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_104_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **18 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **104 passing (python)** + **6 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L412",
+      "source_location": "L410",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -6770,7 +6570,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L415",
+      "source_location": "L413",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -7089,17 +6889,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L16",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_order_ordergateway_ordergateway_submit_order",
-      "target": "engine_include_broker_ibrokergateway_order",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -7176,28 +6965,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "engine_include_order_ordergateway",
-      "target": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L34",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/BrokerSimulator.hpp",
@@ -7215,17 +6982,6 @@
       "source_location": "L7",
       "weight": 1.0,
       "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
-      "target": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L14",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_order_ordergateway_ordergateway_ordergateway",
       "target": "engine_include_broker_ibrokergateway_ibrokergateway",
       "confidence_score": 1.0
     },
@@ -7371,17 +7127,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "engine_include_order_ordergateway",
-      "target": "engine_include_broker_orderevent_orderevent",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/BrokerSimulator.hpp",
@@ -7445,126 +7190,6 @@
       "weight": 1.0,
       "source": "engine_src_journal_eventjournal_hpp_engine_src_journal_eventjournal",
       "target": "engine_include_broker_orderevent_orderevent",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "engine_include_order_ordergateway",
-      "target": "engine_include_order_ordergateway_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "engine_include_order_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_hpp_orderid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_hpp_orderstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L23",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway_cancel_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L29",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway_pump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L31",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway_state",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway_states",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/order/OrderGateway.hpp",
-      "source_location": "L22",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_order_ordergateway_ordergateway",
-      "target": "engine_include_order_ordergateway_ordergateway_submit_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/broker/BrokerSimulator.hpp",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
-      "target": "engine_include_order_ordergateway_hpp_unordered_map",
       "confidence_score": 1.0
     },
     {
@@ -7896,6 +7521,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/broker/BrokerSimulator.hpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
+      "target": "unordered_map",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/BrokerSimulator.hpp",
@@ -8123,7 +7759,7 @@
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_brokersimulator_brokersimulator",
-      "target": "engine_src_broker_brokersimulator_hpp_unordered_map",
+      "target": "unordered_map",
       "confidence_score": 1.0
     },
     {
@@ -8242,132 +7878,6 @@
       "context": "field",
       "source": "engine_src_journal_eventjournal_eventjournal",
       "target": "ofstream",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_is_terminal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_ordergateway_cancel_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_ordergateway_ordergateway",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_ordergateway_pump",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L56",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_ordergateway_state",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway",
-      "target": "engine_src_order_ordergateway_ordergateway_submit_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L8",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_order_ordergateway_is_terminal",
-      "target": "engine_src_order_ordergateway_cpp_orderstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "engine_src_order_ordergateway_ordergateway_pump",
-      "target": "engine_src_order_ordergateway_is_terminal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L56",
-      "weight": 1.0,
-      "context": "return_type",
-      "source": "engine_src_order_ordergateway_ordergateway_state",
-      "target": "engine_src_order_ordergateway_cpp_orderstate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L16",
-      "weight": 1.0,
-      "context": "return_type",
-      "source": "engine_src_order_ordergateway_ordergateway_submit_order",
-      "target": "engine_src_order_ordergateway_cpp_orderid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L22",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_order_ordergateway_ordergateway_cancel_order",
-      "target": "engine_src_order_ordergateway_cpp_orderid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/order/OrderGateway.cpp",
-      "source_location": "L56",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_order_ordergateway_ordergateway_state",
-      "target": "engine_src_order_ordergateway_cpp_orderid",
       "confidence_score": 1.0
     },
     {
@@ -20764,7 +20274,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_constraints",
@@ -20774,7 +20284,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_decisions",
@@ -20784,7 +20294,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L100",
+      "source_location": "L99",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_done",
@@ -20794,7 +20304,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_facts",
@@ -20804,7 +20314,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L140",
+      "source_location": "L138",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -20854,10 +20364,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L105",
+      "source_location": "L104",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_105",
+      "target": "docs_state_open_items_104",
       "confidence_score": 1.0
     },
     {
@@ -20904,7 +20414,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L415",
+      "source_location": "L413",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -20934,7 +20444,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L381",
+      "source_location": "L379",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -20944,7 +20454,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L412",
+      "source_location": "L410",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -20957,7 +20467,7 @@
       "source_location": "L367",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_18_catch2_tests",
+      "target": "docs_system_map_engine_built_broker_simulator_skeleton_6_catch2_tests",
       "confidence_score": 1.0
     },
     {
@@ -21104,10 +20614,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L385",
+      "source_location": "L383",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_106_passing_1_skipped_python_18_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_104_passing_python_6_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -21282,5 +20792,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "04702cbbd6324c3b95888d709107bff11057b219"
+  "built_at_commit": "fafae7f0631978bb803698b67bb1e39d61d13e43"
 }

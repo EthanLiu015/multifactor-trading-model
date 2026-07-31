@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(broker_sim
     src/broker/BrokerSimulator.cpp
     src/journal/EventJournal.cpp
+    src/order/OrderGateway.cpp
 )
 target_include_directories(broker_sim PUBLIC include src)
 

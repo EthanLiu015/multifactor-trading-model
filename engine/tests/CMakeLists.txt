@@ -9,7 +9,11 @@ FetchContent_MakeAvailable(Catch2)
 add_executable(test_broker_simulator test_broker_simulator.cpp)
 target_link_libraries(test_broker_simulator PRIVATE broker_sim Catch2::Catch2WithMain)
 
+add_executable(test_order_gateway test_order_gateway.cpp)
+target_link_libraries(test_order_gateway PRIVATE broker_sim Catch2::Catch2WithMain)
+
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 include(CTest)
 include(Catch)
 catch_discover_tests(test_broker_simulator)
+catch_discover_tests(test_order_gateway)

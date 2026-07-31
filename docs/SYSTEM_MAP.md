@@ -364,23 +364,25 @@ New directory, sibling to signals/alpha/risk/portfolio/attribution — DESIGN.md
 | `simulate.py` — `BacktestStep` (dataclass), `run_backtest(store, start_date, end_date, lookback_years=3, shrink=0.5, cap=3.0, risk_aversion=5.0, cost_penalty=10.0, book_notional=10_000_000.0, knowledge_ts=None, cost_kwargs=None, **constraint_kwargs)` → `list[BacktestStep]` | block 5b, THE walk-forward day-loop — the sole sanctioned Python loop-over-dates in this codebase (coding conventions §8's pre-authorized exception). Iterates `universe_monthly` rebalance dates, calls `build_target_portfolio` chaining `w_prev` forward (insufficient-history dates skipped, `w_prev` carries over unchanged — matches a real failed rebalance), applies `trade_cost` to the delta, computes each step's holding-period return via `_holding_period_return` (cumulative return over `(date, next_date]`, dot with target weights, mid-period-missing names dropped — documented approximation, see docs/STATE.md Decisions). `BacktestStep` widened 2026-07-24 (block 5c) with a `turnover` field (`\|delta_w\|.sum()`, computed alongside cost from data already in hand). Block 5d (same file): `HELD_OUT_START = dt.date(2023, 7, 24)` (fixed, DESIGN.md's backtest-overfitting defense — final 3y held out until design freeze; deliberately never recomputed from "today", or the boundary would silently creep forward) + `allow_held_out: bool = False` kwarg — `run_backtest` raises `ValueError` if `end_date >= HELD_OUT_START` unless explicitly overridden. |
 | `result.py` — `BacktestResult` (dataclass), `summarize_backtest(steps, book_notional=10_000_000.0)` → `BacktestResult` | block 5c: pure aggregation over `BacktestStep`, mirrors `research/alpha/ic.py`'s `IcSummary` empty-input precedent (no data -> empty result, NOT `None` — unlike `build_target_portfolio`/`build_risk_model`, this function never fails to build, it just has nothing to summarize). Drops the final step (never has a `period_return`). `net_returns = gross_returns - costs/book_notional`; `equity_curve = cumprod(1+net_returns)`. |
 
-### engine/ — **built (broker simulator skeleton, 6 Catch2 tests)**
+### engine/ — **built (broker simulator + order gateway, 18 Catch2 tests)**
 First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on this dev machine (`-DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++`) — system AppleClang/CommandLineTools libc++ headers are broken.
 
 | file / symbol | does |
 |---|---|
 | `include/broker/OrderEvent.hpp` — `OrderId`, `EventType`, `to_string(EventType)`, `OrderEvent` | shared event type (id, type, qty, price, ts, reason) emitted by any gateway implementation into the same journal |
 | `include/broker/IBrokerGateway.hpp` — `Order`, `IBrokerGateway` | abstract interface (`submit_order`/`cancel_order`/`poll_events`) implemented by both `BrokerSimulator` (now) and the future live `AlpacaGateway` |
-| `src/broker/BrokerSimulator.hpp/.cpp` — `BrokerSimulator` | mock broker: `submit_order` only registers the order; nothing happens until a test calls `inject_ack`/`inject_fill`/`inject_reject`/`inject_cancel_ack`; every injected event appended to the journal (if set) then queued for `poll_events()` |
-| `src/journal/EventJournal.hpp/.cpp` — `EventJournal` | append-only CSV log of every `OrderEvent`, flushed synchronously; skeleton only — binary framing + replay-on-restart parser scoped when the order gateway is built |
-| `tests/test_broker_simulator.cpp` | 6 Catch2 scenarios: ack, out-of-order fill-before-ack, partial-then-full fill, reject-with-reason, poll drains the queue, cancel on unknown id throws |
-| `CMakeLists.txt` (root + tests/) | Catch2 pinned via FetchContent (v3.9.1); `build/` gitignored |
+| `src/broker/BrokerSimulator.hpp/.cpp` — `BrokerSimulator` | mock broker: `submit_order` only registers the order; nothing happens until a test calls `inject_ack`/`inject_fill`/`inject_reject`/`inject_cancel_ack`; every injected event appended to the journal (if set) then queued for `poll_events()`. `inject_fill` validates fill price against a non-market order's `limit_price` (buy: `price <= limit`, sell: `price >= limit`), throws `std::invalid_argument` on violation (fixed 2026-07-28, was a documented gap) |
+| `src/journal/EventJournal.hpp/.cpp` — `EventJournal` | append-only CSV log of every `OrderEvent`, flushed synchronously; skeleton only — binary framing + replay-on-restart parser scoped later |
+| `include/order/OrderGateway.hpp` / `src/order/OrderGateway.cpp` — `OrderState`, `OrderGateway` | broker-agnostic order state machine (DESIGN.md Block 5) wrapping any `IBrokerGateway`; `submit_order`/`cancel_order` pass through, `pump()` drains `poll_events()` and applies each event to gateway-owned state, `state(id)` queries it. An event on an order already in a terminal state (`Filled`/`Cancelled`/`Rejected`) throws `std::logic_error`; unknown `OrderId` throws `std::out_of_range` (matches `BrokerSimulator::cancel_order`'s precedent). Built 2026-07-30, first of the remaining unscoped Block 5 C++ pieces (position keeper, risk checks, market data handler, live `AlpacaGateway` still not started). |
+| `tests/test_broker_simulator.cpp` | 9 Catch2 scenarios: ack, out-of-order fill-before-ack, partial-then-full fill, reject-with-reason, poll drains the queue, cancel on unknown id throws, buy-above-limit throws, sell-below-limit throws, exact-limit fill legal |
+| `tests/test_order_gateway.cpp` | 9 Catch2 scenarios: starts New, pump applies Ack, out-of-order fill reaches Filled, partial-then-full fill, reject, cancel-ack, event-on-terminal-order throws, unknown-id state/cancel throw |
+| `CMakeLists.txt` (root + tests/) | Catch2 pinned via FetchContent (v3.9.1); `build/` gitignored; `broker_sim` library now also builds `src/order/OrderGateway.cpp` |
 
 ### Barrel files
 - `research/data/__init__.py` — exports `PITStore`
 - `research/data/loaders/__init__.py` — exports `CRSPDailyLoader`, `YFinanceDailyLoader`, `AuditReport`, `audit_daily_bars`
 
-### tests/ — **104 passing (Python)** + **6 passing (C++, `ctest --test-dir engine/build`)**
+### tests/ — **106 passing, 1 skipped (Python)** + **18 passing (C++, `ctest --test-dir engine/build`)**
 | file | covers |
 |---|---|
 | `test_store.py` | round trip, PIT asof windows (before/mid/after revision), idempotent append, part coexist+overwrite+path-safety, schema rejection |
@@ -411,4 +413,4 @@ First C++ in the repo. CMake + Catch2 v3.9.1, C++20. Requires Homebrew LLVM on t
 - `pyproject.toml` — deps: polars ≥1.42, wrds ≥3.2, yfinance ≥1.5, numpy ≥2.0, scikit-learn ≥1.5, cvxpy ≥1.5, pyarrow ≥19 (Polars→pandas bridge, block 6c); pytest config. `delta` extra: databricks-connect ==16.1.* (install into `.venv-delta/` only, per module docstring)
 
 ## Not yet started (DESIGN.md blocks)
-security master block 4 (CRSP permno/CUSIP hookup) · `research/attribution/` · `engine/` remaining Block 5 (C++) pieces (order gateway state machine, position keeper, pre-trade risk checks, market data handler, live `AlpacaGateway` — separate from the now-complete research/backtest/) · `common/` · `infra/`
+security master block 4 (CRSP permno/CUSIP hookup) · `research/attribution/` · `engine/` remaining Block 5 (C++) pieces (position keeper, pre-trade risk checks, market data handler, live `AlpacaGateway` — order gateway state machine now built; separate from the now-complete research/backtest/) · `common/` · `infra/`
