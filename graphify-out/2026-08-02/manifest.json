@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1785724893.9801846,
-    "ast_hash": "0fcab38a931640da64d4ce7ed2763326",
+    "mtime": 1785459911.7680037,
+    "ast_hash": "1260d9fe8413bdd4a77291b2c710ae10",
     "semantic_hash": ""
   },
   "pyproject.toml": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785725313.1816585,
-    "ast_hash": "c9f10464df6689f695cdf85407959c18",
+    "mtime": 1785467294.3303072,
+    "ast_hash": "1bc0c7d24ed0d1fbc2188d1e5e4bc490",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785725286.80765,
-    "ast_hash": "f5c2a7998ec88e8f5b56d7a2e71d4a53",
+    "mtime": 1785467280.585983,
+    "ast_hash": "568be86b6185f6b1dc29dac88cff05ed",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785725331.5267832,
-    "ast_hash": "81a06db8794a840bd48fe162112e0a50",
+    "mtime": 1785467307.5437737,
+    "ast_hash": "f6bcf55cf8d5d6670a3c9fc4afcf2c61",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
-    "mtime": 1785725206.6398606,
-    "ast_hash": "8a5e1a47ce899fa03e2e72d353a5c2d8",
+    "mtime": 1785467218.7168036,
+    "ast_hash": "22fe6ce9af372b5954c032bb0d31eb52",
     "semantic_hash": ""
   },
   "engine/tests/CMakeLists.txt": {
-    "mtime": 1785725025.331548,
-    "ast_hash": "63a52d11969be80b7c55aeb445c626ee",
+    "mtime": 1785467249.6621268,
+    "ast_hash": "7dc5f5452317aa0f8fba6c34c26a1d89",
     "semantic_hash": ""
   },
   "research/alpha/__init__.py": {
@@ -412,36 +412,6 @@
   "engine/tests/test_risk_checker.cpp": {
     "mtime": 1785467244.4509335,
     "ast_hash": "d9b691b5507dd2bbf4f9e8a9fbb4b01a",
-    "semantic_hash": ""
-  },
-  "engine/include/marketdata/AlpacaMarketDataStream.hpp": {
-    "mtime": 1785725090.9000595,
-    "ast_hash": "b4f0c220f68510544bee647d8299d489",
-    "semantic_hash": ""
-  },
-  "engine/include/marketdata/MarketDataHandler.hpp": {
-    "mtime": 1785724973.4590392,
-    "ast_hash": "2ae1ffd20acf485c1586ec76211dfb96",
-    "semantic_hash": ""
-  },
-  "engine/src/marketdata/AlpacaMarketDataStream.cpp": {
-    "mtime": 1785725154.499804,
-    "ast_hash": "67cb3363fd5667d5e23a118ce4b1e0ef",
-    "semantic_hash": ""
-  },
-  "engine/src/marketdata/MarketDataHandler.cpp": {
-    "mtime": 1785724991.4521024,
-    "ast_hash": "ee13231c7272fba7ea2b1dc05898fe01",
-    "semantic_hash": ""
-  },
-  "engine/tests/test_market_data_handler.cpp": {
-    "mtime": 1785725016.8296323,
-    "ast_hash": "1f4a4ceabfb440fb63ac419485494b25",
-    "semantic_hash": ""
-  },
-  "engine/tools/smoke_market_data.cpp": {
-    "mtime": 1785725202.4607413,
-    "ast_hash": "ec18c8fd688b815fc7809c3a8e1853c3",
     "semantic_hash": ""
   }
 }

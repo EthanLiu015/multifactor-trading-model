@@ -20,7 +20,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order",
-      "community": 22,
+      "community": 27,
       "norm_label": "order"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_symbol",
-      "community": 22,
+      "community": 27,
       "norm_label": "symbol"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_qty",
-      "community": 22,
+      "community": 27,
       "norm_label": "qty"
     },
     {
@@ -60,7 +60,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_limit_price",
-      "community": 22,
+      "community": 27,
       "norm_label": "limit_price"
     },
     {
@@ -70,7 +70,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_order_is_buy",
-      "community": 22,
+      "community": 27,
       "norm_label": "is_buy"
     },
     {
@@ -80,7 +80,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "community": 26,
+      "community": 23,
       "norm_label": "ibrokergateway"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_ibrokergateway",
-      "community": 26,
+      "community": 23,
       "norm_label": ".~ibrokergateway()"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_submit_order",
-      "community": 26,
+      "community": 23,
       "norm_label": "submit_order"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_cancel_order",
-      "community": 26,
+      "community": 23,
       "norm_label": "cancel_order"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_poll_events",
-      "community": 26,
+      "community": 23,
       "norm_label": "poll_events"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent",
-      "community": 22,
+      "community": 8,
       "norm_label": "orderevent.hpp"
     },
     {
@@ -140,7 +140,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_to_string",
-      "community": 22,
+      "community": 8,
       "norm_label": "to_string()"
     },
     {
@@ -150,7 +150,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_hpp_eventtype",
-      "community": 22,
+      "community": 8,
       "norm_label": "eventtype"
     },
     {
@@ -160,7 +160,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent",
-      "community": 22,
+      "community": 8,
       "norm_label": "orderevent"
     },
     {
@@ -170,7 +170,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_hpp_orderid",
-      "community": 22,
+      "community": 8,
       "norm_label": "orderid"
     },
     {
@@ -180,7 +180,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_id",
-      "community": 22,
+      "community": 8,
       "norm_label": "id"
     },
     {
@@ -190,7 +190,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_type",
-      "community": 22,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -200,7 +200,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_qty",
-      "community": 22,
+      "community": 8,
       "norm_label": "qty"
     },
     {
@@ -210,7 +210,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_price",
-      "community": 22,
+      "community": 8,
       "norm_label": "price"
     },
     {
@@ -220,7 +220,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "time_point",
-      "community": 22,
+      "community": 8,
       "norm_label": "time_point"
     },
     {
@@ -230,7 +230,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_ts",
-      "community": 22,
+      "community": 8,
       "norm_label": "ts"
     },
     {
@@ -240,7 +240,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_hpp_string",
-      "community": 22,
+      "community": 8,
       "norm_label": "string"
     },
     {
@@ -250,308 +250,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "engine_include_broker_orderevent_orderevent_reason",
-      "community": 22,
+      "community": 8,
       "norm_label": "reason"
-    },
-    {
-      "label": "AlpacaMarketDataStream.hpp",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream",
-      "community": 27,
-      "norm_label": "alpacamarketdatastream.hpp"
-    },
-    {
-      "label": "AlpacaMarketDataStream",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "community": 24,
-      "norm_label": "alpacamarketdatastream"
-    },
-    {
-      "label": "connect",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "community": 24,
-      "norm_label": "connect"
-    },
-    {
-      "label": "disconnect",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_disconnect",
-      "community": 24,
-      "norm_label": "disconnect"
-    },
-    {
-      "label": "string",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_hpp_string",
-      "community": 24,
-      "norm_label": "string"
-    },
-    {
-      "label": "api_key_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_api_key",
-      "community": 24,
-      "norm_label": "api_key_"
-    },
-    {
-      "label": "api_secret_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_api_secret",
-      "community": 24,
-      "norm_label": "api_secret_"
-    },
-    {
-      "label": "vector",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_hpp_vector",
-      "community": 27,
-      "norm_label": "vector"
-    },
-    {
-      "label": "symbols_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_symbols",
-      "community": 24,
-      "norm_label": "symbols_"
-    },
-    {
-      "label": "WebSocket",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "websocket",
-      "community": 24,
-      "norm_label": "websocket"
-    },
-    {
-      "label": "ws_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_ws",
-      "community": 24,
-      "norm_label": "ws_"
-    },
-    {
-      "label": "MarketDataHandler.hpp",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler",
-      "community": 27,
-      "norm_label": "marketdatahandler.hpp"
-    },
-    {
-      "label": "Trade",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_trade",
-      "community": 32,
-      "norm_label": "trade"
-    },
-    {
-      "label": "price",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_trade_price",
-      "community": 32,
-      "norm_label": "price"
-    },
-    {
-      "label": "size",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_trade_size",
-      "community": 32,
-      "norm_label": "size"
-    },
-    {
-      "label": "string",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_hpp_string",
-      "community": 32,
-      "norm_label": "string"
-    },
-    {
-      "label": "timestamp",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_trade_timestamp",
-      "community": 32,
-      "norm_label": "timestamp"
-    },
-    {
-      "label": "Quote",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote",
-      "community": 29,
-      "norm_label": "quote"
-    },
-    {
-      "label": "bid_price",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote_bid_price",
-      "community": 29,
-      "norm_label": "bid_price"
-    },
-    {
-      "label": "bid_size",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote_bid_size",
-      "community": 29,
-      "norm_label": "bid_size"
-    },
-    {
-      "label": "ask_price",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote_ask_price",
-      "community": 29,
-      "norm_label": "ask_price"
-    },
-    {
-      "label": "ask_size",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote_ask_size",
-      "community": 29,
-      "norm_label": "ask_size"
-    },
-    {
-      "label": "timestamp",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_quote_timestamp",
-      "community": 29,
-      "norm_label": "timestamp"
-    },
-    {
-      "label": "MarketDataHandler",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "community": 8,
-      "norm_label": "marketdatahandler"
-    },
-    {
-      "label": "on_message",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler_on_message",
-      "community": 8,
-      "norm_label": "on_message"
-    },
-    {
-      "label": "latest_trade",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "community": 8,
-      "norm_label": "latest_trade"
-    },
-    {
-      "label": "latest_quote",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "community": 8,
-      "norm_label": "latest_quote"
-    },
-    {
-      "label": "unordered_map",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "community": 27,
-      "norm_label": "unordered_map"
-    },
-    {
-      "label": "trades_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler_trades",
-      "community": 8,
-      "norm_label": "trades_"
-    },
-    {
-      "label": "quotes_",
-      "file_type": "code",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "engine_include_marketdata_marketdatahandler_marketdatahandler_quotes",
-      "community": 8,
-      "norm_label": "quotes_"
     },
     {
       "label": "OrderGateway.hpp",
@@ -560,7 +260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_include_order_ordergateway",
-      "community": 27,
+      "community": 23,
       "norm_label": "ordergateway.hpp"
     },
     {
@@ -860,7 +560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_engine_src_broker_brokersimulator",
-      "community": 22,
+      "community": 24,
       "norm_label": "brokersimulator.cpp"
     },
     {
@@ -870,7 +570,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_make_event",
-      "community": 22,
+      "community": 24,
       "norm_label": "make_event()"
     },
     {
@@ -880,7 +580,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_orderid",
-      "community": 22,
+      "community": 24,
       "norm_label": "orderid"
     },
     {
@@ -890,7 +590,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_eventtype",
-      "community": 22,
+      "community": 24,
       "norm_label": "eventtype"
     },
     {
@@ -900,7 +600,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_brokersimulator",
-      "community": 22,
+      "community": 24,
       "norm_label": "brokersimulator::brokersimulator()"
     },
     {
@@ -910,7 +610,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "eventjournal",
-      "community": 22,
+      "community": 24,
       "norm_label": "eventjournal"
     },
     {
@@ -919,8 +619,8 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "engine_src_broker_brokersimulator_cpp_vector",
-      "community": 22,
+      "id": "vector",
+      "community": 27,
       "norm_label": "vector"
     },
     {
@@ -930,7 +630,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_cpp_string",
-      "community": 22,
+      "community": 24,
       "norm_label": "string"
     },
     {
@@ -1020,7 +720,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_submit_order",
-      "community": 22,
+      "community": 24,
       "norm_label": "submit_order"
     },
     {
@@ -1030,7 +730,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_cancel_order",
-      "community": 22,
+      "community": 24,
       "norm_label": "cancel_order"
     },
     {
@@ -1040,7 +740,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_poll_events",
-      "community": 22,
+      "community": 27,
       "norm_label": "poll_events"
     },
     {
@@ -1050,7 +750,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_ack",
-      "community": 22,
+      "community": 24,
       "norm_label": "inject_ack"
     },
     {
@@ -1060,7 +760,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_fill",
-      "community": 22,
+      "community": 24,
       "norm_label": "inject_fill"
     },
     {
@@ -1070,7 +770,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_reject",
-      "community": 22,
+      "community": 24,
       "norm_label": "inject_reject"
     },
     {
@@ -1080,7 +780,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_inject_cancel_ack",
-      "community": 22,
+      "community": 24,
       "norm_label": "inject_cancel_ack"
     },
     {
@@ -1090,7 +790,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "engine_src_broker_brokersimulator_brokersimulator_enqueue",
-      "community": 22,
+      "community": 24,
       "norm_label": "enqueue"
     },
     {
@@ -1170,7 +870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_cpp_engine_src_journal_eventjournal",
-      "community": 22,
+      "community": 26,
       "norm_label": "eventjournal.cpp"
     },
     {
@@ -1180,7 +880,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_eventjournal",
-      "community": 22,
+      "community": 26,
       "norm_label": "eventjournal::eventjournal()"
     },
     {
@@ -1190,7 +890,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_cpp_string",
-      "community": 22,
+      "community": 26,
       "norm_label": "string"
     },
     {
@@ -1200,7 +900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_hpp_engine_src_journal_eventjournal",
-      "community": 22,
+      "community": 26,
       "norm_label": "eventjournal.hpp"
     },
     {
@@ -1210,7 +910,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal",
-      "community": 22,
+      "community": 26,
       "norm_label": "eventjournal"
     },
     {
@@ -1220,7 +920,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_append",
-      "community": 22,
+      "community": 26,
       "norm_label": "append"
     },
     {
@@ -1230,7 +930,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ofstream",
-      "community": 22,
+      "community": 26,
       "norm_label": "ofstream"
     },
     {
@@ -1240,128 +940,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "engine_src_journal_eventjournal_eventjournal_out",
-      "community": 22,
+      "community": 26,
       "norm_label": "out_"
-    },
-    {
-      "label": "AlpacaMarketDataStream.cpp",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream",
-      "community": 30,
-      "norm_label": "alpacamarketdatastream.cpp"
-    },
-    {
-      "label": "AlpacaMarketDataStream::AlpacaMarketDataStream()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_alpacamarketdatastream",
-      "community": 30,
-      "norm_label": "alpacamarketdatastream::alpacamarketdatastream()"
-    },
-    {
-      "label": "string",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream_cpp_string",
-      "community": 30,
-      "norm_label": "string"
-    },
-    {
-      "label": "AlpacaMarketDataStream::connect()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "community": 30,
-      "norm_label": "alpacamarketdatastream::connect()"
-    },
-    {
-      "label": "vector",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream_cpp_vector",
-      "community": 30,
-      "norm_label": "vector"
-    },
-    {
-      "label": "AlpacaMarketDataStream::disconnect()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_disconnect",
-      "community": 30,
-      "norm_label": "alpacamarketdatastream::disconnect()"
-    },
-    {
-      "label": "MarketDataHandler.cpp",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_marketdatahandler",
-      "community": 31,
-      "norm_label": "marketdatahandler.cpp"
-    },
-    {
-      "label": "MarketDataHandler::on_message()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_marketdatahandler_marketdatahandler_on_message",
-      "community": 31,
-      "norm_label": "marketdatahandler::on_message()"
-    },
-    {
-      "label": "string",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_marketdatahandler_cpp_string",
-      "community": 31,
-      "norm_label": "string"
-    },
-    {
-      "label": "MarketDataHandler::latest_trade()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "community": 31,
-      "norm_label": "marketdatahandler::latest_trade()"
-    },
-    {
-      "label": "optional",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "optional",
-      "community": 31,
-      "norm_label": "optional"
-    },
-    {
-      "label": "MarketDataHandler::latest_quote()",
-      "file_type": "code",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "community": 31,
-      "norm_label": "marketdatahandler::latest_quote()"
     },
     {
       "label": "OrderGateway.cpp",
@@ -1400,7 +980,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_src_order_ordergateway_ordergateway_ordergateway",
-      "community": 26,
+      "community": 23,
       "norm_label": "ordergateway::ordergateway()"
     },
     {
@@ -1534,16 +1114,6 @@
       "norm_label": "test_broker_simulator.cpp"
     },
     {
-      "label": "test_market_data_handler.cpp",
-      "file_type": "code",
-      "source_file": "engine/tests/test_market_data_handler.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_tests_test_market_data_handler",
-      "community": 8,
-      "norm_label": "test_market_data_handler.cpp"
-    },
-    {
       "label": "test_order_gateway.cpp",
       "file_type": "code",
       "source_file": "engine/tests/test_order_gateway.cpp",
@@ -1582,46 +1152,6 @@
       "id": "engine_tests_test_risk_checker_make_checker",
       "community": 25,
       "norm_label": "make_checker()"
-    },
-    {
-      "label": "smoke_market_data.cpp",
-      "file_type": "code",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "engine_tools_smoke_market_data",
-      "community": 8,
-      "norm_label": "smoke_market_data.cpp"
-    },
-    {
-      "label": "load_dotenv()",
-      "file_type": "code",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "engine_tools_smoke_market_data_load_dotenv",
-      "community": 8,
-      "norm_label": "load_dotenv()"
-    },
-    {
-      "label": "string",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "engine_tools_smoke_market_data_cpp_string",
-      "community": 8,
-      "norm_label": "string"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "engine_tools_smoke_market_data_main",
-      "community": 8,
-      "norm_label": "main()"
     },
     {
       "label": "multifactor-trading-system",
@@ -2153,7 +1683,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_init",
-      "community": 9,
+      "community": 11,
       "norm_label": "__init__.py"
     },
     {
@@ -2313,7 +1843,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_init",
-      "community": 19,
+      "community": 9,
       "norm_label": "__init__.py"
     },
     {
@@ -2323,7 +1853,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit",
-      "community": 19,
+      "community": 9,
       "norm_label": "audit.py"
     },
     {
@@ -2333,7 +1863,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport",
-      "community": 19,
+      "community": 9,
       "norm_label": "auditreport"
     },
     {
@@ -2343,7 +1873,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport_ok",
-      "community": 19,
+      "community": 9,
       "norm_label": ".ok()"
     },
     {
@@ -2353,7 +1883,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_loaders_audit_audit_daily_bars",
-      "community": 19,
+      "community": 9,
       "norm_label": "audit_daily_bars()"
     },
     {
@@ -2363,7 +1893,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_audit_py_dataframe",
-      "community": 19,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -2373,7 +1903,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_1",
-      "community": 19,
+      "community": 9,
       "norm_label": "shared audit for daily-bars loaders (design.md block 1d).  every vendor chunk pa"
     },
     {
@@ -2383,7 +1913,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_52",
-      "community": 19,
+      "community": 9,
       "norm_label": "audit one yearly chunk of daily bars keyed (security_id, effective_date).      h"
     },
     {
@@ -2393,7 +1923,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily",
-      "community": 19,
+      "community": 9,
       "norm_label": "crsp_daily.py"
     },
     {
@@ -2473,7 +2003,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_audit",
-      "community": 19,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -2503,7 +2033,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_1",
-      "community": 19,
+      "community": 9,
       "norm_label": "crsp daily-bars loader (wrds, crsp 2.0 / \"ciz\" format).  pulls daily bars for al"
     },
     {
@@ -2623,7 +2153,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 9,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -2873,7 +2403,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta",
-      "community": 17,
+      "community": 11,
       "norm_label": "port_to_delta.py"
     },
     {
@@ -2883,7 +2413,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "research_data_port_to_delta_port_dataset",
-      "community": 17,
+      "community": 11,
       "norm_label": "port_dataset()"
     },
     {
@@ -2893,7 +2423,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "research_data_port_to_delta_main",
-      "community": 17,
+      "community": 11,
       "norm_label": "main()"
     },
     {
@@ -2903,7 +2433,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta_rationale_1",
-      "community": 17,
+      "community": 11,
       "norm_label": "one-time port of a local pitstore dataset into delta (block 6c).  copies every `"
     },
     {
@@ -2913,7 +2443,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "research_data_port_to_delta_rationale_38",
-      "community": 17,
+      "community": 11,
       "norm_label": "copy every batch of ``dataset`` from local_store into delta_store.      returns"
     },
     {
@@ -2923,7 +2453,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store",
-      "community": 9,
+      "community": 11,
       "norm_label": "store.py"
     },
     {
@@ -2933,7 +2463,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "research_data_store_pitstore",
-      "community": 9,
+      "community": 11,
       "norm_label": "pitstore"
     },
     {
@@ -2943,7 +2473,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_data_store_pitstore_init",
-      "community": 9,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -2953,7 +2483,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "path",
-      "community": 9,
+      "community": 11,
       "norm_label": "path"
     },
     {
@@ -2963,7 +2493,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "research_data_store_pitstore_dataset_dir",
-      "community": 9,
+      "community": 11,
       "norm_label": "._dataset_dir()"
     },
     {
@@ -2973,7 +2503,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "research_data_store_pitstore_append",
-      "community": 9,
+      "community": 11,
       "norm_label": ".append()"
     },
     {
@@ -2983,7 +2513,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_dataframe",
-      "community": 9,
+      "community": 11,
       "norm_label": "dataframe"
     },
     {
@@ -2993,7 +2523,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_datetime",
-      "community": 9,
+      "community": 11,
       "norm_label": "datetime"
     },
     {
@@ -3003,7 +2533,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "research_data_store_pitstore_scan",
-      "community": 9,
+      "community": 11,
       "norm_label": ".scan()"
     },
     {
@@ -3013,7 +2543,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_lazyframe",
-      "community": 9,
+      "community": 11,
       "norm_label": "lazyframe"
     },
     {
@@ -3023,7 +2553,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "research_data_store_pitstore_asof",
-      "community": 9,
+      "community": 11,
       "norm_label": ".asof()"
     },
     {
@@ -3033,7 +2563,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store_rationale_1",
-      "community": 9,
+      "community": 11,
       "norm_label": "point-in-time (bitemporal) parquet store.  every dataset in the lake carries two"
     },
     {
@@ -3043,7 +2573,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_data_store_rationale_28",
-      "community": 9,
+      "community": 11,
       "norm_label": "a directory-per-dataset parquet lake with point-in-time reads."
     },
     {
@@ -3053,7 +2583,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_store_rationale_43",
-      "community": 9,
+      "community": 11,
       "norm_label": "write one load batch. idempotent: same knowledge_ts overwrites.          the bat"
     },
     {
@@ -3063,7 +2593,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "research_data_store_rationale_81",
-      "community": 9,
+      "community": 11,
       "norm_label": "lazy scan of every batch in a dataset (no pit filtering)."
     },
     {
@@ -3073,7 +2603,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "research_data_store_rationale_91",
-      "community": 9,
+      "community": 11,
       "norm_label": "the world as we knew it at ``knowledge_ts``.          drops rows learned after t"
     },
     {
@@ -3093,7 +2623,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_portfolio_beta",
-      "community": 21,
+      "community": 18,
       "norm_label": "beta.py"
     },
     {
@@ -3153,7 +2683,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_portfolio_beta_rationale_1",
-      "community": 21,
+      "community": 18,
       "norm_label": "per-stock market beta (block 4b input): rolling single-factor beta.  needed for"
     },
     {
@@ -5083,7 +4613,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_ic_store",
-      "community": 16,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -5273,7 +4803,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_port_to_delta",
-      "community": 17,
+      "community": 11,
       "norm_label": "test_port_to_delta.py"
     },
     {
@@ -5283,7 +4813,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_store",
-      "community": 17,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -5293,7 +4823,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_bars",
-      "community": 17,
+      "community": 11,
       "norm_label": "bars()"
     },
     {
@@ -5303,7 +4833,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_py_dataframe",
-      "community": 17,
+      "community": 11,
       "norm_label": "dataframe"
     },
     {
@@ -5313,7 +4843,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkcolumn",
-      "community": 17,
+      "community": 11,
       "norm_label": "fakesparkcolumn"
     },
     {
@@ -5323,7 +4853,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkcolumn_cast",
-      "community": 17,
+      "community": 11,
       "norm_label": ".cast()"
     },
     {
@@ -5333,7 +4863,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe",
-      "community": 17,
+      "community": 11,
       "norm_label": "fakesparkdataframe"
     },
     {
@@ -5343,7 +4873,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_init",
-      "community": 17,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -5353,7 +4883,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_getattr",
-      "community": 17,
+      "community": 11,
       "norm_label": ".__getattr__()"
     },
     {
@@ -5363,7 +4893,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_len",
-      "community": 17,
+      "community": 11,
       "norm_label": ".__len__()"
     },
     {
@@ -5373,7 +4903,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_getitem",
-      "community": 17,
+      "community": 11,
       "norm_label": ".__getitem__()"
     },
     {
@@ -5383,7 +4913,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_withcolumn",
-      "community": 17,
+      "community": 11,
       "norm_label": ".withcolumn()"
     },
     {
@@ -5393,7 +4923,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakespark",
-      "community": 17,
+      "community": 11,
       "norm_label": "fakespark"
     },
     {
@@ -5403,7 +4933,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakespark_createdataframe",
-      "community": 17,
+      "community": 11,
       "norm_label": ".createdataframe()"
     },
     {
@@ -5413,7 +4943,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore",
-      "community": 17,
+      "community": 11,
       "norm_label": "fakedeltastore"
     },
     {
@@ -5423,7 +4953,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore_init",
-      "community": 17,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -5433,7 +4963,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore_append",
-      "community": 17,
+      "community": 11,
       "norm_label": ".append()"
     },
     {
@@ -5443,7 +4973,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_test_port_preserves_every_knowledge_ts_batch",
-      "community": 17,
+      "community": 11,
       "norm_label": "test_port_preserves_every_knowledge_ts_batch()"
     },
     {
@@ -5453,7 +4983,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_test_port_combines_parts_under_one_knowledge_ts",
-      "community": 17,
+      "community": 11,
       "norm_label": "test_port_combines_parts_under_one_knowledge_ts()"
     },
     {
@@ -5463,7 +4993,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_rationale_31",
-      "community": 17,
+      "community": 11,
       "norm_label": "stands in for a real spark dataframe: delegates to the underlying     pandas fra"
     },
     {
@@ -5993,7 +5523,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 15,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -6633,7 +6163,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 9,
+      "community": 11,
       "norm_label": "store()"
     },
     {
@@ -7230,7 +6760,7 @@
       "label": "Constraints",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L30",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "docs_state_constraints",
       "community": 1,
@@ -7240,7 +6770,7 @@
       "label": "Decisions",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L39",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "docs_state_decisions",
       "community": 1,
@@ -7250,7 +6780,7 @@
       "label": "Facts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L87",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "docs_state_facts",
       "community": 1,
@@ -7260,7 +6790,7 @@
       "label": "Done",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L102",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "docs_state_done",
       "community": 1,
@@ -7270,9 +6800,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L107",
+      "source_location": "L105",
       "_origin": "ast",
-      "id": "docs_state_open_items_107",
+      "id": "docs_state_open_items_105",
       "community": 1,
       "norm_label": "open items"
     },
@@ -7280,7 +6810,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L145",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -7497,40 +7027,40 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler, 38 Catch2 tests)**",
+      "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker, 31 Catch2 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L367",
       "_origin": "ast",
-      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_38_catch2_tests",
+      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_31_catch2_tests",
       "community": 12,
-      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler, 38 catch2 tests)**"
+      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker, 31 catch2 tests)**"
     },
     {
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L389",
+      "source_location": "L385",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **38 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **31 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L393",
+      "source_location": "L389",
       "_origin": "ast",
-      "id": "docs_system_map_tests_106_passing_1_skipped_python_38_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_106_passing_1_skipped_python_31_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **38 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **31 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L420",
+      "source_location": "L416",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -7540,7 +7070,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L423",
+      "source_location": "L419",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -7778,7 +7308,7 @@
       "source_location": "L4",
       "weight": 1.0,
       "source": "engine_include_broker_ibrokergateway",
-      "target": "engine_include_marketdata_alpacamarketdatastream_hpp_vector",
+      "target": "vector",
       "confidence_score": 1.0
     },
     {
@@ -7895,28 +7425,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_alpacamarketdatastream",
-      "target": "engine_include_broker_ibrokergateway_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "engine_include_broker_ibrokergateway_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "engine/include/position/PositionKeeper.hpp",
       "source_location": "L3",
       "weight": 1.0,
@@ -7954,17 +7462,6 @@
       "source_location": "L4",
       "weight": 1.0,
       "source": "engine_src_journal_eventjournal_hpp_engine_src_journal_eventjournal",
-      "target": "engine_include_broker_ibrokergateway_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data",
       "target": "engine_include_broker_ibrokergateway_hpp_string",
       "confidence_score": 1.0
     },
@@ -8295,497 +7792,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_hpp_vector",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_alpacamarketdatastream",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L36",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_api_key",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L37",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_api_secret",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L32",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_disconnect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L39",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_symbols",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L40",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream_ws",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L39",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L39",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_alpacamarketdatastream_hpp_vector",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/AlpacaMarketDataStream.hpp",
-      "source_location": "L40",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "websocket",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_quote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_trade",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "engine_include_marketdata_marketdatahandler",
-      "target": "optional",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L47",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_trade",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L12",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_trade",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L10",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_trade",
-      "target": "engine_include_marketdata_marketdatahandler_trade_price",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L11",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_trade",
-      "target": "engine_include_marketdata_marketdatahandler_trade_size",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L12",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_trade",
-      "target": "engine_include_marketdata_marketdatahandler_trade_timestamp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "target": "engine_include_marketdata_marketdatahandler_trade",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L47",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L20",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L48",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_quote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L18",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote_ask_price",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L19",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote_ask_size",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L16",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote_bid_price",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L17",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote_bid_size",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L20",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote_timestamp",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "target": "engine_include_marketdata_marketdatahandler_quote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L47",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L44",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L43",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L41",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_on_message",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L48",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_quotes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "defines",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/marketdata/MarketDataHandler.hpp",
-      "source_location": "L47",
-      "weight": 1.0,
-      "context": "field",
-      "source": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_trades",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L13",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_marketdatahandler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tests/test_market_data_handler.cpp",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "engine_tests_test_market_data_handler",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L59",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data_main",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_trade"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L60",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data_main",
-      "target": "engine_include_marketdata_marketdatahandler_marketdatahandler_latest_quote"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -8793,29 +7799,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "source": "engine_include_order_ordergateway",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/include/position/PositionKeeper.hpp",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "engine_include_position_positionkeeper",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/broker/BrokerSimulator.hpp",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
-      "target": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
+      "target": "engine_include_order_ordergateway_hpp_unordered_map",
       "confidence_score": 1.0
     },
     {
@@ -8914,6 +7898,28 @@
       "context": "field",
       "source": "engine_include_order_ordergateway_ordergateway",
       "target": "engine_include_order_ordergateway_ordergateway_submit_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/include/position/PositionKeeper.hpp",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "engine_include_position_positionkeeper",
+      "target": "engine_include_order_ordergateway_hpp_unordered_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/broker/BrokerSimulator.hpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "engine_src_broker_brokersimulator_hpp_engine_src_broker_brokersimulator",
+      "target": "engine_include_order_ordergateway_hpp_unordered_map",
       "confidence_score": 1.0
     },
     {
@@ -9526,7 +8532,7 @@
       "weight": 1.0,
       "context": "return_type",
       "source": "engine_src_broker_brokersimulator_brokersimulator_poll_events",
-      "target": "engine_src_broker_brokersimulator_cpp_vector",
+      "target": "vector",
       "confidence_score": 1.0
     },
     {
@@ -9933,154 +8939,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_alpacamarketdatastream",
-      "target": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_alpacamarketdatastream",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_alpacamarketdatastream",
-      "target": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L66",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_alpacamarketdatastream",
-      "target": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_disconnect",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L13",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_alpacamarketdatastream",
-      "target": "engine_src_marketdata_alpacamarketdatastream_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "target": "engine_src_marketdata_alpacamarketdatastream_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/AlpacaMarketDataStream.cpp",
-      "source_location": "L19",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "target": "engine_src_marketdata_alpacamarketdatastream_cpp_vector",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_marketdatahandler",
-      "target": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_marketdatahandler",
-      "target": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_marketdatahandler",
-      "target": "engine_src_marketdata_marketdatahandler_marketdatahandler_on_message",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_on_message",
-      "target": "engine_src_marketdata_marketdatahandler_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "target": "engine_src_marketdata_marketdatahandler_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "target": "engine_src_marketdata_marketdatahandler_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L33",
-      "weight": 1.0,
-      "context": "return_type",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_trade",
-      "target": "optional",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/src/marketdata/MarketDataHandler.cpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "context": "return_type",
-      "source": "engine_src_marketdata_marketdatahandler_marketdatahandler_latest_quote",
-      "target": "optional",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "engine/src/order/OrderGateway.cpp",
       "source_location": "L8",
       "weight": 1.0,
@@ -10274,48 +9132,6 @@
       "weight": 1.0,
       "source": "engine_tests_test_risk_checker",
       "target": "engine_tests_test_risk_checker_make_checker",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data",
-      "target": "engine_tools_smoke_market_data_load_dotenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data",
-      "target": "engine_tools_smoke_market_data_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L22",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "engine_tools_smoke_market_data_load_dotenv",
-      "target": "engine_tools_smoke_market_data_cpp_string",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "engine/tools/smoke_market_data.cpp",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "engine_tools_smoke_market_data_main",
-      "target": "engine_tools_smoke_market_data_load_dotenv",
       "confidence_score": 1.0
     },
     {
@@ -22712,7 +21528,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_constraints",
@@ -22722,7 +21538,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L39",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_decisions",
@@ -22732,7 +21548,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L102",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_done",
@@ -22742,7 +21558,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L87",
+      "source_location": "L86",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_facts",
@@ -22752,7 +21568,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L145",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -22802,10 +21618,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L107",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_107",
+      "target": "docs_state_open_items_105",
       "confidence_score": 1.0
     },
     {
@@ -22852,7 +21668,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L423",
+      "source_location": "L419",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -22882,7 +21698,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L389",
+      "source_location": "L385",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -22892,7 +21708,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L420",
+      "source_location": "L416",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -22905,7 +21721,7 @@
       "source_location": "L367",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_38_catch2_tests",
+      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_31_catch2_tests",
       "confidence_score": 1.0
     },
     {
@@ -23052,10 +21868,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L393",
+      "source_location": "L389",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_106_passing_1_skipped_python_38_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_106_passing_1_skipped_python_31_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -23230,5 +22046,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "97abb8002e67c657190e9f020b118efa8f0d6754"
+  "built_at_commit": "978bcb33bff057ec02e8946459244633372bb891"
 }

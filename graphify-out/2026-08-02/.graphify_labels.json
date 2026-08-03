@@ -27,9 +27,5 @@
   "25": "OrderGateway.cpp",
   "26": "EventJournal",
   "27": "Order",
-  "28": "test_order_gateway.cpp",
-  "29": "Quote",
-  "30": "AlpacaMarketDataStream.cpp",
-  "31": "MarketDataHandler.cpp",
-  "32": "Trade"
+  "28": "test_order_gateway.cpp"
 }
