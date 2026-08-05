@@ -71,15 +71,20 @@ def build_factor_return_history(
     end_year: int,
     *,
     knowledge_ts: dt.datetime | None = None,
-) -> tuple[pl.DataFrame, pl.DataFrame]:
-    """Per-date exposures -> regression, stacked into factor + specific return history.
+) -> tuple[pl.DataFrame, pl.DataFrame, pl.DataFrame]:
+    """Per-date exposures -> regression, stacked into factor + specific return
+    history, plus the exposure matrices themselves.
 
-    Returns ``(factor_return_history, specific_return_history)``.
-    ``factor_return_history``: [effective_date, <factor columns>] with
-    nulls where a date's exposure matrix didn't include that factor (see
-    module docstring); callers needing a clean matrix should
+    Returns ``(factor_return_history, specific_return_history,
+    exposure_history)``. ``factor_return_history``: [effective_date, <factor
+    columns>] with nulls where a date's exposure matrix didn't include that
+    factor (see module docstring); callers needing a clean matrix should
     ``.drop_nulls()``. ``specific_return_history``: [effective_date,
     security_id, specific_return], every date concatenated.
+    ``exposure_history``: [effective_date, security_id, <factor columns>],
+    the same per-date ``build_exposure_matrix`` output this function already
+    computes internally for the regression -- exposed for
+    research/attribution/decompose.py rather than recomputed there.
     """
     if knowledge_ts is None:
         knowledge_ts = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
@@ -102,6 +107,7 @@ def build_factor_return_history(
 
     factor_rows: list[dict] = []
     specific_frames: list[pl.DataFrame] = []
+    exposure_frames: list[pl.DataFrame] = []
     for d in rebuild_dates:
         members = (
             universe.filter(pl.col("effective_date") == d)
@@ -124,6 +130,7 @@ def build_factor_return_history(
         specific_frames.append(
             specific.with_columns(pl.lit(d, dtype=pl.Date).alias("effective_date"))
         )
+        exposure_frames.append(exposures)
 
     factor_history = (
         pl.DataFrame(factor_rows)
@@ -141,7 +148,12 @@ def build_factor_return_history(
             }
         )
     )
-    return factor_history, specific_history
+    exposure_history = (
+        pl.concat(exposure_frames, how="diagonal")
+        if exposure_frames
+        else pl.DataFrame(schema={"effective_date": pl.Date, "security_id": pl.String})
+    )
+    return factor_history, specific_history, exposure_history
 
 
 def build_risk_model(
@@ -160,7 +172,7 @@ def build_risk_model(
     if knowledge_ts is None:
         knowledge_ts = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
 
-    factor_history, specific_history = build_factor_return_history(
+    factor_history, specific_history, _exposure_history = build_factor_return_history(
         store,
         rebuild_date.year - lookback_years,
         rebuild_date.year,

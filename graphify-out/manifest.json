@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785902892.5706425,
-    "ast_hash": "f1912dee50b830228a70ae50ac9d5202",
+    "mtime": 1785953568.3209467,
+    "ast_hash": "d41b5f3b285702c53bdfeb3a3a4a8374",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785902867.464926,
-    "ast_hash": "8b5864c45888300d41a7825d2022ae6e",
+    "mtime": 1785953549.0788593,
+    "ast_hash": "94ba8c484dec47858671d7e7242308e9",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785902925.1107595,
-    "ast_hash": "744e46d3bdf232b820b5a1d2a80d94f2",
+    "mtime": 1785953602.3165517,
+    "ast_hash": "9431eb41fe54979683cbb44c267e770c",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "research/risk/model.py": {
-    "mtime": 1784490198.5755832,
-    "ast_hash": "82138cf8d664cb61aa50c5d742900076",
+    "mtime": 1785953332.024468,
+    "ast_hash": "0c11aa52d7b1d3e2e87b0003ea93c741",
     "semantic_hash": ""
   },
   "research/risk/regression.py": {
@@ -502,6 +502,21 @@
   "engine/tests/test_kill_switch.cpp": {
     "mtime": 1785902581.43368,
     "ast_hash": "c3c91cfbe7c258d2005707d1a631e3e5",
+    "semantic_hash": ""
+  },
+  "research/attribution/__init__.py": {
+    "mtime": 1785953420.8073766,
+    "ast_hash": "6a09e2b55f904e494b40d5fdede504dc",
+    "semantic_hash": ""
+  },
+  "research/attribution/decompose.py": {
+    "mtime": 1785953417.7475643,
+    "ast_hash": "a0aae6c6434dda9989257a28f0bec184",
+    "semantic_hash": ""
+  },
+  "tests/test_decompose.py": {
+    "mtime": 1785953454.5060554,
+    "ast_hash": "967bbd6787c70fa51ba4726fd77ee2bc",
     "semantic_hash": ""
   }
 }
