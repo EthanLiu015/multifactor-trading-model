@@ -2,6 +2,7 @@
 
 #include <curl/curl.h>
 
+#include <chrono>
 #include <iostream>
 #include <mutex>
 #include <stdexcept>
@@ -37,7 +38,12 @@ std::optional<OrderEvent> parse_trade_update(const std::string& raw_json) {
     const std::string event = data.value("event", std::string());
 
     EventType type;
-    if (event == "new") {
+    if (event == "new" || event == "accepted") {
+        // Both mean "order acknowledged, now live" -- Alpaca's paper
+        // environment sends "accepted" as the initial event rather than
+        // "new" (confirmed live 2026-08-04); mapping both is safe even if
+        // a live account ever emits both, since a second Ack on a
+        // non-terminal state is not an illegal transition.
         type = EventType::Ack;
     } else if (event == "fill") {
         type = EventType::Fill;
@@ -68,7 +74,9 @@ std::optional<OrderEvent> parse_trade_update(const std::string& raw_json) {
 AlpacaGateway::AlpacaGateway(std::string api_key, std::string api_secret, std::string base_url)
     : api_key_(std::move(api_key)),
       api_secret_(std::move(api_secret)),
-      base_url_(std::move(base_url)) {
+      base_url_(std::move(base_url)),
+      run_id_(std::to_string(
+          std::chrono::system_clock::now().time_since_epoch().count())) {
     std::call_once(curl_global_init_flag, [] { curl_global_init(CURL_GLOBAL_DEFAULT); });
 }
 
@@ -127,7 +135,7 @@ OrderId AlpacaGateway::submit_order(const Order& order) {
         {"side", order.is_buy ? "buy" : "sell"},
         {"type", order.limit_price == 0.0 ? "market" : "limit"},
         {"time_in_force", "day"},  // placeholder default -- Order has no TIF field yet
-        {"client_order_id", std::to_string(id)},
+        {"client_order_id", std::to_string(id) + "-" + run_id_},
     };
     if (order.limit_price != 0.0) {
         body["limit_price"] = std::to_string(order.limit_price);
@@ -214,6 +222,9 @@ void AlpacaGateway::connect() {
         if (event.has_value()) {
             std::lock_guard<std::mutex> lock(mutex_);
             pending_events_.push_back(*event);
+        } else if (stream == "trade_updates") {
+            std::cerr << "[AlpacaGateway] trade_updates message not mapped to an OrderEvent: "
+                      << msg->str << "\n";
         }
     });
 

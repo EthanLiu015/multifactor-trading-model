@@ -43,5 +43,8 @@ target_link_libraries(broker_sim PUBLIC ixwebsocket::ixwebsocket)
 add_executable(smoke_market_data tools/smoke_market_data.cpp)
 target_link_libraries(smoke_market_data PRIVATE broker_sim)
 
+add_executable(smoke_alpaca_gateway tools/smoke_alpaca_gateway.cpp)
+target_link_libraries(smoke_alpaca_gateway PRIVATE broker_sim)
+
 enable_testing()
 add_subdirectory(tests)

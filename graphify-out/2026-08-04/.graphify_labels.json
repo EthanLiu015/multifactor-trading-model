@@ -31,5 +31,10 @@
   "29": "Quote",
   "30": "AlpacaMarketDataStream.cpp",
   "31": "MarketDataHandler.cpp",
-  "32": "Trade"
+  "32": "Trade",
+  "33": ".append",
+  "34": "test_port_to_delta.py",
+  "35": "FakeSparkDataFrame",
+  "36": "test_delta_store.py",
+  "37": "test_alpaca_gateway.cpp"
 }

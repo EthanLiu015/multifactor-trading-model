@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785890484.226613,
-    "ast_hash": "02e5c9e9b954d5d4b451be45f5ede3ed",
+    "mtime": 1785893159.936382,
+    "ast_hash": "e04b79ba9c343331cfc78736812ff23a",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785890467.0590305,
-    "ast_hash": "00c17891b83bd31e825a371c527f791b",
+    "mtime": 1785893200.7095404,
+    "ast_hash": "a58c17fcb7bc051849f74fbe4bd94cf2",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785890508.4990835,
-    "ast_hash": "e28ec70bd6c11ee3fb7aec0db4e01635",
+    "mtime": 1785893216.0627272,
+    "ast_hash": "3b9436f1a0131808c69c4c89655b4f92",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
-    "mtime": 1785890376.0822105,
-    "ast_hash": "071d3d0c3458c2696586c6d876665249",
+    "mtime": 1785892861.0602157,
+    "ast_hash": "cd6a7aed5e8ca05ece08543be14d194c",
     "semantic_hash": ""
   },
   "engine/tests/CMakeLists.txt": {
@@ -445,18 +445,23 @@
     "semantic_hash": ""
   },
   "engine/src/broker/AlpacaGateway.cpp": {
-    "mtime": 1785890361.3171077,
-    "ast_hash": "8e21b84d0cee85d4e7e26273f12074fb",
+    "mtime": 1785893109.4535613,
+    "ast_hash": "151454fc2924703795d482b920f6ed77",
     "semantic_hash": ""
   },
   "engine/src/broker/AlpacaGateway.hpp": {
-    "mtime": 1785890246.242037,
-    "ast_hash": "3df6024bcb5fadfedf354249c003a6b4",
+    "mtime": 1785893117.0039356,
+    "ast_hash": "31d75583d418f5084bd82c61087bb8f6",
     "semantic_hash": ""
   },
   "engine/tests/test_alpaca_gateway.cpp": {
-    "mtime": 1785890405.7371824,
-    "ast_hash": "c33248824ccf24317211c4c9291cbbc7",
+    "mtime": 1785893125.5584302,
+    "ast_hash": "6b7b03be2b9cafd58ad7466c33895202",
+    "semantic_hash": ""
+  },
+  "engine/tools/smoke_alpaca_gateway.cpp": {
+    "mtime": 1785892856.3476639,
+    "ast_hash": "45a829d70ded9def8384c6d3d2456fa2",
     "semantic_hash": ""
   }
 }

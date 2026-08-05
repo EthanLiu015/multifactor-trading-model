@@ -38,6 +38,17 @@ TEST_CASE("a new event maps to EventType::Ack with zero qty/price", "[alpaca_gat
     REQUIRE(event->price == 0.0);
 }
 
+TEST_CASE("an accepted event also maps to EventType::Ack", "[alpaca_gateway]") {
+    // Alpaca's paper-trading environment sends "accepted" as the initial
+    // acknowledgment rather than "new" -- confirmed live 2026-08-04.
+    auto event = parse_trade_update(
+        R"({"stream":"trade_updates","data":{"event":"accepted",)"
+        R"("order":{"id":"abc-123","client_order_id":"1"},"qty":null,"price":null}})");
+
+    REQUIRE(event.has_value());
+    REQUIRE(event->type == EventType::Ack);
+}
+
 TEST_CASE("canceled and expired events both map to EventType::Cancel", "[alpaca_gateway]") {
     auto canceled = parse_trade_update(
         R"({"stream":"trade_updates","data":{"event":"canceled",)"
