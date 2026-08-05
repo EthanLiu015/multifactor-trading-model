@@ -45,4 +45,8 @@ Position PositionKeeper::position(const std::string& symbol) const {
     return it != positions_.end() ? it->second : Position{};
 }
 
+const std::unordered_map<std::string, Position>& PositionKeeper::all_positions() const {
+    return positions_;
+}
+
 }  // namespace engine::position

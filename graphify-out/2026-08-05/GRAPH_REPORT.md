@@ -1,16 +1,16 @@
-# Graph Report - multifactor-trading-system  (2026-08-05)
+# Graph Report - multifactor-trading-system  (2026-08-04)
 
 ## Corpus Check
-- 98 files · ~62,672 words
+- 95 files · ~61,243 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 862 nodes · 1624 edges · 35 communities (34 shown, 1 thin omitted)
+- 844 nodes · 1600 edges · 33 communities (32 shown, 1 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.61)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e90e6c0b`
+- Built from commit: `bc06afaa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,37 +45,35 @@
 - AlpacaMarketDataStream.cpp
 - MarketDataHandler.cpp
 - Trade
-- wait_for_event
-- ExecutionScheduler
 
 ## God Nodes (most connected - your core abstractions)
 1. `PITStore` - 75 edges
 2. `AlpacaGateway` - 27 edges
 3. `YFinanceDailyLoader` - 25 edges
 4. `OrderEvent` - 23 edges
-5. `MarketDataHandler` - 22 edges
+5. `MarketDataHandler` - 21 edges
 6. `BrokerSimulator` - 20 edges
 7. `CRSPDailyLoader` - 20 edges
-8. `PositionKeeper` - 19 edges
-9. `Files & functions` - 19 edges
+8. `Files & functions` - 19 edges
+9. `PositionKeeper` - 18 edges
 10. `Multifactor Trading System — Design` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_beta.py → research/data/store.py
+- `FakeConn` --uses--> `PITStore`  [INFERRED]
+  tests/test_crsp_loader.py → research/data/store.py
+- `store()` --calls--> `PITStore`  [EXTRACTED]
+  tests/test_crsp_loader.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_exposures.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
-  tests/test_ic.py → research/data/store.py
-- `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_model.py → research/data/store.py
-- `store()` --calls--> `PITStore`  [EXTRACTED]
-  tests/test_portfolio_inputs.py → research/data/store.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (35 total, 1 thin omitted)
+## Communities (33 total, 1 thin omitted)
 
 ### Community 0 - "Multifactor Trading System — Design"
 Cohesion: 0.10
@@ -102,12 +100,12 @@ Cohesion: 0.15
 Nodes (12): Data layer — PITStore (point-in-time parquet store), Data loaders — yfinance daily bars (phase 1: universe scan), Data loaders — yfinance daily bars (phase 2: 15.5-year backfill, top-1500), Data loaders — yfinance sector/industry snapshot, Infra — Block 6c: local lake -> Delta/Databricks port, METRICS, Pending sections (filled as systems are built), PIT store — real-lake point lookup vs full scan (+4 more)
 
 ### Community 8 - "AuditReport"
-Cohesion: 0.14
-Nodes (14): EventType, OrderId, string, OrderEvent, id, price, qty, reason (+6 more)
+Cohesion: 0.40
+Nodes (5): latest_quote, latest_trade, string, load_dotenv(), main()
 
 ### Community 9 - "YFinanceDailyLoader"
 Cohesion: 0.06
-Nodes (50): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al, fetch_listed_tickers(), main() (+42 more)
+Nodes (49): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al, fetch_listed_tickers(), main() (+41 more)
 
 ### Community 10 - "HANDOFF — Multifactor Equity Trading System"
 Cohesion: 0.11
@@ -119,7 +117,7 @@ Nodes (26): build_snapshot(), build_universe(), _empty_snapshot(), main(), month
 
 ### Community 12 - "Files & functions"
 Cohesion: 0.08
-Nodes (25): Barrel files, C++ engine (Block 5 — broker simulator skeleton, started 2026-07-16), Config, Data layer (Phase 1 — current), engine/ — **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway + execution scheduler + kill switch, 66 Catch2 tests, live end-to-end verified)**, Files & functions, Not yet started (DESIGN.md blocks), research/alpha/ic.py — **built (Phase 2, 8 tests)** (+17 more)
+Nodes (25): Barrel files, C++ engine (Block 5 — broker simulator skeleton, started 2026-07-16), Config, Data layer (Phase 1 — current), engine/ — **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway + execution scheduler, 55 Catch2 tests, live end-to-end verified)**, Files & functions, Not yet started (DESIGN.md blocks), research/alpha/ic.py — **built (Phase 2, 8 tests)** (+17 more)
 
 ### Community 13 - "test_security_master.py"
 Cohesion: 0.14
@@ -130,96 +128,88 @@ Cohesion: 0.07
 Nodes (50): build_exposure_matrix(), DataFrame, date, LazyFrame, Factor exposure matrix B (Block 3 risk model).  Per rebalance date: one row per, Exposure matrix B for one rebalance date.      ``sectors`` is the already-asof'd, _zscore(), Signal registry — every signal follows the same contract.  Each ``compute_*`` fu (+42 more)
 
 ### Community 16 - "test_ic.py"
-Cohesion: 0.15
-Nodes (31): build_ic_series(), compute_forward_returns(), compute_ic(), _empty_forward_returns(), _ic_for_date(), ic_summary(), IcSummary, main() (+23 more)
+Cohesion: 0.12
+Nodes (36): build_ic_series(), compute_forward_returns(), compute_ic(), _empty_forward_returns(), _ic_for_date(), ic_summary(), IcSummary, main() (+28 more)
 
 ### Community 17 - "build_exposure_matrix"
-Cohesion: 0.10
-Nodes (20): build_ic_series_spark(), main(), DataFrame, datetime, Spark benchmark for the historical alpha run (Block 6d).  Re-executes the SAME p, Same result as build_ic_series (long format: rebalance_date/signal/ic     rows i, DeltaPITStore, DataFrame (+12 more)
+Cohesion: 0.13
+Nodes (14): DeltaPITStore, DataFrame, datetime, Delta-backed point-in-time store — Unity Catalog mirror of PITStore.  Same bitem, The world as known at ``knowledge_ts`` — same semantics as         PITStore.asof, A Unity Catalog schema (``catalog.schema``) with point-in-time reads., MERGE one load batch. Idempotent: same (keys, effective_date,         knowledge_, Every batch in a dataset (no PIT filtering). (+6 more)
 
 ### Community 18 - "build_optimizer_inputs"
 Cohesion: 0.06
 Nodes (64): Problem, Per-stock market beta (Block 4b input): rolling single-factor beta.  Needed for, build_constraints(), Constraint, Variable, Block 4b: optimizer constraints (DESIGN.md Block 4).  Builds the cvxpy constrain, Constraint list for ``w`` (shape ``(N,)``, aligned to ``inputs.security_ids``)., export_target_portfolio() (+56 more)
 
 ### Community 19 - "CRSPDailyLoader"
-Cohesion: 0.23
-Nodes (13): AlpacaGateway::AlpacaGateway(), cancel_order, connect, disconnect, send_request, submit_order, optional, OrderId (+5 more)
+Cohesion: 0.17
+Nodes (17): CRSPDailyLoader, main(), DataFrame, datetime, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, Assert expected CIZ columns exist on the live table., Pull one calendar year, audit it, append or quarantine it., FakeConn (+9 more)
 
 ### Community 20 - "trade_cost"
-Cohesion: 0.09
-Nodes (40): ndarray, Block 5a: research-side trading cost model (DESIGN.md Block 5's cost components,, Per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `, trade_cost(), BacktestResult, Block 5c: backtest result/equity-curve summary.  Pure aggregation over BacktestS, Equity curve + cost/turnover series over ``steps``.      Only steps with a ``per, summarize_backtest() (+32 more)
+Cohesion: 0.12
+Nodes (26): ndarray, Block 5a: research-side trading cost model (DESIGN.md Block 5's cost components,, Per-security $ trading cost for one rebalance's ``delta_w = w - w_prev``.      `, trade_cost(), BacktestResult, Block 5c: backtest result/equity-curve summary.  Pure aggregation over BacktestS, Equity curve + cost/turnover series over ``steps``.      Only steps with a ``per, summarize_backtest() (+18 more)
 
 ### Community 21 - "compute_market_beta"
 Cohesion: 0.05
-Nodes (49): CRSPDailyLoader, main(), DataFrame, datetime, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, Assert expected CIZ columns exist on the live table., Pull one calendar year, audit it, append or quarantine it., main() (+41 more)
+Nodes (48): Walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw, run_backtest(), main(), port_dataset(), One-time port of a local PITStore dataset into Delta (Block 6c).  Copies every `, Copy every batch of ``dataset`` from local_store into delta_store.      Returns, PITStore, DataFrame (+40 more)
 
 ### Community 22 - "BrokerSimulator"
-Cohesion: 0.12
-Nodes (29): deque, BrokerSimulator, BrokerSimulator::BrokerSimulator(), cancel_order, enqueue, inject_ack, inject_cancel_ack, inject_fill (+21 more)
+Cohesion: 0.06
+Nodes (47): deque, EventType, OrderId, string, OrderEvent, id, price, qty (+39 more)
 
 ### Community 23 - "IBrokerGateway"
-Cohesion: 0.12
-Nodes (14): IBrokerGateway, cancel_order, poll_events, submit_order, unordered_map, OrderId, OrderState, unordered_map (+6 more)
+Cohesion: 0.14
+Nodes (13): IBrokerGateway, cancel_order, poll_events, submit_order, OrderId, OrderState, unordered_map, OrderGateway (+5 more)
 
 ### Community 24 - "BrokerSimulator.cpp"
-Cohesion: 0.14
-Nodes (9): string, KillSwitch, is_tripped, rearm, reason_, trip, tripped_, string (+1 more)
+Cohesion: 0.20
+Nodes (10): AlpacaMarketDataStream, api_key_, api_secret_, connect, disconnect, symbols_, ws_, string (+2 more)
 
 ### Community 25 - "OrderGateway.cpp"
-Cohesion: 0.12
-Nodes (17): string, unordered_map, PositionKeeper, on_fill, position, positions_, string, RiskChecker (+9 more)
+Cohesion: 0.11
+Nodes (20): ExecutionScheduler, run_once, string, unordered_map, PositionKeeper, on_fill, position, positions_ (+12 more)
 
 ### Community 26 - "EventJournal"
-Cohesion: 0.24
-Nodes (9): string, string, vector, ParsedTargetPortfolio, positions, status, TargetPosition, symbol (+1 more)
+Cohesion: 0.23
+Nodes (12): string, ParsedTargetPortfolio, positions, status, TargetPosition, symbol, target_notional, compute_target_orders() (+4 more)
 
 ### Community 27 - "Order"
-Cohesion: 0.23
-Nodes (12): Order, is_buy, limit_price, qty, symbol, compute_book_value(), compute_target_orders(), string (+4 more)
+Cohesion: 0.28
+Nodes (7): string, Order, is_buy, limit_price, qty, symbol, vector
 
 ### Community 29 - "Quote"
-Cohesion: 0.29
+Cohesion: 0.25
 Nodes (7): Position, avg_price, qty, realized_pnl, string, PositionKeeper::on_fill(), PositionKeeper::position()
 
 ### Community 30 - "AlpacaMarketDataStream.cpp"
-Cohesion: 0.12
-Nodes (15): AlpacaGateway, alpaca_order_id_, api_key_, api_secret_, base_url_, mutex_, next_id_, pending_events_ (+7 more)
+Cohesion: 0.06
+Nodes (40): AlpacaGateway, alpaca_order_id_, AlpacaGateway::AlpacaGateway(), api_key_, api_secret_, base_url_, cancel_order, connect (+32 more)
 
 ### Community 31 - "MarketDataHandler.cpp"
-Cohesion: 0.25
-Nodes (6): string, EventJournal, append, EventJournal::EventJournal(), out_, ofstream
+Cohesion: 0.53
+Nodes (5): optional, string, MarketDataHandler::latest_quote(), MarketDataHandler::latest_trade(), MarketDataHandler::on_message()
 
 ### Community 32 - "Trade"
-Cohesion: 0.05
-Nodes (41): AlpacaMarketDataStream, api_key_, api_secret_, connect, disconnect, symbols_, ws_, string (+33 more)
-
-### Community 33 - "wait_for_event"
-Cohesion: 0.38
-Nodes (6): EventType, OrderId, string, load_dotenv(), main(), wait_for_event()
-
-### Community 34 - "ExecutionScheduler"
-Cohesion: 0.40
-Nodes (5): ExecutionScheduler, book_notional_, high_water_mark_, max_drawdown_pct_, run_once
+Cohesion: 0.12
+Nodes (18): string, unordered_map, MarketDataHandler, on_message, quotes_, trades_, Quote, ask_price (+10 more)
 
 ## Knowledge Gaps
-- **153 isolated node(s):** `symbol`, `qty`, `limit_price`, `is_buy`, `submit_order` (+148 more)
+- **145 isolated node(s):** `symbol`, `qty`, `limit_price`, `is_buy`, `submit_order` (+140 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PITStore` connect `compute_market_beta` to `test_store.py`, `model.py`, `YFinanceDailyLoader`, `.load_year`, `test_security_master.py`, `test_signals.py`, `test_ic.py`, `build_optimizer_inputs`, `trade_cost`?**
-  _High betweenness centrality (0.546) - this node is a cross-community bridge._
-- **Why does `AlpacaGateway` connect `AlpacaMarketDataStream.cpp` to `AuditReport`, `wait_for_event`, `CRSPDailyLoader`, `IBrokerGateway`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
-- **Why does `MarketDataHandler` connect `Trade` to `EventJournal`, `Order`, `ExecutionScheduler`, `IBrokerGateway`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `PITStore` connect `compute_market_beta` to `test_store.py`, `model.py`, `YFinanceDailyLoader`, `.load_year`, `test_security_master.py`, `test_signals.py`, `test_ic.py`, `build_optimizer_inputs`, `CRSPDailyLoader`, `trade_cost`?**
+  _High betweenness centrality (0.550) - this node is a cross-community bridge._
+- **Why does `AlpacaGateway` connect `AlpacaMarketDataStream.cpp` to `BrokerSimulator`, `IBrokerGateway`?**
+  _High betweenness centrality (0.081) - this node is a cross-community bridge._
+- **Why does `MarketDataHandler` connect `Trade` to `AuditReport`, `BrokerSimulator.cpp`, `OrderGateway.cpp`, `EventJournal`, `Order`, `AlpacaMarketDataStream.cpp`, `MarketDataHandler.cpp`?**
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `PITStore` (e.g. with `CRSPDailyLoader` and `YFinanceClient`) actually correct?**
   _`PITStore` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `YFinanceDailyLoader` (e.g. with `AuditReport` and `PITStore`) actually correct?**
   _`YFinanceDailyLoader` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `symbol`, `qty`, `limit_price` to the rest of the system?**
-  _251 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _243 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Multifactor Trading System — Design` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._

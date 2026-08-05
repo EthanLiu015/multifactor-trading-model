@@ -89,3 +89,21 @@ TEST_CASE("positions for different symbols are independent", "[position_keeper]"
     REQUIRE(keeper.position("AAPL").qty == Approx(100.0));
     REQUIRE(keeper.position("MSFT").qty == Approx(-50.0));
 }
+
+TEST_CASE("all_positions is empty before any fill", "[position_keeper]") {
+    PositionKeeper keeper;
+
+    REQUIRE(keeper.all_positions().empty());
+}
+
+TEST_CASE("all_positions reflects every traded symbol", "[position_keeper]") {
+    PositionKeeper keeper;
+
+    keeper.on_fill("AAPL", 100, 10.0, true);
+    keeper.on_fill("MSFT", 50, 300.0, false);
+
+    const auto& all = keeper.all_positions();
+    REQUIRE(all.size() == 2);
+    REQUIRE(all.at("AAPL").qty == Approx(100.0));
+    REQUIRE(all.at("MSFT").qty == Approx(-50.0));
+}

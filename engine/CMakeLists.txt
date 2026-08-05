@@ -33,6 +33,7 @@ add_library(broker_sim
     src/marketdata/MarketDataHandler.cpp
     src/marketdata/AlpacaMarketDataStream.cpp
     src/execution/ExecutionScheduler.cpp
+    src/ops/KillSwitch.cpp
 )
 target_include_directories(broker_sim PUBLIC include src)
 target_link_libraries(broker_sim PRIVATE nlohmann_json::nlohmann_json CURL::libcurl)

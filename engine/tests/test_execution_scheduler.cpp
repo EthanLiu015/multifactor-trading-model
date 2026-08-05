@@ -10,6 +10,7 @@ using namespace engine::broker;
 using namespace engine::position;
 using namespace engine::marketdata;
 using namespace engine::risk;
+using namespace engine::ops;
 using namespace engine::execution;
 
 namespace {
@@ -87,7 +88,8 @@ TEST_CASE("ExecutionScheduler::run_once submits orders that pass risk checks",
     PositionKeeper positions;
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim);
+    KillSwitch kill_switch;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio.json";
     {
@@ -109,7 +111,8 @@ TEST_CASE("ExecutionScheduler::run_once submits nothing when status isn't optima
     PositionKeeper positions;
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim);
+    KillSwitch kill_switch;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_infeasible.json";
     {
@@ -130,7 +133,8 @@ TEST_CASE("ExecutionScheduler::run_once skips an order that fails risk checks",
     PositionKeeper positions;
     RiskChecker risk_checker(positions, 1'000.0, 2'000.0);  // tiny bounds -- fat-finger will fire
     BrokerSimulator broker_sim;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim);
+    KillSwitch kill_switch;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_risky.json";
     {
@@ -142,4 +146,73 @@ TEST_CASE("ExecutionScheduler::run_once skips an order that fails risk checks",
     std::filesystem::remove(path);
 
     REQUIRE(submitted.empty());
+}
+
+TEST_CASE("compute_book_value is zero for a flat book", "[execution_scheduler]") {
+    PositionKeeper positions;
+    MarketDataHandler market_data;
+
+    REQUIRE(compute_book_value(positions, market_data) == 0.0);
+}
+
+TEST_CASE("compute_book_value counts realized P&L even with no live quote",
+          "[execution_scheduler]") {
+    PositionKeeper positions;
+    positions.on_fill("AAPL", 100, 10.0, true);
+    positions.on_fill("AAPL", 100, 15.0, false);  // closes flat, realizes (15-10)*100 = 500
+    MarketDataHandler market_data;                // no quote for AAPL
+
+    REQUIRE(compute_book_value(positions, market_data) == 500.0);
+}
+
+TEST_CASE("compute_book_value adds unrealized mark-to-market P&L", "[execution_scheduler]") {
+    PositionKeeper positions;
+    positions.on_fill("AAPL", 100, 100.0, true);  // long 100 @ 100
+    MarketDataHandler market_data;
+    set_quote(market_data, "AAPL", 109.0, 111.0);  // mid = 110 -> unrealized = 100*(110-100)=1000
+
+    REQUIRE(compute_book_value(positions, market_data) == 1000.0);
+}
+
+TEST_CASE("ExecutionScheduler::run_once does nothing when the kill switch is already tripped",
+          "[execution_scheduler]") {
+    MarketDataHandler market_data;
+    PositionKeeper positions;
+    RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
+    BrokerSimulator broker_sim;
+    KillSwitch kill_switch;
+    kill_switch.trip("manual halt for the test");
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
+
+    // A nonexistent path would normally throw -- an already-tripped switch
+    // must return before ever touching the file.
+    auto submitted = scheduler.run_once("/nonexistent/path.json", 1'000'000.0);
+
+    REQUIRE(submitted.empty());
+}
+
+TEST_CASE("ExecutionScheduler::run_once auto-trips the kill switch on a drawdown breach",
+          "[execution_scheduler]") {
+    MarketDataHandler market_data;
+    set_quote(market_data, "AAPL", 49.0, 51.0);  // mid = 50, well below the 100 cost basis
+    PositionKeeper positions;
+    positions.on_fill("AAPL", 100, 100.0, true);  // long 100 @ 100 -> unrealized = -5000
+    RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
+    BrokerSimulator broker_sim;
+    KillSwitch kill_switch;
+    // book_notional=10,000, max_drawdown_pct=5% -> trips at a $500 loss; -5000 is far past it
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch,
+                                 10'000.0, 0.05);
+
+    const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_drawdown.json";
+    {
+        std::ofstream file(path);
+        file << R"({"status":"optimal","positions":[]})";
+    }
+
+    auto submitted = scheduler.run_once(path.string(), 1'000'000.0);
+    std::filesystem::remove(path);
+
+    REQUIRE(submitted.empty());
+    REQUIRE(kill_switch.is_tripped());
 }

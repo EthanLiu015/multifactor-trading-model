@@ -14,9 +14,9 @@ struct Position {
 };
 
 // Average-cost position/P&L tracker, built from fills (DESIGN.md Block 5's
-// position keeper). Standalone: not wired to OrderGateway yet -- that wiring
-// waits for whatever drives the main event loop (execution scheduler, still
-// unscoped).
+// position keeper). Queried directly by ExecutionScheduler for per-symbol
+// current position; not yet fed by OrderGateway.pump()'s output specifically
+// (that wiring gap is separate from execution scheduling).
 class PositionKeeper {
 public:
     // A fill same-direction as the existing position grows it and
@@ -28,6 +28,11 @@ public:
     // A symbol with no fills yet is a normal, expected state (never traded
     // it) -- returns a default flat Position{}, not a throw.
     Position position(const std::string& symbol) const;
+
+    // Every symbol with a non-default Position, for book-level aggregation
+    // (e.g. the ops layer's drawdown check needs every position's
+    // realized P&L + live mark-to-market, not one symbol at a time).
+    const std::unordered_map<std::string, Position>& all_positions() const;
 
 private:
     std::unordered_map<std::string, Position> positions_;

@@ -1,5 +1,6 @@
 #include "execution/ExecutionScheduler.hpp"
 
+#include <algorithm>
 #include <cmath>
 #include <fstream>
 #include <sstream>
@@ -49,17 +50,52 @@ std::vector<broker::Order> compute_target_orders(
     return orders;
 }
 
+double compute_book_value(const position::PositionKeeper& positions,
+                           const marketdata::MarketDataHandler& market_data) {
+    double total = 0.0;
+    for (const auto& [symbol, pos] : positions.all_positions()) {
+        total += pos.realized_pnl;
+        if (pos.qty == 0.0) {
+            continue;
+        }
+        auto quote = market_data.latest_quote(symbol);
+        if (quote.has_value()) {
+            const double mid = (quote->bid_price + quote->ask_price) / 2.0;
+            total += pos.qty * (mid - pos.avg_price);
+        }
+    }
+    return total;
+}
+
 ExecutionScheduler::ExecutionScheduler(marketdata::MarketDataHandler& market_data,
                                         position::PositionKeeper& positions,
                                         risk::RiskChecker& risk_checker,
-                                        broker::IBrokerGateway& broker)
+                                        broker::IBrokerGateway& broker,
+                                        ops::KillSwitch& kill_switch, double book_notional,
+                                        double max_drawdown_pct)
     : market_data_(market_data),
       positions_(positions),
       risk_checker_(risk_checker),
-      broker_(broker) {}
+      broker_(broker),
+      kill_switch_(kill_switch),
+      book_notional_(book_notional),
+      max_drawdown_pct_(max_drawdown_pct) {}
 
 std::vector<broker::Order> ExecutionScheduler::run_once(const std::string& target_portfolio_path,
                                                          double buying_power) {
+    if (kill_switch_.is_tripped()) {
+        return {};
+    }
+
+    const double book_value = compute_book_value(positions_, market_data_);
+    high_water_mark_ = std::max(high_water_mark_, book_value);
+    const double drawdown_pct = (book_value - high_water_mark_) / book_notional_;
+    if (drawdown_pct <= -max_drawdown_pct_) {
+        kill_switch_.trip("book drawdown " + std::to_string(drawdown_pct * 100.0) +
+                           "% exceeds max " + std::to_string(-max_drawdown_pct_ * 100.0) + "%");
+        return {};
+    }
+
     std::ifstream file(target_portfolio_path);
     if (!file) {
         throw std::runtime_error("ExecutionScheduler: cannot open " + target_portfolio_path);

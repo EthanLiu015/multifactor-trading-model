@@ -31,7 +31,5 @@
   "29": "Quote",
   "30": "AlpacaMarketDataStream.cpp",
   "31": "MarketDataHandler.cpp",
-  "32": "Trade",
-  "33": "wait_for_event",
-  "34": "ExecutionScheduler"
+  "32": "Trade"
 }

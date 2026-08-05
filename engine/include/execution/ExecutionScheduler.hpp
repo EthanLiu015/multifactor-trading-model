@@ -5,6 +5,7 @@
 
 #include "broker/IBrokerGateway.hpp"
 #include "marketdata/MarketDataHandler.hpp"
+#include "ops/KillSwitch.hpp"
 #include "position/PositionKeeper.hpp"
 #include "risk/RiskChecker.hpp"
 
@@ -39,21 +40,34 @@ std::vector<broker::Order> compute_target_orders(
     const std::vector<TargetPosition>& targets, const position::PositionKeeper& positions,
     const marketdata::MarketDataHandler& market_data, double min_shares = 1.0);
 
-// Orchestrates one full rebalance pass: read the target file, compute
-// orders, risk-check each, submit the ones that pass via the injected
-// IBrokerGateway (BrokerSimulator for tests, AlpacaGateway live -- same
-// injection convention as everywhere else in this codebase). Does
-// nothing if the file's status isn't "optimal" -- trading off
-// infeasible/non-optimal weights is a real risk, not routine.
+// Book value = sum of realized P&L + mark-to-market unrealized P&L (live
+// mid price from market_data) across every position. A symbol with no
+// live quote yet still contributes its realized_pnl -- ignoring a whole
+// position would understate drawdown, not a normal skip like
+// compute_target_orders' no-quote case.
+double compute_book_value(const position::PositionKeeper& positions,
+                           const marketdata::MarketDataHandler& market_data);
+
+// Orchestrates one full rebalance pass: check the kill switch, check book
+// drawdown (auto-trips the kill switch on breach), read the target file,
+// compute orders, risk-check each, submit the ones that pass via the
+// injected IBrokerGateway (BrokerSimulator for tests, AlpacaGateway live --
+// same injection convention as everywhere else in this codebase). Does
+// nothing if the kill switch is tripped, or if the file's status isn't
+// "optimal" -- trading off infeasible/non-optimal weights is a real risk,
+// not routine.
 class ExecutionScheduler {
 public:
     ExecutionScheduler(marketdata::MarketDataHandler& market_data,
                         position::PositionKeeper& positions, risk::RiskChecker& risk_checker,
-                        broker::IBrokerGateway& broker);
+                        broker::IBrokerGateway& broker, ops::KillSwitch& kill_switch,
+                        double book_notional = 10'000'000.0, double max_drawdown_pct = 0.05);
 
     // Returns the orders actually submitted (those that passed risk
     // checks) -- callers/tests can inspect what happened without a live
-    // broker connection.
+    // broker connection. Empty if the kill switch was already tripped,
+    // just tripped by this call's drawdown check, or the file's status
+    // isn't "optimal".
     std::vector<broker::Order> run_once(const std::string& target_portfolio_path,
                                          double buying_power);
 
@@ -62,6 +76,10 @@ private:
     position::PositionKeeper& positions_;
     risk::RiskChecker& risk_checker_;
     broker::IBrokerGateway& broker_;
+    ops::KillSwitch& kill_switch_;
+    double book_notional_;
+    double max_drawdown_pct_;
+    double high_water_mark_ = 0.0;  // cumulative book P&L starts at 0 for a fresh book
 };
 
 }  // namespace engine::execution
