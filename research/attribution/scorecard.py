@@ -2,24 +2,43 @@
 exposure, max drawdown, hit rate, factor exposures vs limits).
 
 v1 scope: Sharpe ratio, max drawdown, hit rate (all from BacktestResult's
-net_returns/equity_curve, already built), plus gross/net exposure per date
-(from BacktestStep's weights, already built). Deliberately NOT built here,
-documented gaps not silent ones: per-factor paper-portfolio metrics (needs
-a hypothetical single-factor-only portfolio, not just decompose_backtest's
-aggregate factor contribution), realized transfer coefficient (meaningless
-until the backtester models a real target-vs-held execution gap -- the
-current single-shot fill assumption makes held == target trivially),
-realized beta (needs research/portfolio/beta.py wired in).
+net_returns/equity_curve, already built), gross/net exposure per date (from
+BacktestStep's weights, already built), and realized beta (per date,
+research/portfolio/beta.py's compute_market_beta dotted with weights --
+DESIGN.md's "realized beta (should sit ~0 -- the beta-neutrality check)").
+
+Realized beta is computed with a loop over ``steps`` -- a genuine
+exception to coding-conventions §8's "backtester's day loop is the sole
+sanctioned exception" (a THIRD instance alongside that loop and
+research/risk/model.py's own pre-existing one, see decompose.py's
+docstring). Accepted here deliberately (Ethan's call, 2026-08-05):
+``compute_market_beta`` has no vectorized-across-dates form the way
+build_factor_return_history does, and this loop runs over an
+already-completed backtest's rebalance dates (small N, e.g. ~185 for
+this project's monthly cadence) -- not the large-table operation the
+house rule is actually guarding against.
+
+Deliberately NOT built here, documented gaps not silent ones: per-factor
+paper-portfolio metrics (needs a hypothetical single-factor-only
+portfolio, not just decompose_backtest's aggregate factor contribution),
+realized transfer coefficient (meaningless until the backtester models a
+real target-vs-held execution gap -- the current single-shot fill
+assumption makes held == target trivially).
 """
 
 from __future__ import annotations
 
 import dataclasses
+import datetime as dt
 
 import numpy as np
+import polars as pl
 
 from research.backtest import BacktestResult, BacktestStep
+from research.data import PITStore
+from research.portfolio.beta import compute_market_beta
 
+BARS_DATASET = "yfinance_daily"
 TRADING_DAYS_PER_YEAR = 252
 
 
@@ -30,6 +49,7 @@ class BookScorecard:
     hit_rate: float  # fraction of periods with net_return > 0
     gross_exposure: np.ndarray  # per usable step, sum(|w_i|)
     net_exposure: np.ndarray  # per usable step, sum(w_i)
+    realized_beta: np.ndarray  # per usable step, weights . per-stock beta; NaN if unavailable
 
 
 def _sharpe_ratio(net_returns: np.ndarray) -> float | None:
@@ -55,21 +75,45 @@ def _hit_rate(net_returns: np.ndarray) -> float:
     return float((net_returns > 0).sum() / len(net_returns))
 
 
-def score_backtest(result: BacktestResult, steps: list[BacktestStep]) -> BookScorecard:
+def _realized_beta(bars: pl.LazyFrame, step: BacktestStep) -> float:
+    betas = compute_market_beta(bars, step.rebuild_date, step.security_ids)
+    if betas.is_empty():
+        return float("nan")
+    # min_obs can exclude some names from compute_market_beta's output --
+    # align weights to only the securities beta was actually computed for,
+    # same "absent means insufficient data" convention as everywhere else.
+    weight_by_id = dict(zip(step.security_ids, step.weights))
+    aligned_weights = np.array([weight_by_id[sid] for sid in betas["security_id"]])
+    return float((aligned_weights * betas["beta"].to_numpy()).sum())
+
+
+def score_backtest(
+    result: BacktestResult,
+    steps: list[BacktestStep],
+    store: PITStore,
+    *,
+    knowledge_ts: dt.datetime | None = None,
+) -> BookScorecard:
     """Book-level metrics from a completed backtest.
 
     ``steps`` is the same list passed to ``summarize_backtest`` to build
-    ``result`` -- gross/net exposure need each step's per-security weight
-    vector, which ``BacktestResult`` itself doesn't carry (it's a pure
-    aggregation over scalars: gross_returns/costs/turnover, not weights).
-    Filters to ``period_return is not None`` exactly like
-    ``summarize_backtest`` does, so the exposure arrays stay aligned with
-    ``result``'s own arrays -- a step this filter drops would otherwise
-    silently misalign gross/net exposure against dates/net_returns.
+    ``result`` -- gross/net exposure and realized beta need each step's
+    per-security weight vector, which ``BacktestResult`` itself doesn't
+    carry (it's a pure aggregation over scalars: gross_returns/costs/
+    turnover, not weights). Filters to ``period_return is not None``
+    exactly like ``summarize_backtest`` does, so every per-step array
+    stays aligned with ``result``'s own arrays -- a step this filter
+    drops would otherwise silently misalign them against dates/net_returns.
     """
+    if knowledge_ts is None:
+        knowledge_ts = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+
     usable = [step for step in steps if step.period_return is not None]
     gross_exposure = np.array([np.abs(step.weights).sum() for step in usable])
     net_exposure = np.array([step.weights.sum() for step in usable])
+
+    bars = store.asof(BARS_DATASET, knowledge_ts, keys=["security_id"])
+    realized_beta = np.array([_realized_beta(bars, step) for step in usable])
 
     return BookScorecard(
         sharpe_ratio=_sharpe_ratio(result.net_returns),
@@ -77,4 +121,5 @@ def score_backtest(result: BacktestResult, steps: list[BacktestStep]) -> BookSco
         hit_rate=_hit_rate(result.net_returns),
         gross_exposure=gross_exposure,
         net_exposure=net_exposure,
+        realized_beta=realized_beta,
     )

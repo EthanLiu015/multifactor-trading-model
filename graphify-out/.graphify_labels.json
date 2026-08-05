@@ -39,5 +39,7 @@
   "37": "MarketDataHandler.cpp",
   "38": "Trade",
   "39": "Quote",
-  "40": "set_quote"
+  "40": "set_quote",
+  "41": "KillSwitch.cpp",
+  "42": ".sigma"
 }

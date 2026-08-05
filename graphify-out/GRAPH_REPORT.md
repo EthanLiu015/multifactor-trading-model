@@ -1,16 +1,16 @@
 # Graph Report - multifactor-trading-system  (2026-08-05)
 
 ## Corpus Check
-- 103 files · ~65,368 words
+- 103 files · ~66,404 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 900 nodes · 1732 edges · 41 communities (39 shown, 2 thin omitted)
+- 906 nodes · 1757 edges · 43 communities (40 shown, 3 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.61)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8308098c`
+- Built from commit: `ade29643`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,35 +53,37 @@
 - Trade
 - Quote
 - set_quote
+- KillSwitch.cpp
+- .sigma
 
 ## God Nodes (most connected - your core abstractions)
-1. `PITStore` - 79 edges
+1. `PITStore` - 83 edges
 2. `AlpacaGateway` - 27 edges
 3. `YFinanceDailyLoader` - 25 edges
 4. `OrderEvent` - 23 edges
 5. `MarketDataHandler` - 22 edges
-6. `BrokerSimulator` - 20 edges
-7. `CRSPDailyLoader` - 20 edges
-8. `Files & functions` - 20 edges
-9. `PositionKeeper` - 19 edges
-10. `BacktestStep` - 18 edges
+6. `score_backtest()` - 21 edges
+7. `BacktestStep` - 21 edges
+8. `BrokerSimulator` - 20 edges
+9. `CRSPDailyLoader` - 20 edges
+10. `Files & functions` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `FakeClient` --uses--> `YFinanceClient`  [INFERRED]
-  tests/test_yfinance_loader.py → research/data/loaders/yfinance_daily.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_beta.py → research/data/store.py
-- `FakeConn` --uses--> `PITStore`  [INFERRED]
-  tests/test_crsp_loader.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_decompose.py → research/data/store.py
 - `store()` --calls--> `PITStore`  [EXTRACTED]
   tests/test_exposures.py → research/data/store.py
+- `store()` --calls--> `PITStore`  [EXTRACTED]
+  tests/test_model.py → research/data/store.py
+- `store()` --calls--> `PITStore`  [EXTRACTED]
+  tests/test_portfolio_inputs.py → research/data/store.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (41 total, 2 thin omitted)
+## Communities (43 total, 3 thin omitted)
 
 ### Community 0 - "Multifactor Trading System — Design"
 Cohesion: 0.10
@@ -92,36 +94,36 @@ Cohesion: 0.17
 Nodes (11): Constraints, Decisions, Done, Facts, Failed attempts, Goal, Next, Now (+3 more)
 
 ### Community 2 - "test_store.py"
-Cohesion: 0.13
-Nodes (16): fetch_listed_tickers(), main(), _rate_limited_errors(), yfinance daily-bars loader (interim free vendor, part 2b).  Fills the lake while, Top ``top_n`` tickers by median daily dollar volume in ``year``.      Fetch tria, One ticker per line; blank lines and '#' comments skipped., Listed US common-stock-ish tickers from the NASDAQ Trader symbol files.      Exc, True if a yfinance per-ticker error dict shows Yahoo throttling.      Batch ``yf (+8 more)
+Cohesion: 0.10
+Nodes (20): build_ic_series_spark(), main(), DataFrame, datetime, Spark benchmark for the historical alpha run (Block 6d).  Re-executes the SAME p, Same result as build_ic_series (long format: rebalance_date/signal/ic     rows i, DeltaPITStore, DataFrame (+12 more)
 
 ### Community 3 - "model.py"
-Cohesion: 0.07
-Nodes (46): build_factor_covariance(), _ewma_scaled_centered(), _ewma_weights(), ndarray, Factor covariance matrix F (Block 3 risk model).  DESIGN.md: "Factor covariance, n weights, oldest first, most recent = 1.0; normalized so mean = 1., EWMA + Ledoit-Wolf shrunk + Newey-West adjusted factor covariance.      ``factor, build_factor_return_history() (+38 more)
+Cohesion: 0.29
+Nodes (10): build_factor_covariance(), _ewma_scaled_centered(), _ewma_weights(), ndarray, Factor covariance matrix F (Block 3 risk model).  DESIGN.md: "Factor covariance, n weights, oldest first, most recent = 1.0; normalized so mean = 1., EWMA + Ledoit-Wolf shrunk + Newey-West adjusted factor covariance.      ``factor, test_correlated_factors_show_higher_covariance_than_uncorrelated() (+2 more)
 
 ### Community 6 - "test_crsp_loader.py"
-Cohesion: 0.39
-Nodes (7): OrderId, OrderState, is_terminal(), OrderGateway::cancel_order(), OrderGateway::pump(), OrderGateway::state(), OrderGateway::submit_order()
+Cohesion: 0.33
+Nodes (8): OrderId, OrderState, is_terminal(), OrderGateway::cancel_order(), OrderGateway::OrderGateway(), OrderGateway::pump(), OrderGateway::state(), OrderGateway::submit_order()
 
 ### Community 7 - "METRICS"
 Cohesion: 0.15
 Nodes (12): Data layer — PITStore (point-in-time parquet store), Data loaders — yfinance daily bars (phase 1: universe scan), Data loaders — yfinance daily bars (phase 2: 15.5-year backfill, top-1500), Data loaders — yfinance sector/industry snapshot, Infra — Block 6c: local lake -> Delta/Databricks port, METRICS, Pending sections (filled as systems are built), PIT store — real-lake point lookup vs full scan (+4 more)
 
 ### Community 8 - "AuditReport"
-Cohesion: 0.36
-Nodes (11): CRSPDailyLoader, scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, FakeConn, frame(), row(), test_duplicate_rows_quarantined_not_stored(), test_happy_path_lands_in_store(), test_nulls_and_outliers_flagged_not_dropped() (+3 more)
+Cohesion: 0.16
+Nodes (21): _empty_holding_returns(), _holding_period_return(), DataFrame, date, datetime, LazyFrame, Walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw, Cumulative return per security over ``(start_date, end_date]``.      Excludes `` (+13 more)
 
 ### Community 9 - "YFinanceDailyLoader"
-Cohesion: 0.18
-Nodes (20): scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``client`` ex, YFinanceDailyLoader, FakeClient, _patched_client(), YFinanceClient with fake yf.download, shared._ERRORS, recorded sleeps., {ticker: {date: (close, adj_close, volume)}} -> yfinance wide frame., test_client_backoff_then_success(), test_client_gives_up_after_max_retries() (+12 more)
+Cohesion: 0.06
+Nodes (52): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, DataFrame, datetime, CRSP daily-bars loader (WRDS, CRSP 2.0 / "CIZ" format).  Pulls daily bars for al (+44 more)
 
 ### Community 10 - "HANDOFF — Multifactor Equity Trading System"
 Cohesion: 0.11
 Nodes (17): 10. Dependencies and rationale, 11. Performance model, 12. Known limitations, technical debt, inconsistencies, 13. Non-obvious implementation details & pitfalls, 14. Testing strategy, 15. How to add things, 16. Roadmap & recommended next tasks, 1. Project purpose (+9 more)
 
 ### Community 11 - ".load_year"
-Cohesion: 0.16
-Nodes (26): build_snapshot(), build_universe(), _empty_snapshot(), main(), month_end_trading_days(), DataFrame, date, datetime (+18 more)
+Cohesion: 0.17
+Nodes (25): build_snapshot(), build_universe(), _empty_snapshot(), main(), month_end_trading_days(), DataFrame, date, datetime (+17 more)
 
 ### Community 12 - "Files & functions"
 Cohesion: 0.07
@@ -132,16 +134,16 @@ Cohesion: 0.14
 Nodes (32): build_ticker_segments(), empty_master(), main(), DataFrame, date, datetime, LazyFrame, Security master (part 4, block 1): schema + PITStore fit.  Problem this exists t (+24 more)
 
 ### Community 15 - "test_signals.py"
-Cohesion: 0.07
-Nodes (50): build_exposure_matrix(), DataFrame, date, LazyFrame, Factor exposure matrix B (Block 3 risk model).  Per rebalance date: one row per, Exposure matrix B for one rebalance date.      ``sectors`` is the already-asof'd, _zscore(), Signal registry — every signal follows the same contract.  Each ``compute_*`` fu (+42 more)
+Cohesion: 0.15
+Nodes (16): Factor exposure matrix B (Block 3 risk model).  Per rebalance date: one row per, Signal registry — every signal follows the same contract.  Each ``compute_*`` fu, compute_low_vol(), _empty_signal(), DataFrame, date, LazyFrame, Low-volatility signal (Phase 2 signals + IC measurement).  Trailing ``window_day (+8 more)
 
 ### Community 16 - "test_ic.py"
-Cohesion: 0.12
-Nodes (37): build_ic_series(), compute_forward_returns(), compute_ic(), _empty_forward_returns(), _ic_for_date(), ic_summary(), IcSummary, main() (+29 more)
+Cohesion: 0.16
+Nodes (30): build_ic_series(), compute_forward_returns(), compute_ic(), _empty_forward_returns(), _ic_for_date(), ic_summary(), IcSummary, main() (+22 more)
 
 ### Community 17 - "build_exposure_matrix"
 Cohesion: 0.06
-Nodes (28): DeltaPITStore, DataFrame, datetime, Delta-backed point-in-time store — Unity Catalog mirror of PITStore.  Same bitem, The world as known at ``knowledge_ts`` — same semantics as         PITStore.asof, A Unity Catalog schema (``catalog.schema``) with point-in-time reads., MERGE one load batch. Idempotent: same (keys, effective_date,         knowledge_, Every batch in a dataset (no PIT filtering). (+20 more)
+Nodes (42): CRSPDailyLoader, main(), scrub -> audit -> PIT store, per DESIGN.md Block 1d contract.      ``conn`` is a, Assert expected CIZ columns exist on the live table., main(), port_dataset(), One-time port of a local PITStore dataset into Delta (Block 6c).  Copies every `, Copy every batch of ``dataset`` from local_store into delta_store.      Returns (+34 more)
 
 ### Community 18 - "build_optimizer_inputs"
 Cohesion: 0.06
@@ -152,24 +154,24 @@ Cohesion: 0.10
 Nodes (29): AlpacaMarketDataStream::AlpacaMarketDataStream(), AlpacaMarketDataStream::connect(), string, vector, json, export_target_portfolio(), Path, Writes a TargetPortfolio to common/target_portfolio.json -- the file contract be (+21 more)
 
 ### Community 20 - "trade_cost"
-Cohesion: 0.06
-Nodes (72): AttributionResult, decompose_backtest(), _empty_result(), datetime, Attribution (DESIGN.md Block 6): decompose realized backtest returns into factor, Per rebalance date: how much of that date's target weights came from     factor, BookScorecard, _hit_rate() (+64 more)
+Cohesion: 0.07
+Nodes (57): AttributionResult, decompose_backtest(), _empty_result(), datetime, Attribution (DESIGN.md Block 6): decompose realized backtest returns into factor, Per rebalance date: how much of that date's target weights came from     factor, BookScorecard, _hit_rate() (+49 more)
 
 ### Community 21 - "compute_market_beta"
-Cohesion: 0.14
-Nodes (12): PITStore, DataFrame, datetime, LazyFrame, Path, Point-in-time (bitemporal) parquet store.  Every dataset in the lake carries two, A directory-per-dataset parquet lake with point-in-time reads., Write one load batch. Idempotent: same knowledge_ts overwrites.          The bat (+4 more)
+Cohesion: 0.20
+Nodes (15): build_exposure_matrix(), DataFrame, date, LazyFrame, Exposure matrix B for one rebalance date.      ``sectors`` is the already-asof'd, _zscore(), build_factor_return_history(), build_risk_model() (+7 more)
 
 ### Community 22 - "BrokerSimulator"
 Cohesion: 0.06
 Nodes (47): deque, EventType, OrderId, string, OrderEvent, id, price, qty (+39 more)
 
 ### Community 23 - "IBrokerGateway"
-Cohesion: 0.22
-Nodes (9): OrderId, OrderState, unordered_map, OrderGateway, cancel_order, pump, state, states_ (+1 more)
+Cohesion: 0.14
+Nodes (13): IBrokerGateway, cancel_order, poll_events, submit_order, OrderId, OrderState, unordered_map, OrderGateway (+5 more)
 
 ### Community 24 - "BrokerSimulator.cpp"
 Cohesion: 0.14
-Nodes (9): string, KillSwitch, is_tripped, rearm, reason_, trip, tripped_, string (+1 more)
+Nodes (12): ExecutionScheduler, book_notional_, high_water_mark_, max_drawdown_pct_, run_once, string, KillSwitch, is_tripped (+4 more)
 
 ### Community 25 - "OrderGateway.cpp"
 Cohesion: 0.12
@@ -196,20 +198,20 @@ Cohesion: 0.20
 Nodes (10): AlpacaMarketDataStream, api_key_, api_secret_, connect, disconnect, symbols_, ws_, string (+2 more)
 
 ### Community 32 - "Trade"
-Cohesion: 0.24
-Nodes (9): MarketDataHandler, latest_quote, latest_trade, on_message, quotes_, trades_, string, load_dotenv() (+1 more)
+Cohesion: 0.09
+Nodes (23): string, unordered_map, MarketDataHandler, latest_quote, latest_trade, on_message, quotes_, trades_ (+15 more)
 
 ### Community 33 - "wait_for_event"
-Cohesion: 0.16
-Nodes (11): audit_daily_bars(), AuditReport, DataFrame, Shared audit for daily-bars loaders (DESIGN.md Block 1d).  Every vendor chunk pa, Audit one yearly chunk of daily bars keyed (security_id, effective_date).      H, main(), DataFrame, datetime (+3 more)
+Cohesion: 0.32
+Nodes (11): DataFrame, date, n consecutive weekdays starting at (or after) start., ret_bars(), test_low_vol_short_history_returns_empty(), test_low_vol_zero_for_constant_return(), test_momentum_ignores_data_after_rebuild_date(), test_momentum_matches_closed_form_for_constant_return() (+3 more)
 
 ### Community 34 - "ExecutionScheduler"
-Cohesion: 0.18
-Nodes (10): IBrokerGateway, cancel_order, poll_events, submit_order, ExecutionScheduler, book_notional_, high_water_mark_, max_drawdown_pct_ (+2 more)
+Cohesion: 0.31
+Nodes (9): build_specific_variance(), DataFrame, Specific (idiosyncratic) variance D (Block 3 risk model).  Diagonal of Σ = B·F·B, EWMA specific variance per security.      ``specific_return_history``: [effectiv, _dates(), test_constant_returns_give_zero_variance(), test_empty_input_returns_empty(), test_single_observation_excluded() (+1 more)
 
 ### Community 35 - "FakeSparkDataFrame"
-Cohesion: 0.19
-Nodes (7): DataFrame, datetime, (sector, industry) — Yahoo's own taxonomy, not literal GICS codes.          Unli, Pull one calendar year for all tickers, audit, append or quarantine.          Do, Wide yfinance frames -> long internal schema.          yfinance returns one colu, Snapshot current shares outstanding into its own dataset.          One row per t, Snapshot current sector/industry into its own dataset.          One row per tick
+Cohesion: 0.31
+Nodes (8): cross_sectional_regression(), DataFrame, Cross-sectional factor regression (Block 3 risk model).  One OLS regression per, OLS regression of returns on exposures for one date.      ``returns``: [security, test_drops_securities_missing_from_either_side(), test_null_ret_excluded_not_corrupted(), test_recovers_known_coefficients_with_zero_noise(), test_underdetermined_returns_empty()
 
 ### Community 36 - "test_store.py"
 Cohesion: 0.39
@@ -220,26 +222,30 @@ Cohesion: 0.53
 Nodes (5): optional, string, MarketDataHandler::latest_quote(), MarketDataHandler::latest_trade(), MarketDataHandler::on_message()
 
 ### Community 38 - "Trade"
-Cohesion: 0.25
-Nodes (6): string, unordered_map, Trade, price, size, timestamp
+Cohesion: 0.49
+Nodes (9): DataFrame, date, ret_bars(), store(), test_build_exposure_matrix_shape_and_sector_dummies(), test_empty_when_no_members_have_enough_history(), test_null_sector_value_excluded_not_crashed(), test_security_missing_sector_is_excluded() (+1 more)
 
 ### Community 39 - "Quote"
-Cohesion: 0.33
-Nodes (6): Quote, ask_price, ask_size, bid_price, bid_size, timestamp
+Cohesion: 0.42
+Nodes (8): populated_store(), DataFrame, date, ret_bars(), store(), test_build_risk_model_end_to_end_shape(), test_build_risk_model_none_with_insufficient_history(), trading_days()
+
+### Community 40 - "set_quote"
+Cohesion: 0.32
+Nodes (7): compute_reversal(), _empty_signal(), DataFrame, date, LazyFrame, Short-term reversal signal (Phase 2 signals + IC measurement).  Trailing ``windo, Trailing ``window_days`` cumulative return per security, as of ``rebuild_date``.
 
 ## Knowledge Gaps
 - **154 isolated node(s):** `symbol`, `qty`, `limit_price`, `is_buy`, `submit_order` (+149 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PITStore` connect `compute_market_beta` to `wait_for_event`, `test_store.py`, `model.py`, `test_store.py`, `AuditReport`, `YFinanceDailyLoader`, `.load_year`, `test_security_master.py`, `test_signals.py`, `test_ic.py`, `build_exposure_matrix`, `build_optimizer_inputs`, `CRSPDailyLoader`, `trade_cost`?**
-  _High betweenness centrality (0.548) - this node is a cross-community bridge._
-- **Why does `AlpacaGateway` connect `AlpacaMarketDataStream.cpp` to `ExecutionScheduler`, `BrokerSimulator`?**
+- **Why does `PITStore` connect `build_exposure_matrix` to `wait_for_event`, `test_store.py`, `Trade`, `Quote`, `AuditReport`, `YFinanceDailyLoader`, `.load_year`, `test_security_master.py`, `test_ic.py`, `build_optimizer_inputs`, `CRSPDailyLoader`, `trade_cost`, `compute_market_beta`?**
+  _High betweenness centrality (0.563) - this node is a cross-community bridge._
+- **Why does `AlpacaGateway` connect `AlpacaMarketDataStream.cpp` to `BrokerSimulator`, `IBrokerGateway`?**
   _High betweenness centrality (0.076) - this node is a cross-community bridge._
-- **Why does `MarketDataHandler` connect `Trade` to `ExecutionScheduler`, `MarketDataHandler.cpp`, `Trade`, `Quote`, `set_quote`, `CRSPDailyLoader`, `EventJournal`, `Order`, `MarketDataHandler.cpp`?**
+- **Why does `MarketDataHandler` connect `Trade` to `MarketDataHandler.cpp`, `CRSPDailyLoader`, `BrokerSimulator.cpp`, `EventJournal`, `Order`, `MarketDataHandler.cpp`?**
   _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `PITStore` (e.g. with `CRSPDailyLoader` and `YFinanceClient`) actually correct?**
   _`PITStore` has 9 INFERRED edges - model-reasoned connections that need verification._

@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1785963125.422571,
-    "ast_hash": "78dc2ed548e2b19892155ae98b3cdb93",
+    "mtime": 1785964222.7535896,
+    "ast_hash": "2adca3b0a4cb6049d59b8d7db9c62922",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1785963103.8610322,
-    "ast_hash": "6815c1edd031dec8cc2c6cd912ea3f54",
+    "mtime": 1785964195.867193,
+    "ast_hash": "3cfbdd3ff80645bfc5451b6cc35dbe57",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1785963145.8327947,
-    "ast_hash": "52c4b5231e787c2b19923c37e16e4c47",
+    "mtime": 1785964243.8713903,
+    "ast_hash": "e42ce2cb40ac219cb39624b425f049a1",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -520,13 +520,13 @@
     "semantic_hash": ""
   },
   "research/attribution/scorecard.py": {
-    "mtime": 1785963009.9512167,
-    "ast_hash": "03289b676e9f7dac7436381d6aab5f6d",
+    "mtime": 1785963974.258649,
+    "ast_hash": "73118f797cdc7df41edc141133b8ad80",
     "semantic_hash": ""
   },
   "tests/test_scorecard.py": {
-    "mtime": 1785963046.739942,
-    "ast_hash": "ab22fa8e553c0c154eaed49dc0ca9b41",
+    "mtime": 1785964114.4907258,
+    "ast_hash": "c8e2fb386057a1c9df70bdb9f79e2186",
     "semantic_hash": ""
   }
 }

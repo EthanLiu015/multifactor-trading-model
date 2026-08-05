@@ -80,7 +80,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway",
-      "community": 34,
+      "community": 23,
       "norm_label": "ibrokergateway"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_ibrokergateway",
-      "community": 34,
+      "community": 23,
       "norm_label": ".~ibrokergateway()"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_submit_order",
-      "community": 34,
+      "community": 23,
       "norm_label": "submit_order"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_cancel_order",
-      "community": 34,
+      "community": 23,
       "norm_label": "cancel_order"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "engine_include_broker_ibrokergateway_ibrokergateway_poll_events",
-      "community": 34,
+      "community": 23,
       "norm_label": "poll_events"
     },
     {
@@ -350,7 +350,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "engine_include_execution_executionscheduler_executionscheduler",
-      "community": 34,
+      "community": 24,
       "norm_label": "executionscheduler"
     },
     {
@@ -360,7 +360,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "engine_include_execution_executionscheduler_executionscheduler_run_once",
-      "community": 34,
+      "community": 24,
       "norm_label": "run_once"
     },
     {
@@ -370,7 +370,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "engine_include_execution_executionscheduler_executionscheduler_book_notional",
-      "community": 34,
+      "community": 24,
       "norm_label": "book_notional_"
     },
     {
@@ -380,7 +380,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "engine_include_execution_executionscheduler_executionscheduler_max_drawdown_pct",
-      "community": 34,
+      "community": 24,
       "norm_label": "max_drawdown_pct_"
     },
     {
@@ -390,7 +390,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "engine_include_execution_executionscheduler_executionscheduler_high_water_mark",
-      "community": 34,
+      "community": 24,
       "norm_label": "high_water_mark_"
     },
     {
@@ -510,7 +510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler",
-      "community": 38,
+      "community": 32,
       "norm_label": "marketdatahandler.hpp"
     },
     {
@@ -520,7 +520,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_trade",
-      "community": 38,
+      "community": 32,
       "norm_label": "trade"
     },
     {
@@ -530,7 +530,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_trade_price",
-      "community": 38,
+      "community": 32,
       "norm_label": "price"
     },
     {
@@ -540,7 +540,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_trade_size",
-      "community": 38,
+      "community": 32,
       "norm_label": "size"
     },
     {
@@ -550,7 +550,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_hpp_string",
-      "community": 38,
+      "community": 32,
       "norm_label": "string"
     },
     {
@@ -560,7 +560,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_trade_timestamp",
-      "community": 38,
+      "community": 32,
       "norm_label": "timestamp"
     },
     {
@@ -570,7 +570,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote",
-      "community": 39,
+      "community": 32,
       "norm_label": "quote"
     },
     {
@@ -580,7 +580,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote_bid_price",
-      "community": 39,
+      "community": 32,
       "norm_label": "bid_price"
     },
     {
@@ -590,7 +590,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote_bid_size",
-      "community": 39,
+      "community": 32,
       "norm_label": "bid_size"
     },
     {
@@ -600,7 +600,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote_ask_price",
-      "community": 39,
+      "community": 32,
       "norm_label": "ask_price"
     },
     {
@@ -610,7 +610,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote_ask_size",
-      "community": 39,
+      "community": 32,
       "norm_label": "ask_size"
     },
     {
@@ -620,7 +620,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_quote_timestamp",
-      "community": 39,
+      "community": 32,
       "norm_label": "timestamp"
     },
     {
@@ -670,7 +670,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_include_marketdata_marketdatahandler_hpp_unordered_map",
-      "community": 38,
+      "community": 32,
       "norm_label": "unordered_map"
     },
     {
@@ -780,7 +780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_include_order_ordergateway",
-      "community": 38,
+      "community": 32,
       "norm_label": "ordergateway.hpp"
     },
     {
@@ -2000,7 +2000,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch.cpp"
     },
     {
@@ -2010,7 +2010,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_is_tripped",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::is_tripped()"
     },
     {
@@ -2020,7 +2020,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_trip",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::trip()"
     },
     {
@@ -2030,7 +2030,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_cpp_string",
-      "community": 24,
+      "community": 41,
       "norm_label": "string"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_rearm",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::rearm()"
     },
     {
@@ -2080,7 +2080,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_src_order_ordergateway_ordergateway_ordergateway",
-      "community": 34,
+      "community": 6,
       "norm_label": "ordergateway::ordergateway()"
     },
     {
@@ -2230,7 +2230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_tests_test_execution_scheduler",
-      "community": 40,
+      "community": 32,
       "norm_label": "test_execution_scheduler.cpp"
     },
     {
@@ -2240,7 +2240,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "engine_tests_test_execution_scheduler_set_quote",
-      "community": 40,
+      "community": 32,
       "norm_label": "set_quote()"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_tests_test_execution_scheduler_cpp_string",
-      "community": 40,
+      "community": 32,
       "norm_label": "string"
     },
     {
@@ -2653,7 +2653,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic",
-      "community": 16,
+      "community": 2,
       "norm_label": "spark_ic.py"
     },
     {
@@ -2663,7 +2663,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_build_ic_series_spark",
-      "community": 16,
+      "community": 2,
       "norm_label": "build_ic_series_spark()"
     },
     {
@@ -2673,7 +2673,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_dataframe",
-      "community": 16,
+      "community": 2,
       "norm_label": "dataframe"
     },
     {
@@ -2683,7 +2683,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_datetime",
-      "community": 16,
+      "community": 2,
       "norm_label": "datetime"
     },
     {
@@ -2693,7 +2693,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_main",
-      "community": 16,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -2703,7 +2703,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_1",
-      "community": 16,
+      "community": 2,
       "norm_label": "spark benchmark for the historical alpha run (block 6d).  re-executes the same p"
     },
     {
@@ -2713,7 +2713,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_76",
-      "community": 16,
+      "community": 2,
       "norm_label": "same result as build_ic_series (long format: rebalance_date/signal/ic     rows i"
     },
     {
@@ -2810,7 +2810,7 @@
       "label": "BookScorecard",
       "file_type": "code",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L27",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "research_attribution_scorecard_bookscorecard",
       "community": 20,
@@ -2820,7 +2820,7 @@
       "label": "_sharpe_ratio()",
       "file_type": "code",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L35",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "research_attribution_scorecard_sharpe_ratio",
       "community": 20,
@@ -2840,7 +2840,7 @@
       "label": "_max_drawdown()",
       "file_type": "code",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L44",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "research_attribution_scorecard_max_drawdown",
       "community": 20,
@@ -2850,21 +2850,51 @@
       "label": "_hit_rate()",
       "file_type": "code",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L52",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "research_attribution_scorecard_hit_rate",
       "community": 20,
       "norm_label": "_hit_rate()"
     },
     {
+      "label": "_realized_beta()",
+      "file_type": "code",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "research_attribution_scorecard_realized_beta",
+      "community": 20,
+      "norm_label": "_realized_beta()"
+    },
+    {
+      "label": "LazyFrame",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_attribution_scorecard_py_lazyframe",
+      "community": 20,
+      "norm_label": "lazyframe"
+    },
+    {
       "label": "score_backtest()",
       "file_type": "code",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L58",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "research_attribution_scorecard_score_backtest",
       "community": 20,
       "norm_label": "score_backtest()"
+    },
+    {
+      "label": "datetime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "research_attribution_scorecard_py_datetime",
+      "community": 20,
+      "norm_label": "datetime"
     },
     {
       "label": "Book-level scorecard (DESIGN.md's analytics suite: Sharpe, IR, gross/net exposur",
@@ -2880,9 +2910,9 @@
       "label": "Book-level metrics from a completed backtest.      ``steps`` is the same list pa",
       "file_type": "rationale",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L59",
+      "source_location": "L97",
       "_origin": "ast",
-      "id": "research_attribution_scorecard_rationale_59",
+      "id": "research_attribution_scorecard_rationale_97",
       "community": 20,
       "norm_label": "book-level metrics from a completed backtest.      ``steps`` is the same list pa"
     },
@@ -3013,7 +3043,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "research_backtest_simulate_empty_holding_returns",
-      "community": 20,
+      "community": 8,
       "norm_label": "_empty_holding_returns()"
     },
     {
@@ -3023,7 +3053,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_dataframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "dataframe"
     },
     {
@@ -3033,7 +3063,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_backtest_simulate_holding_period_return",
-      "community": 20,
+      "community": 8,
       "norm_label": "_holding_period_return()"
     },
     {
@@ -3043,7 +3073,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_lazyframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "lazyframe"
     },
     {
@@ -3053,7 +3083,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "date"
     },
     {
@@ -3073,7 +3103,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "research_backtest_simulate_run_backtest",
-      "community": 20,
+      "community": 8,
       "norm_label": "run_backtest()"
     },
     {
@@ -3083,7 +3113,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_datetime",
-      "community": 20,
+      "community": 8,
       "norm_label": "datetime"
     },
     {
@@ -3103,7 +3133,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_56",
-      "community": 20,
+      "community": 8,
       "norm_label": "cumulative return per security over ``(start_date, end_date]``.      excludes ``"
     },
     {
@@ -3113,7 +3143,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_104",
-      "community": 20,
+      "community": 8,
       "norm_label": "walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw"
     },
     {
@@ -3123,7 +3153,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_init",
-      "community": 21,
+      "community": 17,
       "norm_label": "__init__.py"
     },
     {
@@ -3133,7 +3163,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_delta_store",
-      "community": 17,
+      "community": 2,
       "norm_label": "delta_store.py"
     },
     {
@@ -3143,7 +3173,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore",
-      "community": 17,
+      "community": 2,
       "norm_label": "deltapitstore"
     },
     {
@@ -3153,7 +3183,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore_init",
-      "community": 17,
+      "community": 2,
       "norm_label": ".__init__()"
     },
     {
@@ -3163,7 +3193,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "sparksession",
-      "community": 17,
+      "community": 2,
       "norm_label": "sparksession"
     },
     {
@@ -3173,7 +3203,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore_table",
-      "community": 17,
+      "community": 2,
       "norm_label": "._table()"
     },
     {
@@ -3183,7 +3213,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore_append",
-      "community": 17,
+      "community": 2,
       "norm_label": ".append()"
     },
     {
@@ -3193,7 +3223,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_delta_store_py_dataframe",
-      "community": 17,
+      "community": 2,
       "norm_label": "dataframe"
     },
     {
@@ -3203,7 +3233,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_delta_store_py_datetime",
-      "community": 17,
+      "community": 2,
       "norm_label": "datetime"
     },
     {
@@ -3213,7 +3243,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore_scan",
-      "community": 17,
+      "community": 2,
       "norm_label": ".scan()"
     },
     {
@@ -3223,7 +3253,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "research_data_delta_store_deltapitstore_asof",
-      "community": 17,
+      "community": 2,
       "norm_label": ".asof()"
     },
     {
@@ -3233,7 +3263,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_delta_store_rationale_1",
-      "community": 17,
+      "community": 2,
       "norm_label": "delta-backed point-in-time store \u2014 unity catalog mirror of pitstore.  same bitem"
     },
     {
@@ -3243,7 +3273,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "research_data_delta_store_rationale_41",
-      "community": 17,
+      "community": 2,
       "norm_label": "a unity catalog schema (``catalog.schema``) with point-in-time reads."
     },
     {
@@ -3253,7 +3283,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "research_data_delta_store_rationale_58",
-      "community": 17,
+      "community": 2,
       "norm_label": "merge one load batch. idempotent: same (keys, effective_date,         knowledge_"
     },
     {
@@ -3263,7 +3293,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "research_data_delta_store_rationale_94",
-      "community": 17,
+      "community": 2,
       "norm_label": "every batch in a dataset (no pit filtering)."
     },
     {
@@ -3273,7 +3303,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "research_data_delta_store_rationale_103",
-      "community": 17,
+      "community": 2,
       "norm_label": "the world as known at ``knowledge_ts`` \u2014 same semantics as         pitstore.asof"
     },
     {
@@ -3283,7 +3313,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_init",
-      "community": 33,
+      "community": 9,
       "norm_label": "__init__.py"
     },
     {
@@ -3293,7 +3323,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit",
-      "community": 33,
+      "community": 9,
       "norm_label": "audit.py"
     },
     {
@@ -3303,7 +3333,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport",
-      "community": 33,
+      "community": 9,
       "norm_label": "auditreport"
     },
     {
@@ -3313,7 +3343,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "research_data_loaders_audit_auditreport_ok",
-      "community": 33,
+      "community": 9,
       "norm_label": ".ok()"
     },
     {
@@ -3323,7 +3353,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_loaders_audit_audit_daily_bars",
-      "community": 33,
+      "community": 9,
       "norm_label": "audit_daily_bars()"
     },
     {
@@ -3333,7 +3363,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_audit_py_dataframe",
-      "community": 33,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -3343,7 +3373,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_1",
-      "community": 33,
+      "community": 9,
       "norm_label": "shared audit for daily-bars loaders (design.md block 1d).  every vendor chunk pa"
     },
     {
@@ -3353,7 +3383,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_data_loaders_audit_rationale_52",
-      "community": 33,
+      "community": 9,
       "norm_label": "audit one yearly chunk of daily bars keyed (security_id, effective_date).      h"
     },
     {
@@ -3363,7 +3393,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily",
-      "community": 33,
+      "community": 9,
       "norm_label": "crsp_daily.py"
     },
     {
@@ -3373,7 +3403,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader",
-      "community": 8,
+      "community": 17,
       "norm_label": "crspdailyloader"
     },
     {
@@ -3383,7 +3413,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_init",
-      "community": 21,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -3393,7 +3423,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_verify_schema",
-      "community": 33,
+      "community": 17,
       "norm_label": ".verify_schema()"
     },
     {
@@ -3403,7 +3433,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_load_year",
-      "community": 33,
+      "community": 9,
       "norm_label": ".load_year()"
     },
     {
@@ -3413,7 +3443,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_datetime",
-      "community": 33,
+      "community": 9,
       "norm_label": "datetime"
     },
     {
@@ -3423,7 +3453,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_transform",
-      "community": 33,
+      "community": 9,
       "norm_label": "._transform()"
     },
     {
@@ -3433,7 +3463,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_dataframe",
-      "community": 33,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -3443,7 +3473,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_audit",
-      "community": 33,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -3453,7 +3483,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_quarantine",
-      "community": 33,
+      "community": 9,
       "norm_label": "._quarantine()"
     },
     {
@@ -3463,7 +3493,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_main",
-      "community": 33,
+      "community": 17,
       "norm_label": "main()"
     },
     {
@@ -3473,7 +3503,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_1",
-      "community": 33,
+      "community": 9,
       "norm_label": "crsp daily-bars loader (wrds, crsp 2.0 / \"ciz\" format).  pulls daily bars for al"
     },
     {
@@ -3483,7 +3513,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_54",
-      "community": 8,
+      "community": 17,
       "norm_label": "scrub -> audit -> pit store, per design.md block 1d contract.      ``conn`` is a"
     },
     {
@@ -3493,7 +3523,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_65",
-      "community": 33,
+      "community": 17,
       "norm_label": "assert expected ciz columns exist on the live table."
     },
     {
@@ -3503,7 +3533,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_76",
-      "community": 33,
+      "community": 9,
       "norm_label": "pull one calendar year, audit it, append or quarantine it."
     },
     {
@@ -3513,7 +3543,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily",
-      "community": 2,
+      "community": 9,
       "norm_label": "yfinance_daily.py"
     },
     {
@@ -3523,7 +3553,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rate_limited_errors",
-      "community": 2,
+      "community": 9,
       "norm_label": "_rate_limited_errors()"
     },
     {
@@ -3533,7 +3563,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinanceclient",
-      "community": 2,
+      "community": 9,
       "norm_label": "yfinanceclient"
     },
     {
@@ -3543,7 +3573,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinanceclient_init",
-      "community": 2,
+      "community": 9,
       "norm_label": ".__init__()"
     },
     {
@@ -3553,7 +3583,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinanceclient_download",
-      "community": 2,
+      "community": 9,
       "norm_label": ".download()"
     },
     {
@@ -3563,7 +3593,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinanceclient_shares_outstanding",
-      "community": 35,
+      "community": 9,
       "norm_label": ".shares_outstanding()"
     },
     {
@@ -3573,7 +3603,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinanceclient_sector_info",
-      "community": 35,
+      "community": 9,
       "norm_label": ".sector_info()"
     },
     {
@@ -3593,7 +3623,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 21,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -3603,7 +3633,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_load_year",
-      "community": 35,
+      "community": 9,
       "norm_label": ".load_year()"
     },
     {
@@ -3613,7 +3643,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_py_datetime",
-      "community": 35,
+      "community": 9,
       "norm_label": "datetime"
     },
     {
@@ -3623,7 +3653,7 @@
       "source_location": "L199",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_transform",
-      "community": 35,
+      "community": 9,
       "norm_label": "._transform()"
     },
     {
@@ -3633,7 +3663,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_py_dataframe",
-      "community": 35,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -3643,7 +3673,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_audit",
-      "community": 33,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -3653,7 +3683,7 @@
       "source_location": "L259",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_quarantine",
-      "community": 35,
+      "community": 9,
       "norm_label": "._quarantine()"
     },
     {
@@ -3663,7 +3693,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_load_shares_current",
-      "community": 35,
+      "community": 9,
       "norm_label": ".load_shares_current()"
     },
     {
@@ -3673,7 +3703,7 @@
       "source_location": "L289",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_load_sector_current",
-      "community": 35,
+      "community": 9,
       "norm_label": ".load_sector_current()"
     },
     {
@@ -3683,7 +3713,7 @@
       "source_location": "L316",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_select_liquid_tickers",
-      "community": 2,
+      "community": 9,
       "norm_label": "select_liquid_tickers()"
     },
     {
@@ -3693,7 +3723,7 @@
       "source_location": "L337",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_read_tickers_file",
-      "community": 2,
+      "community": 9,
       "norm_label": "read_tickers_file()"
     },
     {
@@ -3703,7 +3733,7 @@
       "source_location": "L347",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_fetch_listed_tickers",
-      "community": 2,
+      "community": 9,
       "norm_label": "fetch_listed_tickers()"
     },
     {
@@ -3713,7 +3743,7 @@
       "source_location": "L389",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_main",
-      "community": 2,
+      "community": 9,
       "norm_label": "main()"
     },
     {
@@ -3723,7 +3753,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_1",
-      "community": 2,
+      "community": 9,
       "norm_label": "yfinance daily-bars loader (interim free vendor, part 2b).  fills the lake while"
     },
     {
@@ -3733,7 +3763,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_54",
-      "community": 2,
+      "community": 9,
       "norm_label": "true if a yfinance per-ticker error dict shows yahoo throttling.      batch ``yf"
     },
     {
@@ -3743,7 +3773,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_68",
-      "community": 2,
+      "community": 9,
       "norm_label": "thin adapter over the yfinance package; tests inject a fake instead.      paces"
     },
     {
@@ -3753,7 +3783,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_132",
-      "community": 35,
+      "community": 9,
       "norm_label": "(sector, industry) \u2014 yahoo's own taxonomy, not literal gics codes.          unli"
     },
     {
@@ -3773,7 +3803,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_166",
-      "community": 35,
+      "community": 9,
       "norm_label": "pull one calendar year for all tickers, audit, append or quarantine.          do"
     },
     {
@@ -3783,7 +3813,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_200",
-      "community": 35,
+      "community": 9,
       "norm_label": "wide yfinance frames -> long internal schema.          yfinance returns one colu"
     },
     {
@@ -3793,7 +3823,7 @@
       "source_location": "L270",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_270",
-      "community": 35,
+      "community": 9,
       "norm_label": "snapshot current shares outstanding into its own dataset.          one row per t"
     },
     {
@@ -3803,7 +3833,7 @@
       "source_location": "L292",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_292",
-      "community": 35,
+      "community": 9,
       "norm_label": "snapshot current sector/industry into its own dataset.          one row per tick"
     },
     {
@@ -3813,7 +3843,7 @@
       "source_location": "L317",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_317",
-      "community": 2,
+      "community": 9,
       "norm_label": "top ``top_n`` tickers by median daily dollar volume in ``year``.      fetch tria"
     },
     {
@@ -3823,7 +3853,7 @@
       "source_location": "L338",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_338",
-      "community": 2,
+      "community": 9,
       "norm_label": "one ticker per line; blank lines and '#' comments skipped."
     },
     {
@@ -3833,7 +3863,7 @@
       "source_location": "L348",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_rationale_348",
-      "community": 2,
+      "community": 9,
       "norm_label": "listed us common-stock-ish tickers from the nasdaq trader symbol files.      exc"
     },
     {
@@ -3893,7 +3923,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store",
-      "community": 21,
+      "community": 17,
       "norm_label": "store.py"
     },
     {
@@ -3903,7 +3933,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "research_data_store_pitstore",
-      "community": 21,
+      "community": 17,
       "norm_label": "pitstore"
     },
     {
@@ -3913,7 +3943,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_data_store_pitstore_init",
-      "community": 21,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -3923,7 +3953,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_path",
-      "community": 21,
+      "community": 17,
       "norm_label": "path"
     },
     {
@@ -3933,7 +3963,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "research_data_store_pitstore_dataset_dir",
-      "community": 21,
+      "community": 17,
       "norm_label": "._dataset_dir()"
     },
     {
@@ -3943,7 +3973,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "research_data_store_pitstore_append",
-      "community": 21,
+      "community": 17,
       "norm_label": ".append()"
     },
     {
@@ -3953,7 +3983,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_dataframe",
-      "community": 21,
+      "community": 17,
       "norm_label": "dataframe"
     },
     {
@@ -3963,7 +3993,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_datetime",
-      "community": 21,
+      "community": 17,
       "norm_label": "datetime"
     },
     {
@@ -3973,7 +4003,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "research_data_store_pitstore_scan",
-      "community": 21,
+      "community": 17,
       "norm_label": ".scan()"
     },
     {
@@ -3983,7 +4013,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_lazyframe",
-      "community": 21,
+      "community": 17,
       "norm_label": "lazyframe"
     },
     {
@@ -3993,7 +4023,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "research_data_store_pitstore_asof",
-      "community": 21,
+      "community": 17,
       "norm_label": ".asof()"
     },
     {
@@ -4003,7 +4033,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store_rationale_1",
-      "community": 21,
+      "community": 17,
       "norm_label": "point-in-time (bitemporal) parquet store.  every dataset in the lake carries two"
     },
     {
@@ -4013,7 +4043,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_data_store_rationale_28",
-      "community": 21,
+      "community": 17,
       "norm_label": "a directory-per-dataset parquet lake with point-in-time reads."
     },
     {
@@ -4023,7 +4053,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_store_rationale_43",
-      "community": 21,
+      "community": 17,
       "norm_label": "write one load batch. idempotent: same knowledge_ts overwrites.          the bat"
     },
     {
@@ -4033,7 +4063,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "research_data_store_rationale_81",
-      "community": 21,
+      "community": 17,
       "norm_label": "lazy scan of every batch in a dataset (no pit filtering)."
     },
     {
@@ -4043,7 +4073,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "research_data_store_rationale_91",
-      "community": 21,
+      "community": 17,
       "norm_label": "the world as we knew it at ``knowledge_ts``.          drops rows learned after t"
     },
     {
@@ -4483,7 +4513,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_init",
-      "community": 3,
+      "community": 21,
       "norm_label": "__init__.py"
     },
     {
@@ -4503,7 +4533,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_risk_exposures_zscore",
-      "community": 15,
+      "community": 21,
       "norm_label": "_zscore()"
     },
     {
@@ -4513,7 +4543,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_dataframe",
-      "community": 15,
+      "community": 21,
       "norm_label": "dataframe"
     },
     {
@@ -4523,7 +4553,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "research_risk_exposures_build_exposure_matrix",
-      "community": 15,
+      "community": 21,
       "norm_label": "build_exposure_matrix()"
     },
     {
@@ -4533,7 +4563,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_lazyframe",
-      "community": 15,
+      "community": 21,
       "norm_label": "lazyframe"
     },
     {
@@ -4543,7 +4573,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_date",
-      "community": 15,
+      "community": 21,
       "norm_label": "date"
     },
     {
@@ -4563,7 +4593,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_52",
-      "community": 15,
+      "community": 21,
       "norm_label": "exposure matrix b for one rebalance date.      ``sectors`` is the already-asof'd"
     },
     {
@@ -4653,7 +4683,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_model",
-      "community": 3,
+      "community": 21,
       "norm_label": "model.py"
     },
     {
@@ -4663,7 +4693,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "research_risk_model_riskmodel",
-      "community": 3,
+      "community": 21,
       "norm_label": "riskmodel"
     },
     {
@@ -4673,7 +4703,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "research_risk_model_riskmodel_sigma",
-      "community": 3,
+      "community": 42,
       "norm_label": ".sigma()"
     },
     {
@@ -4683,7 +4713,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_ndarray",
-      "community": 3,
+      "community": 42,
       "norm_label": "ndarray"
     },
     {
@@ -4693,7 +4723,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "research_risk_model_build_factor_return_history",
-      "community": 3,
+      "community": 21,
       "norm_label": "build_factor_return_history()"
     },
     {
@@ -4703,7 +4733,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_datetime",
-      "community": 3,
+      "community": 21,
       "norm_label": "datetime"
     },
     {
@@ -4713,7 +4743,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_dataframe",
-      "community": 3,
+      "community": 21,
       "norm_label": "dataframe"
     },
     {
@@ -4723,7 +4753,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "research_risk_model_build_risk_model",
-      "community": 3,
+      "community": 21,
       "norm_label": "build_risk_model()"
     },
     {
@@ -4733,7 +4763,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_date",
-      "community": 3,
+      "community": 21,
       "norm_label": "date"
     },
     {
@@ -4743,7 +4773,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_model_rationale_1",
-      "community": 3,
+      "community": 21,
       "norm_label": "risk model orchestration (block 3): assembles \u03c3 = b\u00b7f\u00b7bt + d.  ties together exp"
     },
     {
@@ -4753,7 +4783,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_model_rationale_52",
-      "community": 3,
+      "community": 42,
       "norm_label": "full n\u00d7n stock covariance \u03c3 = b\u00b7f\u00b7bt + diag(d).          **may emit spurious num"
     },
     {
@@ -4763,7 +4793,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "research_risk_model_rationale_75",
-      "community": 3,
+      "community": 21,
       "norm_label": "per-date exposures -> regression, stacked into factor + specific return     hist"
     },
     {
@@ -4773,7 +4803,7 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "research_risk_model_rationale_167",
-      "community": 3,
+      "community": 21,
       "norm_label": "full \u03c3 = b\u00b7f\u00b7bt + d for ``rebuild_date``, using trailing history for f and d."
     },
     {
@@ -4783,7 +4813,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "regression.py"
     },
     {
@@ -4793,7 +4823,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "research_risk_regression_cross_sectional_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "cross_sectional_regression()"
     },
     {
@@ -4803,7 +4833,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_regression_py_dataframe",
-      "community": 3,
+      "community": 35,
       "norm_label": "dataframe"
     },
     {
@@ -4813,7 +4843,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_regression_rationale_1",
-      "community": 3,
+      "community": 35,
       "norm_label": "cross-sectional factor regression (block 3 risk model).  one ols regression per"
     },
     {
@@ -4823,7 +4853,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_risk_regression_rationale_26",
-      "community": 3,
+      "community": 35,
       "norm_label": "ols regression of returns on exposures for one date.      ``returns``: [security"
     },
     {
@@ -4833,7 +4863,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "specific_variance.py"
     },
     {
@@ -4843,7 +4873,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "research_risk_specific_variance_build_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "build_specific_variance()"
     },
     {
@@ -4853,7 +4883,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_specific_variance_py_dataframe",
-      "community": 3,
+      "community": 34,
       "norm_label": "dataframe"
     },
     {
@@ -4863,7 +4893,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_specific_variance_rationale_1",
-      "community": 3,
+      "community": 34,
       "norm_label": "specific (idiosyncratic) variance d (block 3 risk model).  diagonal of \u03c3 = b\u00b7f\u00b7b"
     },
     {
@@ -4873,7 +4903,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "research_risk_specific_variance_rationale_23",
-      "community": 3,
+      "community": 34,
       "norm_label": "ewma specific variance per security.      ``specific_return_history``: [effectiv"
     },
     {
@@ -5233,7 +5263,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_signals_reversal",
-      "community": 15,
+      "community": 40,
       "norm_label": "reversal.py"
     },
     {
@@ -5243,7 +5273,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "research_signals_reversal_empty_signal",
-      "community": 15,
+      "community": 40,
       "norm_label": "_empty_signal()"
     },
     {
@@ -5253,7 +5283,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_dataframe",
-      "community": 15,
+      "community": 40,
       "norm_label": "dataframe"
     },
     {
@@ -5263,7 +5293,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_signals_reversal_compute_reversal",
-      "community": 15,
+      "community": 40,
       "norm_label": "compute_reversal()"
     },
     {
@@ -5273,7 +5303,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_lazyframe",
-      "community": 15,
+      "community": 40,
       "norm_label": "lazyframe"
     },
     {
@@ -5283,7 +5313,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_date",
-      "community": 15,
+      "community": 40,
       "norm_label": "date"
     },
     {
@@ -5293,7 +5323,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_signals_reversal_rationale_1",
-      "community": 15,
+      "community": 40,
       "norm_label": "short-term reversal signal (phase 2 signals + ic measurement).  trailing ``windo"
     },
     {
@@ -5303,7 +5333,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "research_signals_reversal_rationale_34",
-      "community": 15,
+      "community": 40,
       "norm_label": "trailing ``window_days`` cumulative return per security, as of ``rebuild_date``."
     },
     {
@@ -5683,7 +5713,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_crsp_loader",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_crsp_loader.py"
     },
     {
@@ -5693,7 +5723,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_row",
-      "community": 8,
+      "community": 17,
       "norm_label": "row()"
     },
     {
@@ -5703,7 +5733,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_frame",
-      "community": 8,
+      "community": 17,
       "norm_label": "frame()"
     },
     {
@@ -5713,7 +5743,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn",
-      "community": 8,
+      "community": 17,
       "norm_label": "fakeconn"
     },
     {
@@ -5723,7 +5753,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_init",
-      "community": 8,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -5733,7 +5763,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_raw_sql",
-      "community": 8,
+      "community": 17,
       "norm_label": ".raw_sql()"
     },
     {
@@ -5743,7 +5773,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_fakeconn_describe_table",
-      "community": 8,
+      "community": 17,
       "norm_label": ".describe_table()"
     },
     {
@@ -5753,7 +5783,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_store",
-      "community": 21,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -5763,7 +5793,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_happy_path_lands_in_store",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_happy_path_lands_in_store()"
     },
     {
@@ -5773,7 +5803,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_rerun_same_year_is_idempotent",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_rerun_same_year_is_idempotent()"
     },
     {
@@ -5783,7 +5813,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_duplicate_rows_quarantined_not_stored",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_duplicate_rows_quarantined_not_stored()"
     },
     {
@@ -5793,7 +5823,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_short_past_year_fails_audit",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_short_past_year_fails_audit()"
     },
     {
@@ -5803,7 +5833,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_nulls_and_outliers_flagged_not_dropped",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_nulls_and_outliers_flagged_not_dropped()"
     },
     {
@@ -5813,7 +5843,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "tests_test_crsp_loader_test_verify_schema",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_verify_schema()"
     },
     {
@@ -5933,7 +5963,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_delta_store",
-      "community": 17,
+      "community": 2,
       "norm_label": "test_delta_store.py"
     },
     {
@@ -5943,7 +5973,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_delta_store_spark",
-      "community": 17,
+      "community": 2,
       "norm_label": "spark()"
     },
     {
@@ -5953,7 +5983,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_delta_store_store",
-      "community": 17,
+      "community": 2,
       "norm_label": "store()"
     },
     {
@@ -5963,7 +5993,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tests_test_delta_store_dataset",
-      "community": 17,
+      "community": 2,
       "norm_label": "dataset()"
     },
     {
@@ -5973,7 +6003,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_delta_store_bars",
-      "community": 17,
+      "community": 2,
       "norm_label": "bars()"
     },
     {
@@ -5983,7 +6013,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_round_trip",
-      "community": 17,
+      "community": 2,
       "norm_label": "test_round_trip()"
     },
     {
@@ -5993,7 +6023,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_asof_point_in_time",
-      "community": 17,
+      "community": 2,
       "norm_label": "test_asof_point_in_time()"
     },
     {
@@ -6003,7 +6033,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_append_idempotent",
-      "community": 17,
+      "community": 2,
       "norm_label": "test_append_idempotent()"
     },
     {
@@ -6013,7 +6043,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_append_rejects_bad_schema",
-      "community": 17,
+      "community": 2,
       "norm_label": "test_append_rejects_bad_schema()"
     },
     {
@@ -6073,7 +6103,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_exposures",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_exposures.py"
     },
     {
@@ -6083,7 +6113,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_exposures_trading_days",
-      "community": 15,
+      "community": 38,
       "norm_label": "trading_days()"
     },
     {
@@ -6093,7 +6123,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_date",
-      "community": 15,
+      "community": 38,
       "norm_label": "date"
     },
     {
@@ -6103,7 +6133,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_exposures_ret_bars",
-      "community": 15,
+      "community": 38,
       "norm_label": "ret_bars()"
     },
     {
@@ -6113,7 +6143,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_dataframe",
-      "community": 15,
+      "community": 38,
       "norm_label": "dataframe"
     },
     {
@@ -6123,7 +6153,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 15,
+      "community": 38,
       "norm_label": "store()"
     },
     {
@@ -6133,7 +6163,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_exposures_test_build_exposure_matrix_shape_and_sector_dummies",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_build_exposure_matrix_shape_and_sector_dummies()"
     },
     {
@@ -6143,7 +6173,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_test_exposures_test_security_missing_sector_is_excluded",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_security_missing_sector_is_excluded()"
     },
     {
@@ -6153,7 +6183,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_exposures_test_null_sector_value_excluded_not_crashed",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_null_sector_value_excluded_not_crashed()"
     },
     {
@@ -6163,7 +6193,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_test_exposures_test_empty_when_no_members_have_enough_history",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_empty_when_no_members_have_enough_history()"
     },
     {
@@ -6263,7 +6293,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_ic_store",
-      "community": 16,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -6753,7 +6783,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_regression.py"
     },
     {
@@ -6763,7 +6793,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_regression_test_recovers_known_coefficients_with_zero_noise",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_recovers_known_coefficients_with_zero_noise()"
     },
     {
@@ -6773,7 +6803,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_regression_test_drops_securities_missing_from_either_side",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_drops_securities_missing_from_either_side()"
     },
     {
@@ -6783,7 +6813,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "tests_test_regression_test_null_ret_excluded_not_corrupted",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_null_ret_excluded_not_corrupted()"
     },
     {
@@ -6793,7 +6823,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "tests_test_regression_test_underdetermined_returns_empty",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_underdetermined_returns_empty()"
     },
     {
@@ -6863,7 +6893,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_risk_model",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_risk_model.py"
     },
     {
@@ -6873,7 +6903,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_risk_model_trading_days",
-      "community": 3,
+      "community": 39,
       "norm_label": "trading_days()"
     },
     {
@@ -6883,7 +6913,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_risk_model_py_date",
-      "community": 3,
+      "community": 39,
       "norm_label": "date"
     },
     {
@@ -6893,7 +6923,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_risk_model_ret_bars",
-      "community": 3,
+      "community": 39,
       "norm_label": "ret_bars()"
     },
     {
@@ -6903,7 +6933,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_risk_model_py_dataframe",
-      "community": 3,
+      "community": 39,
       "norm_label": "dataframe"
     },
     {
@@ -6913,7 +6943,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_risk_model_store",
-      "community": 3,
+      "community": 39,
       "norm_label": "store()"
     },
     {
@@ -6923,7 +6953,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_risk_model_populated_store",
-      "community": 3,
+      "community": 39,
       "norm_label": "populated_store()"
     },
     {
@@ -6933,7 +6963,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_risk_model_test_build_risk_model_end_to_end_shape",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_build_risk_model_end_to_end_shape()"
     },
     {
@@ -6943,7 +6973,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "tests_test_risk_model_test_build_risk_model_none_with_insufficient_history",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_build_risk_model_none_with_insufficient_history()"
     },
     {
@@ -6960,7 +6990,7 @@
       "label": "_step()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L11",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_scorecard_step",
       "community": 20,
@@ -6977,10 +7007,20 @@
       "norm_label": "date"
     },
     {
+      "label": "store()",
+      "file_type": "code",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "tests_test_scorecard_store",
+      "community": 20,
+      "norm_label": "store()"
+    },
+    {
       "label": "test_sharpe_ratio_matches_hand_computation()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L28",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
       "community": 20,
@@ -6990,7 +7030,7 @@
       "label": "test_sharpe_ratio_none_with_fewer_than_two_points()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L43",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
       "community": 20,
@@ -7000,7 +7040,7 @@
       "label": "test_sharpe_ratio_none_with_zero_variance()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L52",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
       "community": 20,
@@ -7010,7 +7050,7 @@
       "label": "test_max_drawdown_matches_hand_computation()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L64",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
       "community": 20,
@@ -7020,7 +7060,7 @@
       "label": "test_hit_rate_matches_hand_computation()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L79",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
       "community": 20,
@@ -7030,11 +7070,31 @@
       "label": "test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded()",
       "file_type": "code",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L93",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
       "community": 20,
       "norm_label": "test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded()"
+    },
+    {
+      "label": "test_realized_beta_is_nan_with_insufficient_history()",
+      "file_type": "code",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "community": 20,
+      "norm_label": "test_realized_beta_is_nan_with_insufficient_history()"
+    },
+    {
+      "label": "test_realized_beta_matches_hand_computation_for_identical_securities()",
+      "file_type": "code",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
+      "community": 20,
+      "norm_label": "test_realized_beta_matches_hand_computation_for_identical_securities()"
     },
     {
       "label": "test_security_master.py",
@@ -7213,7 +7273,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_signals",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_signals.py"
     },
     {
@@ -7223,7 +7283,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_signals_trading_days",
-      "community": 15,
+      "community": 33,
       "norm_label": "trading_days()"
     },
     {
@@ -7233,7 +7293,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_signals_py_date",
-      "community": 15,
+      "community": 33,
       "norm_label": "date"
     },
     {
@@ -7243,7 +7303,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_signals_ret_bars",
-      "community": 15,
+      "community": 33,
       "norm_label": "ret_bars()"
     },
     {
@@ -7253,7 +7313,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_signals_py_dataframe",
-      "community": 15,
+      "community": 33,
       "norm_label": "dataframe"
     },
     {
@@ -7263,7 +7323,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 15,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -7273,7 +7333,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_matches_closed_form_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_matches_closed_form_for_constant_return()"
     },
     {
@@ -7283,7 +7343,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_short_history_returns_empty",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_short_history_returns_empty()"
     },
     {
@@ -7293,7 +7353,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_ignores_data_after_rebuild_date",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_ignores_data_after_rebuild_date()"
     },
     {
@@ -7303,7 +7363,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tests_test_signals_test_reversal_matches_closed_form_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_reversal_matches_closed_form_for_constant_return()"
     },
     {
@@ -7313,7 +7373,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_signals_test_low_vol_zero_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_low_vol_zero_for_constant_return()"
     },
     {
@@ -7323,7 +7383,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "tests_test_signals_test_low_vol_short_history_returns_empty",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_low_vol_short_history_returns_empty()"
     },
     {
@@ -7333,7 +7393,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "tests_test_signals_test_signal_registry_contains_all_three",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_signal_registry_contains_all_three()"
     },
     {
@@ -7343,7 +7403,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_signals_rationale_17",
-      "community": 15,
+      "community": 33,
       "norm_label": "n consecutive weekdays starting at (or after) start."
     },
     {
@@ -7353,7 +7413,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_simulate",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_simulate.py"
     },
     {
@@ -7363,7 +7423,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_simulate_trading_days",
-      "community": 20,
+      "community": 8,
       "norm_label": "trading_days()"
     },
     {
@@ -7373,7 +7433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "date"
     },
     {
@@ -7383,7 +7443,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_simulate_ret_bars",
-      "community": 20,
+      "community": 8,
       "norm_label": "ret_bars()"
     },
     {
@@ -7393,7 +7453,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_dataframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "dataframe"
     },
     {
@@ -7403,7 +7463,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_simulate_store",
-      "community": 20,
+      "community": 8,
       "norm_label": "store()"
     },
     {
@@ -7413,7 +7473,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_simulate_populated_store",
-      "community": 20,
+      "community": 8,
       "norm_label": "populated_store()"
     },
     {
@@ -7423,7 +7483,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_produces_a_step_per_rebalance_date()"
     },
     {
@@ -7433,7 +7493,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_threads_w_prev_across_dates()"
     },
     {
@@ -7443,7 +7503,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_skips_dates_with_insufficient_history()"
     },
     {
@@ -7453,7 +7513,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_blocks_held_out_period_by_default",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_blocks_held_out_period_by_default()"
     },
     {
@@ -7463,7 +7523,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_allows_held_out_period_with_explicit_flag",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_allows_held_out_period_with_explicit_flag()"
     },
     {
@@ -7473,7 +7533,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "tests_test_simulate_rationale_125",
-      "community": 20,
+      "community": 8,
       "norm_label": "first rebalance starts flat (full cost); later ones trade only the delta."
     },
     {
@@ -7543,7 +7603,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_specific_variance.py"
     },
     {
@@ -7553,7 +7613,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "tests_test_specific_variance_dates",
-      "community": 3,
+      "community": 34,
       "norm_label": "_dates()"
     },
     {
@@ -7563,7 +7623,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_constant_returns_give_zero_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_constant_returns_give_zero_variance()"
     },
     {
@@ -7573,7 +7633,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_varying_returns_give_positive_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_varying_returns_give_positive_variance()"
     },
     {
@@ -7583,7 +7643,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_single_observation_excluded",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_single_observation_excluded()"
     },
     {
@@ -7593,7 +7653,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_empty_input_returns_empty",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_empty_input_returns_empty()"
     },
     {
@@ -7723,7 +7783,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_universe_store",
-      "community": 11,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -7903,7 +7963,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 21,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -8013,7 +8073,7 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_test_fetch_listed_tickers_filters_and_maps",
-      "community": 2,
+      "community": 9,
       "norm_label": "test_fetch_listed_tickers_filters_and_maps()"
     },
     {
@@ -8023,7 +8083,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_test_select_liquid_tickers_ranks_by_median_not_mean",
-      "community": 2,
+      "community": 9,
       "norm_label": "test_select_liquid_tickers_ranks_by_median_not_mean()"
     },
     {
@@ -8033,7 +8093,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_test_read_tickers_file",
-      "community": 2,
+      "community": 9,
       "norm_label": "test_read_tickers_file()"
     },
     {
@@ -8043,7 +8103,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_test_rate_limited_errors_detector",
-      "community": 2,
+      "community": 9,
       "norm_label": "test_rate_limited_errors_detector()"
     },
     {
@@ -8540,9 +8600,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L112",
+      "source_location": "L113",
       "_origin": "ast",
-      "id": "docs_state_open_items_112",
+      "id": "docs_state_open_items_113",
       "community": 1,
       "norm_label": "open items"
     },
@@ -8550,7 +8610,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L152",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -8767,14 +8827,14 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "research/attribution/ \u2014 **Block 6 Attribution + book scorecard v1 BUILT (2026-08-05, 10 tests)**",
+      "label": "research/attribution/ \u2014 **Block 6 Attribution + book scorecard v1 BUILT (2026-08-05, 12 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L368",
       "_origin": "ast",
-      "id": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_10_tests",
+      "id": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_12_tests",
       "community": 12,
-      "norm_label": "research/attribution/ \u2014 **block 6 attribution + book scorecard v1 built (2026-08-05, 10 tests)**"
+      "norm_label": "research/attribution/ \u2014 **block 6 attribution + book scorecard v1 built (2026-08-05, 12 tests)**"
     },
     {
       "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway + execution scheduler + kill switch, 66 Catch2 tests, live end-to-end verified)**",
@@ -8797,14 +8857,14 @@
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **119 passing, 1 skipped (Python)** + **66 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **121 passing, 1 skipped (Python)** + **66 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L409",
       "_origin": "ast",
-      "id": "docs_system_map_tests_119_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_121_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **119 passing, 1 skipped (python)** + **66 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **121 passing, 1 skipped (python)** + **66 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
@@ -14257,7 +14317,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L27",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_attribution_scorecard_bookscorecard",
@@ -14267,7 +14327,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L52",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_attribution_scorecard_hit_rate",
@@ -14277,17 +14337,38 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L44",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_attribution_scorecard_max_drawdown",
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard",
+      "target": "research_attribution_scorecard_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L58",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard",
+      "target": "research_attribution_scorecard_realized_beta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14297,7 +14378,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L35",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_attribution_scorecard_sharpe_ratio",
@@ -14308,7 +14389,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L21",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_backtest_result_backtestresult",
@@ -14319,10 +14400,43 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L21",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "research_attribution_scorecard",
       "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard",
+      "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard",
+      "target": "research_portfolio_beta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard",
+      "target": "research_portfolio_beta_compute_market_beta",
       "confidence_score": 1.0
     },
     {
@@ -14340,7 +14454,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_attribution_scorecard",
@@ -14351,7 +14465,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L58",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_attribution_scorecard_bookscorecard",
@@ -14362,7 +14476,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L75",
+      "source_location": "L119",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_attribution_scorecard_sharpe_ratio",
@@ -14373,7 +14487,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L35",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "research_attribution_scorecard_sharpe_ratio",
       "target": "research_attribution_scorecard_py_ndarray",
@@ -14384,7 +14498,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L52",
+      "source_location": "L72",
       "weight": 1.0,
       "source": "research_attribution_scorecard_hit_rate",
       "target": "research_attribution_scorecard_py_ndarray",
@@ -14395,7 +14509,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L44",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "research_attribution_scorecard_max_drawdown",
       "target": "research_attribution_scorecard_py_ndarray",
@@ -14406,7 +14520,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L76",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_attribution_scorecard_max_drawdown",
@@ -14417,19 +14531,63 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L77",
+      "source_location": "L121",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_attribution_scorecard_hit_rate",
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_realized_beta",
+      "target": "research_attribution_scorecard_py_lazyframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_realized_beta",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_realized_beta",
+      "target": "research_portfolio_beta_compute_market_beta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_score_backtest",
+      "target": "research_attribution_scorecard_realized_beta",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L59",
+      "source_location": "L97",
       "weight": 1.0,
-      "source": "research_attribution_scorecard_rationale_59",
+      "source": "research_attribution_scorecard_rationale_97",
       "target": "research_attribution_scorecard_score_backtest",
       "confidence_score": 1.0
     },
@@ -14438,7 +14596,18 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L58",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_score_backtest",
+      "target": "research_attribution_scorecard_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_backtest_result_backtestresult",
@@ -14449,10 +14618,21 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/scorecard.py",
-      "source_location": "L58",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "research_attribution_scorecard_score_backtest",
       "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "research/attribution/scorecard.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "research_attribution_scorecard_score_backtest",
+      "target": "research_data_store_pitstore",
       "confidence_score": 1.0
     },
     {
@@ -14460,7 +14640,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14471,7 +14651,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L102",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14482,7 +14662,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L88",
+      "source_location": "L111",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14493,7 +14673,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L74",
+      "source_location": "L97",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14504,7 +14684,29 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L36",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "target": "research_attribution_scorecard_score_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
+      "target": "research_attribution_scorecard_score_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14515,7 +14717,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L47",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14526,7 +14728,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L59",
+      "source_location": "L82",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
       "target": "research_attribution_scorecard_score_backtest",
@@ -14817,7 +15019,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_backtest_result",
@@ -14914,7 +15116,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_backtest_result_summarize_backtest",
@@ -14925,7 +15127,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L100",
+      "source_location": "L123",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
       "target": "research_backtest_result_summarize_backtest",
@@ -14936,7 +15138,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L86",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
       "target": "research_backtest_result_summarize_backtest",
@@ -14947,7 +15149,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L72",
+      "source_location": "L95",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
       "target": "research_backtest_result_summarize_backtest",
@@ -14958,7 +15160,29 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L34",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "target": "research_backtest_result_summarize_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
+      "target": "research_backtest_result_summarize_backtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
       "target": "research_backtest_result_summarize_backtest",
@@ -14969,7 +15193,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L45",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
       "target": "research_backtest_result_summarize_backtest",
@@ -14980,7 +15204,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L57",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
       "target": "research_backtest_result_summarize_backtest",
@@ -15107,7 +15331,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_backtest_simulate",
@@ -15304,7 +15528,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "research_backtest_simulate_backteststep",
@@ -15315,9 +15539,31 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "tests_test_scorecard_step",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "target": "research_backtest_simulate_backteststep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
       "target": "research_backtest_simulate_backteststep",
       "confidence_score": 1.0
     },
@@ -18039,6 +18285,28 @@
       "source_location": "L38",
       "weight": 1.0,
       "source": "tests_test_risk_model_store",
+      "target": "research_data_store_pitstore"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_test_scorecard",
+      "target": "research_data_store_pitstore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_store",
       "target": "research_data_store_pitstore"
     },
     {
@@ -24533,7 +24801,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_step",
@@ -24543,7 +24811,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L93",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "tests_test_scorecard",
+      "target": "tests_test_scorecard_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
@@ -24553,7 +24831,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L79",
+      "source_location": "L102",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
@@ -24563,7 +24841,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L64",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
@@ -24573,7 +24851,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L28",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "tests_test_scorecard",
+      "target": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "tests_test_scorecard",
+      "target": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
@@ -24583,7 +24881,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L43",
+      "source_location": "L66",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
@@ -24593,7 +24891,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L52",
+      "source_location": "L75",
       "weight": 1.0,
       "source": "tests_test_scorecard",
       "target": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
@@ -24604,7 +24902,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "tests_test_scorecard_step",
       "target": "tests_test_scorecard_py_date",
@@ -24615,7 +24913,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L95",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
       "target": "tests_test_scorecard_step",
@@ -24626,7 +24924,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L81",
+      "source_location": "L104",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
       "target": "tests_test_scorecard_step",
@@ -24637,7 +24935,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L68",
+      "source_location": "L91",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
       "target": "tests_test_scorecard_step",
@@ -24648,7 +24946,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L30",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
       "target": "tests_test_scorecard_step",
@@ -24659,7 +24957,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L44",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
       "target": "tests_test_scorecard_step",
@@ -24670,7 +24968,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L54",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
       "target": "tests_test_scorecard_step",
@@ -24681,7 +24979,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L95",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_store",
+      "target": "tests_test_scorecard_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_gross_and_net_exposure_stay_aligned_when_a_step_is_excluded",
       "target": "tests_test_scorecard_py_date",
@@ -24692,7 +25001,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L81",
+      "source_location": "L104",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_hit_rate_matches_hand_computation",
       "target": "tests_test_scorecard_py_date",
@@ -24703,7 +25012,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L68",
+      "source_location": "L91",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_max_drawdown_matches_hand_computation",
       "target": "tests_test_scorecard_py_date",
@@ -24714,7 +25023,29 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L30",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_is_nan_with_insufficient_history",
+      "target": "tests_test_scorecard_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "tests_test_scorecard_test_realized_beta_matches_hand_computation_for_identical_securities",
+      "target": "tests_test_scorecard_py_date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_scorecard.py",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_matches_hand_computation",
       "target": "tests_test_scorecard_py_date",
@@ -24725,7 +25056,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L44",
+      "source_location": "L67",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_fewer_than_two_points",
       "target": "tests_test_scorecard_py_date",
@@ -24736,7 +25067,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_scorecard.py",
-      "source_location": "L54",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "tests_test_scorecard_test_sharpe_ratio_none_with_zero_variance",
       "target": "tests_test_scorecard_py_date",
@@ -26984,7 +27315,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L152",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -27034,10 +27365,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_112",
+      "target": "docs_state_open_items_113",
       "confidence_score": 1.0
     },
     {
@@ -27167,7 +27498,7 @@
       "source_location": "L368",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_10_tests",
+      "target": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_12_tests",
       "confidence_score": 1.0
     },
     {
@@ -27297,7 +27628,7 @@
       "source_location": "L409",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_119_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_121_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -27472,5 +27803,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8308098cb3336e1cabb30ed338cbbc24436e0519"
+  "built_at_commit": "ade29643b069c1d75348989064a643c04846c2e3"
 }
