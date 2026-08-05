@@ -21,8 +21,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(nlohmann_json)
 
+find_package(CURL REQUIRED)  # system libcurl -- REST client for AlpacaGateway, no FetchContent needed
+
 add_library(broker_sim
     src/broker/BrokerSimulator.cpp
+    src/broker/AlpacaGateway.cpp
     src/journal/EventJournal.cpp
     src/order/OrderGateway.cpp
     src/position/PositionKeeper.cpp
@@ -31,9 +34,10 @@ add_library(broker_sim
     src/marketdata/AlpacaMarketDataStream.cpp
 )
 target_include_directories(broker_sim PUBLIC include src)
-target_link_libraries(broker_sim PRIVATE nlohmann_json::nlohmann_json)
-# PUBLIC: AlpacaMarketDataStream.hpp (a public header) holds an ix::WebSocket
-# member by value, so anything including it needs ixwebsocket's headers too.
+target_link_libraries(broker_sim PRIVATE nlohmann_json::nlohmann_json CURL::libcurl)
+# PUBLIC: AlpacaMarketDataStream.hpp and AlpacaGateway.hpp (public headers)
+# hold an ix::WebSocket member by value, so anything including them needs
+# ixwebsocket's headers too.
 target_link_libraries(broker_sim PUBLIC ixwebsocket::ixwebsocket)
 
 add_executable(smoke_market_data tools/smoke_market_data.cpp)

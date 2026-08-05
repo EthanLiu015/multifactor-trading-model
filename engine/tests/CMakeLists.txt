@@ -21,6 +21,9 @@ target_link_libraries(test_risk_checker PRIVATE broker_sim Catch2::Catch2WithMai
 add_executable(test_market_data_handler test_market_data_handler.cpp)
 target_link_libraries(test_market_data_handler PRIVATE broker_sim Catch2::Catch2WithMain)
 
+add_executable(test_alpaca_gateway test_alpaca_gateway.cpp)
+target_link_libraries(test_alpaca_gateway PRIVATE broker_sim Catch2::Catch2WithMain)
+
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 include(CTest)
 include(Catch)
@@ -29,3 +32,4 @@ catch_discover_tests(test_order_gateway)
 catch_discover_tests(test_position_keeper)
 catch_discover_tests(test_risk_checker)
 catch_discover_tests(test_market_data_handler)
+catch_discover_tests(test_alpaca_gateway)
