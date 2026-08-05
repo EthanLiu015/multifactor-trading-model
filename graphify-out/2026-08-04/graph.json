@@ -867,7 +867,7 @@
       "label": "parse_optional_double()",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_parse_optional_double",
       "community": 30,
@@ -897,7 +897,7 @@
       "label": "write_callback()",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_write_callback",
       "community": 30,
@@ -907,7 +907,7 @@
       "label": "parse_trade_update()",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_parse_trade_update",
       "community": 30,
@@ -927,7 +927,7 @@
       "label": "AlpacaGateway::AlpacaGateway()",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L68",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_alpacagateway",
       "community": 30,
@@ -977,7 +977,7 @@
       "label": "AlpacaGateway",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L42",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway",
       "community": 30,
@@ -987,7 +987,7 @@
       "label": "connect",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L48",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_connect",
       "community": 30,
@@ -997,7 +997,7 @@
       "label": "disconnect",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L49",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_disconnect",
       "community": 30,
@@ -1007,7 +1007,7 @@
       "label": "submit_order",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L51",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_submit_order",
       "community": 30,
@@ -1017,7 +1017,7 @@
       "label": "cancel_order",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L52",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_cancel_order",
       "community": 30,
@@ -1027,7 +1027,7 @@
       "label": "poll_events",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L53",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_poll_events",
       "community": 30,
@@ -1037,7 +1037,7 @@
       "label": "send_request",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L60",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_send_request",
       "community": 30,
@@ -1057,7 +1057,7 @@
       "label": "api_key_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L63",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_api_key",
       "community": 30,
@@ -1067,7 +1067,7 @@
       "label": "api_secret_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L64",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_api_secret",
       "community": 30,
@@ -1077,7 +1077,7 @@
       "label": "base_url_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L65",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_base_url",
       "community": 30,
@@ -1087,7 +1087,7 @@
       "label": "mutex_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L67",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_mutex",
       "community": 30,
@@ -1107,7 +1107,7 @@
       "label": "pending_events_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L68",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_pending_events",
       "community": 30,
@@ -1137,7 +1137,7 @@
       "label": "alpaca_order_id_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L69",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_alpaca_order_id",
       "community": 30,
@@ -1147,11 +1147,21 @@
       "label": "next_id_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L70",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_next_id",
       "community": 30,
       "norm_label": "next_id_"
+    },
+    {
+      "label": "run_id_",
+      "file_type": "code",
+      "source_file": "engine/src/broker/AlpacaGateway.hpp",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "engine_src_broker_alpacagateway_alpacagateway_run_id",
+      "community": 30,
+      "norm_label": "run_id_"
     },
     {
       "label": "WebSocket",
@@ -1167,7 +1177,7 @@
       "label": "ws_",
       "file_type": "code",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L72",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "engine_src_broker_alpacagateway_alpacagateway_ws",
       "community": 30,
@@ -1850,7 +1860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_tests_test_alpaca_gateway",
-      "community": 37,
+      "community": 30,
       "norm_label": "test_alpaca_gateway.cpp"
     },
     {
@@ -1912,6 +1922,76 @@
       "id": "engine_tests_test_risk_checker_make_checker",
       "community": 25,
       "norm_label": "make_checker()"
+    },
+    {
+      "label": "smoke_alpaca_gateway.cpp",
+      "file_type": "code",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway",
+      "community": 30,
+      "norm_label": "smoke_alpaca_gateway.cpp"
+    },
+    {
+      "label": "load_dotenv()",
+      "file_type": "code",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_load_dotenv",
+      "community": 30,
+      "norm_label": "load_dotenv()"
+    },
+    {
+      "label": "string",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_cpp_string",
+      "community": 30,
+      "norm_label": "string"
+    },
+    {
+      "label": "wait_for_event()",
+      "file_type": "code",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "community": 30,
+      "norm_label": "wait_for_event()"
+    },
+    {
+      "label": "OrderId",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_cpp_orderid",
+      "community": 30,
+      "norm_label": "orderid"
+    },
+    {
+      "label": "EventType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_cpp_eventtype",
+      "community": 30,
+      "norm_label": "eventtype"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "engine_tools_smoke_alpaca_gateway_main",
+      "community": 30,
+      "norm_label": "main()"
     },
     {
       "label": "smoke_market_data.cpp",
@@ -2183,7 +2263,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic",
-      "community": 16,
+      "community": 17,
       "norm_label": "spark_ic.py"
     },
     {
@@ -2193,7 +2273,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_build_ic_series_spark",
-      "community": 16,
+      "community": 17,
       "norm_label": "build_ic_series_spark()"
     },
     {
@@ -2203,7 +2283,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_dataframe",
-      "community": 16,
+      "community": 17,
       "norm_label": "dataframe"
     },
     {
@@ -2213,7 +2293,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_datetime",
-      "community": 16,
+      "community": 17,
       "norm_label": "datetime"
     },
     {
@@ -2223,7 +2303,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_main",
-      "community": 16,
+      "community": 17,
       "norm_label": "main()"
     },
     {
@@ -2233,7 +2313,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_1",
-      "community": 16,
+      "community": 17,
       "norm_label": "spark benchmark for the historical alpha run (block 6d).  re-executes the same p"
     },
     {
@@ -2243,7 +2323,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_76",
-      "community": 16,
+      "community": 17,
       "norm_label": "same result as build_ic_series (long format: rebalance_date/signal/ic     rows i"
     },
     {
@@ -2363,7 +2443,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_backtest_simulate",
-      "community": 20,
+      "community": 36,
       "norm_label": "simulate.py"
     },
     {
@@ -2373,7 +2453,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "research_backtest_simulate_empty_holding_returns",
-      "community": 20,
+      "community": 36,
       "norm_label": "_empty_holding_returns()"
     },
     {
@@ -2383,7 +2463,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_dataframe",
-      "community": 20,
+      "community": 36,
       "norm_label": "dataframe"
     },
     {
@@ -2393,7 +2473,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_backtest_simulate_holding_period_return",
-      "community": 20,
+      "community": 36,
       "norm_label": "_holding_period_return()"
     },
     {
@@ -2403,7 +2483,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_lazyframe",
-      "community": 20,
+      "community": 36,
       "norm_label": "lazyframe"
     },
     {
@@ -2413,7 +2493,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_date",
-      "community": 20,
+      "community": 36,
       "norm_label": "date"
     },
     {
@@ -2433,7 +2513,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "research_backtest_simulate_run_backtest",
-      "community": 20,
+      "community": 36,
       "norm_label": "run_backtest()"
     },
     {
@@ -2443,7 +2523,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_datetime",
-      "community": 20,
+      "community": 36,
       "norm_label": "datetime"
     },
     {
@@ -2453,7 +2533,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_1",
-      "community": 20,
+      "community": 36,
       "norm_label": "block 5b: walk-forward day-loop orchestrator (design.md's backtester).  the sole"
     },
     {
@@ -2463,7 +2543,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_56",
-      "community": 20,
+      "community": 36,
       "norm_label": "cumulative return per security over ``(start_date, end_date]``.      excludes ``"
     },
     {
@@ -2473,7 +2553,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_104",
-      "community": 20,
+      "community": 36,
       "norm_label": "walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw"
     },
     {
@@ -2803,7 +2883,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_audit",
-      "community": 19,
+      "community": 9,
       "norm_label": "._audit()"
     },
     {
@@ -5133,7 +5213,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_delta_store",
-      "community": 36,
+      "community": 17,
       "norm_label": "test_delta_store.py"
     },
     {
@@ -5143,7 +5223,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_delta_store_spark",
-      "community": 36,
+      "community": 17,
       "norm_label": "spark()"
     },
     {
@@ -5163,7 +5243,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tests_test_delta_store_dataset",
-      "community": 36,
+      "community": 17,
       "norm_label": "dataset()"
     },
     {
@@ -5173,7 +5253,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_delta_store_bars",
-      "community": 36,
+      "community": 17,
       "norm_label": "bars()"
     },
     {
@@ -5183,7 +5263,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_round_trip",
-      "community": 36,
+      "community": 17,
       "norm_label": "test_round_trip()"
     },
     {
@@ -5193,7 +5273,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_asof_point_in_time",
-      "community": 36,
+      "community": 17,
       "norm_label": "test_asof_point_in_time()"
     },
     {
@@ -5203,7 +5283,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_append_idempotent",
-      "community": 36,
+      "community": 17,
       "norm_label": "test_append_idempotent()"
     },
     {
@@ -5213,7 +5293,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tests_test_delta_store_test_append_rejects_bad_schema",
-      "community": 36,
+      "community": 17,
       "norm_label": "test_append_rejects_bad_schema()"
     },
     {
@@ -5413,7 +5493,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_ic_store",
-      "community": 21,
+      "community": 16,
       "norm_label": "store()"
     },
     {
@@ -5613,7 +5693,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_store",
-      "community": 21,
+      "community": 34,
       "norm_label": "store()"
     },
     {
@@ -6413,7 +6493,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_simulate",
-      "community": 20,
+      "community": 37,
       "norm_label": "test_simulate.py"
     },
     {
@@ -6423,7 +6503,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_simulate_trading_days",
-      "community": 20,
+      "community": 37,
       "norm_label": "trading_days()"
     },
     {
@@ -6433,7 +6513,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_date",
-      "community": 20,
+      "community": 37,
       "norm_label": "date"
     },
     {
@@ -6443,7 +6523,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_simulate_ret_bars",
-      "community": 20,
+      "community": 37,
       "norm_label": "ret_bars()"
     },
     {
@@ -6453,7 +6533,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_dataframe",
-      "community": 20,
+      "community": 37,
       "norm_label": "dataframe"
     },
     {
@@ -6463,7 +6543,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_simulate_store",
-      "community": 20,
+      "community": 37,
       "norm_label": "store()"
     },
     {
@@ -6473,7 +6553,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_simulate_populated_store",
-      "community": 20,
+      "community": 37,
       "norm_label": "populated_store()"
     },
     {
@@ -6483,7 +6563,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
-      "community": 20,
+      "community": 36,
       "norm_label": "test_run_backtest_produces_a_step_per_rebalance_date()"
     },
     {
@@ -6493,7 +6573,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
-      "community": 20,
+      "community": 37,
       "norm_label": "test_run_backtest_threads_w_prev_across_dates()"
     },
     {
@@ -6503,7 +6583,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
-      "community": 20,
+      "community": 37,
       "norm_label": "test_run_backtest_skips_dates_with_insufficient_history()"
     },
     {
@@ -6513,7 +6593,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_blocks_held_out_period_by_default",
-      "community": 20,
+      "community": 36,
       "norm_label": "test_run_backtest_blocks_held_out_period_by_default()"
     },
     {
@@ -6523,7 +6603,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_allows_held_out_period_with_explicit_flag",
-      "community": 20,
+      "community": 36,
       "norm_label": "test_run_backtest_allows_held_out_period_with_explicit_flag()"
     },
     {
@@ -6533,7 +6613,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "tests_test_simulate_rationale_125",
-      "community": 20,
+      "community": 37,
       "norm_label": "first rebalance starts flat (full cost); later ones trade only the delta."
     },
     {
@@ -7610,7 +7690,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L146",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -7827,14 +7907,14 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway, 46 Catch2 tests)**",
+      "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway, 47 Catch2 tests, live end-to-end verified)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L367",
       "_origin": "ast",
-      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_46_catch2_tests",
+      "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_47_catch2_tests_live_end_to_end_verified",
       "community": 12,
-      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live alpacagateway, 46 catch2 tests)**"
+      "norm_label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live alpacagateway, 47 catch2 tests, live end-to-end verified)**"
     },
     {
       "label": "Barrel files",
@@ -7847,14 +7927,14 @@
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **46 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **106 passing, 1 skipped (Python)** + **47 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L395",
       "_origin": "ast",
-      "id": "docs_system_map_tests_106_passing_1_skipped_python_46_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_106_passing_1_skipped_python_47_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **46 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **106 passing, 1 skipped (python)** + **47 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
@@ -8170,7 +8250,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L117",
+      "source_location": "L125",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_submit_order",
@@ -8313,6 +8393,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway",
+      "target": "engine_include_broker_ibrokergateway_hpp_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "engine/tools/smoke_market_data.cpp",
       "source_location": "L12",
       "weight": 1.0,
@@ -8400,7 +8491,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L42",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_alpacagateway",
       "target": "engine_include_broker_ibrokergateway_ibrokergateway",
@@ -8479,6 +8570,17 @@
       "source": "engine_include_broker_orderevent_to_string",
       "target": "engine_include_broker_orderevent_hpp_eventtype",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "target": "engine_include_broker_orderevent_to_string"
     },
     {
       "relation": "references",
@@ -8605,7 +8707,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L68",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -8616,7 +8718,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L162",
+      "source_location": "L170",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "engine_src_broker_alpacagateway_alpacagateway_poll_events",
@@ -8638,7 +8740,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "engine_src_broker_alpacagateway_parse_trade_update",
@@ -9671,10 +9773,21 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/broker/AlpacaGateway.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
+      "target": "engine_src_broker_alpacagateway_alpacagateway",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L68",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_alpacagateway",
@@ -9684,7 +9797,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L150",
+      "source_location": "L158",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_cancel_order",
@@ -9694,7 +9807,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L169",
+      "source_location": "L177",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_connect",
@@ -9704,7 +9817,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L223",
+      "source_location": "L234",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_disconnect",
@@ -9715,7 +9828,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_mutex",
@@ -9725,7 +9838,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L162",
+      "source_location": "L170",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_poll_events",
@@ -9735,7 +9848,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L75",
+      "source_location": "L83",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_send_request",
@@ -9745,7 +9858,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L117",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway_submit_order",
@@ -9755,7 +9868,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_parse_optional_double",
@@ -9765,7 +9878,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_parse_trade_update",
@@ -9775,7 +9888,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_write_callback",
@@ -9786,7 +9899,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_cpp_engine_src_broker_alpacagateway",
       "target": "json",
@@ -9796,7 +9909,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_parse_optional_double",
@@ -9807,7 +9920,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_parse_optional_double",
@@ -9819,7 +9932,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L62",
+      "source_location": "L68",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_parse_trade_update",
       "target": "engine_src_broker_alpacagateway_parse_optional_double",
@@ -9851,7 +9964,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L68",
+      "source_location": "L74",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_alpacagateway",
@@ -9863,7 +9976,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L195",
+      "source_location": "L203",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_alpacagateway_connect",
       "target": "engine_src_broker_alpacagateway_cpp_string",
@@ -9873,7 +9986,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L75",
+      "source_location": "L83",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_send_request",
@@ -9885,7 +9998,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_parse_trade_update",
       "target": "engine_src_broker_alpacagateway_cpp_string",
@@ -9896,7 +10009,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L213",
+      "source_location": "L221",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_alpacagateway_connect",
       "target": "engine_src_broker_alpacagateway_parse_trade_update",
@@ -9906,7 +10019,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "return_type",
       "source": "engine_src_broker_alpacagateway_parse_trade_update",
@@ -9917,7 +10030,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L75",
+      "source_location": "L83",
       "weight": 1.0,
       "context": "return_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_send_request",
@@ -9928,7 +10041,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L150",
+      "source_location": "L158",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_cancel_order",
@@ -9939,7 +10052,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L117",
+      "source_location": "L125",
       "weight": 1.0,
       "context": "return_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_submit_order",
@@ -9950,7 +10063,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L162",
+      "source_location": "L170",
       "weight": 1.0,
       "context": "return_type",
       "source": "engine_src_broker_alpacagateway_alpacagateway_poll_events",
@@ -9961,7 +10074,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L42",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_hpp_engine_src_broker_alpacagateway",
       "target": "engine_src_broker_alpacagateway_alpacagateway",
@@ -9982,7 +10095,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -9993,7 +10106,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L63",
+      "source_location": "L73",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10004,7 +10117,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L64",
+      "source_location": "L74",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10015,7 +10128,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L65",
+      "source_location": "L75",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10026,7 +10139,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L52",
+      "source_location": "L62",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10037,7 +10150,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L48",
+      "source_location": "L58",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10048,7 +10161,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L49",
+      "source_location": "L59",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10059,7 +10172,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L67",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10070,7 +10183,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L70",
+      "source_location": "L80",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10081,7 +10194,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L68",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10092,7 +10205,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L53",
+      "source_location": "L63",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10103,7 +10216,18 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L60",
+      "source_location": "L81",
+      "weight": 1.0,
+      "context": "field",
+      "source": "engine_src_broker_alpacagateway_alpacagateway",
+      "target": "engine_src_broker_alpacagateway_alpacagateway_run_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/src/broker/AlpacaGateway.hpp",
+      "source_location": "L70",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10114,7 +10238,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L51",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10125,7 +10249,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L72",
+      "source_location": "L83",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10136,7 +10260,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L70",
+      "source_location": "L80",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10147,7 +10271,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0,
       "context": "generic_arg",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10158,7 +10282,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10169,7 +10293,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L68",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
@@ -10180,11 +10304,44 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "engine/src/broker/AlpacaGateway.hpp",
-      "source_location": "L72",
+      "source_location": "L83",
       "weight": 1.0,
       "context": "field",
       "source": "engine_src_broker_alpacagateway_alpacagateway",
       "target": "engine_src_broker_alpacagateway_hpp_websocket",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tests/test_alpaca_gateway.cpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "engine_tests_test_alpaca_gateway",
+      "target": "engine_src_broker_alpacagateway_alpacagateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway",
+      "target": "engine_src_broker_alpacagateway_alpacagateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "target": "engine_src_broker_alpacagateway_alpacagateway",
       "confidence_score": 1.0
     },
     {
@@ -10193,7 +10350,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L136",
+      "source_location": "L144",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_alpacagateway_submit_order",
       "target": "engine_src_broker_alpacagateway_alpacagateway_send_request"
@@ -10204,7 +10361,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "engine/src/broker/AlpacaGateway.cpp",
-      "source_location": "L159",
+      "source_location": "L167",
       "weight": 1.0,
       "source": "engine_src_broker_alpacagateway_alpacagateway_cancel_order",
       "target": "engine_src_broker_alpacagateway_alpacagateway_send_request"
@@ -11230,6 +11387,91 @@
       "weight": 1.0,
       "source": "engine_tests_test_risk_checker",
       "target": "engine_tests_test_risk_checker_make_checker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway",
+      "target": "engine_tools_smoke_alpaca_gateway_load_dotenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway",
+      "target": "engine_tools_smoke_alpaca_gateway_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway",
+      "target": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_tools_smoke_alpaca_gateway_load_dotenv",
+      "target": "engine_tools_smoke_alpaca_gateway_cpp_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway_main",
+      "target": "engine_tools_smoke_alpaca_gateway_load_dotenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "engine_tools_smoke_alpaca_gateway_main",
+      "target": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "target": "engine_tools_smoke_alpaca_gateway_cpp_eventtype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "engine/tools/smoke_alpaca_gateway.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "engine_tools_smoke_alpaca_gateway_wait_for_event",
+      "target": "engine_tools_smoke_alpaca_gateway_cpp_orderid",
       "confidence_score": 1.0
     },
     {
@@ -23708,7 +23950,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L146",
+      "source_location": "L147",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -23861,7 +24103,7 @@
       "source_location": "L367",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_46_catch2_tests",
+      "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_47_catch2_tests_live_end_to_end_verified",
       "confidence_score": 1.0
     },
     {
@@ -24011,7 +24253,7 @@
       "source_location": "L395",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_106_passing_1_skipped_python_46_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_106_passing_1_skipped_python_47_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -24186,5 +24428,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "35fd4cf1f9cdc7f3e9ef883acbc4e771ee5c7136"
+  "built_at_commit": "5b0a1346e9a885b5da5d442d241ba6e54c4f5676"
 }
