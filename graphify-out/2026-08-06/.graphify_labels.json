@@ -37,5 +37,9 @@
   "35": "FakeSparkDataFrame",
   "36": "test_store.py",
   "37": "MarketDataHandler.cpp",
-  "38": "Trade"
+  "38": "Trade",
+  "39": "Quote",
+  "40": "set_quote",
+  "41": "KillSwitch.cpp",
+  "42": ".sigma"
 }

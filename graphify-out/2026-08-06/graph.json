@@ -1880,7 +1880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream",
-      "community": 38,
+      "community": 19,
       "norm_label": "alpacamarketdatastream.cpp"
     },
     {
@@ -1890,7 +1890,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_alpacamarketdatastream",
-      "community": 38,
+      "community": 19,
       "norm_label": "alpacamarketdatastream::alpacamarketdatastream()"
     },
     {
@@ -1900,7 +1900,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream_cpp_string",
-      "community": 38,
+      "community": 19,
       "norm_label": "string"
     },
     {
@@ -1910,7 +1910,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_connect",
-      "community": 38,
+      "community": 19,
       "norm_label": "alpacamarketdatastream::connect()"
     },
     {
@@ -1920,7 +1920,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream_cpp_vector",
-      "community": 38,
+      "community": 19,
       "norm_label": "vector"
     },
     {
@@ -1930,7 +1930,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "engine_src_marketdata_alpacamarketdatastream_alpacamarketdatastream_disconnect",
-      "community": 38,
+      "community": 19,
       "norm_label": "alpacamarketdatastream::disconnect()"
     },
     {
@@ -2000,7 +2000,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch.cpp"
     },
     {
@@ -2010,7 +2010,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_is_tripped",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::is_tripped()"
     },
     {
@@ -2020,7 +2020,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_trip",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::trip()"
     },
     {
@@ -2030,7 +2030,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_cpp_string",
-      "community": 24,
+      "community": 41,
       "norm_label": "string"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "engine_src_ops_killswitch_killswitch_rearm",
-      "community": 24,
+      "community": 41,
       "norm_label": "killswitch::rearm()"
     },
     {
@@ -2653,7 +2653,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic",
-      "community": 16,
+      "community": 2,
       "norm_label": "spark_ic.py"
     },
     {
@@ -2663,7 +2663,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_build_ic_series_spark",
-      "community": 16,
+      "community": 2,
       "norm_label": "build_ic_series_spark()"
     },
     {
@@ -2673,7 +2673,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_dataframe",
-      "community": 16,
+      "community": 2,
       "norm_label": "dataframe"
     },
     {
@@ -2683,7 +2683,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_py_datetime",
-      "community": 16,
+      "community": 2,
       "norm_label": "datetime"
     },
     {
@@ -2693,7 +2693,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_main",
-      "community": 16,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -2703,7 +2703,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_1",
-      "community": 16,
+      "community": 2,
       "norm_label": "spark benchmark for the historical alpha run (block 6d).  re-executes the same p"
     },
     {
@@ -2713,7 +2713,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_alpha_spark_ic_rationale_76",
-      "community": 16,
+      "community": 2,
       "norm_label": "same result as build_ic_series (long format: rebalance_date/signal/ic     rows i"
     },
     {
@@ -2727,73 +2727,13 @@
       "norm_label": "__init__.py"
     },
     {
-      "label": "capacity.py",
-      "file_type": "code",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "research_attribution_capacity",
-      "community": 20,
-      "norm_label": "capacity.py"
-    },
-    {
-      "label": "CapacityPoint",
-      "file_type": "code",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "research_attribution_capacity_capacitypoint",
-      "community": 20,
-      "norm_label": "capacitypoint"
-    },
-    {
-      "label": "capacity_analysis()",
-      "file_type": "code",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "research_attribution_capacity_capacity_analysis",
-      "community": 20,
-      "norm_label": "capacity_analysis()"
-    },
-    {
-      "label": "date",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "research_attribution_capacity_py_date",
-      "community": 20,
-      "norm_label": "date"
-    },
-    {
-      "label": "Capacity analysis (DESIGN.md analytics suite): \"at what AUM does modeled impact",
-      "file_type": "rationale",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "research_attribution_capacity_rationale_1",
-      "community": 20,
-      "norm_label": "capacity analysis (design.md analytics suite): \"at what aum does modeled impact"
-    },
-    {
-      "label": "Sharpe ratio and cumulative net return at each AUM level -- the     capacity cur",
-      "file_type": "rationale",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "research_attribution_capacity_rationale_44",
-      "community": 20,
-      "norm_label": "sharpe ratio and cumulative net return at each aum level -- the     capacity cur"
-    },
-    {
       "label": "decompose.py",
       "file_type": "code",
       "source_file": "research/attribution/decompose.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_attribution_decompose",
-      "community": 21,
+      "community": 20,
       "norm_label": "decompose.py"
     },
     {
@@ -2803,7 +2743,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "research_attribution_decompose_attributionresult",
-      "community": 21,
+      "community": 20,
       "norm_label": "attributionresult"
     },
     {
@@ -2813,7 +2753,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "research_attribution_decompose_empty_result",
-      "community": 21,
+      "community": 20,
       "norm_label": "_empty_result()"
     },
     {
@@ -2823,7 +2763,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "research_attribution_decompose_decompose_backtest",
-      "community": 21,
+      "community": 20,
       "norm_label": "decompose_backtest()"
     },
     {
@@ -2833,7 +2773,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_attribution_decompose_py_datetime",
-      "community": 21,
+      "community": 20,
       "norm_label": "datetime"
     },
     {
@@ -2843,7 +2783,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_attribution_decompose_rationale_1",
-      "community": 21,
+      "community": 20,
       "norm_label": "attribution (design.md block 6): decompose realized backtest returns into factor"
     },
     {
@@ -2853,7 +2793,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "research_attribution_decompose_rationale_51",
-      "community": 21,
+      "community": 20,
       "norm_label": "per rebalance date: how much of that date's target weights came from     factor"
     },
     {
@@ -3103,7 +3043,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "research_backtest_simulate_empty_holding_returns",
-      "community": 20,
+      "community": 8,
       "norm_label": "_empty_holding_returns()"
     },
     {
@@ -3113,7 +3053,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_dataframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "dataframe"
     },
     {
@@ -3123,7 +3063,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "research_backtest_simulate_holding_period_return",
-      "community": 20,
+      "community": 8,
       "norm_label": "_holding_period_return()"
     },
     {
@@ -3133,7 +3073,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_lazyframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "lazyframe"
     },
     {
@@ -3143,7 +3083,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "date"
     },
     {
@@ -3163,7 +3103,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "research_backtest_simulate_run_backtest",
-      "community": 20,
+      "community": 8,
       "norm_label": "run_backtest()"
     },
     {
@@ -3173,7 +3113,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_backtest_simulate_py_datetime",
-      "community": 20,
+      "community": 8,
       "norm_label": "datetime"
     },
     {
@@ -3193,7 +3133,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_56",
-      "community": 20,
+      "community": 8,
       "norm_label": "cumulative return per security over ``(start_date, end_date]``.      excludes ``"
     },
     {
@@ -3203,7 +3143,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "research_backtest_simulate_rationale_104",
-      "community": 20,
+      "community": 8,
       "norm_label": "walk-forward backtest over ``[start_date, end_date]``.      ``cost_kwargs`` forw"
     },
     {
@@ -3213,7 +3153,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_init",
-      "community": 9,
+      "community": 17,
       "norm_label": "__init__.py"
     },
     {
@@ -3493,7 +3433,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_load_year",
-      "community": 17,
+      "community": 9,
       "norm_label": ".load_year()"
     },
     {
@@ -3503,7 +3443,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_datetime",
-      "community": 17,
+      "community": 9,
       "norm_label": "datetime"
     },
     {
@@ -3513,7 +3453,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_transform",
-      "community": 17,
+      "community": 9,
       "norm_label": "._transform()"
     },
     {
@@ -3523,7 +3463,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_py_dataframe",
-      "community": 17,
+      "community": 9,
       "norm_label": "dataframe"
     },
     {
@@ -3543,7 +3483,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_crspdailyloader_quarantine",
-      "community": 17,
+      "community": 9,
       "norm_label": "._quarantine()"
     },
     {
@@ -3593,7 +3533,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "research_data_loaders_crsp_daily_rationale_76",
-      "community": 17,
+      "community": 9,
       "norm_label": "pull one calendar year, audit it, append or quarantine it."
     },
     {
@@ -3683,7 +3623,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "research_data_loaders_yfinance_daily_yfinancedailyloader_init",
-      "community": 9,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -3933,7 +3873,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta",
-      "community": 8,
+      "community": 17,
       "norm_label": "port_to_delta.py"
     },
     {
@@ -3943,7 +3883,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "research_data_port_to_delta_port_dataset",
-      "community": 8,
+      "community": 17,
       "norm_label": "port_dataset()"
     },
     {
@@ -3953,7 +3893,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "research_data_port_to_delta_main",
-      "community": 8,
+      "community": 17,
       "norm_label": "main()"
     },
     {
@@ -3963,7 +3903,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_port_to_delta_rationale_1",
-      "community": 8,
+      "community": 17,
       "norm_label": "one-time port of a local pitstore dataset into delta (block 6c).  copies every `"
     },
     {
@@ -3973,7 +3913,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "research_data_port_to_delta_rationale_38",
-      "community": 8,
+      "community": 17,
       "norm_label": "copy every batch of ``dataset`` from local_store into delta_store.      returns"
     },
     {
@@ -3983,7 +3923,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store",
-      "community": 9,
+      "community": 17,
       "norm_label": "store.py"
     },
     {
@@ -3993,7 +3933,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "research_data_store_pitstore",
-      "community": 8,
+      "community": 17,
       "norm_label": "pitstore"
     },
     {
@@ -4003,7 +3943,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "research_data_store_pitstore_init",
-      "community": 34,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -4013,7 +3953,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_path",
-      "community": 34,
+      "community": 17,
       "norm_label": "path"
     },
     {
@@ -4023,7 +3963,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "research_data_store_pitstore_dataset_dir",
-      "community": 34,
+      "community": 17,
       "norm_label": "._dataset_dir()"
     },
     {
@@ -4033,7 +3973,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "research_data_store_pitstore_append",
-      "community": 34,
+      "community": 17,
       "norm_label": ".append()"
     },
     {
@@ -4043,7 +3983,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_dataframe",
-      "community": 34,
+      "community": 17,
       "norm_label": "dataframe"
     },
     {
@@ -4053,7 +3993,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_datetime",
-      "community": 34,
+      "community": 17,
       "norm_label": "datetime"
     },
     {
@@ -4063,7 +4003,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "research_data_store_pitstore_scan",
-      "community": 34,
+      "community": 17,
       "norm_label": ".scan()"
     },
     {
@@ -4073,7 +4013,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_data_store_py_lazyframe",
-      "community": 34,
+      "community": 17,
       "norm_label": "lazyframe"
     },
     {
@@ -4083,7 +4023,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "research_data_store_pitstore_asof",
-      "community": 34,
+      "community": 17,
       "norm_label": ".asof()"
     },
     {
@@ -4093,7 +4033,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_data_store_rationale_1",
-      "community": 9,
+      "community": 17,
       "norm_label": "point-in-time (bitemporal) parquet store.  every dataset in the lake carries two"
     },
     {
@@ -4103,7 +4043,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_data_store_rationale_28",
-      "community": 8,
+      "community": 17,
       "norm_label": "a directory-per-dataset parquet lake with point-in-time reads."
     },
     {
@@ -4113,7 +4053,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "research_data_store_rationale_43",
-      "community": 34,
+      "community": 17,
       "norm_label": "write one load batch. idempotent: same knowledge_ts overwrites.          the bat"
     },
     {
@@ -4123,7 +4063,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "research_data_store_rationale_81",
-      "community": 34,
+      "community": 17,
       "norm_label": "lazy scan of every batch in a dataset (no pit filtering)."
     },
     {
@@ -4133,7 +4073,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "research_data_store_rationale_91",
-      "community": 34,
+      "community": 17,
       "norm_label": "the world as we knew it at ``knowledge_ts``.          drops rows learned after t"
     },
     {
@@ -4453,7 +4393,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "research_portfolio_model_build_target_portfolio",
-      "community": 33,
+      "community": 19,
       "norm_label": "build_target_portfolio()"
     },
     {
@@ -4463,7 +4403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_portfolio_model_py_date",
-      "community": 33,
+      "community": 19,
       "norm_label": "date"
     },
     {
@@ -4473,7 +4413,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_portfolio_model_py_dataframe",
-      "community": 33,
+      "community": 19,
       "norm_label": "dataframe"
     },
     {
@@ -4503,7 +4443,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "research_portfolio_model_rationale_58",
-      "community": 33,
+      "community": 19,
       "norm_label": "target weights for one rebalance date, or ``none`` if inputs can't be built."
     },
     {
@@ -4573,7 +4513,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_init",
-      "community": 3,
+      "community": 21,
       "norm_label": "__init__.py"
     },
     {
@@ -4593,7 +4533,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "research_risk_exposures_zscore",
-      "community": 15,
+      "community": 21,
       "norm_label": "_zscore()"
     },
     {
@@ -4603,7 +4543,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_dataframe",
-      "community": 15,
+      "community": 21,
       "norm_label": "dataframe"
     },
     {
@@ -4613,7 +4553,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "research_risk_exposures_build_exposure_matrix",
-      "community": 15,
+      "community": 21,
       "norm_label": "build_exposure_matrix()"
     },
     {
@@ -4623,7 +4563,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_lazyframe",
-      "community": 15,
+      "community": 21,
       "norm_label": "lazyframe"
     },
     {
@@ -4633,7 +4573,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_exposures_py_date",
-      "community": 15,
+      "community": 21,
       "norm_label": "date"
     },
     {
@@ -4653,7 +4593,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_exposures_rationale_52",
-      "community": 15,
+      "community": 21,
       "norm_label": "exposure matrix b for one rebalance date.      ``sectors`` is the already-asof'd"
     },
     {
@@ -4743,7 +4683,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_model",
-      "community": 3,
+      "community": 21,
       "norm_label": "model.py"
     },
     {
@@ -4753,7 +4693,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "research_risk_model_riskmodel",
-      "community": 3,
+      "community": 21,
       "norm_label": "riskmodel"
     },
     {
@@ -4763,7 +4703,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "research_risk_model_riskmodel_sigma",
-      "community": 3,
+      "community": 42,
       "norm_label": ".sigma()"
     },
     {
@@ -4773,7 +4713,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_ndarray",
-      "community": 3,
+      "community": 42,
       "norm_label": "ndarray"
     },
     {
@@ -4783,7 +4723,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "research_risk_model_build_factor_return_history",
-      "community": 3,
+      "community": 21,
       "norm_label": "build_factor_return_history()"
     },
     {
@@ -4793,7 +4733,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_datetime",
-      "community": 3,
+      "community": 21,
       "norm_label": "datetime"
     },
     {
@@ -4803,7 +4743,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_dataframe",
-      "community": 3,
+      "community": 21,
       "norm_label": "dataframe"
     },
     {
@@ -4813,7 +4753,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "research_risk_model_build_risk_model",
-      "community": 3,
+      "community": 21,
       "norm_label": "build_risk_model()"
     },
     {
@@ -4823,7 +4763,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_model_py_date",
-      "community": 3,
+      "community": 21,
       "norm_label": "date"
     },
     {
@@ -4833,7 +4773,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_model_rationale_1",
-      "community": 3,
+      "community": 21,
       "norm_label": "risk model orchestration (block 3): assembles \u03c3 = b\u00b7f\u00b7bt + d.  ties together exp"
     },
     {
@@ -4843,7 +4783,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "research_risk_model_rationale_52",
-      "community": 3,
+      "community": 42,
       "norm_label": "full n\u00d7n stock covariance \u03c3 = b\u00b7f\u00b7bt + diag(d).          **may emit spurious num"
     },
     {
@@ -4853,7 +4793,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "research_risk_model_rationale_75",
-      "community": 3,
+      "community": 21,
       "norm_label": "per-date exposures -> regression, stacked into factor + specific return     hist"
     },
     {
@@ -4863,7 +4803,7 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "research_risk_model_rationale_167",
-      "community": 3,
+      "community": 21,
       "norm_label": "full \u03c3 = b\u00b7f\u00b7bt + d for ``rebuild_date``, using trailing history for f and d."
     },
     {
@@ -4873,7 +4813,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "regression.py"
     },
     {
@@ -4883,7 +4823,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "research_risk_regression_cross_sectional_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "cross_sectional_regression()"
     },
     {
@@ -4893,7 +4833,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_regression_py_dataframe",
-      "community": 3,
+      "community": 35,
       "norm_label": "dataframe"
     },
     {
@@ -4903,7 +4843,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_regression_rationale_1",
-      "community": 3,
+      "community": 35,
       "norm_label": "cross-sectional factor regression (block 3 risk model).  one ols regression per"
     },
     {
@@ -4913,7 +4853,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "research_risk_regression_rationale_26",
-      "community": 3,
+      "community": 35,
       "norm_label": "ols regression of returns on exposures for one date.      ``returns``: [security"
     },
     {
@@ -4923,7 +4863,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "specific_variance.py"
     },
     {
@@ -4933,7 +4873,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "research_risk_specific_variance_build_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "build_specific_variance()"
     },
     {
@@ -4943,7 +4883,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_risk_specific_variance_py_dataframe",
-      "community": 3,
+      "community": 34,
       "norm_label": "dataframe"
     },
     {
@@ -4953,7 +4893,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_risk_specific_variance_rationale_1",
-      "community": 3,
+      "community": 34,
       "norm_label": "specific (idiosyncratic) variance d (block 3 risk model).  diagonal of \u03c3 = b\u00b7f\u00b7b"
     },
     {
@@ -4963,7 +4903,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "research_risk_specific_variance_rationale_23",
-      "community": 3,
+      "community": 34,
       "norm_label": "ewma specific variance per security.      ``specific_return_history``: [effectiv"
     },
     {
@@ -5323,7 +5263,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_signals_reversal",
-      "community": 15,
+      "community": 40,
       "norm_label": "reversal.py"
     },
     {
@@ -5333,7 +5273,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "research_signals_reversal_empty_signal",
-      "community": 15,
+      "community": 40,
       "norm_label": "_empty_signal()"
     },
     {
@@ -5343,7 +5283,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_dataframe",
-      "community": 15,
+      "community": 40,
       "norm_label": "dataframe"
     },
     {
@@ -5353,7 +5293,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "research_signals_reversal_compute_reversal",
-      "community": 15,
+      "community": 40,
       "norm_label": "compute_reversal()"
     },
     {
@@ -5363,7 +5303,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_lazyframe",
-      "community": 15,
+      "community": 40,
       "norm_label": "lazyframe"
     },
     {
@@ -5373,7 +5313,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "research_signals_reversal_py_date",
-      "community": 15,
+      "community": 40,
       "norm_label": "date"
     },
     {
@@ -5383,7 +5323,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "research_signals_reversal_rationale_1",
-      "community": 15,
+      "community": 40,
       "norm_label": "short-term reversal signal (phase 2 signals + ic measurement).  trailing ``windo"
     },
     {
@@ -5393,7 +5333,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "research_signals_reversal_rationale_34",
-      "community": 15,
+      "community": 40,
       "norm_label": "trailing ``window_days`` cumulative return per security, as of ``rebuild_date``."
     },
     {
@@ -5635,96 +5575,6 @@
       "id": "tests_test_beta_rationale_92",
       "community": 18,
       "norm_label": "a security outside `security_ids` neither gets a beta nor pollutes the market pr"
-    },
-    {
-      "label": "test_capacity.py",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tests_test_capacity",
-      "community": 20,
-      "norm_label": "test_capacity.py"
-    },
-    {
-      "label": "trading_days()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "tests_test_capacity_trading_days",
-      "community": 20,
-      "norm_label": "trading_days()"
-    },
-    {
-      "label": "date",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "tests_test_capacity_py_date",
-      "community": 20,
-      "norm_label": "date"
-    },
-    {
-      "label": "ret_bars()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "tests_test_capacity_ret_bars",
-      "community": 20,
-      "norm_label": "ret_bars()"
-    },
-    {
-      "label": "DataFrame",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "tests_test_capacity_py_dataframe",
-      "community": 20,
-      "norm_label": "dataframe"
-    },
-    {
-      "label": "store()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "tests_test_capacity_store",
-      "community": 20,
-      "norm_label": "store()"
-    },
-    {
-      "label": "populated_store()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "tests_test_capacity_populated_store",
-      "community": 20,
-      "norm_label": "populated_store()"
-    },
-    {
-      "label": "test_capacity_analysis_returns_one_point_per_book_notional()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L93",
-      "_origin": "ast",
-      "id": "tests_test_capacity_test_capacity_analysis_returns_one_point_per_book_notional",
-      "community": 20,
-      "norm_label": "test_capacity_analysis_returns_one_point_per_book_notional()"
-    },
-    {
-      "label": "test_capacity_analysis_at_extreme_aum_shows_capacity_constraint()",
-      "file_type": "code",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L112",
-      "_origin": "ast",
-      "id": "tests_test_capacity_test_capacity_analysis_at_extreme_aum_shows_capacity_constraint",
-      "community": 20,
-      "norm_label": "test_capacity_analysis_at_extreme_aum_shows_capacity_constraint()"
     },
     {
       "label": "test_constraints.py",
@@ -6003,7 +5853,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_decompose",
-      "community": 21,
+      "community": 20,
       "norm_label": "test_decompose.py"
     },
     {
@@ -6013,7 +5863,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_decompose_trading_days",
-      "community": 21,
+      "community": 20,
       "norm_label": "trading_days()"
     },
     {
@@ -6023,7 +5873,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_decompose_py_date",
-      "community": 21,
+      "community": 20,
       "norm_label": "date"
     },
     {
@@ -6033,7 +5883,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_decompose_ret_bars",
-      "community": 21,
+      "community": 20,
       "norm_label": "ret_bars()"
     },
     {
@@ -6043,7 +5893,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_decompose_py_dataframe",
-      "community": 21,
+      "community": 20,
       "norm_label": "dataframe"
     },
     {
@@ -6053,7 +5903,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_decompose_store",
-      "community": 21,
+      "community": 20,
       "norm_label": "store()"
     },
     {
@@ -6063,7 +5913,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_decompose_populated_store",
-      "community": 21,
+      "community": 20,
       "norm_label": "populated_store()"
     },
     {
@@ -6073,7 +5923,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "tests_test_decompose_test_decompose_backtest_empty_steps_returns_empty_result",
-      "community": 21,
+      "community": 20,
       "norm_label": "test_decompose_backtest_empty_steps_returns_empty_result()"
     },
     {
@@ -6083,7 +5933,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_decompose_test_decompose_backtest_end_to_end_shape",
-      "community": 21,
+      "community": 20,
       "norm_label": "test_decompose_backtest_end_to_end_shape()"
     },
     {
@@ -6093,7 +5943,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_decompose_test_decompose_backtest_excludes_non_optimal_steps",
-      "community": 21,
+      "community": 20,
       "norm_label": "test_decompose_backtest_excludes_non_optimal_steps()"
     },
     {
@@ -6103,7 +5953,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "tests_test_decompose_test_decompose_backtest_date_with_no_matching_data_is_zero_not_missing",
-      "community": 21,
+      "community": 20,
       "norm_label": "test_decompose_backtest_date_with_no_matching_data_is_zero_not_missing()"
     },
     {
@@ -6253,7 +6103,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_exposures",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_exposures.py"
     },
     {
@@ -6263,7 +6113,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_exposures_trading_days",
-      "community": 15,
+      "community": 38,
       "norm_label": "trading_days()"
     },
     {
@@ -6273,7 +6123,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_date",
-      "community": 15,
+      "community": 38,
       "norm_label": "date"
     },
     {
@@ -6283,7 +6133,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "tests_test_exposures_ret_bars",
-      "community": 15,
+      "community": 38,
       "norm_label": "ret_bars()"
     },
     {
@@ -6293,7 +6143,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_exposures_py_dataframe",
-      "community": 15,
+      "community": 38,
       "norm_label": "dataframe"
     },
     {
@@ -6303,7 +6153,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_exposures_store",
-      "community": 15,
+      "community": 38,
       "norm_label": "store()"
     },
     {
@@ -6313,7 +6163,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_exposures_test_build_exposure_matrix_shape_and_sector_dummies",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_build_exposure_matrix_shape_and_sector_dummies()"
     },
     {
@@ -6323,7 +6173,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_test_exposures_test_security_missing_sector_is_excluded",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_security_missing_sector_is_excluded()"
     },
     {
@@ -6333,7 +6183,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "tests_test_exposures_test_null_sector_value_excluded_not_crashed",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_null_sector_value_excluded_not_crashed()"
     },
     {
@@ -6343,7 +6193,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "tests_test_exposures_test_empty_when_no_members_have_enough_history",
-      "community": 15,
+      "community": 38,
       "norm_label": "test_empty_when_no_members_have_enough_history()"
     },
     {
@@ -6443,7 +6293,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_ic_store",
-      "community": 8,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -6533,7 +6383,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_model",
-      "community": 33,
+      "community": 19,
       "norm_label": "test_model.py"
     },
     {
@@ -6543,7 +6393,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_model_trading_days",
-      "community": 33,
+      "community": 19,
       "norm_label": "trading_days()"
     },
     {
@@ -6553,7 +6403,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_model_py_date",
-      "community": 33,
+      "community": 19,
       "norm_label": "date"
     },
     {
@@ -6563,7 +6413,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_model_ret_bars",
-      "community": 33,
+      "community": 19,
       "norm_label": "ret_bars()"
     },
     {
@@ -6573,7 +6423,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_model_py_dataframe",
-      "community": 33,
+      "community": 19,
       "norm_label": "dataframe"
     },
     {
@@ -6583,7 +6433,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_model_store",
-      "community": 33,
+      "community": 19,
       "norm_label": "store()"
     },
     {
@@ -6593,7 +6443,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_model_populated_store",
-      "community": 33,
+      "community": 19,
       "norm_label": "populated_store()"
     },
     {
@@ -6603,7 +6453,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "tests_test_model_test_build_target_portfolio_end_to_end",
-      "community": 33,
+      "community": 19,
       "norm_label": "test_build_target_portfolio_end_to_end()"
     },
     {
@@ -6613,7 +6463,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "tests_test_model_test_build_target_portfolio_none_when_risk_model_none",
-      "community": 33,
+      "community": 19,
       "norm_label": "test_build_target_portfolio_none_when_risk_model_none()"
     },
     {
@@ -6623,7 +6473,7 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "tests_test_model_test_build_target_portfolio_respects_constraint_kwargs",
-      "community": 33,
+      "community": 19,
       "norm_label": "test_build_target_portfolio_respects_constraint_kwargs()"
     },
     {
@@ -6633,7 +6483,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_port_to_delta",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_port_to_delta.py"
     },
     {
@@ -6643,7 +6493,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_store",
-      "community": 8,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -6653,7 +6503,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_bars",
-      "community": 8,
+      "community": 17,
       "norm_label": "bars()"
     },
     {
@@ -6663,7 +6513,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_py_dataframe",
-      "community": 8,
+      "community": 17,
       "norm_label": "dataframe"
     },
     {
@@ -6673,7 +6523,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkcolumn",
-      "community": 35,
+      "community": 17,
       "norm_label": "fakesparkcolumn"
     },
     {
@@ -6683,7 +6533,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkcolumn_cast",
-      "community": 35,
+      "community": 17,
       "norm_label": ".cast()"
     },
     {
@@ -6693,7 +6543,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe",
-      "community": 35,
+      "community": 17,
       "norm_label": "fakesparkdataframe"
     },
     {
@@ -6703,7 +6553,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_init",
-      "community": 35,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -6713,7 +6563,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_getattr",
-      "community": 35,
+      "community": 17,
       "norm_label": ".__getattr__()"
     },
     {
@@ -6723,7 +6573,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_len",
-      "community": 35,
+      "community": 17,
       "norm_label": ".__len__()"
     },
     {
@@ -6733,7 +6583,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_getitem",
-      "community": 35,
+      "community": 17,
       "norm_label": ".__getitem__()"
     },
     {
@@ -6743,7 +6593,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakesparkdataframe_withcolumn",
-      "community": 35,
+      "community": 17,
       "norm_label": ".withcolumn()"
     },
     {
@@ -6753,7 +6603,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakespark",
-      "community": 8,
+      "community": 17,
       "norm_label": "fakespark"
     },
     {
@@ -6763,7 +6613,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakespark_createdataframe",
-      "community": 8,
+      "community": 17,
       "norm_label": ".createdataframe()"
     },
     {
@@ -6773,7 +6623,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore",
-      "community": 8,
+      "community": 17,
       "norm_label": "fakedeltastore"
     },
     {
@@ -6783,7 +6633,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore_init",
-      "community": 8,
+      "community": 17,
       "norm_label": ".__init__()"
     },
     {
@@ -6793,7 +6643,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_fakedeltastore_append",
-      "community": 8,
+      "community": 17,
       "norm_label": ".append()"
     },
     {
@@ -6803,7 +6653,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_test_port_preserves_every_knowledge_ts_batch",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_port_preserves_every_knowledge_ts_batch()"
     },
     {
@@ -6813,7 +6663,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_test_port_combines_parts_under_one_knowledge_ts",
-      "community": 8,
+      "community": 17,
       "norm_label": "test_port_combines_parts_under_one_knowledge_ts()"
     },
     {
@@ -6823,7 +6673,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_port_to_delta_rationale_31",
-      "community": 35,
+      "community": 17,
       "norm_label": "stands in for a real spark dataframe: delegates to the underlying     pandas fra"
     },
     {
@@ -6933,7 +6783,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_regression",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_regression.py"
     },
     {
@@ -6943,7 +6793,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_test_regression_test_recovers_known_coefficients_with_zero_noise",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_recovers_known_coefficients_with_zero_noise()"
     },
     {
@@ -6953,7 +6803,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_regression_test_drops_securities_missing_from_either_side",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_drops_securities_missing_from_either_side()"
     },
     {
@@ -6963,7 +6813,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "tests_test_regression_test_null_ret_excluded_not_corrupted",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_null_ret_excluded_not_corrupted()"
     },
     {
@@ -6973,7 +6823,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "tests_test_regression_test_underdetermined_returns_empty",
-      "community": 3,
+      "community": 35,
       "norm_label": "test_underdetermined_returns_empty()"
     },
     {
@@ -7043,7 +6893,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_risk_model",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_risk_model.py"
     },
     {
@@ -7053,7 +6903,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_risk_model_trading_days",
-      "community": 3,
+      "community": 39,
       "norm_label": "trading_days()"
     },
     {
@@ -7063,7 +6913,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_risk_model_py_date",
-      "community": 3,
+      "community": 39,
       "norm_label": "date"
     },
     {
@@ -7073,7 +6923,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_risk_model_ret_bars",
-      "community": 3,
+      "community": 39,
       "norm_label": "ret_bars()"
     },
     {
@@ -7083,7 +6933,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_risk_model_py_dataframe",
-      "community": 3,
+      "community": 39,
       "norm_label": "dataframe"
     },
     {
@@ -7093,7 +6943,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_risk_model_store",
-      "community": 3,
+      "community": 39,
       "norm_label": "store()"
     },
     {
@@ -7103,7 +6953,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_risk_model_populated_store",
-      "community": 3,
+      "community": 39,
       "norm_label": "populated_store()"
     },
     {
@@ -7113,7 +6963,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_risk_model_test_build_risk_model_end_to_end_shape",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_build_risk_model_end_to_end_shape()"
     },
     {
@@ -7123,7 +6973,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "tests_test_risk_model_test_build_risk_model_none_with_insufficient_history",
-      "community": 3,
+      "community": 39,
       "norm_label": "test_build_risk_model_none_with_insufficient_history()"
     },
     {
@@ -7423,7 +7273,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_signals",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_signals.py"
     },
     {
@@ -7433,7 +7283,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_signals_trading_days",
-      "community": 15,
+      "community": 33,
       "norm_label": "trading_days()"
     },
     {
@@ -7443,7 +7293,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_signals_py_date",
-      "community": 15,
+      "community": 33,
       "norm_label": "date"
     },
     {
@@ -7453,7 +7303,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_signals_ret_bars",
-      "community": 15,
+      "community": 33,
       "norm_label": "ret_bars()"
     },
     {
@@ -7463,7 +7313,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_signals_py_dataframe",
-      "community": 15,
+      "community": 33,
       "norm_label": "dataframe"
     },
     {
@@ -7473,7 +7323,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_signals_store",
-      "community": 15,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -7483,7 +7333,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_matches_closed_form_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_matches_closed_form_for_constant_return()"
     },
     {
@@ -7493,7 +7343,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_short_history_returns_empty",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_short_history_returns_empty()"
     },
     {
@@ -7503,7 +7353,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_signals_test_momentum_ignores_data_after_rebuild_date",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_momentum_ignores_data_after_rebuild_date()"
     },
     {
@@ -7513,7 +7363,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tests_test_signals_test_reversal_matches_closed_form_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_reversal_matches_closed_form_for_constant_return()"
     },
     {
@@ -7523,7 +7373,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_test_signals_test_low_vol_zero_for_constant_return",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_low_vol_zero_for_constant_return()"
     },
     {
@@ -7533,7 +7383,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "tests_test_signals_test_low_vol_short_history_returns_empty",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_low_vol_short_history_returns_empty()"
     },
     {
@@ -7543,7 +7393,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "tests_test_signals_test_signal_registry_contains_all_three",
-      "community": 15,
+      "community": 33,
       "norm_label": "test_signal_registry_contains_all_three()"
     },
     {
@@ -7553,7 +7403,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_signals_rationale_17",
-      "community": 15,
+      "community": 33,
       "norm_label": "n consecutive weekdays starting at (or after) start."
     },
     {
@@ -7563,7 +7413,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_simulate",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_simulate.py"
     },
     {
@@ -7573,7 +7423,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_simulate_trading_days",
-      "community": 20,
+      "community": 8,
       "norm_label": "trading_days()"
     },
     {
@@ -7583,7 +7433,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "date"
     },
     {
@@ -7593,7 +7443,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_simulate_ret_bars",
-      "community": 20,
+      "community": 8,
       "norm_label": "ret_bars()"
     },
     {
@@ -7603,7 +7453,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "tests_test_simulate_py_dataframe",
-      "community": 20,
+      "community": 8,
       "norm_label": "dataframe"
     },
     {
@@ -7613,7 +7463,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "tests_test_simulate_store",
-      "community": 20,
+      "community": 8,
       "norm_label": "store()"
     },
     {
@@ -7623,7 +7473,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_simulate_populated_store",
-      "community": 20,
+      "community": 8,
       "norm_label": "populated_store()"
     },
     {
@@ -7633,7 +7483,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_produces_a_step_per_rebalance_date",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_produces_a_step_per_rebalance_date()"
     },
     {
@@ -7643,7 +7493,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_threads_w_prev_across_dates",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_threads_w_prev_across_dates()"
     },
     {
@@ -7653,7 +7503,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_skips_dates_with_insufficient_history",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_skips_dates_with_insufficient_history()"
     },
     {
@@ -7663,7 +7513,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_blocks_held_out_period_by_default",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_blocks_held_out_period_by_default()"
     },
     {
@@ -7673,7 +7523,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "tests_test_simulate_test_run_backtest_allows_held_out_period_with_explicit_flag",
-      "community": 20,
+      "community": 8,
       "norm_label": "test_run_backtest_allows_held_out_period_with_explicit_flag()"
     },
     {
@@ -7683,7 +7533,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "tests_test_simulate_rationale_125",
-      "community": 20,
+      "community": 8,
       "norm_label": "first rebalance starts flat (full cost); later ones trade only the delta."
     },
     {
@@ -7753,7 +7603,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_specific_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_specific_variance.py"
     },
     {
@@ -7763,7 +7613,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "tests_test_specific_variance_dates",
-      "community": 3,
+      "community": 34,
       "norm_label": "_dates()"
     },
     {
@@ -7773,7 +7623,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_constant_returns_give_zero_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_constant_returns_give_zero_variance()"
     },
     {
@@ -7783,7 +7633,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_varying_returns_give_positive_variance",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_varying_returns_give_positive_variance()"
     },
     {
@@ -7793,7 +7643,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_single_observation_excluded",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_single_observation_excluded()"
     },
     {
@@ -7803,7 +7653,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_test_specific_variance_test_empty_input_returns_empty",
-      "community": 3,
+      "community": 34,
       "norm_label": "test_empty_input_returns_empty()"
     },
     {
@@ -7933,7 +7783,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_universe_store",
-      "community": 11,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -8113,7 +7963,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_yfinance_loader_store",
-      "community": 9,
+      "community": 17,
       "norm_label": "store()"
     },
     {
@@ -8750,9 +8600,9 @@
       "label": "Open items",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L114",
+      "source_location": "L113",
       "_origin": "ast",
-      "id": "docs_state_open_items_114",
+      "id": "docs_state_open_items_113",
       "community": 1,
       "norm_label": "open items"
     },
@@ -8760,7 +8610,7 @@
       "label": "Failed attempts",
       "file_type": "document",
       "source_file": "docs/STATE.md",
-      "source_location": "L154",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "docs_state_failed_attempts",
       "community": 1,
@@ -8977,20 +8827,20 @@
       "norm_label": "research/backtest/ \u2014 **block 5 backtester built (kicked off 2026-07-23, 11 tests)**"
     },
     {
-      "label": "research/attribution/ \u2014 **Block 6 Attribution + book scorecard + capacity analysis v1 BUILT (2026-08-06, 14 tests)**",
+      "label": "research/attribution/ \u2014 **Block 6 Attribution + book scorecard v1 BUILT (2026-08-05, 12 tests)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
       "source_location": "L368",
       "_origin": "ast",
-      "id": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_capacity_analysis_v1_built_2026_08_06_14_tests",
+      "id": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_12_tests",
       "community": 12,
-      "norm_label": "research/attribution/ \u2014 **block 6 attribution + book scorecard + capacity analysis v1 built (2026-08-06, 14 tests)**"
+      "norm_label": "research/attribution/ \u2014 **block 6 attribution + book scorecard v1 built (2026-08-05, 12 tests)**"
     },
     {
       "label": "engine/ \u2014 **built (broker simulator + order gateway + position keeper + risk checker + market data handler + live AlpacaGateway + execution scheduler + kill switch, 66 Catch2 tests, live end-to-end verified)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L377",
+      "source_location": "L376",
       "_origin": "ast",
       "id": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_execution_scheduler_kill_switch_66_catch2_tests_live_end_to_end_verified",
       "community": 12,
@@ -9000,27 +8850,27 @@
       "label": "Barrel files",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L405",
+      "source_location": "L404",
       "_origin": "ast",
       "id": "docs_system_map_barrel_files",
       "community": 12,
       "norm_label": "barrel files"
     },
     {
-      "label": "tests/ \u2014 **123 passing, 1 skipped (Python)** + **66 passing (C++, `ctest --test-dir engine/build`)**",
+      "label": "tests/ \u2014 **121 passing, 1 skipped (Python)** + **66 passing (C++, `ctest --test-dir engine/build`)**",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L410",
+      "source_location": "L409",
       "_origin": "ast",
-      "id": "docs_system_map_tests_123_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
+      "id": "docs_system_map_tests_121_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
       "community": 12,
-      "norm_label": "tests/ \u2014 **123 passing, 1 skipped (python)** + **66 passing (c++, `ctest --test-dir engine/build`)**"
+      "norm_label": "tests/ \u2014 **121 passing, 1 skipped (python)** + **66 passing (c++, `ctest --test-dir engine/build`)**"
     },
     {
       "label": "Config",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L441",
+      "source_location": "L439",
       "_origin": "ast",
       "id": "docs_system_map_config",
       "community": 12,
@@ -9030,7 +8880,7 @@
       "label": "Not yet started (DESIGN.md blocks)",
       "file_type": "document",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L444",
+      "source_location": "L442",
       "_origin": "ast",
       "id": "docs_system_map_not_yet_started_design_md_blocks",
       "community": 12,
@@ -14157,39 +14007,6 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "research_attribution_init",
-      "target": "research_attribution_capacity",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/__init__.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "research_attribution_init",
-      "target": "research_attribution_capacity_capacity_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/__init__.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "research_attribution_init",
-      "target": "research_attribution_capacity_capacitypoint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "re_exports",
-      "context": "export",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/__init__.py",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "research_attribution_init",
       "target": "research_attribution_decompose",
       "confidence_score": 1.0
     },
@@ -14198,7 +14015,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/__init__.py",
-      "source_location": "L2",
+      "source_location": "L1",
       "weight": 1.0,
       "source": "research_attribution_init",
       "target": "research_attribution_decompose_attributionresult",
@@ -14209,7 +14026,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/__init__.py",
-      "source_location": "L2",
+      "source_location": "L1",
       "weight": 1.0,
       "source": "research_attribution_init",
       "target": "research_attribution_decompose_decompose_backtest",
@@ -14220,7 +14037,7 @@
       "context": "export",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/__init__.py",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "research_attribution_init",
       "target": "research_attribution_scorecard",
@@ -14231,7 +14048,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/__init__.py",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "research_attribution_init",
       "target": "research_attribution_scorecard_bookscorecard",
@@ -14242,237 +14059,10 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "research/attribution/__init__.py",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "research_attribution_init",
       "target": "research_attribution_scorecard_score_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_attribution_capacity_capacity_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_attribution_capacity_capacitypoint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_attribution_scorecard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_attribution_scorecard_score_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_backtest_result",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_backtest_result_summarize_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_backtest_simulate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_backtest_simulate_run_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "research_attribution_capacity",
-      "target": "research_data_store_pitstore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_rationale_1",
-      "target": "research_attribution_capacity",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "research_attribution_capacity",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_attribution_capacity_capacitypoint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_attribution_capacity_py_date",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L65",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_attribution_scorecard_score_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_backtest_result_summarize_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_backtest_simulate_run_backtest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_capacity_analysis",
-      "target": "research_data_store_pitstore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "research/attribution/capacity.py",
-      "source_location": "L44",
-      "weight": 1.0,
-      "source": "research_attribution_capacity_rationale_44",
-      "target": "research_attribution_capacity_capacity_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "research_attribution_capacity_capacity_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L124",
-      "weight": 1.0,
-      "source": "tests_test_capacity_test_capacity_analysis_at_extreme_aum_shows_capacity_constraint",
-      "target": "research_attribution_capacity_capacity_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L97",
-      "weight": 1.0,
-      "source": "tests_test_capacity_test_capacity_analysis_returns_one_point_per_book_notional",
-      "target": "research_attribution_capacity_capacity_analysis",
       "confidence_score": 1.0
     },
     {
@@ -18458,28 +18048,6 @@
       "source_location": "L36",
       "weight": 1.0,
       "source": "tests_test_beta_store",
-      "target": "research_data_store_pitstore"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "research_data_store_pitstore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "tests_test_capacity_store",
       "target": "research_data_store_pitstore"
     },
     {
@@ -22905,132 +22473,6 @@
       "weight": 1.0,
       "source": "tests_test_beta_rationale_92",
       "target": "tests_test_beta_test_beta_only_computed_over_named_securities",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_populated_store",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_ret_bars",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_store",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L112",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_test_capacity_analysis_at_extreme_aum_shows_capacity_constraint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L93",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_test_capacity_analysis_returns_one_point_per_book_notional",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "tests_test_capacity",
-      "target": "tests_test_capacity_trading_days",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "tests_test_capacity_populated_store",
-      "target": "tests_test_capacity_trading_days",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "tests_test_capacity_trading_days",
-      "target": "tests_test_capacity_py_date",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "tests_test_capacity_ret_bars",
-      "target": "tests_test_capacity_py_date",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L58",
-      "weight": 1.0,
-      "source": "tests_test_capacity_populated_store",
-      "target": "tests_test_capacity_ret_bars",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "return_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "tests_test_capacity_ret_bars",
-      "target": "tests_test_capacity_py_dataframe",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_capacity.py",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "tests_test_capacity_populated_store",
-      "target": "tests_test_capacity_py_dataframe",
       "confidence_score": 1.0
     },
     {
@@ -27873,7 +27315,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L154",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "docs_state_state",
       "target": "docs_state_failed_attempts",
@@ -27923,10 +27365,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/STATE.md",
-      "source_location": "L114",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "docs_state_state",
-      "target": "docs_state_open_items_114",
+      "target": "docs_state_open_items_113",
       "confidence_score": 1.0
     },
     {
@@ -27973,7 +27415,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L444",
+      "source_location": "L442",
       "weight": 1.0,
       "source": "docs_system_map_system_map",
       "target": "docs_system_map_not_yet_started_design_md_blocks",
@@ -28003,7 +27445,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L405",
+      "source_location": "L404",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_barrel_files",
@@ -28013,7 +27455,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L441",
+      "source_location": "L439",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_config",
@@ -28023,7 +27465,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L377",
+      "source_location": "L376",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
       "target": "docs_system_map_engine_built_broker_simulator_order_gateway_position_keeper_risk_checker_market_data_handler_live_alpacagateway_execution_scheduler_kill_switch_66_catch2_tests_live_end_to_end_verified",
@@ -28056,7 +27498,7 @@
       "source_location": "L368",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_capacity_analysis_v1_built_2026_08_06_14_tests",
+      "target": "docs_system_map_research_attribution_block_6_attribution_book_scorecard_v1_built_2026_08_05_12_tests",
       "confidence_score": 1.0
     },
     {
@@ -28183,10 +27625,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/SYSTEM_MAP.md",
-      "source_location": "L410",
+      "source_location": "L409",
       "weight": 1.0,
       "source": "docs_system_map_files_functions",
-      "target": "docs_system_map_tests_123_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
+      "target": "docs_system_map_tests_121_passing_1_skipped_python_66_passing_c_ctest_test_dir_engine_build",
       "confidence_score": 1.0
     },
     {
@@ -28361,5 +27803,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9264fdffa3c2c9797ab7858b2a862376190648bb"
+  "built_at_commit": "ade29643b069c1d75348989064a643c04846c2e3"
 }
