@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "broker/IBrokerGateway.hpp"
+#include "compliance/ComplianceChecker.hpp"
 #include "marketdata/MarketDataHandler.hpp"
 #include "ops/KillSwitch.hpp"
 #include "position/PositionKeeper.hpp"
@@ -50,24 +51,27 @@ double compute_book_value(const position::PositionKeeper& positions,
 
 // Orchestrates one full rebalance pass: check the kill switch, check book
 // drawdown (auto-trips the kill switch on breach), read the target file,
-// compute orders, risk-check each, submit the ones that pass via the
-// injected IBrokerGateway (BrokerSimulator for tests, AlpacaGateway live --
-// same injection convention as everywhere else in this codebase). Does
-// nothing if the kill switch is tripped, or if the file's status isn't
-// "optimal" -- trading off infeasible/non-optimal weights is a real risk,
-// not routine.
+// compute orders, risk-check + compliance-check each, submit the ones
+// that pass both via the injected IBrokerGateway (BrokerSimulator for
+// tests, AlpacaGateway live -- same injection convention as everywhere
+// else in this codebase). Does nothing if the kill switch is tripped, or
+// if the file's status isn't "optimal" -- trading off infeasible/
+// non-optimal weights is a real risk, not routine.
 class ExecutionScheduler {
 public:
     ExecutionScheduler(marketdata::MarketDataHandler& market_data,
                         position::PositionKeeper& positions, risk::RiskChecker& risk_checker,
+                        compliance::ComplianceChecker& compliance_checker,
                         broker::IBrokerGateway& broker, ops::KillSwitch& kill_switch,
                         double book_notional = 10'000'000.0, double max_drawdown_pct = 0.05);
 
-    // Returns the orders actually submitted (those that passed risk
-    // checks) -- callers/tests can inspect what happened without a live
-    // broker connection. Empty if the kill switch was already tripped,
-    // just tripped by this call's drawdown check, or the file's status
-    // isn't "optimal".
+    // Returns the orders actually submitted (those that passed both risk
+    // and compliance checks) -- callers/tests can inspect what happened
+    // without a live broker connection. Empty if the kill switch was
+    // already tripped, just tripped by this call's drawdown check, or
+    // the file's status isn't "optimal". Calls compliance_checker.reset()
+    // at the start of every call -- duplicate-order detection is scoped
+    // to one run_once() batch, never across separate calls/days.
     std::vector<broker::Order> run_once(const std::string& target_portfolio_path,
                                          double buying_power);
 
@@ -75,6 +79,7 @@ private:
     marketdata::MarketDataHandler& market_data_;
     position::PositionKeeper& positions_;
     risk::RiskChecker& risk_checker_;
+    compliance::ComplianceChecker& compliance_checker_;
     broker::IBrokerGateway& broker_;
     ops::KillSwitch& kill_switch_;
     double book_notional_;

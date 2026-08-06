@@ -11,6 +11,7 @@ using namespace engine::position;
 using namespace engine::marketdata;
 using namespace engine::risk;
 using namespace engine::ops;
+using namespace engine::compliance;
 using namespace engine::execution;
 
 namespace {
@@ -89,7 +90,9 @@ TEST_CASE("ExecutionScheduler::run_once submits orders that pass risk checks",
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
     KillSwitch kill_switch;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
+    ComplianceChecker compliance_checker;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio.json";
     {
@@ -112,7 +115,9 @@ TEST_CASE("ExecutionScheduler::run_once submits nothing when status isn't optima
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
     KillSwitch kill_switch;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
+    ComplianceChecker compliance_checker;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_infeasible.json";
     {
@@ -134,7 +139,9 @@ TEST_CASE("ExecutionScheduler::run_once skips an order that fails risk checks",
     RiskChecker risk_checker(positions, 1'000.0, 2'000.0);  // tiny bounds -- fat-finger will fire
     BrokerSimulator broker_sim;
     KillSwitch kill_switch;
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
+    ComplianceChecker compliance_checker;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_risky.json";
     {
@@ -146,6 +153,91 @@ TEST_CASE("ExecutionScheduler::run_once skips an order that fails risk checks",
     std::filesystem::remove(path);
 
     REQUIRE(submitted.empty());
+}
+
+TEST_CASE("ExecutionScheduler::run_once skips a restricted symbol", "[execution_scheduler]") {
+    MarketDataHandler market_data;
+    set_quote(market_data, "AAPL", 99.0, 101.0);
+    PositionKeeper positions;
+    RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
+    BrokerSimulator broker_sim;
+    KillSwitch kill_switch;
+    ComplianceChecker compliance_checker({"AAPL"});  // AAPL restricted
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
+
+    const auto path =
+        std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_restricted.json";
+    {
+        std::ofstream file(path);
+        file << R"({"status":"optimal","positions":[{"symbol":"AAPL","target_notional":10000.0}]})";
+    }
+
+    auto submitted = scheduler.run_once(path.string(), 1'000'000.0);
+    std::filesystem::remove(path);
+
+    REQUIRE(submitted.empty());
+}
+
+TEST_CASE("ExecutionScheduler::run_once submits only one of two duplicate target rows",
+          "[execution_scheduler]") {
+    // A data-quality bug -- the same symbol listed twice with the same
+    // notional in the target file -- produces two identical Order objects
+    // from compute_target_orders. ComplianceChecker's duplicate detection
+    // (scoped to this one run_once() batch) catches the second.
+    MarketDataHandler market_data;
+    set_quote(market_data, "AAPL", 99.0, 101.0);
+    PositionKeeper positions;
+    RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
+    BrokerSimulator broker_sim;
+    KillSwitch kill_switch;
+    ComplianceChecker compliance_checker;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
+
+    const auto path =
+        std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_dup_rows.json";
+    {
+        std::ofstream file(path);
+        file << R"({"status":"optimal","positions":[)"
+                R"({"symbol":"AAPL","target_notional":10000.0},)"
+                R"({"symbol":"AAPL","target_notional":10000.0}]})";
+    }
+
+    auto submitted = scheduler.run_once(path.string(), 1'000'000.0);
+    std::filesystem::remove(path);
+
+    REQUIRE(submitted.size() == 1);
+}
+
+TEST_CASE("ExecutionScheduler::run_once does not treat a later call's matching order "
+          "as a duplicate of an earlier call",
+          "[execution_scheduler]") {
+    // Proves compliance_checker.reset() really runs each call -- duplicate
+    // detection must never span across separate run_once() batches/days.
+    MarketDataHandler market_data;
+    set_quote(market_data, "AAPL", 99.0, 101.0);
+    PositionKeeper positions;
+    RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
+    BrokerSimulator broker_sim;
+    KillSwitch kill_switch;
+    ComplianceChecker compliance_checker;
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
+
+    const auto path =
+        std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_repeat_day.json";
+    {
+        std::ofstream file(path);
+        file << R"({"status":"optimal","positions":[{"symbol":"AAPL","target_notional":10000.0}]})";
+    }
+
+    auto first_call = scheduler.run_once(path.string(), 1'000'000.0);
+    auto second_call = scheduler.run_once(path.string(), 1'000'000.0);
+    std::filesystem::remove(path);
+
+    REQUIRE(first_call.size() == 1);
+    REQUIRE(second_call.size() == 1);
 }
 
 TEST_CASE("compute_book_value is zero for a flat book", "[execution_scheduler]") {
@@ -181,8 +273,10 @@ TEST_CASE("ExecutionScheduler::run_once does nothing when the kill switch is alr
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
     KillSwitch kill_switch;
+    ComplianceChecker compliance_checker;
     kill_switch.trip("manual halt for the test");
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch);
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch);
 
     // A nonexistent path would normally throw -- an already-tripped switch
     // must return before ever touching the file.
@@ -200,9 +294,10 @@ TEST_CASE("ExecutionScheduler::run_once auto-trips the kill switch on a drawdown
     RiskChecker risk_checker(positions, 1'000'000.0, 2'000'000.0);
     BrokerSimulator broker_sim;
     KillSwitch kill_switch;
+    ComplianceChecker compliance_checker;
     // book_notional=10,000, max_drawdown_pct=5% -> trips at a $500 loss; -5000 is far past it
-    ExecutionScheduler scheduler(market_data, positions, risk_checker, broker_sim, kill_switch,
-                                 10'000.0, 0.05);
+    ExecutionScheduler scheduler(market_data, positions, risk_checker, compliance_checker,
+                                  broker_sim, kill_switch, 10'000.0, 0.05);
 
     const auto path = std::filesystem::temp_directory_path() / "mfts_test_target_portfolio_drawdown.json";
     {

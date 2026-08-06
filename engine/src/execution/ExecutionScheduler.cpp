@@ -70,12 +70,14 @@ double compute_book_value(const position::PositionKeeper& positions,
 ExecutionScheduler::ExecutionScheduler(marketdata::MarketDataHandler& market_data,
                                         position::PositionKeeper& positions,
                                         risk::RiskChecker& risk_checker,
+                                        compliance::ComplianceChecker& compliance_checker,
                                         broker::IBrokerGateway& broker,
                                         ops::KillSwitch& kill_switch, double book_notional,
                                         double max_drawdown_pct)
     : market_data_(market_data),
       positions_(positions),
       risk_checker_(risk_checker),
+      compliance_checker_(compliance_checker),
       broker_(broker),
       kill_switch_(kill_switch),
       book_notional_(book_notional),
@@ -86,6 +88,7 @@ std::vector<broker::Order> ExecutionScheduler::run_once(const std::string& targe
     if (kill_switch_.is_tripped()) {
         return {};
     }
+    compliance_checker_.reset();  // duplicate detection is scoped to this batch only
 
     const double book_value = compute_book_value(positions_, market_data_);
     high_water_mark_ = std::max(high_water_mark_, book_value);
@@ -112,8 +115,9 @@ std::vector<broker::Order> ExecutionScheduler::run_once(const std::string& targe
 
     std::vector<broker::Order> submitted;
     for (const auto& order : candidates) {
-        const auto result = risk_checker_.check(order, order.limit_price, buying_power);
-        if (result.passed) {
+        const auto risk_result = risk_checker_.check(order, order.limit_price, buying_power);
+        const auto compliance_result = compliance_checker_.check(order);
+        if (risk_result.passed && compliance_result.passed) {
             broker_.submit_order(order);
             submitted.push_back(order);
         }
