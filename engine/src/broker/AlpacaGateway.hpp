@@ -62,6 +62,12 @@ public:
     void cancel_order(OrderId id) override;
     std::vector<OrderEvent> poll_events() override;
 
+    // The broker's real reported positions (GET /v2/positions) -- used for
+    // daily reconciliation (engine::ops::reconcile_positions) against this
+    // engine's own PositionKeeper. Not part of IBrokerGateway; see
+    // BrokerPosition's own docstring. Live REST call, not unit-tested.
+    std::vector<BrokerPosition> fetch_positions() const;
+
 private:
     struct HttpResponse {
         long status_code = 0;

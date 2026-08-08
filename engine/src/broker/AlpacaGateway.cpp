@@ -174,6 +174,22 @@ std::vector<OrderEvent> AlpacaGateway::poll_events() {
     return out;
 }
 
+std::vector<BrokerPosition> AlpacaGateway::fetch_positions() const {
+    const HttpResponse response = send_request("GET", "/v2/positions");
+    if (response.status_code < 200 || response.status_code >= 300) {
+        throw std::runtime_error("AlpacaGateway::fetch_positions failed (HTTP " +
+                                  std::to_string(response.status_code) + "): " + response.body);
+    }
+
+    const auto parsed = nlohmann::json::parse(response.body);
+    std::vector<BrokerPosition> positions;
+    for (const auto& p : parsed) {
+        positions.push_back(
+            {p.at("symbol").get<std::string>(), std::stod(p.at("qty").get<std::string>())});
+    }
+    return positions;
+}
+
 void AlpacaGateway::connect() {
     ws_.setUrl(base_url_.find("paper") != std::string::npos
                    ? "wss://paper-api.alpaca.markets/stream"

@@ -14,6 +14,17 @@ struct Order {
     bool is_buy;
 };
 
+// A broker's reported position for one symbol (e.g. Alpaca's GET
+// /v2/positions). Not part of IBrokerGateway -- fetching it is meaningful
+// only for a live broker with an independent record to diverge from;
+// BrokerSimulator has none, so reconciling against it would be
+// meaningless. See AlpacaGateway::fetch_positions() and
+// engine::ops::reconcile_positions().
+struct BrokerPosition {
+    std::string symbol;
+    double qty;
+};
+
 // Implemented by both the live Alpaca gateway (Block 5, scoped later) and
 // BrokerSimulator (this skeleton) — order-gateway code calls this interface
 // and never knows which one is behind it. Production callers poll this in a

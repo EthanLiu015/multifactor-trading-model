@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "docs/STATE.md": {
-    "mtime": 1786149938.9243848,
-    "ast_hash": "c3d89feae5168133c6f8fc4cb10aca38",
+    "mtime": 1786046000.6349561,
+    "ast_hash": "bde74b0e838803717e3f97a3f1a109ca",
     "semantic_hash": ""
   },
   "tests/test_crsp_loader.py": {
@@ -80,13 +80,13 @@
     "semantic_hash": ""
   },
   "docs/SYSTEM_MAP.md": {
-    "mtime": 1786149915.81565,
-    "ast_hash": "9997f3cb52a2cfb95aeae2666f31efdf",
+    "mtime": 1786045979.4555795,
+    "ast_hash": "d8d7df3bdbf276991b252ed0106a3892",
     "semantic_hash": ""
   },
   "handoff.md": {
-    "mtime": 1786149964.3937922,
-    "ast_hash": "493867790340f563a696780a044f219f",
+    "mtime": 1786046047.4805474,
+    "ast_hash": "418098899f0d141dac8d6ecc237623b9",
     "semantic_hash": ""
   },
   "research/universe.py": {
@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "engine/include/broker/IBrokerGateway.hpp": {
-    "mtime": 1786149749.9640608,
-    "ast_hash": "60672c0b5839c79319015d6ef3553028",
+    "mtime": 1784215847.1683507,
+    "ast_hash": "4e0e808307f8e53331ad422e962f5a34",
     "semantic_hash": ""
   },
   "engine/include/broker/OrderEvent.hpp": {
@@ -150,13 +150,13 @@
     "semantic_hash": ""
   },
   "engine/CMakeLists.txt": {
-    "mtime": 1786149803.98286,
-    "ast_hash": "ce087c0a083a79caf746b7d268c67afd",
+    "mtime": 1786045675.3104606,
+    "ast_hash": "158c2f5b1f4b3251c4faa367b927bf0f",
     "semantic_hash": ""
   },
   "engine/tests/CMakeLists.txt": {
-    "mtime": 1786149836.9101608,
-    "ast_hash": "3f34799d38e8815c6f9eaa8b2d23209e",
+    "mtime": 1786045716.2726712,
+    "ast_hash": "990659c9d385e682a47337f97fadbec2",
     "semantic_hash": ""
   },
   "research/alpha/__init__.py": {
@@ -445,13 +445,13 @@
     "semantic_hash": ""
   },
   "engine/src/broker/AlpacaGateway.cpp": {
-    "mtime": 1786149769.975665,
-    "ast_hash": "c97d321965d9fab466f77c9f3e182585",
+    "mtime": 1785893109.4535613,
+    "ast_hash": "151454fc2924703795d482b920f6ed77",
     "semantic_hash": ""
   },
   "engine/src/broker/AlpacaGateway.hpp": {
-    "mtime": 1786149759.0173671,
-    "ast_hash": "8da860781ab7bc0fd547049a74d1301b",
+    "mtime": 1785893117.0039356,
+    "ast_hash": "31d75583d418f5084bd82c61087bb8f6",
     "semantic_hash": ""
   },
   "engine/tests/test_alpaca_gateway.cpp": {
@@ -552,21 +552,6 @@
   "engine/tests/test_compliance_checker.cpp": {
     "mtime": 1786045705.5350552,
     "ast_hash": "d390fd4cc93569a73c4ba897772f61d3",
-    "semantic_hash": ""
-  },
-  "engine/include/ops/Reconciliation.hpp": {
-    "mtime": 1786149791.7108364,
-    "ast_hash": "0bca58d8e2424d8af2ba0d16eea01191",
-    "semantic_hash": ""
-  },
-  "engine/src/ops/Reconciliation.cpp": {
-    "mtime": 1786149799.9021983,
-    "ast_hash": "f37dffb30818abc126745b6b8c04810f",
-    "semantic_hash": ""
-  },
-  "engine/tests/test_reconciliation.cpp": {
-    "mtime": 1786149828.4505813,
-    "ast_hash": "5f86ed838e7217a08a80ce7d89e877e4",
     "semantic_hash": ""
   }
 }

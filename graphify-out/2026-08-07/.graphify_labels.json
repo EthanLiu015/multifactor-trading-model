@@ -40,5 +40,6 @@
   "38": "Trade",
   "39": "score_backtest",
   "40": "IBrokerGateway",
-  "41": "test_result.py"
+  "41": "test_result.py",
+  "42": "KillSwitch.cpp"
 }

@@ -33,6 +33,9 @@ target_link_libraries(test_kill_switch PRIVATE broker_sim Catch2::Catch2WithMain
 add_executable(test_compliance_checker test_compliance_checker.cpp)
 target_link_libraries(test_compliance_checker PRIVATE broker_sim Catch2::Catch2WithMain)
 
+add_executable(test_reconciliation test_reconciliation.cpp)
+target_link_libraries(test_reconciliation PRIVATE broker_sim Catch2::Catch2WithMain)
+
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 include(CTest)
 include(Catch)
@@ -45,3 +48,4 @@ catch_discover_tests(test_alpaca_gateway)
 catch_discover_tests(test_execution_scheduler)
 catch_discover_tests(test_kill_switch)
 catch_discover_tests(test_compliance_checker)
+catch_discover_tests(test_reconciliation)
