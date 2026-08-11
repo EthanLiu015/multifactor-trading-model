@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "multifactor-trading-system"
 version = "0.1.0"
@@ -27,3 +31,6 @@ delta = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["research*"]
