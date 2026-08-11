@@ -1,0 +1,3970 @@
+{
+  "rebuild_date": "2023-06-30",
+  "status": "optimal",
+  "positions": [
+    {
+      "symbol": "CCEP",
+      "target_notional": -4.366523251282762
+    },
+    {
+      "symbol": "META",
+      "target_notional": -0.22071436646569903
+    },
+    {
+      "symbol": "UHS",
+      "target_notional": -1.964255943202952
+    },
+    {
+      "symbol": "PCOR",
+      "target_notional": -0.2967508464485014
+    },
+    {
+      "symbol": "FOXA",
+      "target_notional": -0.7866844353979335
+    },
+    {
+      "symbol": "FSLR",
+      "target_notional": 0.26996657430475374
+    },
+    {
+      "symbol": "ADI",
+      "target_notional": -0.5943523812953058
+    },
+    {
+      "symbol": "SRE",
+      "target_notional": -0.025384641329461582
+    },
+    {
+      "symbol": "WTRG",
+      "target_notional": -0.04650365817048957
+    },
+    {
+      "symbol": "WY",
+      "target_notional": -0.8909906202073139
+    },
+    {
+      "symbol": "TDG",
+      "target_notional": -0.7723016108721179
+    },
+    {
+      "symbol": "LBRDK",
+      "target_notional": -0.7351452027958696
+    },
+    {
+      "symbol": "ARW",
+      "target_notional": -0.6768130906410175
+    },
+    {
+      "symbol": "ELV",
+      "target_notional": -2.2106786534457252
+    },
+    {
+      "symbol": "LEA",
+      "target_notional": -0.8891496134436535
+    },
+    {
+      "symbol": "DVA",
+      "target_notional": -1.9413411116473909
+    },
+    {
+      "symbol": "GPK",
+      "target_notional": -0.961983280376636
+    },
+    {
+      "symbol": "EVRG",
+      "target_notional": -0.05241435008149716
+    },
+    {
+      "symbol": "MEDP",
+      "target_notional": -1.629529486506669
+    },
+    {
+      "symbol": "BE",
+      "target_notional": -0.44326493822820867
+    },
+    {
+      "symbol": "FANG",
+      "target_notional": -6882.295893246546
+    },
+    {
+      "symbol": "TMHC",
+      "target_notional": -0.5869785635553333
+    },
+    {
+      "symbol": "AIZ",
+      "target_notional": -1.0046605863029336
+    },
+    {
+      "symbol": "LEGN",
+      "target_notional": -1.8232955320684394
+    },
+    {
+      "symbol": "BBWI",
+      "target_notional": -0.5429601093944233
+    },
+    {
+      "symbol": "BWA",
+      "target_notional": -0.8240089974558085
+    },
+    {
+      "symbol": "RRX",
+      "target_notional": -0.7629128231340463
+    },
+    {
+      "symbol": "LULU",
+      "target_notional": -0.746435330154889
+    },
+    {
+      "symbol": "AVGO",
+      "target_notional": -0.4173791849617007
+    },
+    {
+      "symbol": "AA",
+      "target_notional": 0.21529910774794503
+    },
+    {
+      "symbol": "ITUB",
+      "target_notional": 17712.920809738393
+    },
+    {
+      "symbol": "DECK",
+      "target_notional": -0.6122363644388272
+    },
+    {
+      "symbol": "MELI",
+      "target_notional": -47469.558118597175
+    },
+    {
+      "symbol": "FMX",
+      "target_notional": -4.247214018235995
+    },
+    {
+      "symbol": "MDT",
+      "target_notional": -2.2084587181584396
+    },
+    {
+      "symbol": "BILI",
+      "target_notional": -30154.644856777028
+    },
+    {
+      "symbol": "BJ",
+      "target_notional": -4.446957526525635
+    },
+    {
+      "symbol": "VFC",
+      "target_notional": -0.9121812503594786
+    },
+    {
+      "symbol": "BILL",
+      "target_notional": -0.08769722797379437
+    },
+    {
+      "symbol": "CME",
+      "target_notional": -1.1007458327973545
+    },
+    {
+      "symbol": "MTB",
+      "target_notional": -0.913088664537154
+    },
+    {
+      "symbol": "CM",
+      "target_notional": -0.985038776459233
+    },
+    {
+      "symbol": "TROW",
+      "target_notional": -0.7468911499490554
+    },
+    {
+      "symbol": "CCJ",
+      "target_notional": -0.26496167374750396
+    },
+    {
+      "symbol": "ULTA",
+      "target_notional": -1.020586179776743
+    },
+    {
+      "symbol": "TAL",
+      "target_notional": -3.7157156559040785
+    },
+    {
+      "symbol": "OGE",
+      "target_notional": -0.04242775381728348
+    },
+    {
+      "symbol": "STLA",
+      "target_notional": -0.7955717308756336
+    },
+    {
+      "symbol": "KLAC",
+      "target_notional": -0.41435009935980954
+    },
+    {
+      "symbol": "NXPI",
+      "target_notional": -0.4781626165128619
+    },
+    {
+      "symbol": "SHEL",
+      "target_notional": -0.5441142657204792
+    },
+    {
+      "symbol": "SQM",
+      "target_notional": 0.1521062092766835
+    },
+    {
+      "symbol": "CRWD",
+      "target_notional": -14109.695453319924
+    },
+    {
+      "symbol": "APD",
+      "target_notional": -0.11139637687838014
+    },
+    {
+      "symbol": "JBL",
+      "target_notional": 28850.666113420284
+    },
+    {
+      "symbol": "UAL",
+      "target_notional": -0.6766034137257722
+    },
+    {
+      "symbol": "EXEL",
+      "target_notional": -2.1769415681296
+    },
+    {
+      "symbol": "EQIX",
+      "target_notional": -0.7950741905006564
+    },
+    {
+      "symbol": "EXE",
+      "target_notional": -0.41587887932421536
+    },
+    {
+      "symbol": "WDC",
+      "target_notional": -0.5472580420770973
+    },
+    {
+      "symbol": "ROST",
+      "target_notional": -0.8193991643978483
+    },
+    {
+      "symbol": "INSP",
+      "target_notional": -1.7710040404513403
+    },
+    {
+      "symbol": "PPG",
+      "target_notional": -0.004123259106102394
+    },
+    {
+      "symbol": "LH",
+      "target_notional": -2.192055145582623
+    },
+    {
+      "symbol": "DHR",
+      "target_notional": -2.096995864914509
+    },
+    {
+      "symbol": "CUBE",
+      "target_notional": -0.8614726037312638
+    },
+    {
+      "symbol": "HIG",
+      "target_notional": -0.9488160313299324
+    },
+    {
+      "symbol": "ABG",
+      "target_notional": -0.6670923151147818
+    },
+    {
+      "symbol": "FLEX",
+      "target_notional": -0.40084466395563495
+    },
+    {
+      "symbol": "PAYC",
+      "target_notional": -0.5323741506949228
+    },
+    {
+      "symbol": "AZO",
+      "target_notional": -1.0759343009965388
+    },
+    {
+      "symbol": "SWKS",
+      "target_notional": -0.518964333015617
+    },
+    {
+      "symbol": "MTCH",
+      "target_notional": -0.5629241851133553
+    },
+    {
+      "symbol": "HRI",
+      "target_notional": -0.6094167764326532
+    },
+    {
+      "symbol": "FIVN",
+      "target_notional": -0.4063861001087563
+    },
+    {
+      "symbol": "CNP",
+      "target_notional": -0.036034318019375865
+    },
+    {
+      "symbol": "JCI",
+      "target_notional": -0.8485502427773742
+    },
+    {
+      "symbol": "WST",
+      "target_notional": -1.9214952749243248
+    },
+    {
+      "symbol": "F",
+      "target_notional": -0.7337309103692828
+    },
+    {
+      "symbol": "ENPH",
+      "target_notional": -0.34704846133192074
+    },
+    {
+      "symbol": "CHRD",
+      "target_notional": -0.23374567804808266
+    },
+    {
+      "symbol": "FCNCA",
+      "target_notional": -0.21482379153912354
+    },
+    {
+      "symbol": "PLUG",
+      "target_notional": -0.405841102752153
+    },
+    {
+      "symbol": "BN",
+      "target_notional": -0.8582953289790068
+    },
+    {
+      "symbol": "BCE",
+      "target_notional": -0.9296496212845896
+    },
+    {
+      "symbol": "PZZA",
+      "target_notional": -0.9361778055843557
+    },
+    {
+      "symbol": "MRNA",
+      "target_notional": -1.8338506047410286
+    },
+    {
+      "symbol": "MCHP",
+      "target_notional": -0.4356966436629534
+    },
+    {
+      "symbol": "MCO",
+      "target_notional": -0.7960552072071161
+    },
+    {
+      "symbol": "PAA",
+      "target_notional": -0.42896016089742023
+    },
+    {
+      "symbol": "ACHC",
+      "target_notional": -2.11441118834356
+    },
+    {
+      "symbol": "ASX",
+      "target_notional": -0.47040697512399365
+    },
+    {
+      "symbol": "PAGS",
+      "target_notional": -0.21301503798270913
+    },
+    {
+      "symbol": "TDOC",
+      "target_notional": -1.6777158187916656
+    },
+    {
+      "symbol": "INFY",
+      "target_notional": -0.8367069048041281
+    },
+    {
+      "symbol": "MDLZ",
+      "target_notional": -4.451065735049695
+    },
+    {
+      "symbol": "MTD",
+      "target_notional": -2.001634001648688
+    },
+    {
+      "symbol": "TGT",
+      "target_notional": -4.279371786775317
+    },
+    {
+      "symbol": "FLG",
+      "target_notional": -0.5080380310727793
+    },
+    {
+      "symbol": "LOW",
+      "target_notional": -0.9055151596088634
+    },
+    {
+      "symbol": "IFF",
+      "target_notional": -0.14403118138933518
+    },
+    {
+      "symbol": "NDSN",
+      "target_notional": -0.9318727440481958
+    },
+    {
+      "symbol": "PBR",
+      "target_notional": 30357.063097994105
+    },
+    {
+      "symbol": "BNS",
+      "target_notional": -1.01924610529263
+    },
+    {
+      "symbol": "NE",
+      "target_notional": -0.17753142960245438
+    },
+    {
+      "symbol": "ALNY",
+      "target_notional": -1.612313076971558
+    },
+    {
+      "symbol": "AWK",
+      "target_notional": -0.004990266319993477
+    },
+    {
+      "symbol": "PII",
+      "target_notional": -0.8653180457826763
+    },
+    {
+      "symbol": "ALLY",
+      "target_notional": -11370.025660722296
+    },
+    {
+      "symbol": "BURL",
+      "target_notional": -0.7185589708010621
+    },
+    {
+      "symbol": "AGCO",
+      "target_notional": -0.8136047255706902
+    },
+    {
+      "symbol": "ETSY",
+      "target_notional": -12521.90909503689
+    },
+    {
+      "symbol": "CPAY",
+      "target_notional": -0.6361833128189236
+    },
+    {
+      "symbol": "STT",
+      "target_notional": -0.7581872155120113
+    },
+    {
+      "symbol": "TCOM",
+      "target_notional": -0.7000218859437632
+    },
+    {
+      "symbol": "CHDN",
+      "target_notional": -0.8250789110299571
+    },
+    {
+      "symbol": "SPGI",
+      "target_notional": -0.8840087162811779
+    },
+    {
+      "symbol": "SHW",
+      "target_notional": -0.05795232175561768
+    },
+    {
+      "symbol": "AVB",
+      "target_notional": -0.944217825844387
+    },
+    {
+      "symbol": "EMR",
+      "target_notional": -0.9896026646650298
+    },
+    {
+      "symbol": "WIX",
+      "target_notional": -0.19791138149058662
+    },
+    {
+      "symbol": "CI",
+      "target_notional": -2.227584134360139
+    },
+    {
+      "symbol": "DG",
+      "target_notional": -41087.23307121021
+    },
+    {
+      "symbol": "C",
+      "target_notional": -0.8682794196314163
+    },
+    {
+      "symbol": "VZ",
+      "target_notional": -0.9832244551912563
+    },
+    {
+      "symbol": "RIVN",
+      "target_notional": -0.5237081716765704
+    },
+    {
+      "symbol": "GGG",
+      "target_notional": -0.8734885469522894
+    },
+    {
+      "symbol": "SM",
+      "target_notional": -0.293871513137189
+    },
+    {
+      "symbol": "NVS",
+      "target_notional": -2.2273954855856477
+    },
+    {
+      "symbol": "GEN",
+      "target_notional": -0.7897978040200165
+    },
+    {
+      "symbol": "BC",
+      "target_notional": -0.7780774708548724
+    },
+    {
+      "symbol": "XP",
+      "target_notional": 95846.59006394014
+    },
+    {
+      "symbol": "XYL",
+      "target_notional": -0.8464283735961615
+    },
+    {
+      "symbol": "ABT",
+      "target_notional": -2.2106561048371502
+    },
+    {
+      "symbol": "BKNG",
+      "target_notional": -0.8129932682169454
+    },
+    {
+      "symbol": "MUR",
+      "target_notional": -0.2716717587207633
+    },
+    {
+      "symbol": "KDP",
+      "target_notional": -4.5528132346674495
+    },
+    {
+      "symbol": "HST",
+      "target_notional": -0.7679206623535937
+    },
+    {
+      "symbol": "CSX",
+      "target_notional": -0.9790828844413826
+    },
+    {
+      "symbol": "NVR",
+      "target_notional": -0.8368558384630954
+    },
+    {
+      "symbol": "FOUR",
+      "target_notional": -0.05275156508839595
+    },
+    {
+      "symbol": "PDD",
+      "target_notional": -0.5058044833461925
+    },
+    {
+      "symbol": "DDOG",
+      "target_notional": -0.2718186869095233
+    },
+    {
+      "symbol": "GRMN",
+      "target_notional": -0.7270888724713114
+    },
+    {
+      "symbol": "WEC",
+      "target_notional": -0.06747789971451797
+    },
+    {
+      "symbol": "BOOT",
+      "target_notional": -0.6545426474209008
+    },
+    {
+      "symbol": "CBRE",
+      "target_notional": -0.8084055882484704
+    },
+    {
+      "symbol": "RNG",
+      "target_notional": -71808.99068319847
+    },
+    {
+      "symbol": "CBOE",
+      "target_notional": -1.0029747233970001
+    },
+    {
+      "symbol": "IONS",
+      "target_notional": -1.9987135226301231
+    },
+    {
+      "symbol": "DAL",
+      "target_notional": -0.7792785299125429
+    },
+    {
+      "symbol": "TXT",
+      "target_notional": -0.9502312511785733
+    },
+    {
+      "symbol": "AMZN",
+      "target_notional": -0.762351263152651
+    },
+    {
+      "symbol": "NWSA",
+      "target_notional": -0.6368113756752771
+    },
+    {
+      "symbol": "GDDY",
+      "target_notional": -0.7192569470546378
+    },
+    {
+      "symbol": "GWRE",
+      "target_notional": -0.5521337573544651
+    },
+    {
+      "symbol": "AU",
+      "target_notional": 0.23259932709919962
+    },
+    {
+      "symbol": "CLX",
+      "target_notional": -4.403592660446067
+    },
+    {
+      "symbol": "IBKR",
+      "target_notional": -0.7620368912846924
+    },
+    {
+      "symbol": "EGP",
+      "target_notional": -0.8640913537399489
+    },
+    {
+      "symbol": "JKHY",
+      "target_notional": -0.8129091205249684
+    },
+    {
+      "symbol": "AAPL",
+      "target_notional": -0.6009187589825155
+    },
+    {
+      "symbol": "VTRS",
+      "target_notional": -2.1264676363254167
+    },
+    {
+      "symbol": "PG",
+      "target_notional": -4.521771838486862
+    },
+    {
+      "symbol": "STNE",
+      "target_notional": 0.05986958875416489
+    },
+    {
+      "symbol": "INVH",
+      "target_notional": -0.8936469429224105
+    },
+    {
+      "symbol": "BTU",
+      "target_notional": -0.2599758060819253
+    },
+    {
+      "symbol": "ZTO",
+      "target_notional": -0.8581941801032078
+    },
+    {
+      "symbol": "AVTR",
+      "target_notional": -2.116579295656669
+    },
+    {
+      "symbol": "BAC",
+      "target_notional": -0.9278347903342965
+    },
+    {
+      "symbol": "TS",
+      "target_notional": -0.399178638451845
+    },
+    {
+      "symbol": "D",
+      "target_notional": -0.13418273372759024
+    },
+    {
+      "symbol": "CB",
+      "target_notional": -1.042385611902239
+    },
+    {
+      "symbol": "BKR",
+      "target_notional": -0.4438085637706133
+    },
+    {
+      "symbol": "BABA",
+      "target_notional": -0.8112402873295159
+    },
+    {
+      "symbol": "FWONK",
+      "target_notional": -0.72918560589011
+    },
+    {
+      "symbol": "LI",
+      "target_notional": -0.6320411212721446
+    },
+    {
+      "symbol": "NNN",
+      "target_notional": -1.0168206744554995
+    },
+    {
+      "symbol": "NET",
+      "target_notional": -34697.98799869084
+    },
+    {
+      "symbol": "MAA",
+      "target_notional": -0.9562692751645521
+    },
+    {
+      "symbol": "GD",
+      "target_notional": -1.1058430387781408
+    },
+    {
+      "symbol": "NXST",
+      "target_notional": -0.7237158540473296
+    },
+    {
+      "symbol": "CACI",
+      "target_notional": 6891.6595022929
+    },
+    {
+      "symbol": "PBR-A",
+      "target_notional": 44695.410258217584
+    },
+    {
+      "symbol": "HSIC",
+      "target_notional": -2.201570824349319
+    },
+    {
+      "symbol": "WSM",
+      "target_notional": -0.7471215978527079
+    },
+    {
+      "symbol": "NVT",
+      "target_notional": -0.7687434208351835
+    },
+    {
+      "symbol": "TECH",
+      "target_notional": -2.0313175830459373
+    },
+    {
+      "symbol": "RL",
+      "target_notional": -0.8054970789767049
+    },
+    {
+      "symbol": "PVH",
+      "target_notional": -39185.91420140914
+    },
+    {
+      "symbol": "EQH",
+      "target_notional": -0.798933484314988
+    },
+    {
+      "symbol": "FBIN",
+      "target_notional": -0.751610077627632
+    },
+    {
+      "symbol": "NTLA",
+      "target_notional": -1.652616024198269
+    },
+    {
+      "symbol": "RBA",
+      "target_notional": -0.9746581180909988
+    },
+    {
+      "symbol": "DOCN",
+      "target_notional": -0.22874609133545606
+    },
+    {
+      "symbol": "SITE",
+      "target_notional": -0.6634081052185279
+    },
+    {
+      "symbol": "YETI",
+      "target_notional": -33210.10358630546
+    },
+    {
+      "symbol": "ATO",
+      "target_notional": 0.005167889675901072
+    },
+    {
+      "symbol": "FERG",
+      "target_notional": -0.8241451732386411
+    },
+    {
+      "symbol": "LVS",
+      "target_notional": -0.6679454245413587
+    },
+    {
+      "symbol": "MAS",
+      "target_notional": -0.8722514735757797
+    },
+    {
+      "symbol": "NIO",
+      "target_notional": -0.5554707198928327
+    },
+    {
+      "symbol": "TOL",
+      "target_notional": -0.7263822247120314
+    },
+    {
+      "symbol": "BYD",
+      "target_notional": -0.8667423358765713
+    },
+    {
+      "symbol": "OLLI",
+      "target_notional": -4.145427821424176
+    },
+    {
+      "symbol": "TD",
+      "target_notional": -1.0179016434949404
+    },
+    {
+      "symbol": "RACE",
+      "target_notional": -0.8473758309324938
+    },
+    {
+      "symbol": "HBAN",
+      "target_notional": -0.8347349965373511
+    },
+    {
+      "symbol": "WEN",
+      "target_notional": -1.0049167450932561
+    },
+    {
+      "symbol": "PODD",
+      "target_notional": -1.882818726024159
+    },
+    {
+      "symbol": "VAC",
+      "target_notional": -19485.830027132743
+    },
+    {
+      "symbol": "GXO",
+      "target_notional": -0.5744988039338577
+    },
+    {
+      "symbol": "RMD",
+      "target_notional": -2.158850941375147
+    },
+    {
+      "symbol": "MTZ",
+      "target_notional": -0.686454790526335
+    },
+    {
+      "symbol": "UTHR",
+      "target_notional": -2.249686810944478
+    },
+    {
+      "symbol": "UAA",
+      "target_notional": -70135.30923795214
+    },
+    {
+      "symbol": "WMT",
+      "target_notional": -4.418726930097719
+    },
+    {
+      "symbol": "YUMC",
+      "target_notional": -0.8950155278983297
+    },
+    {
+      "symbol": "GPN",
+      "target_notional": -30416.834965441525
+    },
+    {
+      "symbol": "AKAM",
+      "target_notional": -0.7543245475107474
+    },
+    {
+      "symbol": "KMX",
+      "target_notional": -0.7399611126616019
+    },
+    {
+      "symbol": "NBIX",
+      "target_notional": -2.192286721362325
+    },
+    {
+      "symbol": "SE",
+      "target_notional": -44774.16619828352
+    },
+    {
+      "symbol": "CELH",
+      "target_notional": -3.5629023489981937
+    },
+    {
+      "symbol": "ORLY",
+      "target_notional": -0.996560016414535
+    },
+    {
+      "symbol": "WFC",
+      "target_notional": -0.8812600997712358
+    },
+    {
+      "symbol": "HDB",
+      "target_notional": -0.9237435755486517
+    },
+    {
+      "symbol": "HAL",
+      "target_notional": -0.3460167795469752
+    },
+    {
+      "symbol": "HUBB",
+      "target_notional": -0.7499412244400347
+    },
+    {
+      "symbol": "SIG",
+      "target_notional": -13153.966930173663
+    },
+    {
+      "symbol": "ZBH",
+      "target_notional": -2.1138977611092074
+    },
+    {
+      "symbol": "APH",
+      "target_notional": -0.7018946128497363
+    },
+    {
+      "symbol": "ALGN",
+      "target_notional": -1.633998962598986
+    },
+    {
+      "symbol": "NEE",
+      "target_notional": 0.015446864279309877
+    },
+    {
+      "symbol": "FE",
+      "target_notional": -0.01964734048597034
+    },
+    {
+      "symbol": "QGEN",
+      "target_notional": -2.2346919188345358
+    },
+    {
+      "symbol": "SCI",
+      "target_notional": -1.0764760888629443
+    },
+    {
+      "symbol": "MRSH",
+      "target_notional": -0.9705682427062552
+    },
+    {
+      "symbol": "ACN",
+      "target_notional": -0.6815813967622051
+    },
+    {
+      "symbol": "TKO",
+      "target_notional": -0.5704044091372062
+    },
+    {
+      "symbol": "XRAY",
+      "target_notional": -2.0447931473489196
+    },
+    {
+      "symbol": "DOV",
+      "target_notional": -0.9146117396020748
+    },
+    {
+      "symbol": "SONY",
+      "target_notional": -0.7046116610994918
+    },
+    {
+      "symbol": "WPC",
+      "target_notional": -1.0420796340866283
+    },
+    {
+      "symbol": "SYK",
+      "target_notional": -1.9950167779177934
+    },
+    {
+      "symbol": "NTR",
+      "target_notional": -0.07494165134690282
+    },
+    {
+      "symbol": "NOW",
+      "target_notional": -0.4513406283008615
+    },
+    {
+      "symbol": "ANET",
+      "target_notional": -0.303531247293902
+    },
+    {
+      "symbol": "LAD",
+      "target_notional": -0.8374895625102742
+    },
+    {
+      "symbol": "VNO",
+      "target_notional": 14160.279853945667
+    },
+    {
+      "symbol": "CINF",
+      "target_notional": -0.938089822968572
+    },
+    {
+      "symbol": "CPT",
+      "target_notional": -0.9883150837880524
+    },
+    {
+      "symbol": "PPL",
+      "target_notional": -0.039721104392300643
+    },
+    {
+      "symbol": "CALM",
+      "target_notional": -4.334650661246862
+    },
+    {
+      "symbol": "KNSL",
+      "target_notional": 45992.19232952813
+    },
+    {
+      "symbol": "MRVL",
+      "target_notional": -0.09373467681165365
+    },
+    {
+      "symbol": "CP",
+      "target_notional": -0.9769342144787884
+    },
+    {
+      "symbol": "VICI",
+      "target_notional": -0.9573219258576252
+    },
+    {
+      "symbol": "JPM",
+      "target_notional": -0.8687117410146025
+    },
+    {
+      "symbol": "NKE",
+      "target_notional": -0.8591043565025651
+    },
+    {
+      "symbol": "ARCC",
+      "target_notional": -0.9447300373853426
+    },
+    {
+      "symbol": "CHD",
+      "target_notional": -4.49281864337425
+    },
+    {
+      "symbol": "VTR",
+      "target_notional": -0.9206407155603439
+    },
+    {
+      "symbol": "APP",
+      "target_notional": -11121.091591602855
+    },
+    {
+      "symbol": "NSC",
+      "target_notional": -1.0257148860135794
+    },
+    {
+      "symbol": "MKC",
+      "target_notional": -4.445348677503761
+    },
+    {
+      "symbol": "TSM",
+      "target_notional": -0.5467387304770208
+    },
+    {
+      "symbol": "CVE",
+      "target_notional": -3288.8957938927256
+    },
+    {
+      "symbol": "HPQ",
+      "target_notional": -0.6943871622221909
+    },
+    {
+      "symbol": "RNR",
+      "target_notional": -0.8419812248269257
+    },
+    {
+      "symbol": "PNW",
+      "target_notional": 0.02318701284860787
+    },
+    {
+      "symbol": "SNAP",
+      "target_notional": -0.16396596563797872
+    },
+    {
+      "symbol": "TSLA",
+      "target_notional": -0.5786015882405294
+    },
+    {
+      "symbol": "VALE",
+      "target_notional": -0.0076710256587331225
+    },
+    {
+      "symbol": "MET",
+      "target_notional": -0.9793569182981314
+    },
+    {
+      "symbol": "APO",
+      "target_notional": -0.6130599325995649
+    },
+    {
+      "symbol": "SLAB",
+      "target_notional": -0.4539959374245454
+    },
+    {
+      "symbol": "IP",
+      "target_notional": -1.0392056778390077
+    },
+    {
+      "symbol": "BG",
+      "target_notional": -4.28910271411813
+    },
+    {
+      "symbol": "BZ",
+      "target_notional": -0.3893328929822151
+    },
+    {
+      "symbol": "B",
+      "target_notional": -0.0951528226064437
+    },
+    {
+      "symbol": "OZK",
+      "target_notional": -0.7425979126991654
+    },
+    {
+      "symbol": "MPT",
+      "target_notional": -0.8534752530458364
+    },
+    {
+      "symbol": "RY",
+      "target_notional": -1.024583396052025
+    },
+    {
+      "symbol": "NOC",
+      "target_notional": -1.0638139907997726
+    },
+    {
+      "symbol": "PEG",
+      "target_notional": -0.010738343789090408
+    },
+    {
+      "symbol": "AAP",
+      "target_notional": -29447.287563961414
+    },
+    {
+      "symbol": "W",
+      "target_notional": 69048.31734791196
+    },
+    {
+      "symbol": "HLI",
+      "target_notional": -0.8853456413034593
+    },
+    {
+      "symbol": "DLR",
+      "target_notional": -0.8397246196810553
+    },
+    {
+      "symbol": "CFR",
+      "target_notional": -0.8744633744204034
+    },
+    {
+      "symbol": "CASY",
+      "target_notional": -1.0361370216969388
+    },
+    {
+      "symbol": "RIG",
+      "target_notional": 0.24344280505448956
+    },
+    {
+      "symbol": "WRB",
+      "target_notional": -1.0569310656676916
+    },
+    {
+      "symbol": "REGN",
+      "target_notional": -2.0295401469626224
+    },
+    {
+      "symbol": "EME",
+      "target_notional": -0.7699403948524319
+    },
+    {
+      "symbol": "DELL",
+      "target_notional": -0.6312177026558925
+    },
+    {
+      "symbol": "INCY",
+      "target_notional": -2.2884866105500317
+    },
+    {
+      "symbol": "SUI",
+      "target_notional": -0.9366757272158205
+    },
+    {
+      "symbol": "KBH",
+      "target_notional": -0.6948052895073359
+    },
+    {
+      "symbol": "XPEV",
+      "target_notional": 230752.5634632949
+    },
+    {
+      "symbol": "PRKS",
+      "target_notional": -26964.476134121353
+    },
+    {
+      "symbol": "EXPD",
+      "target_notional": -0.9145903056963174
+    },
+    {
+      "symbol": "CBRL",
+      "target_notional": -23737.328597610194
+    },
+    {
+      "symbol": "CPRI",
+      "target_notional": -38177.56829458153
+    },
+    {
+      "symbol": "RRC",
+      "target_notional": -0.20191117772477035
+    },
+    {
+      "symbol": "STM",
+      "target_notional": -0.40702531994903174
+    },
+    {
+      "symbol": "ZIM",
+      "target_notional": -43045.09578502657
+    },
+    {
+      "symbol": "AEM",
+      "target_notional": -0.00728942097561904
+    },
+    {
+      "symbol": "PB",
+      "target_notional": -0.9883097704897323
+    },
+    {
+      "symbol": "ST",
+      "target_notional": -0.6185245058003571
+    },
+    {
+      "symbol": "WPM",
+      "target_notional": -0.014648373439232367
+    },
+    {
+      "symbol": "ACM",
+      "target_notional": -0.9340878874409797
+    },
+    {
+      "symbol": "HPE",
+      "target_notional": -0.6609288360755485
+    },
+    {
+      "symbol": "PNR",
+      "target_notional": -0.7783593702794238
+    },
+    {
+      "symbol": "CTSH",
+      "target_notional": -0.7374494096467509
+    },
+    {
+      "symbol": "SCHW",
+      "target_notional": -0.83154610114052
+    },
+    {
+      "symbol": "UPST",
+      "target_notional": 0.19886927617918834
+    },
+    {
+      "symbol": "PFG",
+      "target_notional": -0.8651435429292404
+    },
+    {
+      "symbol": "GE",
+      "target_notional": -0.6198600036467206
+    },
+    {
+      "symbol": "S",
+      "target_notional": -150035.71775490572
+    },
+    {
+      "symbol": "UNP",
+      "target_notional": -1.0235138893568854
+    },
+    {
+      "symbol": "HTZ",
+      "target_notional": -0.7351325512876157
+    },
+    {
+      "symbol": "ELF",
+      "target_notional": 41327.47253989935
+    },
+    {
+      "symbol": "ARE",
+      "target_notional": -0.9035124121244259
+    },
+    {
+      "symbol": "CCL",
+      "target_notional": 188933.0258906952
+    },
+    {
+      "symbol": "PENN",
+      "target_notional": -80684.46555564489
+    },
+    {
+      "symbol": "ON",
+      "target_notional": -0.15124499458200105
+    },
+    {
+      "symbol": "ADSK",
+      "target_notional": -0.5040672649306429
+    },
+    {
+      "symbol": "AXSM",
+      "target_notional": -1.225189192605758
+    },
+    {
+      "symbol": "MA",
+      "target_notional": -0.9236100634031097
+    },
+    {
+      "symbol": "UPS",
+      "target_notional": -0.9873609467062657
+    },
+    {
+      "symbol": "TSCO",
+      "target_notional": -0.9764270171080969
+    },
+    {
+      "symbol": "DBX",
+      "target_notional": -0.6625413004754727
+    },
+    {
+      "symbol": "FRO",
+      "target_notional": -0.019733966609292976
+    },
+    {
+      "symbol": "CNH",
+      "target_notional": -0.8105945597246483
+    },
+    {
+      "symbol": "EL",
+      "target_notional": -4.306762145915717
+    },
+    {
+      "symbol": "ALC",
+      "target_notional": -2.0842323641438654
+    },
+    {
+      "symbol": "CMCSA",
+      "target_notional": -0.7547896173516795
+    },
+    {
+      "symbol": "STLD",
+      "target_notional": 0.21764029698366677
+    },
+    {
+      "symbol": "CPB",
+      "target_notional": -4.498836492920563
+    },
+    {
+      "symbol": "HON",
+      "target_notional": -1.0091929103954351
+    },
+    {
+      "symbol": "CHWY",
+      "target_notional": -0.5276164622964966
+    },
+    {
+      "symbol": "ABBV",
+      "target_notional": -2.284008625994117
+    },
+    {
+      "symbol": "LCID",
+      "target_notional": -131407.90622061942
+    },
+    {
+      "symbol": "CVNA",
+      "target_notional": 340069.3060060889
+    },
+    {
+      "symbol": "JNJ",
+      "target_notional": -2.3693227068077025
+    },
+    {
+      "symbol": "EQNR",
+      "target_notional": -0.5696741099671248
+    },
+    {
+      "symbol": "TJX",
+      "target_notional": -0.9489954576655071
+    },
+    {
+      "symbol": "GOOG",
+      "target_notional": -0.6147371858876401
+    },
+    {
+      "symbol": "ENB",
+      "target_notional": -4713.983199291508
+    },
+    {
+      "symbol": "OLN",
+      "target_notional": 0.03665085263945489
+    },
+    {
+      "symbol": "ROP",
+      "target_notional": -0.7847619174116304
+    },
+    {
+      "symbol": "PTCT",
+      "target_notional": -1.876039286269307
+    },
+    {
+      "symbol": "ADC",
+      "target_notional": -1.0614275590087374
+    },
+    {
+      "symbol": "THC",
+      "target_notional": -1.7002766752550824
+    },
+    {
+      "symbol": "EFX",
+      "target_notional": -0.8059752869162586
+    },
+    {
+      "symbol": "WEX",
+      "target_notional": -0.6095804427486542
+    },
+    {
+      "symbol": "CNX",
+      "target_notional": -0.46222085426844617
+    },
+    {
+      "symbol": "URBN",
+      "target_notional": -0.5563998482963456
+    },
+    {
+      "symbol": "STWD",
+      "target_notional": -0.8641144587168034
+    },
+    {
+      "symbol": "PFE",
+      "target_notional": -2.308856211310316
+    },
+    {
+      "symbol": "AME",
+      "target_notional": -0.9264309983434776
+    },
+    {
+      "symbol": "Z",
+      "target_notional": -0.3341347296753402
+    },
+    {
+      "symbol": "PCVX",
+      "target_notional": -1.0966104016828466
+    },
+    {
+      "symbol": "NDAQ",
+      "target_notional": -18998.75952199545
+    },
+    {
+      "symbol": "HUN",
+      "target_notional": -0.11042436835965569
+    },
+    {
+      "symbol": "ITW",
+      "target_notional": -0.915412352357991
+    },
+    {
+      "symbol": "TMUS",
+      "target_notional": -0.8675144051035227
+    },
+    {
+      "symbol": "GFS",
+      "target_notional": -0.31315314688788803
+    },
+    {
+      "symbol": "PAG",
+      "target_notional": -0.7933038591131973
+    },
+    {
+      "symbol": "COO",
+      "target_notional": -2.0224342046741435
+    },
+    {
+      "symbol": "CVS",
+      "target_notional": -2.2751783293104437
+    },
+    {
+      "symbol": "BLK",
+      "target_notional": -0.8093564113215648
+    },
+    {
+      "symbol": "EPAM",
+      "target_notional": -54990.99002029663
+    },
+    {
+      "symbol": "CL",
+      "target_notional": -4.5522947524142
+    },
+    {
+      "symbol": "GMED",
+      "target_notional": -2.0460884854209223
+    },
+    {
+      "symbol": "PINS",
+      "target_notional": -0.25835604442806476
+    },
+    {
+      "symbol": "WMS",
+      "target_notional": -0.5971746939763983
+    },
+    {
+      "symbol": "DOCS",
+      "target_notional": -1.6997221482938956
+    },
+    {
+      "symbol": "IONQ",
+      "target_notional": 36911.08357524832
+    },
+    {
+      "symbol": "NVST",
+      "target_notional": -2.135503057451039
+    },
+    {
+      "symbol": "SPG",
+      "target_notional": -0.8020745603492977
+    },
+    {
+      "symbol": "BLDR",
+      "target_notional": -0.3546634603829724
+    },
+    {
+      "symbol": "LLY",
+      "target_notional": -2.114647858691533
+    },
+    {
+      "symbol": "DGX",
+      "target_notional": -2.2404223570318464
+    },
+    {
+      "symbol": "SLG",
+      "target_notional": -0.6882724800115636
+    },
+    {
+      "symbol": "PWR",
+      "target_notional": -0.7635894016389855
+    },
+    {
+      "symbol": "WCN",
+      "target_notional": -1.0647541763878619
+    },
+    {
+      "symbol": "NLY",
+      "target_notional": -0.8150580862892743
+    },
+    {
+      "symbol": "V",
+      "target_notional": -0.9703751813127658
+    },
+    {
+      "symbol": "CMS",
+      "target_notional": -0.06879034032952373
+    },
+    {
+      "symbol": "SU",
+      "target_notional": -7366.546517326369
+    },
+    {
+      "symbol": "TRMB",
+      "target_notional": -0.6510241251583017
+    },
+    {
+      "symbol": "GIS",
+      "target_notional": -4.488723571187041
+    },
+    {
+      "symbol": "IDXX",
+      "target_notional": -1.876024264293588
+    },
+    {
+      "symbol": "TEAM",
+      "target_notional": -23730.820453612832
+    },
+    {
+      "symbol": "NFLX",
+      "target_notional": -0.09215944590791554
+    },
+    {
+      "symbol": "CDW",
+      "target_notional": -0.6958141536839743
+    },
+    {
+      "symbol": "AQN",
+      "target_notional": 0.0373649162276138
+    },
+    {
+      "symbol": "GPC",
+      "target_notional": -1.035248682947765
+    },
+    {
+      "symbol": "COTY",
+      "target_notional": -4.034352034198919
+    },
+    {
+      "symbol": "TECK",
+      "target_notional": 0.2503932058908711
+    },
+    {
+      "symbol": "GS",
+      "target_notional": -0.9032007580445667
+    },
+    {
+      "symbol": "ALB",
+      "target_notional": 0.1226160623959449
+    },
+    {
+      "symbol": "HP",
+      "target_notional": -0.32598936699620684
+    },
+    {
+      "symbol": "PLNT",
+      "target_notional": -0.8938474402557003
+    },
+    {
+      "symbol": "USFD",
+      "target_notional": -4.228300957919564
+    },
+    {
+      "symbol": "EIX",
+      "target_notional": 0.06390346925752449
+    },
+    {
+      "symbol": "MNST",
+      "target_notional": -4.377463526772211
+    },
+    {
+      "symbol": "VRSK",
+      "target_notional": -0.9182823862500167
+    },
+    {
+      "symbol": "TSN",
+      "target_notional": -4.52408551158771
+    },
+    {
+      "symbol": "BBY",
+      "target_notional": -0.8202165309442218
+    },
+    {
+      "symbol": "OHI",
+      "target_notional": -0.9014623282563481
+    },
+    {
+      "symbol": "FHN",
+      "target_notional": -0.9090924398361725
+    },
+    {
+      "symbol": "FIVE",
+      "target_notional": -0.6241650318969205
+    },
+    {
+      "symbol": "VLY",
+      "target_notional": -0.8012891058444865
+    },
+    {
+      "symbol": "ALL",
+      "target_notional": -0.9664107612328384
+    },
+    {
+      "symbol": "NEM",
+      "target_notional": -0.178058466336784
+    },
+    {
+      "symbol": "VOD",
+      "target_notional": -0.9075854370968822
+    },
+    {
+      "symbol": "BIO",
+      "target_notional": -2.062165707988577
+    },
+    {
+      "symbol": "IOT",
+      "target_notional": 165178.1397909984
+    },
+    {
+      "symbol": "FNF",
+      "target_notional": -0.9009502834476478
+    },
+    {
+      "symbol": "AAL",
+      "target_notional": -0.7097864028310302
+    },
+    {
+      "symbol": "AN",
+      "target_notional": -0.7959392933944457
+    },
+    {
+      "symbol": "RYAAY",
+      "target_notional": -0.7192198557714877
+    },
+    {
+      "symbol": "UMC",
+      "target_notional": -0.5184104359724384
+    },
+    {
+      "symbol": "COF",
+      "target_notional": -0.7216527445050931
+    },
+    {
+      "symbol": "WBD",
+      "target_notional": -0.4342932681872069
+    },
+    {
+      "symbol": "WM",
+      "target_notional": -1.1023697719112497
+    },
+    {
+      "symbol": "ESS",
+      "target_notional": -0.9536475815831839
+    },
+    {
+      "symbol": "FAST",
+      "target_notional": -0.944797562081468
+    },
+    {
+      "symbol": "STZ",
+      "target_notional": -4.442824871100074
+    },
+    {
+      "symbol": "CAR",
+      "target_notional": -0.5142893730529323
+    },
+    {
+      "symbol": "AI",
+      "target_notional": 0.7175604961908701
+    },
+    {
+      "symbol": "PANW",
+      "target_notional": 26577.360822656152
+    },
+    {
+      "symbol": "EXPE",
+      "target_notional": -0.7532186242013427
+    },
+    {
+      "symbol": "CRUS",
+      "target_notional": -0.6072778972512896
+    },
+    {
+      "symbol": "EOG",
+      "target_notional": -0.4359405935730623
+    },
+    {
+      "symbol": "HSBC",
+      "target_notional": -0.9204123812910445
+    },
+    {
+      "symbol": "ELAN",
+      "target_notional": -2.052864576875521
+    },
+    {
+      "symbol": "CPRT",
+      "target_notional": -0.7949019983722383
+    },
+    {
+      "symbol": "TRP",
+      "target_notional": -1320.3381808186355
+    },
+    {
+      "symbol": "DUOL",
+      "target_notional": -0.09752534327082092
+    },
+    {
+      "symbol": "COST",
+      "target_notional": -4.3827475390851465
+    },
+    {
+      "symbol": "LEN",
+      "target_notional": -0.7378390387368099
+    },
+    {
+      "symbol": "U",
+      "target_notional": 56301.594263705134
+    },
+    {
+      "symbol": "MT",
+      "target_notional": 0.054133467459560165
+    },
+    {
+      "symbol": "EQR",
+      "target_notional": -0.965798674960652
+    },
+    {
+      "symbol": "KHC",
+      "target_notional": -4.517883044790062
+    },
+    {
+      "symbol": "TDY",
+      "target_notional": -0.7594136843044137
+    },
+    {
+      "symbol": "GH",
+      "target_notional": -1.576025127550483
+    },
+    {
+      "symbol": "STX",
+      "target_notional": -0.5982152213039117
+    },
+    {
+      "symbol": "NVDA",
+      "target_notional": 0.19660887215878575
+    },
+    {
+      "symbol": "MRK",
+      "target_notional": -2.2245758378503
+    },
+    {
+      "symbol": "AMCR",
+      "target_notional": -1.108677595028095
+    },
+    {
+      "symbol": "BHP",
+      "target_notional": -0.03197116379999632
+    },
+    {
+      "symbol": "EA",
+      "target_notional": -0.8626344905116646
+    },
+    {
+      "symbol": "UGI",
+      "target_notional": -0.006466112845545024
+    },
+    {
+      "symbol": "ADM",
+      "target_notional": -4.414132666772463
+    },
+    {
+      "symbol": "BAP",
+      "target_notional": -0.8723092045486994
+    },
+    {
+      "symbol": "TER",
+      "target_notional": -0.5071457711359155
+    },
+    {
+      "symbol": "FRPT",
+      "target_notional": -4.073390622999332
+    },
+    {
+      "symbol": "HRL",
+      "target_notional": -4.5998666218072835
+    },
+    {
+      "symbol": "DTE",
+      "target_notional": -0.08458014946739699
+    },
+    {
+      "symbol": "SYF",
+      "target_notional": -0.6852430479102077
+    },
+    {
+      "symbol": "MFC",
+      "target_notional": -0.913849482099199
+    },
+    {
+      "symbol": "ELS",
+      "target_notional": -0.9578652885899817
+    },
+    {
+      "symbol": "POR",
+      "target_notional": 0.012418903008222092
+    },
+    {
+      "symbol": "HAS",
+      "target_notional": -0.9901332289979695
+    },
+    {
+      "symbol": "OC",
+      "target_notional": -0.7225483596266408
+    },
+    {
+      "symbol": "FITB",
+      "target_notional": -0.8400654023508193
+    },
+    {
+      "symbol": "TEL",
+      "target_notional": -0.6788034735650571
+    },
+    {
+      "symbol": "WAB",
+      "target_notional": -0.9341451236875659
+    },
+    {
+      "symbol": "HTHT",
+      "target_notional": -0.7246416395975837
+    },
+    {
+      "symbol": "RHP",
+      "target_notional": -0.7461113164132027
+    },
+    {
+      "symbol": "VVV",
+      "target_notional": -0.9032341627185594
+    },
+    {
+      "symbol": "CAG",
+      "target_notional": -4.509567602389251
+    },
+    {
+      "symbol": "BRO",
+      "target_notional": -0.9248921240930241
+    },
+    {
+      "symbol": "STNG",
+      "target_notional": -0.2920052569557092
+    },
+    {
+      "symbol": "ZS",
+      "target_notional": -0.27142819802957613
+    },
+    {
+      "symbol": "MTN",
+      "target_notional": -0.9354146004799317
+    },
+    {
+      "symbol": "BMY",
+      "target_notional": -2.347057722136119
+    },
+    {
+      "symbol": "AES",
+      "target_notional": 0.14167690921669965
+    },
+    {
+      "symbol": "AJG",
+      "target_notional": -0.9381480960218609
+    },
+    {
+      "symbol": "GFI",
+      "target_notional": 0.27780165204374624
+    },
+    {
+      "symbol": "DUK",
+      "target_notional": -0.09904760940164083
+    },
+    {
+      "symbol": "ONC",
+      "target_notional": -47460.63109034553
+    },
+    {
+      "symbol": "CNI",
+      "target_notional": -1.0316667956708057
+    },
+    {
+      "symbol": "ICLR",
+      "target_notional": -1.979724884356912
+    },
+    {
+      "symbol": "GL",
+      "target_notional": -0.9997890935740804
+    },
+    {
+      "symbol": "TPR",
+      "target_notional": -0.7555008788376927
+    },
+    {
+      "symbol": "CDNS",
+      "target_notional": -0.5057318898589386
+    },
+    {
+      "symbol": "PLD",
+      "target_notional": -0.8297182968474284
+    },
+    {
+      "symbol": "BAH",
+      "target_notional": -1.0221985565916483
+    },
+    {
+      "symbol": "EXP",
+      "target_notional": 0.08566423237442763
+    },
+    {
+      "symbol": "SYY",
+      "target_notional": -4.504362027202327
+    },
+    {
+      "symbol": "MP",
+      "target_notional": 0.17092075403550017
+    },
+    {
+      "symbol": "LYB",
+      "target_notional": -0.0937062724551555
+    },
+    {
+      "symbol": "MARA",
+      "target_notional": 48481.14248566707
+    },
+    {
+      "symbol": "GSK",
+      "target_notional": -2.2855523984078143
+    },
+    {
+      "symbol": "OKE",
+      "target_notional": -0.48946459870245923
+    },
+    {
+      "symbol": "DRI",
+      "target_notional": -0.922602056328179
+    },
+    {
+      "symbol": "MGM",
+      "target_notional": -0.7259117641583595
+    },
+    {
+      "symbol": "MUSA",
+      "target_notional": -0.9887052446279733
+    },
+    {
+      "symbol": "SHAK",
+      "target_notional": -0.49730052109248174
+    },
+    {
+      "symbol": "NWL",
+      "target_notional": -4.367238451622476
+    },
+    {
+      "symbol": "VRSN",
+      "target_notional": -0.6527857515245891
+    },
+    {
+      "symbol": "AR",
+      "target_notional": -0.34143593240723114
+    },
+    {
+      "symbol": "KMI",
+      "target_notional": -0.6325381455705011
+    },
+    {
+      "symbol": "L",
+      "target_notional": -1.0165803596582288
+    },
+    {
+      "symbol": "KMB",
+      "target_notional": -4.532517555960408
+    },
+    {
+      "symbol": "EBAY",
+      "target_notional": -0.9164381902405954
+    },
+    {
+      "symbol": "SGI",
+      "target_notional": -0.5485651555982586
+    },
+    {
+      "symbol": "BMRN",
+      "target_notional": -2.1007654019321693
+    },
+    {
+      "symbol": "TM",
+      "target_notional": -1.112019259160754
+    },
+    {
+      "symbol": "DOC",
+      "target_notional": -0.9750391795062245
+    },
+    {
+      "symbol": "NRG",
+      "target_notional": 0.12603947799713094
+    },
+    {
+      "symbol": "UNM",
+      "target_notional": -0.762945324071234
+    },
+    {
+      "symbol": "RJF",
+      "target_notional": -0.8749114827019819
+    },
+    {
+      "symbol": "WU",
+      "target_notional": -1.01854662149752
+    },
+    {
+      "symbol": "LYV",
+      "target_notional": -0.6551171521553167
+    },
+    {
+      "symbol": "SWK",
+      "target_notional": -0.8344802924375136
+    },
+    {
+      "symbol": "EWBC",
+      "target_notional": -0.7134924297843592
+    },
+    {
+      "symbol": "TXRH",
+      "target_notional": -0.8961934506651322
+    },
+    {
+      "symbol": "CRL",
+      "target_notional": -1.9899156924088788
+    },
+    {
+      "symbol": "A",
+      "target_notional": -2.0759699894472563
+    },
+    {
+      "symbol": "MPLX",
+      "target_notional": -0.6089646405621263
+    },
+    {
+      "symbol": "APA",
+      "target_notional": -3016.8508996289697
+    },
+    {
+      "symbol": "TRIP",
+      "target_notional": -0.7776817876459696
+    },
+    {
+      "symbol": "GTLB",
+      "target_notional": 60759.11177130672
+    },
+    {
+      "symbol": "P",
+      "target_notional": 66320.99267352682
+    },
+    {
+      "symbol": "PTC",
+      "target_notional": -0.6642699504501638
+    },
+    {
+      "symbol": "ILMN",
+      "target_notional": -7546.536310767151
+    },
+    {
+      "symbol": "COHR",
+      "target_notional": 78847.8181303304
+    },
+    {
+      "symbol": "PK",
+      "target_notional": -9195.843359843324
+    },
+    {
+      "symbol": "TKR",
+      "target_notional": -0.7447595894232568
+    },
+    {
+      "symbol": "MPC",
+      "target_notional": -0.3853150622913668
+    },
+    {
+      "symbol": "MCK",
+      "target_notional": -2.199919001532961
+    },
+    {
+      "symbol": "TXN",
+      "target_notional": -0.6508481438081734
+    },
+    {
+      "symbol": "EG",
+      "target_notional": -0.8656970699573601
+    },
+    {
+      "symbol": "CARR",
+      "target_notional": -0.8446905737269323
+    },
+    {
+      "symbol": "FTI",
+      "target_notional": 0.0027957520620264225
+    },
+    {
+      "symbol": "VMI",
+      "target_notional": -0.8868027686220942
+    },
+    {
+      "symbol": "AFL",
+      "target_notional": -0.9434053920459552
+    },
+    {
+      "symbol": "LPX",
+      "target_notional": -0.7466872034525925
+    },
+    {
+      "symbol": "HLT",
+      "target_notional": -0.9155624341669445
+    },
+    {
+      "symbol": "SRPT",
+      "target_notional": -1.583705290591526
+    },
+    {
+      "symbol": "CRM",
+      "target_notional": -0.4908738421681981
+    },
+    {
+      "symbol": "RVTY",
+      "target_notional": -2.104859709938487
+    },
+    {
+      "symbol": "TGTX",
+      "target_notional": 0.8757219869341405
+    },
+    {
+      "symbol": "PYPL",
+      "target_notional": -0.7522790431798325
+    },
+    {
+      "symbol": "ALK",
+      "target_notional": -0.8417378272605663
+    },
+    {
+      "symbol": "AYI",
+      "target_notional": -0.9019480028023982
+    },
+    {
+      "symbol": "BMO",
+      "target_notional": -0.9873448341753565
+    },
+    {
+      "symbol": "ARRY",
+      "target_notional": 0.2495394617704269
+    },
+    {
+      "symbol": "CZR",
+      "target_notional": -0.4985856570452928
+    },
+    {
+      "symbol": "KBR",
+      "target_notional": -0.9363190369309983
+    },
+    {
+      "symbol": "IVZ",
+      "target_notional": -0.7637246342094974
+    },
+    {
+      "symbol": "KIM",
+      "target_notional": -0.8801578818932903
+    },
+    {
+      "symbol": "MSCI",
+      "target_notional": -0.7349139075112284
+    },
+    {
+      "symbol": "CNC",
+      "target_notional": -2.230761469260106
+    },
+    {
+      "symbol": "ZTS",
+      "target_notional": -2.1138759562819485
+    },
+    {
+      "symbol": "BEN",
+      "target_notional": -0.8035583000020975
+    },
+    {
+      "symbol": "WYNN",
+      "target_notional": -0.5785105390448587
+    },
+    {
+      "symbol": "GLOB",
+      "target_notional": -0.41332290973832436
+    },
+    {
+      "symbol": "SNOW",
+      "target_notional": -0.10692277935716085
+    },
+    {
+      "symbol": "ALLE",
+      "target_notional": -0.8819659319295649
+    },
+    {
+      "symbol": "DASH",
+      "target_notional": -0.5726211346096244
+    },
+    {
+      "symbol": "LHX",
+      "target_notional": -1.1196371042421722
+    },
+    {
+      "symbol": "CHKP",
+      "target_notional": -0.8229111433746242
+    },
+    {
+      "symbol": "MOS",
+      "target_notional": -0.025240227733784374
+    },
+    {
+      "symbol": "ATI",
+      "target_notional": -0.5824115631317458
+    },
+    {
+      "symbol": "T",
+      "target_notional": -0.9070198953411391
+    },
+    {
+      "symbol": "QCOM",
+      "target_notional": -0.6051423668572119
+    },
+    {
+      "symbol": "BRK-B",
+      "target_notional": -0.9706001493696323
+    },
+    {
+      "symbol": "MS",
+      "target_notional": -0.8819752129901954
+    },
+    {
+      "symbol": "TMO",
+      "target_notional": -2.1384460941916155
+    },
+    {
+      "symbol": "SMG",
+      "target_notional": -17643.524629534633
+    },
+    {
+      "symbol": "RHI",
+      "target_notional": -0.9374682951248928
+    },
+    {
+      "symbol": "OXY",
+      "target_notional": -11429.962033860495
+    },
+    {
+      "symbol": "FICO",
+      "target_notional": -0.19649185371958547
+    },
+    {
+      "symbol": "PAYX",
+      "target_notional": -0.7898483114158695
+    },
+    {
+      "symbol": "BA",
+      "target_notional": -0.7219044211757689
+    },
+    {
+      "symbol": "IR",
+      "target_notional": -0.7939330041393768
+    },
+    {
+      "symbol": "GWW",
+      "target_notional": -0.8060928613674707
+    },
+    {
+      "symbol": "FLO",
+      "target_notional": -4.496212743781629
+    },
+    {
+      "symbol": "CROX",
+      "target_notional": -0.05759172065946675
+    },
+    {
+      "symbol": "WAT",
+      "target_notional": -2.150037032037342
+    },
+    {
+      "symbol": "FR",
+      "target_notional": -0.8891654598253741
+    },
+    {
+      "symbol": "RGEN",
+      "target_notional": -100860.47690550628
+    },
+    {
+      "symbol": "XYZ",
+      "target_notional": -0.1943512121877447
+    },
+    {
+      "symbol": "NOV",
+      "target_notional": -0.39501110648262416
+    },
+    {
+      "symbol": "EDU",
+      "target_notional": -3.5861666781830595
+    },
+    {
+      "symbol": "LITE",
+      "target_notional": -0.6902364727908792
+    },
+    {
+      "symbol": "OSK",
+      "target_notional": -0.9245018538228755
+    },
+    {
+      "symbol": "IRDM",
+      "target_notional": -0.5300366445224158
+    },
+    {
+      "symbol": "CHRW",
+      "target_notional": -14414.54559671649
+    },
+    {
+      "symbol": "KR",
+      "target_notional": -4.469929837298842
+    },
+    {
+      "symbol": "CF",
+      "target_notional": -0.09064312061539145
+    },
+    {
+      "symbol": "TFX",
+      "target_notional": -2.082786393484211
+    },
+    {
+      "symbol": "GLW",
+      "target_notional": -0.75583800981338
+    },
+    {
+      "symbol": "AMP",
+      "target_notional": -0.7483142360460331
+    },
+    {
+      "symbol": "MDB",
+      "target_notional": 86350.80448139911
+    },
+    {
+      "symbol": "UDR",
+      "target_notional": -0.9427120091006528
+    },
+    {
+      "symbol": "DKS",
+      "target_notional": -0.609355637243162
+    },
+    {
+      "symbol": "FIS",
+      "target_notional": -0.6677664979969345
+    },
+    {
+      "symbol": "PAAS",
+      "target_notional": -0.020575312841097104
+    },
+    {
+      "symbol": "LUV",
+      "target_notional": -0.9625428727984437
+    },
+    {
+      "symbol": "NVO",
+      "target_notional": -2.0379055581945593
+    },
+    {
+      "symbol": "MAR",
+      "target_notional": -0.8885425810902863
+    },
+    {
+      "symbol": "GNRC",
+      "target_notional": -0.6024681369500205
+    },
+    {
+      "symbol": "MMM",
+      "target_notional": -1.041281802493032
+    },
+    {
+      "symbol": "RH",
+      "target_notional": -0.6362812399925439
+    },
+    {
+      "symbol": "AMT",
+      "target_notional": -0.9688343770787351
+    },
+    {
+      "symbol": "TXG",
+      "target_notional": -1.4239934356014472
+    },
+    {
+      "symbol": "RGLD",
+      "target_notional": -0.0762767875827431
+    },
+    {
+      "symbol": "NUE",
+      "target_notional": 2315.3822597248395
+    },
+    {
+      "symbol": "IRM",
+      "target_notional": -0.8044212437797365
+    },
+    {
+      "symbol": "AMGN",
+      "target_notional": -2.2865713214398133
+    },
+    {
+      "symbol": "ADP",
+      "target_notional": -0.7961274199128345
+    },
+    {
+      "symbol": "FUTU",
+      "target_notional": -0.5142006971759545
+    },
+    {
+      "symbol": "VOYA",
+      "target_notional": -0.8212213044374564
+    },
+    {
+      "symbol": "USB",
+      "target_notional": -0.9138114151320277
+    },
+    {
+      "symbol": "VSXY",
+      "target_notional": -156496.21119662086
+    },
+    {
+      "symbol": "GM",
+      "target_notional": -0.8255179331196884
+    },
+    {
+      "symbol": "HOG",
+      "target_notional": -0.8389476217704632
+    },
+    {
+      "symbol": "BRX",
+      "target_notional": -0.8673226765171379
+    },
+    {
+      "symbol": "MGA",
+      "target_notional": -0.8540148884458937
+    },
+    {
+      "symbol": "NI",
+      "target_notional": -0.02842871069013258
+    },
+    {
+      "symbol": "WHR",
+      "target_notional": -0.9362194792568092
+    },
+    {
+      "symbol": "RPRX",
+      "target_notional": -2.324731419077146
+    },
+    {
+      "symbol": "PKG",
+      "target_notional": -1.0158443560535049
+    },
+    {
+      "symbol": "POOL",
+      "target_notional": -0.8058661795117125
+    },
+    {
+      "symbol": "MTH",
+      "target_notional": -0.6530338269057403
+    },
+    {
+      "symbol": "WSC",
+      "target_notional": -0.8032259701865501
+    },
+    {
+      "symbol": "VLO",
+      "target_notional": -0.4298471370440648
+    },
+    {
+      "symbol": "ANF",
+      "target_notional": -0.325822060310161
+    },
+    {
+      "symbol": "WBS",
+      "target_notional": -0.7795672133150365
+    },
+    {
+      "symbol": "IEX",
+      "target_notional": -0.9848502337271583
+    },
+    {
+      "symbol": "MDGL",
+      "target_notional": 189526.49478652232
+    },
+    {
+      "symbol": "J",
+      "target_notional": -1.025919447604327
+    },
+    {
+      "symbol": "MSTR",
+      "target_notional": 0.3650898393990914
+    },
+    {
+      "symbol": "IBN",
+      "target_notional": -0.9280132122064232
+    },
+    {
+      "symbol": "VRT",
+      "target_notional": -0.09098569064643822
+    },
+    {
+      "symbol": "FLR",
+      "target_notional": -0.7410071878821625
+    },
+    {
+      "symbol": "CRK",
+      "target_notional": -0.1809643953533398
+    },
+    {
+      "symbol": "ERIC",
+      "target_notional": -0.7376674655905652
+    },
+    {
+      "symbol": "G",
+      "target_notional": -0.8700294247025188
+    },
+    {
+      "symbol": "NTES",
+      "target_notional": -0.6744015349448109
+    },
+    {
+      "symbol": "THO",
+      "target_notional": -0.7246637203209468
+    },
+    {
+      "symbol": "GAP",
+      "target_notional": -0.6329467870956126
+    },
+    {
+      "symbol": "MCD",
+      "target_notional": -1.1343279356352896
+    },
+    {
+      "symbol": "CAT",
+      "target_notional": -0.8623505181298246
+    },
+    {
+      "symbol": "ZBRA",
+      "target_notional": -0.5293456046613604
+    },
+    {
+      "symbol": "SEDG",
+      "target_notional": -0.2695896376759546
+    },
+    {
+      "symbol": "LDOS",
+      "target_notional": -0.874181620432933
+    },
+    {
+      "symbol": "LII",
+      "target_notional": -0.738432302345858
+    },
+    {
+      "symbol": "PHM",
+      "target_notional": -0.6693110496054604
+    },
+    {
+      "symbol": "BIDU",
+      "target_notional": -0.5092025038003108
+    },
+    {
+      "symbol": "MLM",
+      "target_notional": 0.012969827371364718
+    },
+    {
+      "symbol": "SNPS",
+      "target_notional": -0.5110162315017405
+    },
+    {
+      "symbol": "EVR",
+      "target_notional": -0.7579455890496657
+    },
+    {
+      "symbol": "MAT",
+      "target_notional": -0.9989734866567926
+    },
+    {
+      "symbol": "PBF",
+      "target_notional": -0.14832571598825353
+    },
+    {
+      "symbol": "VST",
+      "target_notional": 0.1623875571934221
+    },
+    {
+      "symbol": "FCX",
+      "target_notional": 0.21465972397424826
+    },
+    {
+      "symbol": "HII",
+      "target_notional": -1.0745958050070734
+    },
+    {
+      "symbol": "ZM",
+      "target_notional": -0.5273402021314518
+    },
+    {
+      "symbol": "JAZZ",
+      "target_notional": -2.2345666083980316
+    },
+    {
+      "symbol": "TT",
+      "target_notional": -0.8671718542070083
+    },
+    {
+      "symbol": "LSTR",
+      "target_notional": -0.9183941926995052
+    },
+    {
+      "symbol": "URI",
+      "target_notional": -0.6423706543291052
+    },
+    {
+      "symbol": "SLB",
+      "target_notional": -0.32617255782059373
+    },
+    {
+      "symbol": "ODFL",
+      "target_notional": -0.7443568877744065
+    },
+    {
+      "symbol": "KKR",
+      "target_notional": -0.6923942656306781
+    },
+    {
+      "symbol": "HWM",
+      "target_notional": -0.8494572597867364
+    },
+    {
+      "symbol": "SBUX",
+      "target_notional": -0.9106182827205183
+    },
+    {
+      "symbol": "SAP",
+      "target_notional": -0.6105123943309583
+    },
+    {
+      "symbol": "HRB",
+      "target_notional": -1.0095628777843944
+    },
+    {
+      "symbol": "TTE",
+      "target_notional": -0.5331312053561534
+    },
+    {
+      "symbol": "LPLA",
+      "target_notional": -0.8192815687261009
+    },
+    {
+      "symbol": "IT",
+      "target_notional": -0.6131685100616707
+    },
+    {
+      "symbol": "LNG",
+      "target_notional": -0.48451337583615467
+    },
+    {
+      "symbol": "BP",
+      "target_notional": -0.4849940588584616
+    },
+    {
+      "symbol": "WTW",
+      "target_notional": -0.9741714453080632
+    },
+    {
+      "symbol": "SNY",
+      "target_notional": -2.2243352502292644
+    },
+    {
+      "symbol": "VAL",
+      "target_notional": -0.16812760714114972
+    },
+    {
+      "symbol": "FRT",
+      "target_notional": -0.9220694237638711
+    },
+    {
+      "symbol": "DINO",
+      "target_notional": -0.4477614225600399
+    },
+    {
+      "symbol": "OVV",
+      "target_notional": -0.2885504358608096
+    },
+    {
+      "symbol": "PR",
+      "target_notional": 0.052164686466582184
+    },
+    {
+      "symbol": "RS",
+      "target_notional": 0.002969752155401392
+    },
+    {
+      "symbol": "BR",
+      "target_notional": -0.7578911060403574
+    },
+    {
+      "symbol": "PRU",
+      "target_notional": -0.9430441103183613
+    },
+    {
+      "symbol": "CG",
+      "target_notional": -0.7368150688836148
+    },
+    {
+      "symbol": "VRTX",
+      "target_notional": -2.132063769091206
+    },
+    {
+      "symbol": "ASAN",
+      "target_notional": -52797.370230293855
+    },
+    {
+      "symbol": "TRGP",
+      "target_notional": -0.3912699973675579
+    },
+    {
+      "symbol": "FND",
+      "target_notional": -0.5268177507745675
+    },
+    {
+      "symbol": "O",
+      "target_notional": -1.0517342918896704
+    },
+    {
+      "symbol": "LRCX",
+      "target_notional": -0.3003285546737239
+    },
+    {
+      "symbol": "LNTH",
+      "target_notional": -1.7082444473783154
+    },
+    {
+      "symbol": "XOM",
+      "target_notional": -0.4901228667398995
+    },
+    {
+      "symbol": "ABNB",
+      "target_notional": -0.6058460365175483
+    },
+    {
+      "symbol": "AXTA",
+      "target_notional": 0.05858857750532045
+    },
+    {
+      "symbol": "NICE",
+      "target_notional": -0.6032338215292975
+    },
+    {
+      "symbol": "ASML",
+      "target_notional": -0.32925137535417087
+    },
+    {
+      "symbol": "JBLU",
+      "target_notional": -0.7870815209952766
+    },
+    {
+      "symbol": "XPO",
+      "target_notional": -0.4099788132784558
+    },
+    {
+      "symbol": "BRK-A",
+      "target_notional": -0.9654928360640739
+    },
+    {
+      "symbol": "FTV",
+      "target_notional": -0.6851130084145917
+    },
+    {
+      "symbol": "IBM",
+      "target_notional": -0.8893979575852289
+    },
+    {
+      "symbol": "CE",
+      "target_notional": 0.04524045297520949
+    },
+    {
+      "symbol": "ESTC",
+      "target_notional": -73146.9532966782
+    },
+    {
+      "symbol": "SJM",
+      "target_notional": -4.513437400946008
+    },
+    {
+      "symbol": "WMB",
+      "target_notional": -0.6161231686363613
+    },
+    {
+      "symbol": "SFM",
+      "target_notional": -4.156142279761862
+    },
+    {
+      "symbol": "AFG",
+      "target_notional": -1.025263872872721
+    },
+    {
+      "symbol": "ARES",
+      "target_notional": -0.5947997490850297
+    },
+    {
+      "symbol": "BF-B",
+      "target_notional": -4.496189227575575
+    },
+    {
+      "symbol": "ROK",
+      "target_notional": -0.7392052469392196
+    },
+    {
+      "symbol": "CNQ",
+      "target_notional": -586.8358609529308
+    },
+    {
+      "symbol": "NOG",
+      "target_notional": -0.17590659269193237
+    },
+    {
+      "symbol": "FMC",
+      "target_notional": -0.17949477757487586
+    },
+    {
+      "symbol": "GOOGL",
+      "target_notional": -0.6198918053492356
+    },
+    {
+      "symbol": "KSS",
+      "target_notional": -0.7357764271374873
+    },
+    {
+      "symbol": "EXR",
+      "target_notional": -0.8975418065316081
+    },
+    {
+      "symbol": "CX",
+      "target_notional": 0.24746147104298094
+    },
+    {
+      "symbol": "MNDY",
+      "target_notional": 0.1125727772323197
+    },
+    {
+      "symbol": "ACI",
+      "target_notional": -4.464053267512261
+    },
+    {
+      "symbol": "CCK",
+      "target_notional": -0.9497339272611748
+    },
+    {
+      "symbol": "ENVX",
+      "target_notional": 25261.58181486529
+    },
+    {
+      "symbol": "SMCI",
+      "target_notional": 133903.19897480894
+    },
+    {
+      "symbol": "CIEN",
+      "target_notional": -2261.518240147877
+    },
+    {
+      "symbol": "EPD",
+      "target_notional": -0.6959777060107919
+    },
+    {
+      "symbol": "GME",
+      "target_notional": -18000.30349201692
+    },
+    {
+      "symbol": "WH",
+      "target_notional": -0.9855366993214425
+    },
+    {
+      "symbol": "HCA",
+      "target_notional": -1.925286175871876
+    },
+    {
+      "symbol": "ALGM",
+      "target_notional": -0.2342738678475965
+    },
+    {
+      "symbol": "ICE",
+      "target_notional": -0.9447365407759167
+    },
+    {
+      "symbol": "SAIA",
+      "target_notional": -0.49652637763424473
+    },
+    {
+      "symbol": "HR",
+      "target_notional": -0.8262546101605173
+    },
+    {
+      "symbol": "RBLX",
+      "target_notional": -27223.47896284114
+    },
+    {
+      "symbol": "TFC",
+      "target_notional": -5792.912600748442
+    },
+    {
+      "symbol": "KNX",
+      "target_notional": -6394.021198497498
+    },
+    {
+      "symbol": "SO",
+      "target_notional": -0.040711110227745206
+    },
+    {
+      "symbol": "ISRG",
+      "target_notional": -1.8462078242952913
+    },
+    {
+      "symbol": "WELL",
+      "target_notional": -0.9217351349678704
+    },
+    {
+      "symbol": "AOS",
+      "target_notional": -0.8452029726510109
+    },
+    {
+      "symbol": "DLTR",
+      "target_notional": -4.376654824039334
+    },
+    {
+      "symbol": "IQV",
+      "target_notional": -2.0544064017347483
+    },
+    {
+      "symbol": "PTON",
+      "target_notional": -76283.13349476886
+    },
+    {
+      "symbol": "BCS",
+      "target_notional": -0.811850557607413
+    },
+    {
+      "symbol": "TEVA",
+      "target_notional": -1.9090626456576982
+    },
+    {
+      "symbol": "TREX",
+      "target_notional": -0.6662020470423738
+    },
+    {
+      "symbol": "WAL",
+      "target_notional": -0.0917220536481127
+    },
+    {
+      "symbol": "NCLH",
+      "target_notional": 75704.95879713041
+    },
+    {
+      "symbol": "UNH",
+      "target_notional": -2.2471152398402174
+    },
+    {
+      "symbol": "NVAX",
+      "target_notional": -86574.44485392538
+    },
+    {
+      "symbol": "SBAC",
+      "target_notional": -0.9594096643076879
+    },
+    {
+      "symbol": "AVY",
+      "target_notional": -0.970883005845628
+    },
+    {
+      "symbol": "UBS",
+      "target_notional": -0.7366623008446388
+    },
+    {
+      "symbol": "DT",
+      "target_notional": -0.4337083070582739
+    },
+    {
+      "symbol": "MO",
+      "target_notional": -4.4801903270397245
+    },
+    {
+      "symbol": "TTC",
+      "target_notional": -0.9044860231907668
+    },
+    {
+      "symbol": "CRH",
+      "target_notional": 0.06776878163861699
+    },
+    {
+      "symbol": "ROKU",
+      "target_notional": -0.26536040350456697
+    },
+    {
+      "symbol": "LNT",
+      "target_notional": -0.046253161294276715
+    },
+    {
+      "symbol": "CHTR",
+      "target_notional": -0.7217636777303582
+    },
+    {
+      "symbol": "SHOP",
+      "target_notional": 0.1399589338258236
+    },
+    {
+      "symbol": "HUM",
+      "target_notional": -2.1725537249844864
+    },
+    {
+      "symbol": "PEN",
+      "target_notional": -1.4769161612949846
+    },
+    {
+      "symbol": "ACGL",
+      "target_notional": -0.7666887461474533
+    },
+    {
+      "symbol": "RF",
+      "target_notional": -0.8464575330338757
+    },
+    {
+      "symbol": "NTAP",
+      "target_notional": -0.696269302070815
+    },
+    {
+      "symbol": "ROL",
+      "target_notional": -1.028805219021671
+    },
+    {
+      "symbol": "KEYS",
+      "target_notional": -0.6516387903997073
+    },
+    {
+      "symbol": "VMC",
+      "target_notional": -0.015438869193076698
+    },
+    {
+      "symbol": "LYFT",
+      "target_notional": -0.17892783422315683
+    },
+    {
+      "symbol": "ASO",
+      "target_notional": -0.6218525876994027
+    },
+    {
+      "symbol": "SPOT",
+      "target_notional": -0.32373468519960885
+    },
+    {
+      "symbol": "RCL",
+      "target_notional": -0.16055146835035336
+    },
+    {
+      "symbol": "XEL",
+      "target_notional": -0.045939914655590906
+    },
+    {
+      "symbol": "OKTA",
+      "target_notional": -102083.56534553802
+    },
+    {
+      "symbol": "RIO",
+      "target_notional": -0.05717142571914328
+    },
+    {
+      "symbol": "CRSP",
+      "target_notional": -69138.25252523785
+    },
+    {
+      "symbol": "RIOT",
+      "target_notional": 0.6930062895173342
+    },
+    {
+      "symbol": "CTAS",
+      "target_notional": -0.9419795257841418
+    },
+    {
+      "symbol": "FFIV",
+      "target_notional": -0.729149325780013
+    },
+    {
+      "symbol": "NTRS",
+      "target_notional": -0.9126221472887908
+    },
+    {
+      "symbol": "PM",
+      "target_notional": -4.507465655715878
+    },
+    {
+      "symbol": "QSR",
+      "target_notional": -0.9304595868153785
+    },
+    {
+      "symbol": "BRKR",
+      "target_notional": -2.018631483992421
+    },
+    {
+      "symbol": "SLM",
+      "target_notional": -0.7682707224961578
+    },
+    {
+      "symbol": "LKQ",
+      "target_notional": -1.0035371830084605
+    },
+    {
+      "symbol": "DVN",
+      "target_notional": -12141.634447753426
+    },
+    {
+      "symbol": "CSL",
+      "target_notional": -0.9597326684379116
+    },
+    {
+      "symbol": "CSGP",
+      "target_notional": -0.729038195441887
+    },
+    {
+      "symbol": "AEP",
+      "target_notional": -0.05605039062232303
+    },
+    {
+      "symbol": "TAP",
+      "target_notional": -4.372644882366639
+    },
+    {
+      "symbol": "TWLO",
+      "target_notional": -40119.402665797264
+    },
+    {
+      "symbol": "CVX",
+      "target_notional": -0.5536965953693682
+    },
+    {
+      "symbol": "DOCU",
+      "target_notional": -74384.67807123158
+    },
+    {
+      "symbol": "AEE",
+      "target_notional": -0.05526144529378303
+    },
+    {
+      "symbol": "WLK",
+      "target_notional": 0.04947609147794342
+    },
+    {
+      "symbol": "ECL",
+      "target_notional": -0.0631260596852706
+    },
+    {
+      "symbol": "DKNG",
+      "target_notional": -0.04280980170984045
+    },
+    {
+      "symbol": "RGA",
+      "target_notional": -0.8721766947312672
+    },
+    {
+      "symbol": "CLH",
+      "target_notional": -0.7167256309704553
+    },
+    {
+      "symbol": "REG",
+      "target_notional": -0.925753662932262
+    },
+    {
+      "symbol": "INTU",
+      "target_notional": -0.5368188989644314
+    },
+    {
+      "symbol": "CLF",
+      "target_notional": 0.18556648094984277
+    },
+    {
+      "symbol": "WMG",
+      "target_notional": -0.6198594386988
+    },
+    {
+      "symbol": "AXON",
+      "target_notional": -0.4728579720339108
+    },
+    {
+      "symbol": "MTDR",
+      "target_notional": -0.24885661130216105
+    },
+    {
+      "symbol": "MHK",
+      "target_notional": -0.8690836752230705
+    },
+    {
+      "symbol": "CPNG",
+      "target_notional": -0.5100061635724559
+    },
+    {
+      "symbol": "COR",
+      "target_notional": -2.197582736572313
+    },
+    {
+      "symbol": "AZN",
+      "target_notional": -2.207740160545121
+    },
+    {
+      "symbol": "ARMK",
+      "target_notional": -0.8496661656145698
+    },
+    {
+      "symbol": "BNTX",
+      "target_notional": -2.040641919952872
+    },
+    {
+      "symbol": "PSKY",
+      "target_notional": -0.47275433467381756
+    },
+    {
+      "symbol": "BIIB",
+      "target_notional": -1.7540355388414646
+    },
+    {
+      "symbol": "MIDD",
+      "target_notional": -0.8333953907768751
+    },
+    {
+      "symbol": "YUM",
+      "target_notional": -1.0827952156416043
+    },
+    {
+      "symbol": "EXC",
+      "target_notional": -0.03721499447897102
+    },
+    {
+      "symbol": "PFGC",
+      "target_notional": -4.306128778585063
+    },
+    {
+      "symbol": "PNC",
+      "target_notional": -0.9282580075559197
+    },
+    {
+      "symbol": "EMN",
+      "target_notional": -0.056155142075912996
+    },
+    {
+      "symbol": "AON",
+      "target_notional": -0.9681162095820113
+    },
+    {
+      "symbol": "SSB",
+      "target_notional": -0.8894530659645153
+    },
+    {
+      "symbol": "MANH",
+      "target_notional": -0.4059612306141671
+    },
+    {
+      "symbol": "EQT",
+      "target_notional": -0.2960997852814729
+    },
+    {
+      "symbol": "MKL",
+      "target_notional": -0.9846689388312685
+    },
+    {
+      "symbol": "HEI",
+      "target_notional": -0.9064106608139278
+    },
+    {
+      "symbol": "LNC",
+      "target_notional": -0.6840348832850892
+    },
+    {
+      "symbol": "CAH",
+      "target_notional": 14746.193971544591
+    },
+    {
+      "symbol": "SCCO",
+      "target_notional": 0.1364995264081785
+    },
+    {
+      "symbol": "DXCM",
+      "target_notional": -1.7387460029786632
+    },
+    {
+      "symbol": "AMAT",
+      "target_notional": -0.351215719603335
+    },
+    {
+      "symbol": "ALV",
+      "target_notional": -0.8392154273247198
+    },
+    {
+      "symbol": "DIS",
+      "target_notional": -0.6859341494612208
+    },
+    {
+      "symbol": "CSCO",
+      "target_notional": -0.7572684407699648
+    },
+    {
+      "symbol": "PATH",
+      "target_notional": -54965.89990869053
+    },
+    {
+      "symbol": "AMD",
+      "target_notional": -0.19452748299297684
+    },
+    {
+      "symbol": "JBHT",
+      "target_notional": -0.9115106139156925
+    },
+    {
+      "symbol": "UL",
+      "target_notional": -4.496252171811481
+    },
+    {
+      "symbol": "VEEV",
+      "target_notional": -1.9934106119352601
+    },
+    {
+      "symbol": "BSY",
+      "target_notional": -0.44838341078924276
+    },
+    {
+      "symbol": "TMDX",
+      "target_notional": 478.240261733426
+    },
+    {
+      "symbol": "PEP",
+      "target_notional": -4.518006600685419
+    },
+    {
+      "symbol": "HSY",
+      "target_notional": -4.477343012745451
+    },
+    {
+      "symbol": "CRI",
+      "target_notional": -0.9133674516735302
+    },
+    {
+      "symbol": "GTLS",
+      "target_notional": 67152.78983284159
+    },
+    {
+      "symbol": "PCAR",
+      "target_notional": -0.913106759890176
+    },
+    {
+      "symbol": "ETR",
+      "target_notional": -0.029893190553597935
+    },
+    {
+      "symbol": "BX",
+      "target_notional": -0.6555864874511392
+    },
+    {
+      "symbol": "ADBE",
+      "target_notional": -0.5223528000953063
+    },
+    {
+      "symbol": "WING",
+      "target_notional": -0.08170668629008203
+    },
+    {
+      "symbol": "BAX",
+      "target_notional": -2.1973403277581363
+    },
+    {
+      "symbol": "COIN",
+      "target_notional": 0.2714650453314736
+    },
+    {
+      "symbol": "HOOD",
+      "target_notional": -0.46461360578811994
+    },
+    {
+      "symbol": "AXP",
+      "target_notional": -0.8182935284641536
+    },
+    {
+      "symbol": "RPM",
+      "target_notional": -0.10290816296624232
+    },
+    {
+      "symbol": "AEO",
+      "target_notional": -0.7167387537449216
+    },
+    {
+      "symbol": "OLED",
+      "target_notional": -0.4132047124669329
+    },
+    {
+      "symbol": "QRVO",
+      "target_notional": -0.5509808274751755
+    },
+    {
+      "symbol": "AMH",
+      "target_notional": -0.9133725973375897
+    },
+    {
+      "symbol": "BALL",
+      "target_notional": -0.9271980062120342
+    },
+    {
+      "symbol": "TOST",
+      "target_notional": 0.008491175461232148
+    },
+    {
+      "symbol": "TRU",
+      "target_notional": -0.7608403578243591
+    },
+    {
+      "symbol": "CTVA",
+      "target_notional": -0.17626663404890192
+    },
+    {
+      "symbol": "ORCL",
+      "target_notional": -0.6173302970515429
+    },
+    {
+      "symbol": "FCN",
+      "target_notional": -0.9947252975577121
+    },
+    {
+      "symbol": "ETN",
+      "target_notional": -0.8355964884726479
+    },
+    {
+      "symbol": "TTD",
+      "target_notional": 0.11128487288050615
+    },
+    {
+      "symbol": "APTV",
+      "target_notional": -0.7704528708869567
+    },
+    {
+      "symbol": "ET",
+      "target_notional": -8932.10595098622
+    },
+    {
+      "symbol": "TW",
+      "target_notional": -0.9428832347875867
+    },
+    {
+      "symbol": "DOW",
+      "target_notional": -0.12435546392376046
+    },
+    {
+      "symbol": "MSI",
+      "target_notional": -0.6894327249735528
+    },
+    {
+      "symbol": "FTNT",
+      "target_notional": -0.48257785309742124
+    },
+    {
+      "symbol": "COLB",
+      "target_notional": -0.8316365041173784
+    },
+    {
+      "symbol": "VIPS",
+      "target_notional": -0.605070423151018
+    },
+    {
+      "symbol": "PCTY",
+      "target_notional": -0.49779134393869
+    },
+    {
+      "symbol": "TME",
+      "target_notional": -0.17397188070420413
+    },
+    {
+      "symbol": "DPZ",
+      "target_notional": -1.0417625642427855
+    },
+    {
+      "symbol": "FNV",
+      "target_notional": -0.10601788333299306
+    },
+    {
+      "symbol": "ONON",
+      "target_notional": -0.35646195638680495
+    },
+    {
+      "symbol": "AGNC",
+      "target_notional": -0.8330631897067599
+    },
+    {
+      "symbol": "ZION",
+      "target_notional": -23814.54579798065
+    },
+    {
+      "symbol": "ENTG",
+      "target_notional": -0.24255280056239634
+    },
+    {
+      "symbol": "MU",
+      "target_notional": -0.48594279631731757
+    },
+    {
+      "symbol": "WCC",
+      "target_notional": -0.594904867089007
+    },
+    {
+      "symbol": "BEKE",
+      "target_notional": -0.5282740756852113
+    },
+    {
+      "symbol": "HUBS",
+      "target_notional": -0.09059685332327455
+    },
+    {
+      "symbol": "LECO",
+      "target_notional": -0.8718797662829582
+    },
+    {
+      "symbol": "SSNC",
+      "target_notional": -0.7537023098527859
+    },
+    {
+      "symbol": "NTRA",
+      "target_notional": -1.6046728207527017
+    },
+    {
+      "symbol": "UBER",
+      "target_notional": -0.18634427111736276
+    },
+    {
+      "symbol": "ARGX",
+      "target_notional": -2.152904245915652
+    },
+    {
+      "symbol": "ACLS",
+      "target_notional": 18426.193000741132
+    },
+    {
+      "symbol": "AIG",
+      "target_notional": -0.8663939850963023
+    },
+    {
+      "symbol": "MOH",
+      "target_notional": -2.1749851401469997
+    },
+    {
+      "symbol": "CMG",
+      "target_notional": -0.7345380048917637
+    },
+    {
+      "symbol": "DHI",
+      "target_notional": -0.7093333995529075
+    },
+    {
+      "symbol": "PGR",
+      "target_notional": -0.9398033597970912
+    },
+    {
+      "symbol": "OTIS",
+      "target_notional": -0.9800556906629168
+    },
+    {
+      "symbol": "WDAY",
+      "target_notional": -0.3809971468642643
+    },
+    {
+      "symbol": "H",
+      "target_notional": -0.7840932212532872
+    },
+    {
+      "symbol": "M",
+      "target_notional": -0.7419214537059335
+    },
+    {
+      "symbol": "IQ",
+      "target_notional": 29613.766887144597
+    },
+    {
+      "symbol": "HD",
+      "target_notional": -0.9767550527149703
+    },
+    {
+      "symbol": "COP",
+      "target_notional": -0.41928478106932804
+    },
+    {
+      "symbol": "TPL",
+      "target_notional": -15356.249650939862
+    },
+    {
+      "symbol": "AMR",
+      "target_notional": 15327.631152759483
+    },
+    {
+      "symbol": "CEG",
+      "target_notional": 0.3385521035634775
+    },
+    {
+      "symbol": "LIN",
+      "target_notional": -0.09663219450246627
+    },
+    {
+      "symbol": "RSG",
+      "target_notional": -1.087068855212894
+    },
+    {
+      "symbol": "KEY",
+      "target_notional": -22030.4351948087
+    },
+    {
+      "symbol": "VKTX",
+      "target_notional": 107036.92387038929
+    },
+    {
+      "symbol": "BTI",
+      "target_notional": -4.575666623462907
+    },
+    {
+      "symbol": "DOX",
+      "target_notional": -0.8477520439601003
+    },
+    {
+      "symbol": "ED",
+      "target_notional": -0.06407758546593749
+    },
+    {
+      "symbol": "REXR",
+      "target_notional": -4917.345686053898
+    },
+    {
+      "symbol": "ASH",
+      "target_notional": -0.20772771131642612
+    },
+    {
+      "symbol": "SNA",
+      "target_notional": -0.9293292290883719
+    },
+    {
+      "symbol": "MKSI",
+      "target_notional": -0.4032639286659007
+    },
+    {
+      "symbol": "LMT",
+      "target_notional": -1.0678059434730005
+    },
+    {
+      "symbol": "BUD",
+      "target_notional": -4.410887864617337
+    },
+    {
+      "symbol": "PSA",
+      "target_notional": -0.934959949248521
+    },
+    {
+      "symbol": "BDX",
+      "target_notional": -2.238202358064025
+    },
+    {
+      "symbol": "GT",
+      "target_notional": -43272.196960256326
+    },
+    {
+      "symbol": "BXP",
+      "target_notional": -0.9101860379529253
+    },
+    {
+      "symbol": "OGN",
+      "target_notional": -2.2125514076868367
+    },
+    {
+      "symbol": "GTM",
+      "target_notional": -0.3658981786880072
+    },
+    {
+      "symbol": "DEO",
+      "target_notional": -4.479620354066385
+    },
+    {
+      "symbol": "EW",
+      "target_notional": -2.102231809847452
+    },
+    {
+      "symbol": "INTC",
+      "target_notional": -0.6237439138842876
+    },
+    {
+      "symbol": "FDX",
+      "target_notional": -0.8863863059021199
+    },
+    {
+      "symbol": "ATKR",
+      "target_notional": 1960.1195627716718
+    },
+    {
+      "symbol": "NU",
+      "target_notional": -0.13770043669191454
+    },
+    {
+      "symbol": "STE",
+      "target_notional": -2.079756803386469
+    },
+    {
+      "symbol": "WSO",
+      "target_notional": -0.7520399702832458
+    },
+    {
+      "symbol": "MPWR",
+      "target_notional": -0.2705658130483748
+    },
+    {
+      "symbol": "CFG",
+      "target_notional": -0.8609717747015041
+    },
+    {
+      "symbol": "MKTX",
+      "target_notional": -0.8062049214211188
+    },
+    {
+      "symbol": "ING",
+      "target_notional": -0.7500069673109422
+    },
+    {
+      "symbol": "ALSN",
+      "target_notional": -0.9083038124702318
+    },
+    {
+      "symbol": "TEX",
+      "target_notional": -0.4984138876523932
+    },
+    {
+      "symbol": "DD",
+      "target_notional": -0.01752176167620721
+    },
+    {
+      "symbol": "STAG",
+      "target_notional": -0.8312285206812191
+    },
+    {
+      "symbol": "TTEK",
+      "target_notional": -0.8750470912454554
+    },
+    {
+      "symbol": "OPCH",
+      "target_notional": -2.0073075805644045
+    },
+    {
+      "symbol": "SOFI",
+      "target_notional": -0.22415699247527335
+    },
+    {
+      "symbol": "DDS",
+      "target_notional": -0.6135452940590296
+    },
+    {
+      "symbol": "CHH",
+      "target_notional": -0.9761100219488755
+    },
+    {
+      "symbol": "LSCC",
+      "target_notional": -0.18984283798563736
+    },
+    {
+      "symbol": "DE",
+      "target_notional": -0.9155784634361606
+    },
+    {
+      "symbol": "AFRM",
+      "target_notional": -125931.64377564468
+    },
+    {
+      "symbol": "CMI",
+      "target_notional": -0.9599792742306512
+    },
+    {
+      "symbol": "TYL",
+      "target_notional": -0.5932006087133133
+    },
+    {
+      "symbol": "PLTR",
+      "target_notional": -0.013176343271319267
+    },
+    {
+      "symbol": "RMBS",
+      "target_notional": 0.08385498626019787
+    },
+    {
+      "symbol": "TTWO",
+      "target_notional": -0.6419302141312276
+    },
+    {
+      "symbol": "TRI",
+      "target_notional": -1.0071867204603808
+    },
+    {
+      "symbol": "BSX",
+      "target_notional": -2.1032656795963955
+    },
+    {
+      "symbol": "PI",
+      "target_notional": 0.052204405355282126
+    },
+    {
+      "symbol": "KO",
+      "target_notional": -4.557603029685231
+    },
+    {
+      "symbol": "TRV",
+      "target_notional": -1.0138407187902785
+    },
+    {
+      "symbol": "MSFT",
+      "target_notional": -0.5902701509611316
+    },
+    {
+      "symbol": "JLL",
+      "target_notional": -0.8055348356598349
+    },
+    {
+      "symbol": "OMC",
+      "target_notional": -0.6756724580583555
+    },
+    {
+      "symbol": "PH",
+      "target_notional": -0.8137677935752933
+    },
+    {
+      "symbol": "GLPI",
+      "target_notional": -0.9531141107450232
+    },
+    {
+      "symbol": "GILD",
+      "target_notional": -2.1086141178864217
+    },
+    {
+      "symbol": "FIX",
+      "target_notional": -0.5942415027858117
+    },
+    {
+      "symbol": "LW",
+      "target_notional": -4.292919508330713
+    },
+    {
+      "symbol": "CCI",
+      "target_notional": -0.9922087232183329
+    },
+    {
+      "symbol": "SIRI",
+      "target_notional": 38906.37309145105
+    },
+    {
+      "symbol": "ES",
+      "target_notional": -0.06130039218372467
+    },
+    {
+      "symbol": "DAR",
+      "target_notional": -4.1684017050747935
+    },
+    {
+      "symbol": "JD",
+      "target_notional": -0.8294224195888473
+    },
+    {
+      "symbol": "PCG",
+      "target_notional": 0.27701611721053704
+    },
+    {
+      "symbol": "AER",
+      "target_notional": -0.7449641125384034
+    },
+    {
+      "symbol": "RTX",
+      "target_notional": -1.0502394531399526
+    },
+    {
+      "symbol": "PSX",
+      "target_notional": -0.4528325855089321
+    },
+    {
+      "symbol": "FDS",
+      "target_notional": -0.9545811430612959
+    },
+    {
+      "symbol": "BNY",
+      "target_notional": -0.9233547202925249
+    },
+    {
+      "symbol": "RUN",
+      "target_notional": -16123.630886458559
+    }
+  ]
+}

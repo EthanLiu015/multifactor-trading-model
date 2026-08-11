@@ -50,5 +50,8 @@ target_link_libraries(smoke_market_data PRIVATE broker_sim)
 add_executable(smoke_alpaca_gateway tools/smoke_alpaca_gateway.cpp)
 target_link_libraries(smoke_alpaca_gateway PRIVATE broker_sim)
 
+add_executable(run_simulation tools/run_simulation.cpp)
+target_link_libraries(run_simulation PRIVATE broker_sim nlohmann_json::nlohmann_json)
+
 enable_testing()
 add_subdirectory(tests)
